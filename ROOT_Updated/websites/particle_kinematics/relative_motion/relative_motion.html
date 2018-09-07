@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Relative Motion</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Relative Motion in Particles</h1>
+    <p>Relative motion analysis is the analysis of bodies where more than one body is in motion and  we are in some way examining the motion of one moving particle relative to another moving particle. An example would be cars on a highway. If you are in one car moving down the highway with other cars moving down the highway with you, you will all have velocities in a single direction. From your perspective inside the car though, fast cars in front of you will appear to be moving away from you and slow cars in front of you will appear to be moving towards you. By knowing your speed, and by observing how fast the cars are moving away from you or towards you, you could determine, or at least estimate how fast these cars are going. The process of using your speed in conjunction with the relative velocities of the other cars to find the other cars' speed is relative motion analysis.</p>
+    <h2>Relative Motion in One Dimension:</h2>
+    <p>In a single dimension, we will usually have at least two moving particles as well as some fixed reference point. We usually call the fixed reference point O, and then label the other points A, B, and so on. In the diagram, below we can see an example of this, with a fixed reference point at O, a police car at A, and a speeding car at B. </p>
+    <figure class="center"><img src="images/relative_motion.png" width="500" height="167" alt="Relative Motion in One Dimension"/>
+      <figcaption>In a single dimension we have a fixed reference point O, as well as at least two moving bodies labeled as A and B in this case. The r vectors represent the distances between bodies, with the subscript indicating the starting and ending point. The subscripts should always be formated end point / starting point.</figcaption>
+    </figure>
+    <p>As we can see from the diagram above, the sum of the distance from O to A (r<sub>A/O</sub>) and the distance from A to B (r<sub>B/A</sub>) will be equal to the distance from O to B (r<sub>B/O</sub>). This gives us our position equation below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[r_{B/O}=r_{A/O}+r_{B/A}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>One thing we should notice about the subscripts is that if we keep to our standard naming convention (ending point / starting point) then we should be able to see which points cancel out and which remain. In this case, the A's on the top and bottom on the right cancel out, leaving just a B on the top and an O on the bottom. This matches the subscript on the left of the equation.</p>
+    <p>Furthermore, we can take the derivative of this equation to relate velocities, or a double derivative to relate accelerations. This means that if we know any two of the terms in the equations below, we can solve for the third.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v_{B/O}=v_{A/O}+v_{B/A}\]</td>
+        </tr>
+		<tr>
+          <th>Acceleration:</th>
+          <td>\[a_{B/O}=a_{A/O}+a_{B/A}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+	<h2>Relative Motion in Two Dimensions:</h2>
+	<p>Just as with one dimension, we can start by examining a set of relative positions. In this case we will use the example of two planes moving through the sky. We may wish to deduce the position of plane B on a map, based on our observations from plane A. By using the information we have on our position relative to some set location, along with the relative position read in from on board instrumentation, we should be able to determine the absolute position (including an x and y coordinate) for plane B.</p>
+	<figure class="center"><img src="images/2D_relative_motion.png" width="500" height="193" alt="Relative Motion in 2 dimensions."/>
+      <figcaption>In a two dimensions we have a fixed reference point O, as well as at least two moving bodies, labeled as A and B in this case. The r vectors represent the distance vectors between bodies, with the subscript indicating the starting and ending point. The subscripts should always be formated end point / starting point.</figcaption>
+    </figure>
+	<p>In two dimensions, we will use the same equations as before, except this time we will be using vectors rather than scalar values in our equations.</p>
+	<table class="equation">
+      <tbody>
+		<tr>
+          <th>Position:</th>
+          <td>\[\overrightarrow{r}_{B/O}=\overrightarrow{r}_{A/O}+\overrightarrow{r}_{B/A}\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[\overrightarrow{v}_{B/O}=\overrightarrow{v}_{A/O}+\overrightarrow{v}_{B/A}\]</td>
+        </tr>
+		<tr>
+          <th>Acceleration:</th>
+          <td>\[\overrightarrow{a}_{B/O}=\overrightarrow{a}_{A/O}+\overrightarrow{a}_{B/A}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+	<p>To solve these equations, we will almost always break the vector equations down into a set of component equations. This will let us solve these equations with simple algebra. Because we have more than one particle, we usually use rectangular coordinate systems for this with a universal set of x and y coordinates.</p>
+    
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>A police officer notices a car speeding by. If the police car is traveling 30 m/s and the radar gun measures the relative velocity to be 15 m/s, how fast is the speeding car actually going? If the police car immediately begins accelerating at a constant rate and catches up to the speeding car after 15 seconds, what is the rate of acceleration of the police car?</p>
+        <img src="images/P1.png" width="500" height="233" alt="Problem 1 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  <div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>A plane has an airspeed of 250 kilometers per hour (airspeed is the velocity of the plane relative to the air) and is flying though an easterly crosswind with a speed of 20 kilometers per hour. If the plane wants to maintain a direct northerly course, what is the angle the plane must point into the wind (theta)?</p>
+        <img src="images/P2.png" width="362" height="443" alt="Problem 2 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div id="problem">
+      <div id="question">
+        <h3>Question 3:</h3>
+        <p>You are in a boat that is traveling through the water in an area of swift currents. One instrument measures your speed with respect to the water to be 20 ft/s with your boat pointed at a 45 degree angle. GPS however measures your absolute speed and direction to be 25 ft/s at a 55 degree angle. Based on this information, what is the speed and direction of the water current in this area?</p>
+        <img src="images/P3.png" width="388" height="403" alt="Problem 3 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-noncommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

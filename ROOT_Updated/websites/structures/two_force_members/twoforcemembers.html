@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Two Force Members</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Two Force Members</h1>
+				
+		<p>A <strong>two force member</strong> is a body that has forces (and 
+		only forces, no moments) acting on it in only two locations. In order to 
+		have a two force member in static equilibrium, the net force at each 
+		location must be equal, opposite, and collinear. This will result in all 
+		two force members being in either tension or compression as shown in the 
+		diagram below.</p>
+			
+		<figure class="center">
+			<img alt="Two Force Members" height="131" src="images/twoforcemembers.png" width="500">
+			<figcaption>The forces acting on two force members need to be equal, 
+			opposite, and collinear for the body to be in equilibrium.</figcaption>
+		</figure>
+		
+		<h2>Why the Forces Must Be Equal, Opposite, and Collinear:</h2>
+		<p>Imagine a beam where forces are only exerted at each end of the beam 
+		(a two force member). The body has some non-zero force acting at on one 
+		end of the beam, which we can draw in as a force vector. If this body is 
+		in equilibrium, then we know two things: 1) the sum of the forces must 
+		be equal to zero, and 2) the sum of the moments must be equal to zero.</p>
+		
+		<p>In order to have the sum of the forces equal to zero, the force 
+		vector on the other side of the beam must be equal in magnitude and 
+		opposite in direction. This is the only way to ensure that the sum of the 
+		forces is equal to zero with only two forces.</p>
+		
+		<p>In order to have the sum of the moments equal to zero, the forces 
+		must be collinear. If the forces were not collinear, then the two 
+		equal and opposite forces would form a couple. This couple would exert a 
+		moment on the beam when there are no other moments to counteract the 
+		couple. Because of the moment exerted by the two forces must be equal to 
+		zero, the perpendicular distance between the forces (d) must be equal to 
+		zero. The only way to achieve this is to have the forces be collinear.</p>
+		
+		<figure class="center">			
+			<img alt="Forces in a Two Force Member must be collinear" height="325" src="images/couple.png" width="500">
+			<figcaption>In order to have the sum of the moments be equal to 
+			zero, the forces acting on two force members must always be 
+			collinear, acting along the line connecting the two points where 
+			forces are applied</figcaption>
+		</figure>
+		
+		<h2>Why are Two Force Members Important:</h2>
+		
+		<p>By identifying two force members, we greatly reduce the number of 
+		unknowns in our problem. In two force members we know that the forces 
+		must act along the line between the two connection points on the body. 
+		This means that the direction of the force vectors is known on either 
+		side of the body. Additionally, we know the forces are equal and 
+		opposite, so if we determine the magnitude and direction of the force 
+		acting on one side of the body, we automatically know the magnitude and 
+		direction of the force acting on the other side of the body.</p>
+		
+		<figure class="center">
+			<img alt="Forces act through the connection points" height="368" src="images/connectionpoints.png" width="500">
+			<figcaption>The forces in two force members will always act along 
+			the line connecting the two points where forces are applied.</figcaption>
+		</figure>
+		
+		<p>Two force members are also important in distinguishing between 
+		trusses, and frames and machines. When we analyze trusses using either 
+		the method of joints or the method of sections, we will assume 
+		everything is a two force member. If this assumption is incorrect, this 
+		will cause serous problems in the analysis. By making this assumption 
+		though, we can use some shortcuts that will make truss analysis easier 
+		and faster than the analysis of frames and machines.</p>
+	
+	
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/CYdpTogJdKU" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>	
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

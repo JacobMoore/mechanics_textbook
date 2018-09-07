@@ -1,0 +1,277 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Power Screws</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Power Screws</h1>
+				
+		<p>A power screw (also sometimes called a lead screw) is another simple 
+		machine that can be used to create very large forces. The screw can be 
+		thought of as a wedge or a ramp that has been wound around a shaft. By 
+		holding a nut stationary and rotating the shaft, we can have the nut 
+		sliding either up or down the wedge in the shaft. In this way a 
+		relatively small moment on the shaft can cause very large forces on the 
+		nut.</p>
+		
+		<table class="figtable"><tr>
+		<td>
+			<figure>
+				<img alt="Treaded Rod" height="266" src="images/threadedrod.jpg" width="200">
+				<figcaption>The power screw can be thought of as a ramp wrapped 
+				around a shaft.</figcaption>
+			</figure>
+		</td>	
+		<td>
+			<figure>
+			<img alt="Power Screw" height="217" src="images/leadscrew.jpg" width="300">
+			<figcaption>By rotating the shaft, a nut that is kept from rotating 
+			will slide up or down the ramp. This can turn a relatively small 
+			input moment into a huge force moving the nut up or down.</figcaption>
+			</figure>
+		</td>
+		</tr>
+		</table>
+		
+		<h2>Static Analysis of Power Screws:</h2>
+		
+		<p>The easiest way to analyze a power screw system is to turn the 
+		problem into a 2D problem by "unwrapping" the ramp from around the 
+		shaft. To do this we will need two numbers, first we will need the
+		<strong>diameter</strong> of the shaft, and second we will need either 
+		the <strong>threads-per-inch/centimeter</strong> or the <strong>pitch</strong> 
+		of the screw. The threads-per-inch tells you how many threads you have 
+		per inch/centimeter of screw. With a single thread design (most screws) 
+		this will also be the number of times the thread wraps around the screw 
+		in one inch/centimeter. The pitch on the other hand gives you the 
+		distance between two adjacent threads. Either of these numbers can be 
+		used to find the other.</p>
+		
+		<p>Once we have these numbers, we can imagine unwrapping the ramp from 
+		around the screw and ending up with a ramp in one of the two situations 
+		below. In either case, we can use the inverse tangent function to find 
+		the <strong>lead angle</strong>, which can be thought of as the angle of 
+		the thread that the nut is climbing up. Finding the lead angle is the 
+		first step in analyzing a power screw system.</p>
+		
+		<figure class="center">
+			<img alt="The lead angle of a screw" height="259" src="images/leadangle.png" width="500">
+			<figcaption>The lead angle of a screw is the angle of the thread 
+			that the nut will be climbing up as the shaft rotates.</figcaption>
+		</figure>
+		
+		<p>Once we find the lead angle, we can draw a free body diagram of the 
+		"nut" in our unwrapped system. Here we include the pushing force which 
+		is pushing our nut up the incline, the load force which is the force the 
+		nut exerts on some external body, the normal force between the nut and 
+		screw, and the friction force between the nut and the screw.</p>
+		
+		<figure class="center">
+			<img alt="Screw Free Body Diagram" height="280" src="images/screwfbd.png" width="500">			
+			<figcaption>The free body diagram of the "nut" in our power screw 
+			system.</figcaption>
+		</figure>
+		
+		<p>If our screw is pushing a load at some constant rate, then we can 
+		assume two things. First the nut is in equilibrium, so we can write out 
+		the equilibrium equations for the nut. Second the nut is sliding, 
+		indicating that the friction force will be equal to the normal force 
+		times the kinetic coefficient of friction.</p>
+		
+		<figure class="equation">
+			<img alt="Equilibrium Equations" height="205" src="images/eq1.png" width="500">
+		</figure>
+		
+		<p>We can then simplify the equation above into a single equation 
+		relating the load force and the pushing force.</p>
+		
+		<figure class="equation">
+			<img alt="Simplified Equation" src="images/eq2.png">		
+		</figure>
+		
+		<p>In reality the pushing force is not a single force at all. It is the 
+		forces preventing the nut from rotating with the screw. The cumulative 
+		pushing force will really cause an equal and opposite moment to the 
+		input moment that is spinning the shaft.</p>
+
+		<figure class="center">
+			<img alt="The pushing force and the input moment" height="360" src="images/moment.png" width="320">			
+			<figcaption>The pushing force is really just a representation of the 
+			forces keeping the nut from rotating. If the nut is not rotating 
+			then they must cause an equal and opposite moment to the torque that 
+			is driving the screw.</figcaption>
+		</figure>
+		
+		<p>Finally, if we replace the pushing force with the moment that is 
+		driving the screw in our system, we can relate the input torque that is 
+		driving our screw, to the force that the nut on the screw is pressing 
+		forward with. Screw systems are usually designed allow fairly small 
+		input moments to push very large load forces.</p>
+		
+		<figure class="equation">
+			<img alt="Final Equation" src="images/eq3.png">		
+		</figure>
+		
+		<h2>Self Locking Screws</h2>
+		
+		<p>Imagine we apply a torque to a power screw to lift a body, then when 
+		the get the load to the desired height we stop applying that toque to 
+		let the body sit where it is. If we were to redraw our free body diagram 
+		form earlier for the new situation, we would find two things.
+		<ol>
+		<li>The pushing force is missing (since a torque is no longer applied to 
+		the shaft).</li>
+		<li>The friction is now fighting against the nut sliding back down the 
+		ramp.</li>
+		</ol>
+		</p>
+		
+		<figure class="center">
+			<img alt="Self Locking Screw Free Body Diagram" height="324" src="images/selflockingfbd.png" width="418">	
+			<figcaption>Without the pushing force from an applied torque, the 
+			friction force acts to prevent the nut from sliding down the ramp.</figcaption>
+		</figure>
+		
+		<p>With this new free body diagram, there are two possible scenarios 
+		that could occur.</p>
+		
+		<p>
+		<ol>
+		<li>The friction force is large enough to keep the nut from sliding down 
+		the ramp, meaning everything will remain in static equilibrium if 
+		released.</li>
+		<li>The friction force will not be sufficient to keep the nut from 
+		sliding down the ramp, meaning that the load would begin to fall as soon 
+		as the torque is removed from the shaft.</li>
+		</ol>
+		</p>
+		
+		<p>With power screw applications such as a car jack, the second option 
+		could be very dangerous. It is therefore important to know if a power 
+		screw system is self locking (option 1 from above) or not self locking 
+		(option 2 from above).</p>
+		
+		<p>To define the boundary between self locking systems and non-self 
+		locking systems, we use something called the <strong>self locking angle</strong>. 
+		As intuition would tell us, slipping does not occur on very gentle 
+		slopes (small lead angles) while it does occur on very steep slopes 
+		(large lead angles). The angle at which the nut would begin to slip is 
+		known as the self locking angle.</p>
+		
+		<p>To find the self locking angle, we will assume impending motion 
+		(relating the friction force to the normal force) and leave the lead 
+		angle as an unknown. This lets us create the free body diagram as shown 
+		below and gives us the equilibrium equations below.</p>
+		
+		<figure class="center">
+			<img alt="Self Locking Angle in Power Screws" height="397" src="images/lockinganglefbd.png" width="500">	
+			<figcaption>Assuming impending motion, we write out the equilibrium 
+			equations for the nut with the unknown lead angle.</figcaption>
+		</figure>
+		
+		<p>Using the x equilibrium equation as a starting point, we can solve 
+		for theta (eliminating the normal force all together in the process). 
+		This new equation shown below gives us the self locking angle. Systems 
+		with lead angles smaller than this will be self locking, while systems 
+		with lead angles larger than this will not be self locking.</p>
+		
+		<figure class="equation">	
+			<img alt="Power Screw Self Locking Angle Equation" height="81" src="images/selflockingeq.png" width="340">
+		</figure>
+
+			
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/ggqJsQgZHFI" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>The power screw below is being used to lift a platform with a weight of 12 pounds. Based on the information below... </p>
+			<ul>
+			<li>What is the required torque on the shaft to lift the load?</li>
+				<li>Would the load fall if the toque was removed from the shaft?</li>
+			</ul>
+			
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/uB2r3AtxCRs" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/Screws_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>	
+		
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

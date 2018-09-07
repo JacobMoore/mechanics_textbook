@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Particle Kinematics in 2D Rectangular Coordinates</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Two Dimensional Kinematics in Normal-Tangential Coordinate Systems</h1>
+    <p>Two Dimensional Motion (also called Planar Motion) is any motion in which the objects being analyzed stay in a single plane. When analyzing such motion, we must first decide the type of coordinate system we wish to use. The most common options in engineering are rectangular coordinate systems, normal-tangential coordinate systems, and polar coordinate systems. Any planar motion can potentially be described with any of the three systems, though each choice has potential advantages and disadvantages.</p>
+    <p>The <strong>normal-tangential coordinate system</strong> centers on the body in motion. The origin point will be the body itself, meaning that the position of the particle in the n-t coordianate system is always &quot;zero&quot;. The tangential direction (t-direction) is defined as the direction of travel at that moment in time (the direction of the current velocity vector), with the normal direction (n-direction) being 90 degrees counterclockwise from the t-direction. The diagram below shows a particle following a curved path with the current normal and tangential directions.</p>
+    <figure class="center"><img src="images/normal_tangential_diagram.png" width="500" height="325" alt="The normal tangential coordinate system on a moving particle"/>
+      <figcaption>In the normal-tangential coordinate system the particle itself serves as the origin point. The t-direction is the current direction of travel and the n-direction is always 90 degrees counter-clockwise from the t-direction. The u-t and u-n vectors represent unit vecotrs in the t and n directions respectivly.</figcaption>
+    </figure>
+    <p>Normal-tangential coordinate systems work best when we are observing motion from the perspective of the body in motion, such as being a passenger in a car or plane. In such cases, we would define ourself as the origin point and &quot;forward&quot; would be the tangential direction. An important distintion between the rectangular coordinate system and the normal-tangential coordinate system is that the axes are not fixed in the normal-tangential coordinate system. If we go back to the car example, the&quot; forward&quot; or tangential direction will turn with the car, but the &quot;east&quot; direction or the x-direction will remain constant no matter which way the car is pointed.</p>
+    <p>The the way the cooridnate system is defined, the position of the particle is always set to be at the origin point. The velocity is also always set to be in the tangential direction, and thus there is no velocity in the n-direction. The variable &quot;v&quot;is the body's current speed.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[r_{p/o}(t)=0\hat{u}_{t}+0\hat{u}_{n}\]</td>
+        </tr>
+		<tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=v\hat{u}_{t}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>To find the acceleration, we need to take the derivative of the velocity function. This may seem simple, but there is a new thing to consider in that the u<sub>t</sub> unit vector is not constant. The means a change is speed can cause an acceleration or a change in direction (which would cange the ut direction) can cause an acceleration. Going back to our car example this makes some intunitive sense. We can feel accelerations, and we would be able to feel acceleration if we suddenly steped on the gas and increased our speed, but we would also be able to feel the acceleration if we took a tight turn at a constant speed.</p>
+    <p>Going back to the derivative, we will use the product rule, taking the derivative of one piece at a time.</p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[a(t)=\dot{v}\hat{u}_{t}+v\dot{\hat{u}_{t}}\]</td>
+	    </tr>
+	  </tbody>
+    </table>
+    <p>V dot is the rate of change of speed of the body, which is called the tangential acceleration. Going back to our car analaogy this is the acceleration we would experience from pressing the gas or brake pedals.</p>
+    <p>The other piece of our derivative is the speed times the derivative of a unit vector, which we will need to analyze further. When thinking about the derivative of a rotating unit vector, we think about rotating the coordinate system by a small amount d theta. </p>
+	<figure class="center"><img src="images/unit_vector.png" width="414" height="327" alt="The derivative of a roating unit vector"/>
+      <figcaption>The deriviative of a rotating unit vector can be thought of as the change in position of the head of that vector as it rotates about a small angle d theta.</figcaption>
+    </figure>
+    <p>The derivative of the u-t vector is then the change in position of the head of the vector. Using some geometry, we can see that the distance the head of the vector moves is the length of the vector (which is always 1 for a unit vector) times the angle of rotation in radians. The direction the head of the u-t vector travels is roughly the u-n direction. In fact as d theta approaches zero, it becomes exactly the u-n direction. Putting this back into our derivative we wind up with the following equation for acceleration.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[a(t)=\dot{v}\hat{u}_{t}+v\dot{\hat{u}_{t}}=\dot{v}\hat{u}_{t}+v\dot{\Theta}\hat{u}_{n}\]</td>
+	    </tr>
+	  </tbody>
+    </table>
+	<p>Before we arrive at our final set of equations, we have one last potential substitution. If a particle is moving along a curved path, the rate at which it is turning (theta dot) will be equal to the velocity of the particle divided by the radius of the path at that point (v divided by rho). Putting this last substituion in, we have our final set of equations with two equivalent options for calculating the accelerations.</p>   
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[a(t)=\dot{v}\hat{u}_{t}+v\dot{\Theta}\hat{u}_{n}=\dot{v}\hat{u}_{t}+\frac{v^{2}}{\rho}\hat{u}_{t}\]</td>
+	    </tr>
+	  </tbody>
+    </table>
+	  <p>When using these equations it is important to remember that they are acceleration equations. If we want to know the overall of the acceleration we would need to add the two acceleration components <strong>as vectors</strong>. Also if we are given an acceleration that is not in the normal or tangential direction, we will first need to break that acceleration vecotr down into normal and tangential components before using the above equations. Finally, if we want the velocity or acclerlation in directions other than the normal and tangential directions, we will need to use a coordinate transformation.</p>
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>A commerical jetliner is traveling a constant 250 m/s when it executes an emergency 180 degree turn. If the turn takes 20 seconds, what is the acceleration experienced by the passengers? What is the radius of the curve taken by the plane?</p>
+        <img src="images/P1.jpg" width="500" height="376" alt="Problem 1 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  <div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>Assuming a cloverleaf interchange has a radius of curvature of 80 meters at the tightest part of the turn, what is the fastest a car could travel around this curve without experiencing more than 1/2 a g in acceleration? Assume the car is traveling at a constant speed. If the car was instead increasing speed at a rate of 2 m/s<sup>2</sup>, what would be the new overall magnitude of the acceleration experienced by the passengers?</p>
+        <img src="images/P2.jpg" width="500" height="416" alt="Problem 2 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

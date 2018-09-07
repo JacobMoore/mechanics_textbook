@@ -1,0 +1,225 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Cross Product</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Cross Product</h1>
+		
+		<p>The cross product is a mathematical operation that can be performed on any 
+		two, three dimensional vectors. The result of the cross product operation will be a third 
+		vector that is <strong>perpendicular</strong> to both of the original 
+		vectors and has a magnitude of the first vector times the magnitude of 
+		the second vector times the sine of the angle between the vectors.</p>
+		
+		<figure class="center">
+			<img alt="The cross product" height="303" src="images/crossproduct.png" width="480">
+			<figcaption>The <strong>cross product</strong> of two vectors will 
+			be a vector that is perpendicular to both original vectors with a 
+			magnitude of A times B times the sine of the angle between A and B.</figcaption>
+		</figure>
+
+		<p>When finding a cross product you may notice that there are actually 
+		two directions that are perpendicular to both of your original vectors. 
+		These two directions will be in exact opposite directions. To find 
+		which of these two directions the cross product uses, we will use the
+		<strong>right hand rule</strong>. </p>
+		
+		<p>To use the right hand rule, hold out you right hand, point your index 
+		finger in the direction of the first vector, turn your middle finger in 
+		towards the direction of the second vector, and hold your thumb up. Your 
+		thumb should point in the direction of the cross product.</p>
+		
+		<figure class="center">
+			<img alt="Right hand rule and the cross product" src="images/righthand.png">			
+			<figcaption>We can use the right hand rule to determine the 
+			direction of the cross product.</figcaption>
+		</figure>
+
+		<p>You may also notice that if you switch the order of the two vectors 
+		that your cross product points in the opposite direction. This is 
+		because the cross product operation is <strong>not communicative</strong>, 
+		meaning that order does matter.</p>
+		
+		<h2>Calculating the Cross Product</h2>
+						
+		<p>To find the cross product by hand, the easiest method is as follows.</p>
+		
+		<ol>
+		<li>Write out the letters, x y z x y in a row as shown in the diagram 
+		below. </li>
+			<li>Write our the x, y, and z components of the first vector 
+			underneath the corresponding letters of above. Repeat for this for 
+			the second vector, writing out the second vector in a row under the 
+			first vector.</li>
+			<li>Draw in diagonals as shown in the diagram. The diagonals that 
+			travel to the right as they move down represent positive quantities 
+			while the diagonals that travel to the left as they move down 
+			represent negative quantities.</li>
+			<li>Using the letters the diagonals travel through in the top row as 
+			a guide for which component of the result each quantity is part of 
+			take the sum of the positive and negative diagonal products for each 
+			of the three components in the result. This should give you the 
+			final formula shown in the diagram.</li>
+		</ol>
+		
+		<figure class="center">
+			<img alt="Calculating the cross product" height="351" src="images/crossproductmatrix.png" width="584">			
+			<figcaption>We can use the visual aid above to help remember the 
+			formula for the cross product.</figcaption>
+		</figure>
+		
+		<p>In addition to calculating the cross product by hand we can also use 
+		computer tools such as the "cross" command in MATLAB or web based tools 
+		such as the Wolfram Vector Operation calculator linked to in the sidebar 
+		of this page. Access to these tools allows you to very easily and 
+		quickly calculate the cross product and is a major advantage when using 
+		vectors operations to analyze problems.</p>
+
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/CT58B_SfX-0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Calculate the cross product of force vectors A and B in the diagram 
+			below by hand.</p>
+				
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/KQhOkEflq9s" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/CrossProduct_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Calculate the cross product of vectors A and B in the diagram 
+			below by hand.</p>
+				
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/oHLU_q3kVKc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/CrossProduct_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>Calculate the cross product of vectors A and B in the diagram 
+			below using MATLAB.</p>	
+			<img alt="Problem 3 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/a9w6GWQJ96A" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 4:</h3>
+			<p>Calculate the cross product of vectors A and B in the diagram 
+			below using the Wolfram Vector Operation Calculator.</p>	
+			<img alt="Problem 4 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/24JCFHWWGG4" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+		</div>
+		</div>
+		
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

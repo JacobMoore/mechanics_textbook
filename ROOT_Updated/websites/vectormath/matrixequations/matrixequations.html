@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Matrix Equations</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Solving Systems of Equations with Matrices</h1>
+		
+		<p>A <strong>system</strong> of equations, is any set of equations that 
+		share some variables such as the set of three equations shown below. </p>
+		
+		<figure class="center">
+			<img alt="A system of linear equations" height="163" src="images/system.png" width="350">
+			<figcaption>The set of equations above is an example of a system of 
+			linear equations.</figcaption>
+		</figure>
+		
+		<p>In courses such as statics and dynamics we will often end up with a 
+		system of linear equations and be asked to solve for the unknowns in those 
+		equations. When we have just a few equations in our system, this can 
+		easily be done with algebraic methods such as substitution or 
+		elimination though addition or subtraction. For larger systems of 
+		equations however, the easiest way to solve for the unknowns is to 
+		convert the system of equations into a single matrix equation, and then 
+		use computer tools to solve the matrix equation.</p>
+		
+		<p>This method will only work with systems of <strong>linear equations</strong>. 
+		This means that we can only multiply the variables in the equations by a 
+		constant. We cannot do things such as raise the variables to a power, have the variables 
+		as an exponent, take the log of the variables, or multiply variables 
+		together. Any of these operations would make the system of equations 
+		non-linear, and will prevent us from converting them to a matrix 
+		equation.</p>
+		
+		<p>Additionally, to have a solvable matrix equation we will need have 
+		the <strong>same number of equations as unknown variables</strong>. For 
+		example, above we have a system of equations with three equations and 
+		three unknown variables. If these numbers do not match we will not be 
+		able to solve the matrix equation later on.</p>
+		
+		<h2>Converting a System of Equations to a Matrix Equation:</h2>
+		
+		<p>The first step in converting a system of equations into a matrix 
+		equation is to rearrange the equations into a consistent format. 
+		Generally we will put all the variables with their coefficients on one 
+		side of the equation and the constants on the other side of the 
+		equation. Additionally, it is best to list the variables in the same 
+		order in each equation. This process of rearranging the equations will 
+		make conversion later on easier.</p>
+		
+		<figure class="center">
+			<img alt="The matrix conversion process" height="225" src="images/matrixconversion.png" width="600">
+			<figcaption>To convert a system of equations into single matrix 
+			equation, we will first rearrange the equations for a consistent 
+			order, then we will write out the coefficient (A), variable (X), and 
+			constant (B) matrices.</figcaption>
+		</figure>
+		
+		<p>Next we will begin the process of writing out the three matrices that 
+		make up the matrix equation. These three matrices are the coefficient 
+		matrix (often referred to as the A matrix), the variable matrix (often 
+		referred to as the X matrix), and the constant matrix (often referred to 
+		as the B matrix).</p>
+		
+		<ul>
+		<li>The <strong>coefficient matrix</strong> (or A matrix) is an N x N matrix (where N is 
+		the number of equations / number of unknown variables) that contains all 
+		the coefficients for the variables. Each row of the matrix represents a single equation 
+		while each column represents a single variable (it is sometimes helpful 
+		to write the variable at the top of each column). For instances where a 
+		variable does not show up in an equation, we assume a coefficient of 0.</li>
+		<li>The <strong>variable matrix</strong> (or X matrix) is a 1 x N matrix 
+		that contains all the unknown variables. It is important that the order 
+		of the variables in the coefficient matrix matches the order of the 
+		variables in the variable matrix.</li>
+		<li>Finally, on the other side of the equals sign we have the <strong>
+		constant matrix</strong> (or B matrix). This is a N x 1 matrix 
+		containing all the constants from the right sides of the equations. It 
+		is important that the order of the constants matches the order of 
+		equations in the coefficient matrix.</li>
+		</ul>
+		
+		<p>Once we have the three matrices set up we are ready to solve for the 
+		unknowns in the variable matrix.</p>
+		
+		<h2>Solving the Matrix Equation:</h2>
+		
+		<p>Starting with our A, X, and B matrices in the matrix equation below, 
+		we are looking to solve for for values of the unknown variables that are 
+		contained in our X matrix.</p>
+		
+		<figure class="equation">
+			<img alt="The matrix equation" height="79" src="images/matrixequation.png" width="233">
+		</figure>
+
+		<p>For a scalar equation, we would simply do this by dividing both sides 
+		by A, where the value for X would be B/A. With matrix equation we will 
+		instead need to multiple both sides of the equation by the inverse of 
+		the A matrix. This will cancel out the A matrix on the left side, 
+		leaving only the X matrix that you are looking for. This means that 
+		multiplying the inverse of the A matrix times the B matrix will give you 
+		a 1 x N matrix containing the solution for all the variables. The value 
+		each row of the solution will correspond to the variable listed in the 
+		same row of the X matrix.</p>
+		
+		<figure class="equation">	
+			<img alt="Solving the matrix equation" height="166" src="images/solvingmatrixequation.png" width="357">
+		</figure>
+
+		
+		<p>It is possible to find the inverse of the A matrix by hand and to 
+		multiply this by hand with the B matrix, but using computer tools such 
+		as MATLAB or the Matrix Equation Solver in the panel on the left will 
+		make these calculations far easier.</p>
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/8uAWCyv8Y8k" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>The equilibrium equations for the body shown below are listed on 
+			the right. Convert the system of equations into a single matrix 
+			equation and solve for the unknowns.</p>
+				
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/QX-hJhXTEe0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MatrixEquations_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

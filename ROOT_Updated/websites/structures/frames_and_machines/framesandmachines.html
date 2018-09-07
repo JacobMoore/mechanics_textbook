@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Frames and Machines</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Frames and Machines</h1>
+		
+		<p>A <strong>frame</strong> or a <strong>machine</strong> is an 
+		engineering structure that that contains at least one member that is not 
+		a two force member.</p>
+		
+		<table class="figtable">
+		<tr>
+		<td>	
+			<figure>
+				<img alt="Not a two force member" height="164" src="images/nottwoforce1.png" width="250">
+				<figcaption>This beam is connected to other members (where 
+				normal forces would exist) at more than two locations. This beam 
+				is therefor not a two force member.</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img alt="Not a two force member" src="images/nottwoforce2.png">				
+				<figcaption>This beam has two connection points, but a force is 
+				acting on a third point. Therefore the beam has forces acting on 
+				it at more than two locations and it is not a two force member.</figcaption>
+			</figure>
+		</td>
+		</tr>
+		</table>
+		
+		
+		<p>A frame is a rigid structure, while a machine is not 
+		rigid. This means that no part can move relative to the other parts in a 
+		frame, while parts can move relative to one another in a machine. Though 
+		there is a difference in vocabulary in describing frames and machines, 
+		they are grouped together here because we use the same process to 
+		analyze both of these structures. </p>
+						
+		<table class="figtable">
+		<tr>
+		<td>	
+			<figure>
+				<img alt="Stool Licensed under Creative Commons Attribution-Share Alike 2.5 via Wikimedia Commons" height="266" src="images/stool.jpg" 				width="200">
+				<figcaption>This stool contains non-two force members (the legs) 
+				and no part can move relative to the other parts (it is rigid). 
+				Therefore this is a frame.</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img alt="Locking Pliers Licensed under Creative Commons Attribution-Share Alike 3.0 via Wikimedia Commons" height="220" 							src="images/lockingpliers.jpg" width="300">
+				<figcaption>This pair of locking pliers contains non-two force 
+				members and has parts that can move relative to one another (it 
+				is not rigid). Therefore this is a machine</figcaption>
+			</figure>
+		</td>
+		</tr>
+		</table>
+		
+		<h2>Analyzing Frames and Machines</h2>
+		
+		<p>When we talk about analyzing frames or machines, we are usually 
+		looking to identify both the external forces acting on the structure and 
+		the internal forces acting between members within the structure.</p>
+		
+		<p>The method we use to analyze frames and machines (no special name 
+		here) centers around the process of breaking the structure down into 
+		individual components and analyzing each component as a rigid body. 
+		Where the components are connected, Newton's Third Law states that each 
+		body will exert an equal and opposite force on the other body. Each 
+		component will be analyzed as an independent rigid body leading to 
+		equilibrium equations for each component, but because of Newton's Third 
+		Law, some unknowns may show up acting on two bodies.</p>
+					
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/jG2qm1XkH-U" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>	
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

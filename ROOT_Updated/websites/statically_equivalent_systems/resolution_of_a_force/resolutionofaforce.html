@@ -1,0 +1,178 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Resolution of a Force into a Force and a Couple</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Resolution of a Force into a Force and a Couple</h1>
+						
+		<p>As discussed on the moments page, a force can have a tendency to 
+		cause both a linear and angular acceleration. For example, below is diagram of a force acting on an extended body. 
+		If we were to think about the everything relative to the center of mass 
+		of this body, there would be some force acting on the center of mass 
+		that would cause the same linear acceleration and some pure moment 
+		(couple) that would cause the same angular acceleration. This would be a 
+		force and couple that is <strong>statically equivalent</strong> to the 
+		original force, though the point of application of the force changes.</p>
+		
+		<figure class="center">
+			<img alt="A force and an equivalent force and couple" height="296" src="images/equivalentforcecouple.png" width="400">
+			<figcaption>The original force acting at A would cause both linear 
+			and angular acceleration. The force at B would cause the same linear 
+			acceleration and the moment at B would cause the same angular 
+			acceleration. The force and the moment at B are statically 
+			equivalent to the original force at A.</figcaption>
+		</figure>
+		
+		<p>The process of transforming one force applied at one point, into a 
+		force and a couple at some other point is known as <strong>resolving a 
+		force into a force and a couple</strong>. There are a few reasons that 
+		we may want to do this, but one primary reason is to find the <strong>
+		equivalent force couple system</strong> for a complex set of forces and 
+		moments. The equivalent force couple system is used to simplify more 
+		complex analysis, and consists of a single force and a single pure 
+		moment (couple) that are statically equivalent to some more complex 
+		combination of forces and moments. An important first step in finding 
+		the equivalent force couple system is to resolve all the forces so that 
+		everything is acting at the same point.</p>
+		
+		<p>In order to visualize the process of resolving a force into a force 
+		and a couple, you can use the process outlined in the diagram below. 
+		Imagine we have a body with a force acting at some point A. We want to 
+		resolve the force into a force and a couple about some other point B. To 
+		do this we will first add two forces to the diagram at point B. One will 
+		have the same magnitude and direction as the original force and the 
+		other will be equal and opposite to the original force. Because these 
+		two forces are equal, opposite, and collinear, this will not change the 
+		situation (it's the equivalent to adding zero to an equation). Now, with 
+		these three forces acting on the diagram, we can break it down into two 
+		sets. The first is a force acting at point B with the same magnitude and 
+		direction as the original force. The other two forces act as a couple, 
+		exerting a pure moment about point B. Finally, we can redraw the system 
+		as a force acting at point B and the pure moment acting about point B.</p>
+		
+		<figure class="center">
+			<img alt="The resolution process" height="560" src="images/resolutionprocess.png" width="500">
+			<figcaption>The process of resolving a force about some point A into 
+			a force and a couple about some point B.</figcaption>
+		</figure>
+		
+		<p>As a shortcut to the process described above, we can also see that 
+		the force in the equivalent force couple system will always have a 
+		magnitude and direction equal to the original force and the couple will 
+		be equal to the moment exerted by the original force about the new point 
+		of application.</p>
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/dxk2RZR4NG4" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Resolve the force shown below to a force and a couple acting at 
+			point A.</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/Wfl3S_5FD0Q" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/ResolutionOfAForce_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Resolve the force shown below to a force and a couple acting at 
+			point A.</p>
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/1hRrKhWzf98" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/ResolutionOfAForce_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

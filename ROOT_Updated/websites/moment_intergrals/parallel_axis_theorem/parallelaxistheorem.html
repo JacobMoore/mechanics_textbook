@@ -1,0 +1,272 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Parallel Axis Theorem</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Composite Parts for Moments of Inertia and the Parallel Axis Theorem</h1>
+				
+		<p>As an alternative to integration, both area and mass moments of 
+		inertia can be calculated by breaking down a complex shape into simple, 
+		common parts, looking up the moments of inertia for these parts in a table, 
+		adjusting the moments of inertia for position, and adding them together to find the overall moment of 
+		inertia. This method is known as the <strong>method of composite parts</strong>.</p>
+		<p>A key part to this process that was not present in centroid 
+		calculations is the adjustment for position. Moments of inertia for the 
+		parts of the body can only be added if they all have the same axis of 
+		rotation. The moments of inertia are in the table are generally listed 
+		relative to that shape's centroid though. Since each part has it's own 
+		individual centroid coordinate, we cannot simply add these numbers up. 
+		We will use something called the <strong>Parallel Axis Theorem</strong> 
+		to adjust the moments of inertia so that they are all taken about some 
+		standard point. Once the moments of inertia are adjusted with the 
+		Parallel Axis Theorem, then we can add them together using the method of 
+		composite parts.</p>
+								
+		<h2>The Parallel Axis Theorem</h2>
+		
+		<p>When we calculated the area and mass moments of inertia via 
+		integration, one of the first things we had to do was to select a point 
+		or axis we were going to take the moment of inertia about. We then 
+		measured all distances from that point or axis, where the distances were 
+		the moment arms in our moment integrals. If we pick a different point or 
+		axis to serve as the center all of these distances will be different, 
+		which means that we will get a different moment of inertia.</p>
+		
+		<figure class="center">
+			<img height="241" src="images/axisselection.png" width="500">
+			<figcaption>The distances used in our moment integrals depends on 
+			the point or axis chosen.</figcaption>
+		</figure>	
+		
+		<p>For the instance on the right however, each of these distance vectors 
+		can be broken down into a vector from the origin to the centroid, and 
+		then a vector out from the centroid to all the points in the shape. 
+		Similarly, we can find the overall moment of inertia by adding two sets 
+		of moment integrals. The first moment integral will add up all the 
+		distance vectors from the origin to the centroid (This will be like a 
+		point mass on a massless stick, so we get a mass times distance squared 
+		term), the second will be the moment integral about the centroid (which 
+		is what is listed in the tables). By adding these two terms together we 
+		can find the moment of inertia about the given origin point.</p>
+		
+		<figure class="center">
+			<img alt="Parallel Axis Theorem" height="499" src="images/parallelaxistherorem.png" width="500">
+			<figcaption>The Parallel Axis Theorem states that a bodies moment of 
+			inertia about any given axis is the moment of inertia about the 
+			centroid plus the mass of the body times the distance between the 
+			point and the centroid squared.</figcaption>
+		</figure>		
+
+		<p>This works for both mass and area moments of inertia as well as for 
+		both rectangular and polar moments of inertia. Above the mass moment of 
+		inertia is listed, but if we substitute in areas instead of masses we 
+		can use it for area moments of inertia. </p>
+		
+		<figure class="center">
+			<img alt="Parellel Axis Theorem" height="371" src="images/massorarea.png" width="323">
+			<figcaption>For mass moments of inertia we will use the mass of the 
+			body and for area moments of inertia we will use the area of the 
+			shape.</figcaption>
+		</figure>
+		
+		<p>For rectangular area moments of inertia and for 3D mass moments of 
+		inertia the distances in the equation will be the distance between the 
+		axis or rotation and the centroid while for 2D polar moments of inertia 
+		we will measure the distances from the point of rotation to the 
+		centroid.</p>
+		
+		<figure class="center">
+			<img alt="Parallel Axis Theorem" height="289" src="images/rectangualrorpolar.png" width="600">
+			<figcaption></figcaption>
+		</figure>
+
+		
+		<p>With these equations we can see that the moment of inertia of a body 
+		is always lowest about it's centroid (where d = 0), and that the further 
+		we move away from the centroid the larger the moment of inertia will 
+		become.</p>
+		
+		<h2>Using the Method of Composite Parts to Find the Moment of Inertia</h2>
+		
+		<p>To find the moment of inertia of a body using the method of composite 
+		parts, we must go the following steps.</p>
+		
+		<ol>
+			<li>First, we need to break the complex shape down into simple shapes. 
+			These should be shapes that have moments of inertia listed in moment of 
+			inertia tables.</li>
+			<li>For each of the individual shapes we will want to identify the 
+			area or mass (where holes or cavities count as negative areas or 
+			masses), the coordinates of the centroid, and the shape's 
+			moment of inertia about it's centroid. It is often useful to list these values in a table in order to 
+			more easily keep track of the values.</li>
+			<li>Next we will want to identify the common point we will take the 
+			overall moment of inertia about. Sometimes this will be given to us 
+			and other times it will need to be calculated (it is often the 
+			centroid of the overall shape, in which case you use the method of 
+			composite parts to calculate that).</li>
+			<li>Once you have identified the point you are taking the moment of 
+			inertia about, you will need to measure the distances between this 
+			point and the centroids of each shape (the way you measure these 
+			distances will depend on the type of moment or inertia, see the 
+			figure above for details). Add these distances to your table as the 
+			d values.</li>
+			<li>Next use the distances and the area or mass to calculate the 
+			correction for your moments of inertia (m d squared or A d squared). 
+			Add these corrections to your the moments of inertia about the 
+			centroids to get the corrected moments of inertia.</li>
+			<li>Add the corrected moments of inertia to find the total moment of 
+			inertia for the combined shape.</li>
+		</ol>
+		
+		<p>The diagram below shows a shape that has been broken down and the 
+		table used to calculate the overall moment of inertia.</p>		
+		
+		<figure class="center">
+			<img alt="Moment of Interia Table" height="392" src="images/momentofinertiatable.png" width="600">
+			<figcaption>It is easiest to list areas, centroid coordinates, 
+			moments of inertia, distance corrections, and corrected moments of 
+			inertia in a table. The overall moments of will be the sums of the 
+			corrected moment of inertia columns.&nbsp; </figcaption>
+		</figure>
+	
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/OXRxC5_awJM" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Use the parallel axis theorem to find the mass moment of inertia 
+			of this slender rod with mass m and length L about the z axis at 
+			it's end point.</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/4oN0kgDO3Yw" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/ParallelAxis_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>A beam is made by connecting two 2" x 4" beams in a T pattern 
+			with the cross section as shown below. Determine the location of the 
+			centroid of this combined cross section and then find the 
+			rectangular area moment of inertia about the x axis through the 
+			centroid point.</p>	
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/lgXlp2lRaiA" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/ParallelAxis_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>A dumbbell consists of two .2 meter diameter spheres, each with a 
+			mass of 40 kg spheres attached to the ends of a .6 meter long, 20 kg 
+			slender rod. Determine the mass moment of inertia of the dumbbell 
+			about the y axis shown in the diagram.</p>	
+			<img alt="Problem 3 Diagram" src="images/P3.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/ufewJ7CmvIs" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/ParallelAxis_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

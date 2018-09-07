@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Hydrostatic Pressure on a Flat Surface</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<script type="text/javascript"
+  src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+
+<div id="maincontent">
+
+<hr/>
+<h1>Hydrostatic Pressure on a Flat Surface</h1>
+<hr/>
+
+<p>If a liquid is in contact with flat surface, it will exert a pressure on that surface.  As discussed on the Hydrostatic Pressure page, this pressure will have a magnitude of /( \rho g h/), and will act in a direction normal to the surface it is in contact with.</p>
+
+<p>In the diagram below we have water up against a flat surface (a dam in this case).  The hydrostatic pressure of the water exerts a distributed force on the surface of the dam.  For analysis it is often useful to convert this distributed force into it's <b>equivalent point load</b>.</p>
+
+<div class="piccenter">
+<img src="hydrostaticflatpics/dig1.png" width="522" height="327" alt="Hydrostatic pressure on a flat surface (a dam)"/>
+<div class="caption">The water pressing up against this dam is an example of a hydrostatic pressure on a flat surface.</div>
+</div>
+
+<h4>Finding the Equivalent Point Load Using Integration:</h4>
+
+<p>In order to convert the distributed load into its equivalent point load, we will need to find the magnitude of the of the equivalent point load (\(\mathrm{F_{eq}}\)) and the point of application (\(\mathrm{x_{eq}}\) and \(\mathrm{y_{eq}}\)) of the equivalent point load.</p>
+
+\[ \mathrm{
+	F_{eq} = \int F(x, y) * dA
+}\]
+
+<p>Since we know that the force doesn't vary with y (since the depth doesn't change along the y axis) and if there is a constant width in the y direction (w), we can simplify the formula to...</p>
+
+\[ \mathrm{
+	F_{eq} = w*\int F(x) * dx
+}\]
+
+<p>Next we substitute in the fact that we know that P equals \( \mathrm{\rho g h}\)...</p>
+
+\[ \mathrm{
+	F_{eq} = w*\int \rho g h * dx
+}\]
+
+<p>and we substitute in \( \mathrm{x*cos(\theta)}\) for h in order to get F(x) in terms of x...</p>
+
+\[ \mathrm{
+	F_{eq} = w*\int \rho g cos(\theta) * x * dx
+}\]
+
+<p>Now we bring all of the constants outside of the integral, and we are left with...</p>
+
+\[ \mathrm{
+	F_{eq} = w \rho g cos(\theta)\int x * dx
+}\]
+
+<p>Note that the above equation only works if the flat surface has a constant width (w).</p>
+
+<p>For a rectangular plate such as this one, we can assume that the force will act along the center of the surface in the y direction, or \(\mathrm{y_{eq}}\) will be equal to w/2.</p>
+
+<p>It is more complicated however to calculate \(\mathrm{x_{eq}}\), since the pressure varies with x.</p>
+
+<p>Again taken from the Equivalent Point Load (Distributed) page, we get the formula below for \(\mathrm{x_{eq}}\).</p>
+
+\[ \mathrm{
+	x_{eq} = \frac{\int\left( x *F(x, y) * dA\right)}{F_{eq}}
+}\]
+
+<p>Again, the above formula only works if the flat surface has a constant width in the y direction.</p>
+
+<p>Since y does not vary, and since pressure does not vary along the y direction, we can move w outside of the integral.</p>
+
+\[ \mathrm{
+	x_{eq} = \frac{w*\int\left( x *F(x) * dx\right)}{F_{eq}}
+}\]
+
+<p>Next we substitute in the fact that we know that P equals \( \mathrm{\rho g h}\) and we substitute in \( \mathrm{x*cos(\theta)}\) for h in order to get F(x) in terms of x...</p>
+
+\[ \mathrm{
+	x_{eq} = \frac{w*\int\left( x *\rho g cos(\theta)* x * dx\right)}{F_{eq}}
+}\]
+
+<p>and finally we move all of the constants outside of the integral and we are left with...</p>
+
+\[ \mathrm{
+	x_{eq} = \frac{w\rho g cos(\theta)}{F_{eq}}* \int\left( x^2 * dx\right)
+}\]
+
+<p>Again, the above formula only works if the flat surface has a constant width in the y direction.</p>
+
+<h4>Finding the Equivalent Point Load Using Volume and Center of Mass:</h4>
+
+<p>A shortcut to finding \(\mathrm{F_{eq}}\) , \(\mathrm{x_{eq}}\) and \(\mathrm{y_{eq}}\) is to create a volume with the base of equal to the flat surface the pressure is acting on, and a height equal to the magnitude of the pressure.  If we use the example of a dam above, this volume will be a rectangular prism as shown below.  The rectangle in the xy plane is the flat surface of the dam, and the pressure increases as the depth increases.</p>
+
+<div class="piccenter">
+<img src="hydrostaticflatpics/dig2.png" width="535" height="384" alt="Hydrostatic pressure on a flat surface (a dam)"/>
+<div class="caption">The volume defined by the flat surface as its base (x and y) and the magnitude of the pressure as its height (z).</div>
+</div>
+
+<p>The magnitude of the equivalent point load (\(\mathrm{F_{eq}}\)) will be equal to the volume of this figure.  It is also true that the equivalent point load will act through the center of mass of this volume (assuming it has a uniform density).  Knowing that the equivalent point load acts normal to the surface it is acting on, we can use this to find \(\mathrm{x_{eq}}\) and \(\mathrm{y_{eq}}\) for the equivalent point load.</p>
+
+<p>This method will only work for hydrostatic pressures working on flat surfaces, but the volumes and centers of masses of many solid are easy to look up in tables or on the internet and it will save you the trouble of solving integrals.</p>
+
+<hr/>
+
+<h3>Worked Problems</h3>
+
+<h4>Worked Problem 1:</h4>
+
+<p>A half a meter of water has built up against a water tight door at a costal research station.  Knowing that the door opens outwards (against the water), what force will need to be applied at the doorknob to open the door?</p>
+
+<div class="piccenter">
+<img src="hydrostaticflatpics/probdig1.png" width="557" height="488" alt="The Problem Diagram"/>
+</div>
+
+<br/><br/>
+
+<table width="900px" align="center">
+<colgroup width="600px"></colgroup>
+<colgroup width="300px"></colgroup>
+	<tr>
+		<td>
+		<b>Work</b>
+		</td>
+		<td>
+		<b>Comments</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = w \rho g cos(\theta)\int x * dx
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		The first step here is to convert the hydrostatic force into an equivalent point load.  Then the second step is to use the equations of static equilibrium to solve for the force needed to open the door.  The water is pressing against a flat plate with a uniform width, so we can use the integral equation shown on the left to solve for the magnitude of the equivalent point load.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = (1m)*(1000\frac{kg}{m^3})*(9.81\frac{N}{kg}) \int_0^.5 x * dx
+			}\]
+			<div class="piccenter">
+			<img src="hydrostaticflatpics/P1_1.png" width="142" height="124" alt="The x direction"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		Since the angle from vertical for the door is 0 degrees, cos(\(\mathrm{\theta}\)) turns into 1.  Next we plug in values for the width of the door, the density of water and constant g.  Finally we choose a direction x, which we set to be zero at the water's surface and increase as we go down.  We will be integrating between zero (the surface of the water) and .5 (the bottom of the door).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = (9810 \frac{N}{m^2}) \bigg|_0^.5 x^2
+			}\]
+			\[ \mathrm{
+				F_{eq} = (9810 \frac{N}{m^2})*((.5m)^2-(0m)^2)
+			}\]
+			\[ \mathrm{
+				F_{eq} = (9810 \frac{N}{m^2})*(.25m^2)
+			}\]
+			\[ \mathrm{
+				F_{eq} = 2452.5N
+			}\]
+		</td>
+		<td>
+		Then we simply solve the equation for the value of \(\mathrm{F_{eq}}\).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+			<img src="hydrostaticflatpics/P1_2.png" width="521" height="322" alt="Free body diagram of door"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		In this step we drew out the free body diagram of the door.  We treat it like a 2D problem, looking down on the top of the door.  We have assumed that the equivalent point load is acting in the center of the door, since pressure is uniform along the Y axis.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				\sum{M_A} = 0 = (2452.5 \text{ N}* .5 \text{ m}) - (F_C \text{ N} * .9 \text{ m}) 
+			}\]
+		</td>
+		<td>
+		If we write out the moment equation about point A, we find we are left with only one unknown, \(\mathrm{F_C}\) (the force on the doorknob we are looking to find).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_C = \frac{2452.5*.5}{.9}
+			}\]
+			\[ \mathrm{
+				F_C = 1363 \text{ N}
+			}\]
+		</td>
+		<td>
+		We solve this equation and arrive at the solution we were looking for.<br/><br/>
+		</td>
+	</tr>
+</table>
+
+<h4>Worked Problem 2:</h4>
+
+<p>A window for an underwater observation deck is shown.  Knowing the window is 3 meters wide, determine the equivalent point load for the hydrostatic pressure acting on the window (both magnitude and point of application).</p>
+
+<div class="piccenter">
+<img src="hydrostaticflatpics/probdig2.png" width="552" height="443" alt="The Problem Diagram"/>
+</div>
+
+<br/><br/>
+
+<table width="900px" align="center">
+<colgroup width="600px"></colgroup>
+<colgroup width="300px"></colgroup>
+	<tr>
+		<td>
+		<b>Work</b>
+		</td>
+		<td>
+		<b>Comments</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+			<img src="hydrostaticflatpics/P2_1.png" width="550" height="394" alt="The volume of the base and pressure"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		Since the window is a flat surface, we can use volume and center of mass approach to solve for the equivalent point load.  The first step is to draw out the volume represented by the flat surface as the base and the pressure as the height.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = V = (98100 \frac{N}{m^2} * 2.31m * 3m) + (.5 * 19620\frac{N}{m^2} * 2.31m * 3m)
+			}\]
+			\[ \mathrm{
+				F_{eq} = 747816.3 \text{ N}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		Next, to find \(\mathrm{F_{eq}}\), we find the volume of this shape.  The volume here is simply a rectangular prism and a triangular prism connected together.  We solve for the volume and find \(\mathrm{F_{eq}}\).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				y_{eq} = 1.5 \text{ m}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		For the y position of the center of mass, we can see that the figure is uniform along the y axis and therefore the center of mass will act in the middle of the volume along the y axis.  This means that \(\mathrm{y_{eq}}\) is 1.5 meters.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+			<img src="hydrostaticflatpics/P2_2.png" width="403" height="396" alt="Composite bodies"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		To solve for the x position of the center of mass, we use composite parts.  We break the figure down into the rectangular prism and the triangular prism as shown in the drawing on the left.  Next we identify the volume and center of mass of each.  <br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				x_{eq} = \overline{X} = \frac{\sum{(V\overline{x}})}{\sum{V}}
+			}\]
+			\[ \mathrm{
+				x_{eq} = \frac{(741018*1.16)+(67083.3*1.52)}{747816.3}
+			}\]
+			\[ \mathrm{
+				x_{eq} = 1.29 \text{ m}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		In this step we write out the equation to solve for the center of mass of the composite body.  Then we solve for the x position of the center of mass, and we know that this is \(\mathrm{x_{eq}}\) for the equivalent point load.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+			<img src="hydrostaticflatpics/P2_3.png" width="421" height="397" alt="Solution"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		Finally, we draw in the final solution on the original diagram.<br/><br/>
+		</td>
+	</tr>
+</table>
+
+<hr/ style="clear:both">
+
+<div class="piccenter">
+<table width="400px" align="center">
+<tr>
+<td><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br/></td>
+</tr>
+<tr>
+<td>Author: <a href="http://filebox.vt.edu/users/moorej7/">Jacob Moore</a> has liscenced this work under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>

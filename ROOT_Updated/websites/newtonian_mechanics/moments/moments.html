@@ -1,0 +1,187 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Moments</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Moments</h1>
+						
+		<p>A <strong>moment</strong> (also sometimes called a torque) is defined as the "tendency of a force to rotate a body". 
+		Where forces cause linear accelerations, moments cause <strong>angular 
+		accelerations</strong>. In this way moments, can be thought of as twisting 
+		forces.</p>
+		
+		<figure class="center">	
+			<img alt="The tendancy of a force to rotate a body" height="273" src="images/momentrotation.png" width="600">
+			<figcaption>Imagine two boxes on an icy surface. The force on box A 
+			would simply cause the box to begin accelerating, but the force on 
+			box B would cause the box to both accelerate and to begin to rotate. 
+			The force on box B is exerting a moment, where the force on box A is 
+			not.</figcaption>
+		</figure>
+		
+		<h2>The Vector Representation of a Moment:</h2>
+		
+		<p>Moments, like forces, can be represented as vectors and have a 
+		magnitude, a direction, and a "point of application". For moments 
+		however a better name for the point of application is the <strong>axis 
+		of rotation</strong>. This will be the point or axis about which we will 
+		determine all the moments. </p>
+				
+		<h3>Magnitude:</h3>
+		
+		<p>The magnitude of a moment is the degree to which the moment will 
+		cause angular acceleration in the body it is acting on. It is 
+		represented by a scalar (a single number). The magnitude of the moment 
+		can be thought of as the strength of the twisting force exerted on the 
+		body. When a moment is represented as a vector, the magnitude of the 
+		moment is usually explicitly labeled. though the length of the moment 
+		vector also often corresponds to the relative magnitude of the moment.</p>
+		<p>The magnitude of the moment is measured in units of force times 
+		distance. The standard metric units for the magnitude of moments are 
+		newton meters, and the standard English units for a moment are foot 
+		pounds.</p>
+		
+		<figure class="equation">
+			<img alt="Units for Moments" src="images/units.png">
+		</figure>	
+				
+		<h3>Direction:</h3>
+		
+		<p>In a two dimensional problem, the the direction of can be thought of 
+		as a scalar quantity corresponding to the direction of rotation the 
+		moment would cause. A moment that would cause a counter-clockwise 
+		rotation is a positive moment and a moment that would cause a clockwise 
+		rotation is a negative moment.</p>
+		
+		<figure class="right">	
+			<img alt="The Right Hand Rule" height="249" src="images/rhr.png" width="300">
+			<figcaption>To use the right hand rule, align your right hand as 
+			shown so that your thumb lines up with the axis of rotation for the 
+			moment and your curled fingers point in the direction of 
+			rotation for your moment. If you do this, your thumb will be 
+			pointing in the direction of the moment vector.</figcaption>
+		</figure>
+		
+		<p>In a three dimensional problem however, a body can rotate about an 
+		axis in any direction. If this is the case we need a vector to represent 
+		the direction of the moment. The direction of the moment vector will 
+		line up with the axis of rotation that moment would cause, but to 
+		determine which of the two directions we can use along that axis we have 
+		available we use the right hand rule. To use the right hand rule, align 
+		your right hand as shown so that your thumb lines up with the axis of 
+		rotation for the moment and your curled fingers point in the direction of 
+		rotation for your moment. If you do this, your thumb will be 
+		pointing in the direction of the moment vector.</p>
+		
+		<p>If we look back to two dimensional problems, all rotations occur 
+		about an axis pointing directly into or out of the page (the z axis). 
+		Using the right hand rule, counter-clockwise rotations are represented 
+		by a vector in the positive z direction and clockwise rotations are 
+		represented by a vector in the negative z direction.</p>
+		
+		<h3>Axis of Rotation:</h3>
+		
+		<p>In engineering statics problems we can choose any point/axis as the 
+		axis of rotation. The choice of this point will affect the magnitude and 
+		direction of the resulting moment however, and the moment is only valid 
+		about that point.</p>
+		
+		<figure class="center">	
+			<img alt="The magnitude and direction of a moment depends upon the chosen axis of rotation" height="192" src="images/momentpoint.png" width="450">
+			<figcaption>The magnitude and direction of a moment depends upon the 
+			chosen axis of rotation. For example, the single force above would 
+			cause diffrent moments about Point A and Point B, because it would 
+			cause different rotations depending on the point we fix in place.</figcaption>
+		</figure>
+		
+		<p>Though we can take the moment about any point in a statics problem, 
+		if we are <strong>adding</strong> together the moments from multiple 
+		forces, all the moments must be taken about a <strong>common axis of 
+		rotation</strong>. Moments taken about different points cannot be added 
+		together to find a 'net moment'</p>
+		
+		<p>Additionally, if we move into the subject of dynamics, where bodies 
+		are moving, we will want to relate moments to angular accelerations. For 
+		this to work, we will need to take the moments either about a single 
+		point that does not move (such as the hinge on a door) or we will need 
+		to take the moments about the center of mass of the body. Summing 
+		moments about other axes of rotation will not result in valid 
+		calculations.</p>
+		
+		<h2>Calculating Moments:</h2>
+		
+		<p>To calculate the moment that a force exerts on a body, we will have 
+		two main options: <strong>scalar methods</strong> and <strong>vector 
+		methods</strong>. Scalar methods are generally faster for two 
+		dimensional problems where a body can only rotate clockwise or 
+		counter-clockwise, while vector methods are generally faster for three 
+		dimensional problems where the axis of rotation is more complex.</p>
+
+		
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/bQE4idPhdXY" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

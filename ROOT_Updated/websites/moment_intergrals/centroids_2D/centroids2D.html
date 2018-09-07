@@ -1,0 +1,250 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - The Centroid in 2D via the First Moment Integral</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Centroids in 2D via the First Moment Integral</h1>
+				
+		<p>The <strong>centroid</strong> of an area can be thought of as the 
+		geometric center of that area. It is the average position (x and y 
+		coordinate) of all the points in in 
+		the area. If an area was represented as a thin, uniform plate, 
+		then the centroid would be the same as the center of mass for this thin 
+		plate.</p>
+		
+		<p>Centroids of areas are useful for a number of situations in the 
+		mechanics course sequence, including the analysis of distributed forces, 
+		the analysis of bending in beams, the analysis of torsion in shafts, and as an intermediate step in 
+		determining moments of inertia which are used to determining an object's 
+		resisting to rotational accelerations or an objects resistance to 
+		bending or torsion. Two methods exist for finding the centroids 
+		of shapes:</p>
+		
+		<ol>
+			<li>Using calculus and the first moment integral.</li>
+			<li>Using the method of composite parts and tables of centroids for 
+			common shapes.</li>
+		</ol>
+		
+		<p>The tables used in the method of composite parts however are derived 
+		from the first method, so both methods ultimately use the moment 
+		integrals.</p>
+		
+		<h2>Finding the Centroid via the First Moment Integral</h2>
+		
+		<p>When we find the centroid of a two dimensional shape, we will be 
+		looking for both an x and a y coordinate, represented as x bar and y bar 
+		respectively. This will be the x and y 
+		coordinate of the point that is the centroid of the shape. </p>
+		
+		<p>To find the average x coordinate of a shape (x bar) we will, break 
+		the shape into a large number of small very areas, for each area we will 
+		multiply the area of that shape by it's x coordinate, sum all those 
+		values up, and finally divide by the total area. To sum an infinite 
+		number of infinitely small areas, we use integration. Specifically, this 
+		sum is the <strong>first, rectangular, area moment integral</strong>, 
+		where the x coordinate is the distance value in our moment integral. We 
+		can do something similar with the y coordinates to find our y bar value 
+		and arrive at the equations below.</p>
+		
+		<figure class="equation">
+			<img alt="Centroid Equations 2D" height="101" src="images/centroidequation.png" width="500">
+		</figure>
+		
+		<p>Next let's discuss what the variable dA represents and how we 
+		integrate it over the area. The variable dA is the rate of change in area as we 
+		move along an axis. For the x position of the centroid we will be moving 
+		along the x axis, and for the y position of the centroid we will be 
+		moving along the y axis.</p>
+		
+		<p>First let's look at the x axis, as we move along the x axis on a 
+		shape from it's left most point to its right most point, the rate of 
+		change of the area at any instant in time be equal to the height of the shape 
+		at that point times the rate at which we are moving along the axis (dx). Because the height of the shape will change with 
+		position, we do not use any one value, but instead must come up with an 
+		equation that describes the height at any given value of x. We will then 
+		multiply this equation by the variable x, and integrate that equation 
+		from the leftmost x position of the shape (x min) the right most x 
+		position of the shape (x max).</p>
+				
+		<figure class="center">		
+			<img alt="The x coordinate of the centroid" height="423" src="images/dAx.png" width="600">
+			<figcaption>The x coordinate of the centroid.</figcaption>
+		</figure>
+		
+		<p>To find the y coordinate of the of the centroid, we have a similar 
+		process, but since we are moving along the y axis, the value dA is the 
+		equation describing the width of the shape at any given value of y. We 
+		will also integrate this equation from the y position of the bottommost 
+		point on the shape (y min) to the y position of the topmost point on the 
+		shape (y max).</p>	
+		
+		<figure class="center">		
+			<img alt="The y coordinate of the centroid" height="406" src="images/dAy.png" width="600">
+			<figcaption>The y coordinate of the centroid.</figcaption>
+		</figure>
+		
+		<p>Using the first moment integral and the equations shown above we can 
+		theoretically 
+		find the centroid of any shape as long as we can write an equation to 
+		describe the height and width at any x or y value respectively. For more 
+		complex shapes however, determining these equations and then integrating 
+		these equations may become very time consuming. For these complex 
+		shapes, the method of composite parts or computer tools will most likely 
+		be much faster.</p>
+		
+		<h2>Using Symmetry as a Shortcut</h2>
+		
+		<p>Shape symmetry can provide a shortcut in many centroid calculations. 
+		Remember that the centroid coordinate is the average x and y coordinate 
+		for all the points in the shape. If the shape has a line of symmetry, 
+		that means each point on one side of the line must have an equivalent 
+		point on the other side of the line. This means that the average value 
+		(aka the centroid) 
+		must lie along the line of symmetry. If the shape has more than one line 
+		of symmetry, then the centroid must exist at the intersection of the two 
+		lines of symmetry.</p>
+		
+		<figure class="center">		
+			<img alt="Centroids and Symmetry" height="211" src="images/symmetry.png" width="500">
+			<figcaption>If an shape has a line of symmetry, the centroid must 
+			lie somewhere along that line. If a shape has more than one line of 
+			symmetry, the centroid must exist at the intersection of these 
+			lines.</figcaption>
+		</figure>
+
+			
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/0GOAWYHh6Mk" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Find the x and y coordinates of the centroid of the shape shown 
+			below.</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/dZ2O3zwvuP0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/Centroids_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Find the x and y coordinates of the centroid of the shape shown 
+			below.</p>
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/hmGiCFwgIo8" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/Centroids_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>Find the x and y coordinates of the centroid of the shape shown 
+			below.</p>
+			<img alt="Problem 3 Diagram" src="images/P3.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/4MHflda4FBw" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/Centroids_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

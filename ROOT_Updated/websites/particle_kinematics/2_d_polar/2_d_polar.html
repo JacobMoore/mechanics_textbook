@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Particle Kinematics in 2D Polar Coordinates</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Two Dimensional Kinematics in Polar Coordinate Systems</h1>
+    <p>Two Dimensional Motion (also called Planar Motion) is any motion in which the objects being analyzed stay in a single plane. When analyzing such motion, we must first decide the type of coordinate system we wish to use. The most common options in engineering are rectangular coordinate systems, normal-tangential coordinate systems, and polar coordinate systems. Any planar motion can potentially be described with any of the three systems, though each choice has potential advantages and disadvantages.</p>
+    <p>The <strong>polar coordinate system</strong> uses a distance (r) and an angle (theta) to locate a particle in space. The origin point will be a fixed point in space, but the r-axis of the coordinate system will rotate so that it is always pointed towards the body in the system. The variable &quot;r&quot; is also used to indicate the distance from the origin point to the particle. The theta axis will then be 90 degrees counter clockwise from the r-axis with the variable &quot;theta&quot; being used to show the angle between the r-axis and some fixed axis that does not rotate.. The diagram below shows a particle with a polar coodiante system.</p>
+    <figure class="center"><img src="images/polar_coordinate_system.png" width="500" height="261" alt="A polar coordinate system"/>
+      <figcaption>In the polar coordinate system the r direction always points from the origin point to the body. The variable "r" is also used to indicate the distance between the two points. The theta direction will always be 90 degrees counter-clockwise from the r direction. Theta is also used to indicate the angle between the r direction and some fixed axis used for reference. The u-r and u-theta vectors represent unit vectors in the r and theta directions respectivly.</figcaption>
+    </figure>
+    <p>Polar coordinate systems work best in systems where a body is being tracked via a distance and an angle such as a radar system tracking a plane. In cases such as this, the raw data from this in the form of an angle and a distance would be direct meaures of theta and r respectivly. Polar coordinate systems will also serve as the base for extended body motion, where motors and actuators can directly control things like r and theta.</p>
+    <p>The the way the cooridnate system is defined, the r-axis will always point from the origin point to the body. The distance from the origin to the point is defined as &quot;r&quot; with no component of the position being in the theta direction.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[r_{p/o}(t)=r\hat{u}_{r}+0\hat{u}_{\Theta}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>To find the velocity, we need to take the derivative of the postion function over time. Since the distance r can change over time as well as the direction r changing over time to track the body, we need to worry about the derivative of r as well as the derivative of the unit vector. Like we did with the normal-tangential systems, we will use the product rule and then the subsititue in a value for the derivative of the unit vector.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=\dot{r}\hat{u}_{r}+r\dot{\hat{u}_{r}}=\dot{r}\hat{u}_{r}+r\dot{\Theta}\hat{u}_{\Theta}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>To find the acceleration, we need to take the derivative of the velocity function. As all of these terms, including the unit vectors, change over time, we will need to use the product rule extensivly. The u-r term will split into two terms, and the u-theta term will split into three terms.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)=\ddot{r}\hat{u}_{r}+\dot{r}\dot{\hat{u}_{r}}+\dot{r}\dot{\Theta}\hat{u}_{\Theta}+r\ddot{\Theta}\hat{u}_{\Theta}+r\dot{\Theta}\dot{\hat{u}_{\Theta}}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>Again we will need to substitute in values for the derivatives of the unit vectors similar to before, but it is worth metioning that the derivative of the u-theta vector as it rotates counter clockwise is in the negative u-r direction.</p>
+	<figure class="center"><img src="images/unit_vector_derivative.png" width="445" height="340" alt="The derivatives of the u-r and u-theta unit vectors"/>
+      <figcaption>The derviatives of the u-r and u-theta unit vectors. Notice that the derivative of the u-theta vector is in the negative u-r direction.</figcaption>
+    </figure>
+	<p>After substituting in the derivatives of the unit vectors and simplifying the function we arrive at out final equation for the acceleration.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)=\ddot{r}\hat{u}_{r}+\dot{r}\dot{\Theta}\hat{u}_{\Theta}+\dot{r}\dot{\Theta}\hat{u}_{\Theta}+r\ddot{\Theta}\hat{u}_{\Theta}-r\dot{\Theta}^{2}\hat{u}_{r}\]</td>
+        </tr>
+		<tr>
+			<td></td>
+		  <td>\[=(\ddot{r}-r\dot{\Theta}^{2})\hat{u}_{r}+(2\dot{r}\dot{\Theta}+r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
+		</tr>
+	  </tbody>
+    </table>
+	  <p>Though this final equation has a number of terms, it is still just two components in vector form. Just as with the normal-tangential coordinate system, we will need to remember that </p>
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>A radar tracking station gives the following raw to a user at a given point in time. Based on this data, what is the current velocity and acceleration in the r and theta directions? What is the current velocity and acceleration in the x and y directions?</p>
+        <img src="images/P1.png" width="500" height="324" alt="Problem 1 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  <div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>A spotlight is tracking an actor as he moves across the stage. If the actor is moving with a constant velocity as shown below, what values do we need for the spotlight angular velocity (theta dot) and spotlight angular acceleration (theta double dot) so that the spotlight remains fixed on the actor?</p>
+        <img src="images/P2.png" width="376" height="432" alt="Problem 2 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

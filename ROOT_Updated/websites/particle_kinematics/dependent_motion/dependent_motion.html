@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Relative Motion</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Dependent Motion in Particles</h1>
+    <p>Dependent motion analysis is used when two or more particles have motions that are in some way connected to one another. The way in which the motion of these particles is connected is known as the constraint. A simple example of a constrained system is shown in the image below. Imagine a pickup truck gets stuck in the sand, and a freind uses a rope to help pull them out. This friend ties one end of the rope to the rear bumper of her car, loops the rope around a bar on the front of the pickup truck, then ties the other end to a stationary tree. In this case the two vehicles will not have the same velocity or acceleration, but their motions are related because they are tied together by the rope. In this case, the rope is acting as the constraint, allowing us to know the velocity or acceleration of one vehicle based on the velocity or acceleraion of the other vehicle.</p>
+    <figure class="center"><img src="images/dependent_motion_1D.png" width="600" height="288" alt="A constrained system with two vehicles tied together with a rope"/>
+      <figcaption>This represents a constrained system. The motion of the car and the pickup truck will be related to one another via rope that is connecting them.</figcaption>
+    </figure>
+    <p>The first thing we will need to do when analyzing these systems is to come up with what is known as the <strong>constraint equation</strong>. A constraint equation will be some geometric relationship that will remain true over the course of the motion. In the above example, imagine the rope is 50 ft long. Using the tree as a stationary point, we can also say that the length of the rope is the distance from the green car to the tree, plus two times the distance from the pickup truck to the tree (since it must go out to the pickup truck and then back). If we put this into an equation (the constraint equation) we would have the following.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Constraint Equation: Positions</th>
+          <td>\[L= 50 ft = 2 L_{A}+L_{B}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>Once we have a constraint equation that works for positions, we can take the derivative of this equation to find another constraint equation that relates velocities. In this case, the length of the rope is constant, and therefore the derivative of the length will be zero. If we take the deriviative of the constraint equation again, we wind up with a third constraint equation that relates accelerations.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Constraint Equation: Velocities</th>
+          <td>\[\dot{L}=0=2 \dot{L}_{A}+\dot{L}_{B}\]</td>
+        </tr>
+		<tr>
+          <th>Constraint Equation: Accelerations</th>
+          <td>\[\ddot{L}=0=2 \ddot{L}_{A}+\ddot{L}_{B}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+	  <p>In these equations, it is importnat to remeber that the values represent the changes in length, rather than direct measures of velocities. Though both vehicles would have positive velocities in the example above (velocities to the right), one L dot value will be positive and one will be negative. This is because the truck is getting closer to the tree while the green car is getting further away. A similar situation will occur for the accelerations, where both vehicles would have positive accelerations even if the L double dot values are a mix of positive and negative values.</p>
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>A truck becomes stuck in the sand at a local beach. To help, a freind takes a 50 ft long rope, ties one end to her car, loops the rope around a bar at the front of the truck, and then ties the other end to a stationary tree as shown below. If the car accelerates at a rate of .2 m/s<sup>2</sup>, what will the velocity of the truck be by the time it gets to the tree?</p>
+        <img src="images/P1.png" width="500" height="255" alt="Problem 1 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  <div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>A man has a pulley hooked up a pulley, a rope, and a platform as shown below to lift loads up onto a nearby rooftop. If x is currently 15 meters, y is currently 5 meters, and the man is walking away from the building at a rate of .5 meters per second, what is the current velocity of the platform?</p>
+        <img src="images/P2.png" width="500" height="414" alt="Problem 2 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+  </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-noncommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

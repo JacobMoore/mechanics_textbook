@@ -1,0 +1,181 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Bodies and Free Body Diagrams</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Bodies in Engineering Mechanics</h1>
+		
+		<h2>Bodies:</h2>
+		
+		<p>A body, for the purposes of engineering mechanics, is a collection of 
+		matter that is analyzed as a single object. This can be something simple 
+		like a rubber ball, or it can be something made of many parts such as a 
+		car. What can count as a body and what cannot count as a body is 
+		dependent on the circumstances of the analysis. In some circumstances in 
+		engineering mechanics, it is useful to make certain assumptions about 
+		the bodies being analyzed. We will either need to assume the body is 
+		either rigid or deformable, and we will need to assume that the body is 
+		either a particle or an extended body.</p>
+		
+		<h3>Rigid versus Deformable Bodies</h3>
+		
+		<p>Rigid bodies do not deform (stretch, compress, or bend) when 
+		subjected to loads, while deformable bodies do deform. In actuality, no 
+		physical body is completely rigid, but many bodies deform so little that 
+		this deformation has a minimal impact on the analysis. For this reason, 
+		we usually assume that bodies in the statics and dynamics courses are 
+		rigid. In the strengths of materials course we specifically remove this 
+		assumption and examine how bodies deform and eventually fail under 
+		loading.</p>
+		<p>There is no set boundary for determining if a body can be 
+		approximated as rigid, but there are two factors to to look for that 
+		indicate that a rigid body assumption is not appropriate. First, if the 
+		body is being visibly stretched, compressed, or bent during the period 
+		of analysis, then the body should not be analyzed as a rigid body. 
+		Second, if the body has parts that are free to move relative to one 
+		another, then the body as a whole should not be analyzed as a rigid body 
+		(this is instead a machine, comprised of multiple 
+		connected bodies that will each need to be analyzed separately).</p>
+		
+		<table class="figtable"><tr>
+		<td>
+			<figure>
+				<img alt="Ian Capper [CC-BY-SA-2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons" 
+				height="133" src="images/bridge.jpg" width="200">
+				<figcaption>This bridge deforms very little under normal loading, and therefore can be analyzed as a rigid body.</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img alt="By Janne (Uploaded by Antti Leppänen) [CC-BY-SA-2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons" 
+				height="133" src="images/carcrash.jpg" width="200">
+				<figcaption>This car has been deformed significantly and should 
+				not be modeled as a rigid body during the impact</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				<img alt="By Evan-amos [Public domain], via Wikimedia Commons" height="114" src="images/scissors.jpg" width="200">
+				<figcaption>The two halves of the scissors can move relative to 
+				one another, therefore the scissors cannot be considered a rigid 
+				body as a whole. Instead each half of of the scissors should be 
+				analyzed as its own separate body</figcaption>
+			</figure>
+		</td>
+		</tr>
+		</table>
+		
+		<h3>Particles versus Extended Bodies:</h3>
+		
+		<p>Particles are bodies where all the mass is concentrated at a single 
+		point in space. Particle analysis will only have to take into account 
+		the forces acting on the body and translational motion. Extended bodies 
+		on the other hand have mass that is distributed throughout a finite 
+		volume. Extended body analysis is more complex and also has to take into 
+		account moments and rotational motions. In actuality, no bodies are 
+		truly particles, but some bodies can be approximated as particles to 
+		simplify analysis. Bodies are often assumed to be particles if the 
+		rotational motions are negligible when compared to the translational 
+		motions, or in systems where there is no moment exerted on the body such 
+		as a concurrent force system.</p>
+		
+		<table class="figtable"><tr>
+		<td>
+			<figure>
+				
+				<img alt="By Miketsukunibito [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons&quot;" 
+				height="213" src="images/comet.jpg" width="150">
+				<figcaption>The rotation of this comet and the moments exerted 
+				on the comet are unimportant in modeling its trajectory through 
+				space, therefore we would treat it as a particle.</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>
+				
+				<img alt="By Despeaux [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0), via Wikimedia Commons" 
+				height="140" src="images/skycam.jpg" width="250">
+				<figcaption>The gravitational forces and the tension forces on 
+				the skycam all act through a single point, making this a 
+				concurrent force system that can be analyzed as a particle</figcaption>
+			</figure>
+		</td>
+		<td>
+			<figure>	
+				<img alt="By Pearson Scott Foresman [Public domain], via Wikimedia Commons" 
+				height="228" src="images/crowbar.jpg" width="150">
+				<figcaption>Rotation and moments will be key to the analysis of 
+				the crowbar in this system, therefore the crowbar needs to be 
+				analyzed as an extended body</figcaption>
+			</figure>
+		</td>
+		</tr>
+		</table>
+
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="146" src="http://www.youtube.com/embed/5tUJfAp0DIE" frameborder="0" allowfullscreen></iframe>	
+		</div>
+			
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+﻿/* begin reset */
+
+*{ 	margin: 0;
+	padding: 0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+	
+/* end reset */
+
+body {
+	background-color:#002200
+}
+
+p {
+	line-height: 160%;
+	text-align:justify;
+	margin:20px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+h1 {
+	margin:30px, auto;
+	text-align:center;
+}
+
+h2 {
+	margin-top:40px;
+	margin-left:10px;
+}
+
+h3 {
+	margin-top:30px;
+	margin-left:10px;
+}
+
+ol, ul {
+	margin-left: 35px;
+	margin-right: 20px;
+	text-align:justify;
+	line-height: 160%;
+}
+
+li {
+	margin-top:7px;
+}
+
+a {
+	color:#000000;
+}
+
+a:hover {
+	color:#666666;
+}
+
+#wrapper {
+	width: 1000px;
+	background-color: #EEEEEE;
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	background-color:#DDDDDD;
+	color:black;
+	overflow: hidden;
+}
+
+#headerlogo {
+	float:left;
+	margin: 10px;
+}
+
+#headercourse {
+	float:right;
+	margin: 20px;
+}
+
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+#navmenu {
+	background-color:#666666;
+	clear: both;
+    text-align:center;
+}
+
+#navmenu ul {
+	width: 100%;
+	float: left;
+	margin: 0px;
+	background-color: #666666;
+}
+
+#navmenu ul li {
+	background-color: #888888;
+	display: inline;
+	margin: 0px;
+}
+#navmenu ul li a {
+	float: left;
+	padding: 10px 20px;	
+	border-right: 1px solid #FFFFFF;
+	text-decoration: none;
+}
+
+#navmenu a:link 		{ color:#FFFFFF; }
+#navmenu a:visited 		{ color:#FFFFFF; }
+#navmenu a:active		{ color:#FFFFFF; }
+#navmenu a:hover 		{ color:#FFFFFF; background-color: #AAAAAA}
+#navmenu a:focus		{ color:#FFFFFF; }
+
+
+#maincontent {
+	width: 900px;
+	background-color:#FFFFFF;
+	float: left; 
+	margin: 0px;
+	padding: 20px 50px;
+	overflow: hidden;
+}
+
+
+#problem {
+	width: 900px;
+	margin: 20px auto;
+	overflow: hidden;
+	padding: 0;
+	background-color: #FFFFFF;
+	border: 2px #000000 solid;
+}
+
+#video {
+	text-align:center;
+}
+
+#footer {
+	width: 1000px;
+	background-color: #DDDDDD;
+	clear: both;
+}
+#footer table {
+	font-size: 10px;
+	margin: 10px auto;
+	text-align: center;
+}
+#footer table td {
+	width 200px;
+	padding: 10px 20px;
+}
+
+#footer a:link 		{ color:#444444; }
+#footer a:visited 	{ color:#444444; }
+#footer a:active	{ color:#444444; }
+#footer a:hover 	{ color:#444444; }
+#footer a:focus		{ color:#444444; }
+
+
+

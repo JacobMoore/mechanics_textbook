@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Dot Product</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Dot Product</h1>
+		
+		<p>The dot product (also sometimes called the scalar product) is a 
+		mathematical operation that can be performed on any two vectors with the 
+		same number of elements. The result of the dot product operation will be 
+		single scalar values that is equal to the magnitude of the first vector, 
+		times the magnitude of the second vector, times the cosine of the angle 
+		between the two vectors (at least for 2 and 3 dimensional vectors).</p>
+		
+		<figure class="equation">
+			<img alt="Dot Product Equation" height="89" src="images/dotproducteq1.png" width="371">
+		</figure>
+
+		
+		<p>If the second vector in the dot product operation is a unit vector 
+		(thus having a magnitude of 1), the dot product will represent the 
+		magnitude of the first vector in the direction of the unit vector.</p>
+				
+		<figure class="center">
+			<img alt="Dot Product with a Unit Vector" height="196" src="images/dotproductunitvector.png" width="533">
+			<figcaption>The dot product of a vector with a unit vector will give 
+			you the magnitude of the first vector in the direction of the unit 
+			vector.</figcaption>
+		</figure>
+
+		<p>As an alternative to the above method of calculating the dot product, 
+		you can also break each vector down into components take the sum of each 
+		set of components multiplied together as shown in the equation below. 
+		Either of these two methods will yield the same result.</p>
+		
+		<figure class="equation">	
+			<img alt="Dot Product Equation" height="76" src="images/dotproducteq2.png" width="563">
+		</figure>
+		
+		<p>Finally, as with all vector operations, we can use computer tools 
+		such as the dot command in MATLAB or the Wolfram Vector Operation 
+		Calculator tool linked to in the left panel.</p>
+		
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/eVyFJWfqVmc" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Find the dot product of force vector A with the unit vector shown 
+			with direction B.</p>
+				
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/JJ3aXtIZwZ0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/DotProduct_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Calculate the dot product of vector A with vector B by hand.</p>	
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/NuuYcDNeja4" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/DotProduct_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>Calculate the dot product of vector A with vector B using MATLAB.</p>	
+			<img alt="Problem 3 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/B8PKJtL63C0" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 4:</h3>
+			<p>Calculate the dot product of vector A with vector B using the 
+			Wolfram Vector Operation Calculator.</p>	
+			<img alt="Problem 3 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/2FZSXFASFiQ" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+		</div>
+		</div>
+		
+		
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

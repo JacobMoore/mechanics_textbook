@@ -1,0 +1,248 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Disc Friction</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Disc Friction</h1>
+				
+		<p>Disc friction is the friction that exists between the end of a 
+		rotating shaft or other rotating body and a stationary surface. Disc 
+		friction will tend to exert a moment on the bodies involved, resisting 
+		the relative rotation of the bodies&nbsp; Disc friction is 
+		applicable to a wide variety of designs including end bearings, collar 
+		bearings, disc brakes, and clutches.</p>
+		
+		<figure class="center">
+			<img alt="An Orbital Sander (Exzenterschleifer by Hedwig Storch - Own work. Licensed under CC BY-SA 3.0)" 
+			height="236" src="images/sander.JPG" width="400">
+			<figcaption>This orbital sander rotates a circular sanding disc 
+			against a stationary surface. The disc friction between the sanding 
+			disc and the surface will exert a moment on both the surface and the 
+			sander.</figcaption>
+		</figure>
+		
+		<h2>Hollow Circular Contact Area</h2>
+		
+		<p>To start our analysis of disc friction we will use the example of a 
+		collar bearing. In this type of bearing, we will have a rotating shaft 
+		traveling through a hole in a surface. The shaft is supporting some load 
+		force as shown and a collar is used to support the shaft itself. In this 
+		case we will have a hollow circular contact area between the rotating 
+		collar and the stationary surface.</p>
+		
+		<figure class="center">
+			<img alt="Collar Bearing" height="294" src="images/collarbearing.png" width="400">
+			<figcaption>In a collar bearing we will have a hollow circular 
+			contact area between the rotating collar and the stationary surface.</figcaption>
+		</figure>
+		
+		<p>The friction force at any point in the contact area will be equal to 
+		the normal force at that point times the kinetic coefficient of friction 
+		at that point. If we assume a uniform pressure between the collar and 
+		the surface and a uniform coefficient of friction then we will have a 
+		the same friction force exerted at all points. This does not translate 
+		however into an equal moment exerted by each point. Points further from 
+		the center of rotation will exert a larger moment than points closer to 
+		the center of rotation because they will have a larger moment arm.</p>
+		
+		<figure class="center">
+			<img alt="Friction in a Collar Bearning" height="238" src="images/collarfriction.png" width="400">
+			<figcaption>Though the friction forces at any point will be the 
+			same, points along the outside surface of the contact area will 
+			exert a larger moment than points along the inside surface of the 
+			contact area.</figcaption>
+		</figure>
+
+		<p>To determine the net moment exerted by the friction forces, we will 
+		need to use calculus to sum up the individual moments over the entire 
+		contact area. The moment at each individual point will be equal to the 
+		kinetic coefficient of friction, times the normal force pressure at that point 
+		(p), times the distance from that point to the center of rotation (r).</p>
+		
+		<figure class="equation">
+			<img alt="Moment due to disc friction" height="94" src="images/eq1.png" width="472">
+		</figure>
+		
+		<p>To simplify things we can move the constant coefficient of friction, 
+		and the constant normal force pressure term outside of the integral. We 
+		can also replace the pressure term with the load force on the bearing 
+		over the contact area. Finally, so that we can integrate 
+		over the range of R values, we can recognize that the rate of change in 
+		the area (dA) for the hollow circular areas is simply the rate of change of the r 
+		(dr) term time the 
+		circumference of the circle at r. These changes lead to the equation 
+		below.</p>
+		
+		<figure class="equation">		
+			<img alt="" height="111" src="images/eq2.png" width="523">
+		</figure>
+		
+		<p>Finally we can evaluate the integral from the inner radius to the 
+		outer radius. If we evaluate the integral and simplify we will end up 
+		with the final equation below.</p>
+		
+		<figure class="equation">		
+			<img alt="Moment due to disc friction" height="125" src="images/eq3.png" width="413">
+		</figure>
+		
+		<h2>Other Contact Area Shapes</h2>
+		
+		<h3>Solid Circular Contact Area</h3>
+		
+		<figure class="center">
+			<img alt="An End Bearing" height="307" src="images/endbearing.png" width="400">
+			<figcaption>An end bearing has a solid circular contact area between 
+			the rotating shaft and the stationary bearing.</figcaption>
+		</figure>
+		
+		<p>In cases where we have a solid circular contact area such as with a 
+		solid circular shaft in an end bearing or with the orbital sander shown 
+		at the top of the page we simply set the inner radius to zero and we can 
+		simplify the formula. If we do so, the original formula is reduced to 
+		the equation below.</p>
+		
+		<figure class="equation">
+			<img alt="Disc Friction" height="98" src="images/eq4.png" width="287">
+		</figure>
+
+		<h3>Circular Arcs (Disc Brakes)</h3>
+		
+		<p>In cases, such as in disc brakes, we may have a contact area that 
+		looks like a section of the hollow circular contact area we had earlier. 
+		For this scenario however, we have less area to exert the friction force 
+		and cause a moment, but the smaller area also causes higher pressures in 
+		that contact area for the same load force. The end result is that these terms cancel each other 
+		out and we end up with the same formula we had for the hollow circular 
+		contact area when examining a single brake pad. Most disc brakes however have a 
+		pair of pads however (one on each side of the rotating disc), so we will 
+		need to double the moment in our equation for the usual pair of pads.</p>
+		
+		<figure class="center">
+			<img alt="Disc Brakes" height="348" src="images/discbrake.png" width="600">
+			<figcaption>The contact area in disc brakes is often approximated as 
+			a circular arc with a given contact angle (theta)</figcaption>
+		</figure>
+		
+		<p>The calculations above show that the contact angle (theta) is 
+		irrelevant to the stopping power of the brakes in theory. In practice 
+		however, larger brake pads can slightly increase the stopping power of 
+		the brakes and have other advantages such as better heat distribution.</p>
+
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/UX-2gwiLzFQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>A disc sander is pressed against a wooden surface with a force of 
+			50N. Assuming the kinetic coefficient between the sanding pad and 
+			the wood is .6 and the diameter of the sanding disc is .2 meters, 
+			what is the torque the motor must exert to keep the disc spinning at 
+			a constant rate?</p>	
+			<img alt="Problem 1 Diagram" src="images/sander.jpg">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/0cBfIfDYDic" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/DiscFriction_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>In the disc brake setup shown below, a pair of brake pads is 
+			pressed into the rotor with a force of 300 lbs. If the kinetic 
+			coefficient of friction between the brake pads and the rotor is .4, 
+			find the stopping torque exerted by the brake pads.</p>	
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/lYrN0zr6kF8" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/DiscFriction_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+				
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

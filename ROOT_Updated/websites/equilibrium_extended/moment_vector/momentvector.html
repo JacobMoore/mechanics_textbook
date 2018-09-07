@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Moment About a Point</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Moment About a Point (Vector Calculations)</h1>
+				
+		<p>Given any point on an extended body, if there is a force acting on 
+		that body that does not travel through that point, then that force will 
+		cause a moment about that point. As discussed on the moments page, a 
+		moment is a force's tendency to cause rotation.</p>
+		
+		<h2>The Vector Method in 2 and 3 Dimensions</h2>
+		
+		<p>An alternative to calculating the moment via scalar quantities is to 
+		use the <strong>vector method </strong>or <strong>cross product method</strong>. For simple two 
+		dimensional problems, using scalar quantities is usually easier, but for 
+		more complex problems, using the cross product method is usually easier. 
+		The cross product method for calculating moments says that the moment 
+		vector of a force about a point will be equal to the cross product of a 
+		vector <strong>r</strong> from the point to anywhere on the line of action of the force 
+		and the force vector itself. </p>
+		
+		<figure class="equation">
+			<img alt="Cross Product Moment Equation" height="49" src="images/momentequation2.png" width="159">
+		</figure>
+		
+		<p>A big advantage of this method is that r does not have to be the 
+		shortest distance between the point and the line of action, it goes from 
+		the point to any part of the line of action. For any problem, there are 
+		many possible <strong>r</strong> vectors, though because of the way the cross product 
+		works, they should all result in the same moment vector in the end.</p>
+		
+		<figure class="center">	
+			<img alt="Moment About a Point via the Cross Product" height="395" src="images/lever3.png" width="400">
+			<figcaption>The moment vector of the force F about point A will be 
+			equal to the cross products of the r vector and the force vector. 
+			The r vector is a vector from point A to any point along the line of 
+			action of the force.</figcaption>
+		</figure>
+		
+		<p>It is important to note here that all quantities (<strong>r</strong>, 
+		<strong>F</strong> and <strong>M</strong>) are 
+		vectors. Before you can solve for the cross product, you will need to 
+		write out <strong>r</strong> and <strong>F</strong> in vector component form. 
+		Also, even for two dimensional problems, you will need to write out all 
+		three components of the <strong>r</strong> and <strong>F </strong>
+		vectors. For two dimensional problems the z components of the <strong>r</strong> 
+		and <strong>F</strong> vectors will simply be zero, but those values are 
+		necessary for the calculations.</p>
+		
+		<p>The moment vector you get 
+		will line up with the axis of rotation for the moment, where you can use the 
+		right hand rule to determine if the moment is going clockwise or 
+		counterclockwise about that axis.</p>
+		
+		<figure class="center">
+			<img alt="Moment of a Force About a Point via the Cross Product" height="568" src="images/lever4.png" width="500">
+			<figcaption>The result of <strong>r</strong> cross <strong>F</strong> 
+			will give us the moment vector. For this two dimensional problem, 
+			the moment vector is pointing in the positive z direction. We can 
+			use the right hand rule to determine the direction of rotation from 
+			the moment (line our right thumb up with the moment 
+			vector and our curled fingers will point in the direction of 
+			rotation from the moment).</figcaption>
+		</figure>
+		
+		<p>Finally, it is also important to note that cross product, unlike 
+		multiplication, is not communicative. This means that the order of the 
+		vectors matters, and <strong>r</strong> cross <strong>F</strong> will 
+		not be the same as <strong>F</strong> cross <strong>r</strong>. It is 
+		important to always use <strong>r</strong> cross <strong>F</strong> when 
+		calculating moments.</p>
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/BoRqhVfugPI" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>What is the moment that this force exerts about point A? What is 
+			the moment this force exerts about point B?</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/wn1xJZMpDY4" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentVector_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Determine the Moment that the tension in the cable exerts about 
+			the base of the pole (leave the moment in vector form). What is the 
+			magnitude of the moment the tension exerts about this point?</p>
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/ioqy98jZ0Vg" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentVector_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Particle Kinematics for Continuous Motion</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>One Dimensional Continuous Motion    </h1>
+    <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time.    </p>
+    <figure class="center"> <img src="images/position.png" width="482" height="181" alt="The position of a particle in 1D is x"/>
+      <figcaption>The position of a particle in one dimension can be described with a single number. If the position is changing over time, we will use a function x(t) to describe the position at any given point in time.</figcaption>
+    </figure>
+    <p>The velocity of the particle is then the rate of change of the position over time. If the particle is not moving, then position is not changing over time and the velocity is zero. If the particle is moving, we will first need to find the equation for position x(t), and then take the derivative of the position equation to find the velocity equation v(t). Velocity differs from speed in that the velocity has a direction (either positive or negative for now) while the speed is simply the magnitude of the velocity (always a positive number).</p>
+    <p>Next up is the acceleration, which is the rate of change of the velocity over time. If the velocity is not changing, the acceleration will be zero. If the velocity does change over time, then we will need to take the derivative the velocity equation v(t) to find the acceleration equation a(t). The acceleration is then also the double derivative of the position equation over time. Like the velocity the acceleration has both a magnitude and a direction.</p>
+    <p>To simplify the notation, we often use a dot to indicate a time derivative. This makes the the velocity (the derivative of x) x dot, and the acceleration (the derivative of the derivative of x) x double dot. These relationships and there shorthand notations are all shown below. </p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[x(t)\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=\frac{dx}{dt}=\dot{x}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}=\ddot{x}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If we instead start with the equation for acceleration, we can take the intergral of that equation a(t)  to find the equation for velocity v(t). Unlike the derivatives though we will have an extra step in this process because whenever we intergrate we wind up with a constant of intergration (which we will usually call C). When we intergrate the acceleration equation to find the velocity equation, this constant will be the initial velocity (the velocity at time = 0)</p>
+    <p>Next we can take the intergal of the velocity equation v(t) to find the position equation x(t). With this intergration we will again wind up with a constant of intergration, which in this case will be the initial position (the position at time = 0). These relationships are shown below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=\int a(t)\]</td>
+        </tr>
+        <tr>
+          <th>Position:</th>
+          <td>\[x(t)=\int v(t)=\int \int a(t)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Constant Acceleration Systems:</h2>
+	  <p>In cases where we have a constant acceleration (often due to a constant force), we can start with a constant value for a(t) = a, and work the intergrals from there. Along the way we will add the initial velocty and the initial position as the constants of intergation to wind up with the formulas below.</p>
+	  <table class="equation">
+	    <tbody>
+	      <tr>
+	        <th>Acceleration:</th>
+	        <td>\[a(t)=a\]</td>
+          </tr>
+	      <tr>
+	        <th>Velocity:</th>
+	        <td>\[v(t)=at+v_{0}\]<br></td>
+          </tr>
+	      <tr>
+	        <th>Position:</th>
+	        <td>\[x(t)=\frac{1}{2}at^{2}+v_{0}t+x_{0}\]</td>
+          </tr>
+        </tbody>
+    </table>
+	  <p>If we take the equations for the position and the velocity from above then solve both of them for t and set those equations equal to one another we can actually wind up with another equation that directly relates positiion, velocity, and acceleration without needing to know the time.</p>
+	  <table class="equation">
+	    <tbody>
+	      <tr>
+	        <td>\[v^{2}-v{_{0}}^{2}=2a(x-x_{0})\]</td>
+		  </tr>
+        </tbody>
+    </table>
+	  <p>It is important to remember that these equations are only valid when the acceleration is constant. When that is not the case, you will need to use calculus to find the derivatives or interagrals based the equations for position, velocity, and acceleration that you do know.</p>
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. What is the rate of acceleraion.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+	<div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. How far did you travel in metersover the course of those ten seconds.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+	<div id="problem">
+      <div id="question">
+        <h3>Question 3:</h3>
+        <p>In a rocket sled deceleration experiment, a manned sled is decelerated from a speed of 200 mph (89.4 m/s) to a stop at a constant rate of 18Gs (176.6 m/s<sup>2</sup>). How long does it take for the sled to stop? How far does the sled travel while decelerating.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.jpg"> </div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+	  
+	  
+	<div id="problem">
+      <div id="question">
+        <h3>Question 4:</h3>
+        <p>A metalic particle is accelerated in a magnetic field such that its velocity over time is definted by the function v(t) = 4t<sup>2</sup> - 12, where time is in seconds and velocity is in meters per second. If we assume that the particle has an initial position of zero (x<sub>0</sub> = 0), what are the equations that describe the acceleration and position over time?</p>
+        <img alt="Problem 4 Diagram" src="images/P4.jpg"> </div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+    
+    
+    </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

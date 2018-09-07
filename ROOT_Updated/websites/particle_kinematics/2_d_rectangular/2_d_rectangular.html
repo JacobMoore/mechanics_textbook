@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Particle Kinematics in 2D Rectangular Coordinates</title>
+<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
+    <div id="headercourse">
+      <h2>Engineering Dynamics</h2>
+    </div>
+  </div>
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Two Dimensional Kinematics in Regtangular Coordinate Systems</h1>
+    <p>Two Dimensional Motion (also called Planar Motion) is any motion in which the objects being analyzed stay in a single plane. When analyzing such motion, we must first decide the type of coordinate system we wish to use. The most common options in engineering are rectangular coordinate systems, normal-tangential coordinate systems, and polar coordinate systems. Any planar motion can potentially be described with any of the three systems, though each choice has potential advantages and disadvantages.</p>
+    <p>The <strong>rectangular coordinate system</strong> (also sometimes called the cartesian coordiante system) is the most intuative approach to describing motion. In rectangular coordinate systems we have an x and a y axis. These axes remain fixed to some origin point in the environment and they do not change over time. Instead, the bodies we are analyzing usually move relative to these fixed axes. An example of a body with a rectangular coordinate systems is shown in the figure below.</p>
+    <figure class="center"><img src="images/position_rectangular.png" width="541" height="372" alt="A particle in a rectangular coordinate system"/>
+      <figcaption>In the rectangular coordinate system we have a fixed origin point at o, the particle at point p, and the x and y directions, which must be perpenducular to one another. The vector r is the vector going from o to p. The component of this vector in the x direction is x and the componet of this vector in the y direction is y. We usually describe position in terms of x and y at any given point in time. The vectors i and j represent unit vectors (vectors with a length of one) in the x and y directions respectivly.</figcaption>
+    </figure>
+    <p>Rectangular coordinates work best for systems where <strong>all forces maintain a constant direction</strong>. The most common example of this is projectile motion, where gravity (the only force in these systems) maintains a constant downward direction. An example of a system where the forces change direction over time would be something like a car going around a curve in the road. In this case the friction force at the tires  is going to be rotating with the car. The car problem will therefore be better suited to the use of normal-tangential or polar coordinate systems.</p>
+    <p>When describing the position of a point in rectuangular coordinate systems, we are going to start by describing both x and y ccordinates in a vector form. For this, the values x and y represent distances and the unit vectors i and j are used to indicate which distance cooresponds with which direction. This may seem redundant, but remember when solving actual problems, x and y will just be numbers.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[r_{p/o}(t)=x(t)\hat{i}+y(t)\hat{j}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>Just as with one dimensional problems, if we take the derivative of the position equation, we will find the velocity equation. If we take the derivative of the velocity equation we will wind up with the acceleration equation. Also like one dimensional problems, we can use intergration to move in the other direction, moving from an acceleration equations to a velocity equation to a position equation.</p>
+    <p>The unit vectors add a new element in two dimensions, but since the unit vectors don't change over time (aka they are constants), we treat them like we would any other constant for derivatives and integrals. The resulting velocity and acceleration equations are as follows.</p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=\dot{x}(t)\hat{i}+\dot{y}(t)\hat{j}\]</td>
+        </tr>
+		 <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)=\ddot{x}(t)\hat{i}+\ddot{y}(t)\hat{j}\]</td>
+        </tr>
+	  </tbody>
+    </table>
+    <p>The above equations are vector equations with velocities and accelerations broken down into x and y components. Since the x an y directions are perpendicular, they are also independent (movement in the x direction doesn't impact movement in the y direction and vice versa). This essentially means we can split our vector equation into a set of two sclar equations. To do this we just put everything in front of the i unit vectors in the x equations and everything in front of the j unit vectors in the y equations.</p>
+	<table class="equation">
+      <tbody>
+	  <th>Position:</th>
+		  <td>\[x(t)=...\]</td>
+          <td>\[y(t)=...\]</td>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[\dot{x}(t)=...\]</td>
+          <td>\[\dot{y}(t)=...\]</td>
+        </tr>
+		 <tr>
+          <th>Acceleration:</th>
+          <td>\[\ddot{x}(t)=...\]</td>
+          <td>\[\ddot{y}(t)=...\]</td>
+        </tr>
+	  </tbody>
+    </table>
+	<p>Once we have the everything split into x and y directions we can just use the same processes we used for one dimensional motion to move from x , to x dot, to x double dot and from y to y dot to y double dot. The variable linking the two equations is time t, or time in both the x and y equations.</p>
+	  
+	
+  </div>
+  <div id="sidebar">
+    <h2>Video Lecture</h2>
+    <div id="sidevideo">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2>Useful Resources</h2>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
+    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+      Inertia Table</a> </div>
+    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+      Inertia Table</a> </div>
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div id="problem">
+      <div id="question">
+        <h3>Question 1:</h3>
+        <p>A motorcycle drives off a one meter tall ramp at an angle of 30 degrees as shown below. Determine the equations for the acceleration, velocity, and position over time. How far does the motorcycle in the x direction before hitting the ground?</p>
+        <img src="images/P1.png" width="500" height="229" alt="Problem 1 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  <div id="problem">
+      <div id="question">
+        <h3>Question 2:</h3>
+        <p>A basketball is thrown towards as hoop that is three feet higher in the y direction and 25 feet away in the x direction. If the ball is thrown at an initial angle of 50 degrees, what must the intitial velocity be for the ball to make it into the hoop?</p>
+        <img src="images/P2.png" width="500" height="279" alt="Problem 2 Diagram"/></div>
+      <div id="solution">
+        <h3>Solution:</h3>
+        <div id="sidevideo">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+  </div>
+</div>
+</body>
+</html>

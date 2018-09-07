@@ -1,0 +1,382 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Equivalent Point Load</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Equivalent Point Load</h1>
+						
+		<p>An equivalent point load is a <strong>single point force</strong> that will 
+		have the <strong>same effect</strong> on a body as the original loading condition, 
+		which is usually a distributed force. The equivalent point load should 
+		always cause the same linear acceleration and angular acceleration as 
+		the original force it is equivalent to (or cause the same reaction 
+		forces if the body is constrained). Finding the equivalent point load 
+		for a distributed force 
+		often helps simplify the analysis of a system by removing the integrals 
+		from the equations of equilibrium or equations of motion in later 
+		analysis.</p>
+		
+		
+		<figure class="center">	
+			<img alt="The Equivalent Point Load" height="231" src="images/equivalentpointload.png" width="500">
+			<figcaption>If the body is unconstrained as shown on the left, 
+			the equivalent point load (shown as a solid vector) will cause the 
+			same linear and angular acceleration as the original distributed load (shown 
+			with dashed vectors). If the body is constrained as on shown on 
+			the right, the equivalent point load (shown as a solid vector) will 
+			cause the same reaction forces as the original distributed force 
+			(shown with dashed vectors).</figcaption>
+		</figure>
+				
+		<h2>Finding the Equivalent Point Load</h2>
+		
+		<p>When finding the equivalent point load we need to find the magnitude, 
+		direction, and point of application of a single force that is equivalent 
+		to the distributed force we are given. In this course we will only deal 
+		with distributed forces with a uniform direction, in which case the 
+		direction of the equivalent point load will match the uniform direction 
+		of the distributed force. This leaves the magnitude and the point of 
+		application to be found. There are two options available to find these 
+		values:</p>
+		
+		<ol>
+		<li>We can find the magnitude and the point of application of the 
+		equivalent point load <strong>via integration</strong> of the force 
+		functions.</li>
+		<li>We can use the <strong>area/volume and the centroid/center of volume</strong> 
+		of the area or volume under the force function.</li>
+		</ol>
+		
+		<p>The first method is more flexible, allowing us to find the equivalent 
+		point load for any force function that we can make a mathematical 
+		formula for (assuming we have the skill in calculus to integrate that 
+		function). The second method is usually faster, assuming that we can 
+		look up the values for the area or volume under the force curve and the 
+		values for the centroid or center of volume for the area under the 
+		curve.</p>
+		
+		<h3>Using Integration in 2D Surface Force Problems:</h3>
+		
+		<figure class="left">
+			<img alt="Example of a Distributed Force" height="208" src="images/2Dexample.png" width="300">
+			<figcaption>The block shown above has a distributed force acting on 
+			it. The force function relates the magnitude of the force to the x 
+			position along the top of the box.</figcaption>
+		</figure>
+		
+		<p>Finding the equivalent point load via integration always begins by 
+		determining the mathematical formula that is the <strong>force function</strong>. 
+		The force function mathematically relates the magnitude of the force (F) 
+		to the position (x). In this case the force is acting along a single 
+		line, so the position can be entirely determined by knowing the x 
+		coordinate, but in later problems we may also need to relate the 
+		magnitude of the force to the y and z coordinates. In our example to the 
+		left, we can relate magnitude of the force to the position by stating 
+		that the magnitude of the force at any point in Newtons per meter is 
+		equal to the x position in meters plus one.</p>
+		
+		<p>The magnitude of the equivalent point load will be equal to the area 
+		under the force function. This will be the integral of the force 
+		function over it's entire length (in this case from x = 0 to x = 2).</p>
+		
+		<figure class="equation">		
+			<img alt="2D Surface Force Via Intergration Equation" height="92" src="images/eq_int1.png" width="300">
+		</figure>
+		
+		<p>Now that we have the of the magnitude of the equivalent point load 
+		such that it matches the magnitude of the original force, we need to 
+		adjust the position (xeq) such that it would cause the same <strong>
+		moment</strong> as the original distributed force. The moment of the 
+		distributed force will be the integral of the force function (F(x)) 
+		times the moment arm about the origin (x). The moment of the equivalent 
+		point load will be equal to the magnitude of the equivalent point load 
+		that we just found times the moment arm for the equivalent point load (xeq). 
+		If we set these two things equal to one another and then solve for the 
+		position of the equivalent point load (xeq) we are left with the 
+		following equation.</p>
+		
+		<figure class="equation">		
+			<img alt="2D Surface Force Via Intergration Equation" height="91" src="images/eq_xint1.png" width="300">
+		</figure>
+		
+		<p>Now that we have the magnitude, direction, and position of the 
+		equivalent point load, we can draw the point load in on our original 
+		diagram. This point force can be used in place of the distributed force 
+		in further analysis.</p>
+		
+		<figure class="center">	
+			<img alt="Example Solved" height="300" src="images/2Dexamplesolved.png" width="287">
+			<figcaption>The values for Feq and xeq that we have solved for are 
+			the magnitude and position of the equivalent point load.</figcaption>
+		</figure>
+		
+		<h3>Using the Area and Centroid in 2D Surface Force Problems:</h3>
+		
+		<figure class="right">	
+			<img alt="Equivalent Point Load Alternative Method" height="352" src="images/2Dexamplearea.png" width="354">
+			<figcaption>The magnitude of the equivalent point load is equal to 
+			the area under the force function. Also the equivalent point load 
+			will travel through the centroid of the area under the force 
+			function.</figcaption>
+		</figure>
+		
+		<p>As an alternative to using integration, we can use the area under the 
+		force curve and the centroid of the area under the force curve to find 
+		the equivalent point load's magnitude and point of application 
+		respectively.</p>
+		
+		<p>The <strong>magnitude</strong> (Feq) of the equivalent point load 
+		will be equal to the <strong>area under the force function</strong>. We can find 
+		this area using calculus, but there are often easier geometry based ways 
+		of finding the area under the area.</p>
+		
+		<p>The equivalent point load will also <strong>travel through centroid 
+		of the of the area under the force function</strong>. This allows us to 
+		find the value for xeq. The centroid for many common shapes can be 
+		looked up in tables, and the parallel axis theorem can be used to 
+		determine the centroid of more complex shapes (see the centroid page for 
+		more details).</p>
+		
+		<h3>Using Integration in 3D Surface Force Problems:</h3>
+		
+		<figure class="right">
+			<img alt="A 3D Surface Force" height="256" src="images/3Dexample.png" width="400">
+			<figcaption>The magnitude of the surface force in this example 
+			varies with both x and y.</figcaption>
+		</figure>
+		
+		<p>With surface force in a 3D problem, the force is distributed over a 
+		surface, rather than along a single line. To find the magnitude of the 
+		equivalent point load we will again start by finding the mathematical 
+		equation for the force function. Because the force is distributed over 
+		an area rather than just a line, the magnitude of the force may be 
+		related to both the x and the y coordinate, rather than just the x 
+		coordinate as before.</p>
+
+		<p>The magnitude of the equivalent point load (Feq) will be equal to the 
+		volume under the force curve. To calculate this value we will integrate 
+		the force function over the area that the force is applied to. To 
+		integrate this function F(x,y) in terms of the area, we will furthermore 
+		need to break the integral down and integrate over x and then integrate 
+		over y.</p>
+		
+		<figure class="equation">
+			<img alt="3D Equation" height="67" src="images/eq_int2.png" width="500">
+		</figure>
+		
+		<p>Once we solve for the magnitude of the equivalent point load, we can 
+		then solve position of the equivalent point load. Since the force is 
+		spread over a surface, we will need to calculate both the x (xeq) and 
+		the y (yeq) coordinates for the position. The process for solving for 
+		these values is similar to what was done with only an x value, except we 
+		change the moment arm value to match the equivalent point load 
+		coordinate we are looking for.</p>
+		
+		<figure class="equation">
+			<img alt="" height="175" src="images/eq_xint2.png" width="300">
+		</figure>
+		
+		<p>In each of the equations above, we will need to expand out the area 
+		integral into x and y integrals (as we did for Feq) in order to be able 
+		to solve them.</p>
+		
+		<h3>Using Volume and Center of Volume in 3D Surface Force Problems:</h3>
+		
+		<p>Just as in the 2D problems, there are some available shortcuts to 
+		finding the equivalent point load in 3D surface force problems. For a 
+		force spread over an area, the <strong>magnitude</strong> (Feq) of the 
+		equivalent point load will be equal to the <strong>volume under the 
+		force function</strong>. The equivalent point load will also <strong>
+		travel through the center of volume of the volume under the force 
+		function</strong>. This should allow you to determine both xeq and yeq.</p>
+		
+		<p>The center of volume for a shape will be the same as the center 
+		of mass for a shape if the shape is assumed to have uniform density. It should be possible to look 
+		these values up for common shapes in a table. Again the parallel axis theorem can 
+		be used to find the center of volume for more complex shapes (See the 
+		Center of Mass page for more details).</p>
+		
+		<h3>Using Integration in Body Force Problems:</h3>
+		
+		<p>When we jump to body forces, the magnitude of our force will vary can vary with x, y, 
+		and z coordinates. This means that our force function can include all of 
+		these variables (F(x,y,z)). To find the magnitude of the equivalent 
+		point load we integrate over the volume, breaking the volume integral 
+		down into x, y, and then z integrals.</p>
+		
+		<figure class="equation">
+			<img alt="Body Force Via Intergation" height="158" src="images/eq_int3.png" width="500">
+		</figure>
+		
+		<p>To find the point of application of the equivalent point load, we 
+		will need to find all three coordinate positions. To do this we will 
+		expand out the equations we used with two coordinates to include the 
+		third coordinate (zeq).</p>
+		
+		<figure class="equation">
+			<img alt="Body Force EPL position" height="253" src="images/eq_xint3.png" width="300">
+		</figure>
+		
+		<p>Again you can expand the volume integrals out here like you have done 
+		for the magnitude of the equivalent point load.</p>
+		
+		
+		
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/3p6jD-RRz5M" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Determine the magnitude and the point&nbsp; of application for 
+			the equivalent point load of the distributed force shown below.</p>
+			<img alt="Problem 1 Diagram" src="images/P1.png" width="500" height="199">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/h_E0XjIJaiI" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/EquivalentPointLoad_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Determine the magnitude and the point&nbsp; of application for 
+			the equivalent point load of the distributed force shown below.</p>
+			<img alt="Problem 2 Diagram" src="images/P2.png" width="450" height="379">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/D4JoQpOyI38" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/EquivalentPointLoad_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>Determine the magnitude and the point&nbsp; of application for 
+			the equivalent point load of the distributed force shown below.</p>
+			<img alt="Problem 3 Diagram" src="images/P3.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/UbnfNAQctyg" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/EquivalentPointLoad_WorkedExample3.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="problem">
+		<div id="question">
+			<h3>Question 4:</h3>
+			<p>The wind has piled up sand into a corner on a building. The 
+			building supervisor is worried about the weight of the sand pushing 
+			against the roof of the basement below. The function describing 
+			force of the sand pushing down on the surface is given below. Find 
+			the magnitude, direction and point of application of the equivalent 
+			point load for the distributed force of the sand. Draw the 
+			equivalent point load in a diagram.</p>
+			<img alt="Problem 4 Diagram" src="images/P4.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/IaSe_g3_Mgk" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/EquivalentPointLoad_WorkedExample4.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has 
+		licensed this work under a <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

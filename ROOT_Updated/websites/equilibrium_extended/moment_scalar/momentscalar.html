@@ -1,0 +1,236 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Moment About a Point</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Moment About a Point (Scalar Calculations)</h1>
+				
+		<p>Given any point on an extended body, if there is a force acting on 
+		that body that does not travel through that point, then that force will 
+		cause a moment about that point. As discussed on the moments page, a 
+		moment is a force's tendency to cause rotation.</p>
+		
+		<h2>The Scalar Method in 2 Dimensions</h2>
+		
+		<p>In discussing how to calculate the moment of a force about a point 
+		via scalar quantities, we will begin with the example of a force on a 
+		simple lever as shown below. In this simple lever there is a force on 
+		the end of the lever, distance d away from the center of rotation for 
+		the lever (point A) where the force has a magnitude F. </p>
+		
+		<figure class="center">		
+			<img alt="Moment About A Point" height="231" src="images/lever1.png" width="500">
+			<figcaption>The magnitude of the moment that force F exerts about 
+			point A in this lever will be equal to the magnitude of the force 
+			times distance d.</figcaption>
+		</figure>
+		
+		<p>When using scalar quantities, the magnitude of the moment will be 
+		equal to the perpendicular distance between the line of action of the force and the point we 
+		are taking the moment about. </p>
+		
+		<figure class="equation">
+			<img alt="Moment Equation" height="51" src="images/momentequation.png" width="147">
+		</figure>
+		
+		<p>To determine the sign of the moment, we determine what type of 
+		rotation the force would cause. In this case we can see that the force 
+		would cause the lever to rotate counterclockwise about point A. 
+		Counterclockwise rotations are caused by positive moments while 
+		clockwise rotations are caused by negative moments.</p>
+		
+		<p>Another important factor to remember is that the value d is the 
+		perpendicular distance from the force to the point we are taking the 
+		moment about. We could measure the distance from point A to the head of 
+		the force vector, or the tail of the force vector, or really any point 
+		along the line of action of force F. The distance we need to use for the 
+		scalar moment calculation however is the shortest distance between the point 
+		and the line of action of the force. This will always be a line 
+		perpendicular to the line of action of the force, going to the point we 
+		are taking the moment about.</p>
+		
+		<figure class="center">	
+			<img alt="Moment About a Point" height="413" src="images/lever2.png" width="400">
+			<figcaption>Distance d always needs to be the shortest length 
+			between the line of action of the force and the point we are taking 
+			the moment about. This distance will be perpendicular to the line of 
+			action of the force.</figcaption>
+		</figure>
+		
+		<h2>The Scalar Method in 3 Dimensions</h2>
+		
+		<p>For three dimensional scalar calculations, we will still find the 
+		magnitude of the moment in the same way, multiplying the magnitude of 
+		the force by the perpendicular distance between the point and the line 
+		of action of the force. This perpendicular distance again is the minimum 
+		distance between the point and the line of action of the force. In some 
+		cases, finding this distance may be difficult.</p>
+		
+		<figure class="center">	
+			<img alt="Moments in 3 dimensions" height="365" src="images/moment3d.png" width="500">
+			<figcaption>For moments in three dimensions, the moment vector will 
+			always be perpendicular to both the force vector F and the distance 
+			vector d.</figcaption>
+		</figure>
+
+		
+		<figure class="right">	
+			<img alt="The Right Hand Rule" height="249" src="images/rhr.png" width="300">
+			<figcaption>To use the right hand rule, align your right hand as 
+			shown so that your thumb lines up with the axis of rotation for the 
+			moment and your curled fingers point in the direction of 
+			rotation for your moment. If you do this, your thumb will be 
+			pointing in the direction of the moment vector.</figcaption>
+		</figure>
+		
+		<p>Another difficult factor in three dimensional scalar problems is 
+		finding the axis of rotation, as this is now more complex that just 
+		'clockwise or counterclockwise'. The axis of rotation will be a line 
+		traveling though the point we are taking the moment about that is 
+		perpendicular to both the force force vector and the perpendicular 
+		distance vector. Finding this direction may be quite difficult for more 
+		complex problems where the force and/or distance vectors don't line up 
+		with a single coordinate direction.</p>
+		
+		<p>To further find the direction of the moment vector (which way along 
+		the established line) we will use the right hand rule. Wrap the fingers 
+		of your right hand around the established line with your fingertips 
+		curling in the direction the body would rotate. If you do this, your 
+		thumb should point out along the line in the direction of the moment 
+		vector.</p>
+
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/2SYbDN5lrdQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>What is the moment that Force A exerts about point A? What is the 
+			moment that Force B exerts about Point A?</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/E9Xq1fXdcyE" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentScalar_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>What is the moment that this force exerts about point A? What is 
+			the moment this force exerts about point B?</p>	
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/9nb2q3EN5gs" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentScalar_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+
+		<div id="problem">
+		<div id="question">
+			<h3>Question 3:</h3>
+			<p>What are the moments that each of the three tension forces exert 
+			about point A (the point where the beams come together)?</p>	
+			<img alt="Problem 3 Diagram" src="images/P3.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/2W9-K2KsTMU" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentScalar_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has 
+		licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

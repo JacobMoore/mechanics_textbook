@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Hydrostatic Pressure on Curved Surfaces</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<script type="text/javascript"
+  src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+
+<div id="maincontent">
+
+<hr/>
+<h1>Hydrostatic Pressure on Curved Surfaces</h1>
+<hr/>
+
+<p>If a liquid is in contact with a surface, it will exert distributed hydrostatic pressure on that surface.  On the Hydrostatic Pressure on a Flat Surface page we learned how to integrate this distributed load to find the equivalent point load.  Integrating this load over a non-flat surface is much more difficult because of the changing direction of the force, but we can <b>redefine the body being analyzed</b> to make the process of finding the equivalent point load for the hydrostatic pressure on any non-flat surface easier.</p>
+
+<div class="piccenter">
+<table width="800px" align="center">
+<tr>
+<td width="350px">
+<img src="hydrostaticcurvedpics/dig1.png" width="350" height="247" alt="Hydrostatic presure on a curved surface"/>
+<div class="caption">
+Hydrostatic pressure on a curved surface.
+</div>
+</td>
+<td width="350px">
+<img src="hydrostaticcurvedpics/dig2.png" width="350" height="233" alt="A FBD of a volume of water"/>
+<div class="caption">
+A free body diagram of the volume of water above the curved surface.
+</div>
+</td>
+</tr>
+</table>
+</div>
+
+<p>The images above show hydrostatic pressure acting on the curved surface of a dam.  The image on the left shows the pressure acting on the surface.  The magnitude of the pressure increases with depth and always acts perpendicular to the surface. Finding the equivalent point load for this distributed force directly is a very difficult task.  Instead, we analyze the body of water over top of the surface we are trying to analyze (in this case the quarter circle outlined with the dotted black line).  This body of water is in equilibrium, and has only three forces acting on it. </p>
+
+<ol>
+<li>The hydrostatic pressure acting on the flat side of the defined volume of liquid.  This is simply a hydrostatic pressure acting on a flat surface.</li>
+<li>The weight of the liquid in the defined volume.</li>
+<li>The reaction force from the surface in contact with the liquid.</li>
+</ol>
+
+<p>Being able to determine the hydrostatic pressure on the flat surface and the weight of the liquid in the prescribed volume, you should be able to solve for the reaction force.  The equivalent point load the liquid exerts on the curved surface is equal and opposite to the reaction force (the equivalent point load for the distributed force shown in the image on the left, is equal and opposite to the reaction force you can solve for).</p>
+
+<hr/>
+
+<h3>Worked Problems</h3>
+
+<h4>Worked Problem 1:</h4>
+
+<p>The dam shown below has a cylindrical surface with a radius of 8 meters.  If water is built up to the top of the dam, what is the equivalent point load of the water pressing against the dam.</p>
+
+<div class="piccenter">
+<img src="hydrostaticcurvedpics/probdig1.png" width="520" height="401" alt="The Problem Diagram"/>
+</div>
+
+<br/><br/>
+
+<table width="900px" align="center">
+<colgroup width="600px"></colgroup>
+<colgroup width="300px"></colgroup>
+	<tr>
+		<td>
+		<b>Work</b>
+		</td>
+		<td>
+		<b>Comments</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+				<img src="hydrostaticcurvedpics/P1_1.png" width="500" height="328" alt="A FBD of the body of water above the dam"/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		To solve this problem, we analyze the body of water in the quarter of a cylinder above the dam itself.  We will solve for the use the hydrostatic pressures acting on the flat surface and the weight of the water to solve for the reaction force.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = w \rho g cos(\theta)\int x * dx
+			}\]
+			\[ \mathrm{
+				x_{eq} = \frac{w\rho g cos(\theta)}{F_{eq}}* \int\left( x^2 * dx\right)
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		First we will solve for the hydrostatic pressure on the flat surface on the left.  To do this we use the equations to the left to solve for \(\mathrm{F_{eq}}\) and \(\mathrm{x_{eq}}\).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_{eq} = 10 \text{ m} * 1000 \frac{kg}{m^3} 9.81 \frac{N}{kg} \int_0^8 x * dx
+			}\]
+			\[ \mathrm{
+				F_{eq} = 3139 \text{ kN}
+			}\]
+			<br/><br/>
+			\[ \mathrm{
+				x_{eq} = \frac{10 \text{ m} * 1000 \frac{kg}{m^3} 9.81 \frac{N}{kg}}{3139 \text{ kN}}* \int_0^8 x^2 * dx
+			}\]
+			\[ \mathrm{
+				x_{eq} = 5.33 \text{ m}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		We solve those equations and find Feq and xeq.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				m*g = \rho*g*V
+			}\]
+			\[ \mathrm{
+				V = \frac{1}{4}*\pi*r^2*w
+			}\]
+			\[ \mathrm{
+				V = \frac{1}{4}*\pi*r^2*w
+			}\]
+			\[ \mathrm{
+				V = 502.7 \text{ m}^3
+			}\]
+			\[ \mathrm{
+				m*g = 1000 \frac{kg}{m^3}*9.81 \frac{N}{kg}*502.7 \text{ m}^3
+			}\]
+			\[ \mathrm{
+				m*g = 4931 \text{ kN}
+			}\]
+			<br/><br/>
+			\[ \mathrm{
+				COM = \frac{4}{3*\pi}*r = 3.40 \text{ m}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		Next we need to determine the weight and center of mass of the body of water.  The weight is simply the volume times the density of water times the pull of gravity.  The center of mass can be looked up in a table.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+				<img src="hydrostaticcurvedpics/P1_2.png" width="500" height="351" alt="The hydrostatic pressure and weight drawn in."/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		We then draw in the known forces and distances on the original diagram.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				\sum{F_x}=0= 3139\text{ kN} - cos(\theta)*F_R
+			}\]
+			\[ \mathrm{
+				\sum{F_y}=0= -4931\text{ kN} + sin(\theta)*F_R
+			}\]
+			<br/><br/>
+			\[ \mathrm{
+				F_R = 5845\text{ kN}
+			}\]
+			\[ \mathrm{
+				\theta = 57.5^o
+			}\]
+		</td>
+		<td>
+		We use this new diagram to write out the equations of static equilibrium for the body of water.  We will use the sum of forces in the x and y directions to solve for the magnitude of \(\mathrm{F_R}\) and the angle \(\mathrm{\theta}\).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="piccenter">
+				<img src="hydrostaticcurvedpics/P1_3.png" width="500" height="366" alt="Equivalent point load."/>
+			</div>
+			<br/><br/>
+		</td>
+		<td>
+		The equivalent point load is equal and opposite in direction.  Here is the equivalent point load (magnitude and direction) drawn on the original diagram.<br/><br/>
+		</td>
+	</tr>
+</table>
+
+<hr/ style="clear:both">
+
+<div class="piccenter">
+<table width="400px" align="center">
+<tr>
+<td><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br/></td>
+</tr>
+<tr>
+<td>Author: <a href="http://filebox.vt.edu/users/moorej7/">Jacob Moore</a> has liscenced this work under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>

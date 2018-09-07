@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Method of Sections</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<style type="text/css">
+	</style>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>The Method of Sections</h1>
+		
+		<p>The <strong>method of sections</strong> is a process used to solve for 
+		the unknown forces acting on members of a <strong>truss</strong>. The 
+		method involves breaking the truss down into individual sections and 
+		analyzing each section as a separate rigid body. The method of sections 
+		is usually the fastest and easiest way to determine the unknown forces 
+		acting in a specific member of the truss.</p>
+		
+		<h2>Using the Method of Sections:</h2>
+		
+		<p>The process used in the method of sections is outlined below:</p>
+		
+		<ol>
+			<li>In the beginning it is usually useful to label the members in your truss. This will help you keep everything organized 
+			and consistent in later analysis. In this book, the members will be 
+			labeled with letters.</li>
+			
+			<figure class="center">
+				<img alt="Method of Sections Labels" height="203" src="images/MOSlabels.png" width="400">
+				<figcaption>The first step in the method of sections is to label each member.</figcaption>
+			</figure>
+			
+			<li>Treating the entire truss structure as a rigid body, draw a free 
+			body diagram, write out the equilibrium equations, and solve for the 
+			external reacting forces acting on the truss structure. This analysis 
+			should not differ from the analysis of a single rigid body.</li>
+			
+			<figure class="center">
+				<img alt="Method of Sections Reactions" height="211" src="images/MOSfbd.png" width="400">
+				<figcaption>Treat the entire truss as a rigid body and solve for 
+				the reaction forces supporting the truss structure.</figcaption>
+			</figure>
+			
+			<li>Next you will imagine cutting your truss into two separate 
+			sections. The cut should travel through the member that you are 
+			trying to solve for the forces in, and should cut through as few 
+			members as possible (The cut does not need to be a strait line).</li>
+			
+			<figure class="center">
+				<img alt="Method of Sections Cutting the Truss" height="220" src="images/MOScut.png" width="400">
+				<figcaption>Next you will imagine cutting the truss into two 
+				parts. If you want to find the forces in a specific member be 
+				sure to cut through that member. It also makes things easier if 
+				you cut through as few members as possible.</figcaption>
+			</figure>
+			
+			<li>Next you will draw a free body diagram for either one, or both 
+			sections that you created. Be sure to include all the forces acting 
+			on each section.  				
+					<ul>
+					<li>Any external reaction or load forces that may be acting 
+					at the section.</li>
+					<li>An internal force in each member that was cut when 
+					splitting the truss into sections. Remember that for a two force member, the force 
+					will be acting along the line between the two connection 
+					points on the member. We will also need to guess if it will 
+					be a tensile or a compressive force. An incorrect guess now 
+					though will simply lead to a negative solution later on. A 
+					common strategy then is to assume all forces are tensile, 
+					then later in the solution any positive forces will be 
+					tensile forces and any negative forces will be compressive 
+					forces. </li>
+					<li>Label each force in the diagram. Include any known 
+					magnitudes and directions and provide variable names for 
+					each unknown.</li>
+				</ul>
+			</li>
+			
+			<figure class="center">		
+				<img alt="Method of Sections" height="270" src="images/MOSsection.png" width="400">
+				<figcaption>Next draw a free body diagram of one or both halves 
+				of the truss. Add the known forces, as well as unknown tensile 
+				forces for each member that you cut.</figcaption>
+			</figure>
+			
+			<li>Write out the equilibrium equations for each section you drew a 
+			free body diagram of. These will be extended bodies, so you will 
+			need to write out the force and the moment equations. </li>
+	
+			<figure class="center">		
+				<img alt="Equilibrium Equations 2D" src="images/2Dequations.png"><br>
+				<figcaption>For 2D problems you will have three possible 
+				equations for each section, two force equations and one moment 
+				equation.</figcaption>
+			</figure>
+			
+			<figure class="center">		
+				<img alt="Equilibrium Equations 3D" src="images/3Dequations.png">
+				<figcaption>For 3D problems you will have six possible equations 
+				for each section, three force equations and three moment 
+				equations.</figcaption>
+			</figure>
+
+
+			<li>Finally, solve the equilibrium equations for the unknowns. You 
+			can do this algebraically, solving for one variable at a time, or 
+			you can use matrix equations to solve for everything at once. If you 
+			assumed that all forces were tensile earlier, remember that negative 
+			answers indicate compressive forces in the members.</li>
+		</ol>
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/lGBEC640gU0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>Find the forces acting on members BD and CE. Be sure to 
+			indicate if the forces are tensile or compressive.</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">			
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/9xxmHpLB1uU" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MethodOfSections_WorkedExample1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Find the forces acting on members AC, BC, and BD of the truss. Be sure to 
+			indicate if the forces are tensile or compressive.</p>
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/Kp9U4d2qbvE" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MethodOfSections_WorkedExample2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

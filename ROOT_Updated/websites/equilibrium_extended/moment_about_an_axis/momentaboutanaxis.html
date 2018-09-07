@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - Moment About an Axis</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Moment of a Force About an Axis</h1>
+		
+		<figure class="right">
+			<img alt="A Hinge" height="236" src="images/hinge.png" width="250">
+			<figcaption>A hinge such as the one shown above will only allow for 
+			rotation along the axis of the hinge. Since this corresponds to 
+			moments along the axis of the hinge, it may be useful to 
+			specifically calculate the moment a force exerts about the axis of 
+			the hinge.</figcaption>
+		</figure>
+				
+		<p>It is sometimes useful to be able to calculate the moment a force 
+		exerts about a certain set axis that is relevant to the problem. An 
+		example would be a force on the door with hinges such as the one to the 
+		right. If we 
+		took the moment about a point (say one of the hinges on the door) we may find that the 
+		moment vector does not line up with the axis of this hinge. In that 
+		case, the component of the moment vector that lines up with the axis of 
+		the hinge will cause a rotation, while the component of the moment 
+		vector that does not line up with the axis of the hinge will cause 
+		reaction moments in the hinge. If we are only interested in the rotation 
+		of the door, we will want to find the moment that the force exerts 
+		specifically about the axis of the hinges.</p>
+		
+		<h2>Calculating the Moment About an Axis via the Dot Product:</h2>
+		
+		<p>To find the moment of a force a about a specific axis, we find the 
+		moment that the force exerts about some point on that axis and then we 
+		find the component of the moment vector that lines up with the axis we 
+		are interested in.</p>
+		
+		<p>To do this mathematically, we use the cross product to calculate the 
+		moment of the force about any point along the axis, and then we take the 
+		dot product of a unit vector along the axis and the moment vector we 
+		just calculated.</p>
+		
+		<figure class="center">
+			<img alt="Moment of a Force About an Axis" height="510" src="images/door.png" width="480">
+			<figcaption>The moment of a force about an axis is the dot product 
+			of vector <strong>u</strong> and the cross product of <strong>r</strong> and 
+			<strong>F</strong></figcaption>
+		</figure>
+		
+		<figure class="equation">
+			<img alt="Moment of a Force About an Axis" src="images/momentequation.png">
+		</figure>
+		
+		<p>The unit vector <strong>u</strong> has a magnitude of one and will be 
+		pointing in the direction of the axis we are interested in. Your final 
+		answer from this operation will be a scalar value (having a magnitude 
+		but no direction). This is the magnitude of the moment about the given 
+		axis, with the direction being specified by the unit vector <strong>u</strong>.</p>
+				
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/Edqt-Q_vJuA" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>A flat L shaped plate is attached via two hinges as shown in the 
+			diagram below. If force F acts on the plate as shown in the diagram, 
+			what is the moment that force F exerts about the axis of the hinges? </p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/bP9iKRCCrAc" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/MomentAboutAnAxis_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>

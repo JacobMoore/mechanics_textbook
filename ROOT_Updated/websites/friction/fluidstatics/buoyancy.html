@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Buoyancy</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<script type="text/javascript"
+  src="https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+
+<div id="maincontent">
+
+<hr/>
+<h1>Buoyancy</h1>
+<hr/>
+
+<div class="picright" style="width:414px">
+<img src="buoyancypics/dig1.png" width="414" height="435" alt="Buoyancy"/>
+<div class="caption">The hydrostatic forces are greater along the bottom surface of the object, resulting in an upward buoyancy force.</div>
+</div>
+
+<p>Objects that are submerged or partially submerged in a liquid will experience hydrostatic pressures acting on all surfaces in contact with the liquid as shown in the figure on the right.  The forces acting on the sides tend to cancel each other out, being equal and opposite.  The magnitude of the pressure increases with depth though, leading to larger hydrostatic forces on the bottom surface pushing an object up than hydrostatic forces on the top surface, pushing the object down.  This unequal set of forces leads to a net, upward hydrostatic force acting on the object called <b>buoyancy</b>.</p>
+
+<p>Adding together all of the distributed forces acting on the surfaces of the object is tedious, but luckily there is a shortcut to getting the net buoyancy force acting on an object.  Imagine we fill a very thin walled water balloon with water and submerge this in a larger pool of water, this water in the balloon is the same density as the water surrounding it and will therefore be neutrally buoyant.  This means the water balloon will not sink or float in the larger pool.  The water balloon is in <b>static equilibrium</b>, and only has two forces acting on it (the weight due to gravity and the buoyancy force).  These two forces must be equal and opposite for the object to be in equilibrium, therefore the net buoyancy force will be equal and opposite to the weight of the balloon as shown in example B in the picture below.</b>.</p>
+
+<div class="piccenter">
+<img src="buoyancypics/dig2.png" width="610" height="420" alt="The same buoyancy force works on all three objects of the same size and shape."/>
+<div class="caption">A water balloon (B) has a buoyancy force equal and opposite to its weight.  The foam (A) and metal (C) balls of the same size have the same upward buoyancy force thought their weights are different from the water balloon.</div>
+</div>
+
+<p>If we replaced the water balloon with either a piece of foam (A) or a piece of metal (C) that is exactly the same size and shape as the original balloon, it would experience the same hydrostatic pressures, and therefore experience the same buoyancy force as the original water balloon.  The reason some things sink and some float is because the weight is more or less than the original water balloon.</p>
+
+<p>The weight of the water in the balloon is equal to the density of the water, times the gravitational constant g, times the volume of the water balloon.  This will also be magnitude of the buoyancy force.</p>
+
+\[ \mathrm{
+	F_B = \rho*g*V
+}\]
+
+<p style align="center">Where \( \mathrm{F_B} \) is the buoyancy force,<br/>
+\( \mathrm{\rho} \) is the density of the <b>liquid</b> the object is submerged in,<br/>
+\( \mathrm{g} \) is pull of gravity (9.81 N/kg on earth)<br/>
+and \( \mathrm{V} \) is the volume of the object that lies <b>below the surface of the water</b><br/>
+</p>
+
+<p>This force will act through the center of gravity of the volume of the object that is below water, having the same line of action as the gravity force for any object that is in equilibrium while floating or submerged.</p>
+
+<div class="piccenter">
+<img src="buoyancypics/dig3.png" width="424" height="405" alt="Bouyancy of submerded and floating objects"/>
+<div class="caption">The volume term only applies to volume below the surface of the liquid.  Floating objects in equilibrium have just enough volume below the surface to have the buoyancy forces match the weight of the object.</div>
+</div>
+
+<hr/>
+
+<h3>Worked Problems</h3>
+
+<h4>Worked Problem 1:</h4>
+
+<p>A floating dock is built out of a wood surface on a foam base.  It is built to the dimensions shown below and has a total weight of 500 pounds.  If the dock is placed in water, how high will the surface of the dock be off the surface of the water?  How many pounds can the dock support before sinking below the surface of the water?</p>
+
+<div class="piccenter">
+<img src="buoyancypics/probdig1.png" width="512" height="278" alt="The Problem Diagram"/>
+</div>
+
+<br/><br/>
+
+<table width="900px" align="center">
+<colgroup width="600px"></colgroup>
+<colgroup width="300px"></colgroup>
+	<tr>
+		<td>
+		<b>Work</b>
+		</td>
+		<td>
+		<b>Comments</b>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				500 lbs = \rho g V
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		To find how far above the surface of the water the dock floats, the weight of the dock and the buoyancy force must be balanced (equal and opposite).  The weight is given at 500 lbs, so we set this equal to the equation for the buoyancy force.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				V = \frac{500 lbf}{\rho g}
+			}\]
+			\[ \mathrm{
+				V = \frac{500 lbf}{62.4\frac{lbm}{ft^3} 1\frac{lbf}{lbm}}
+			}\]
+			\[ \mathrm{
+				V = 8.01 ft^3
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		By solving for V, we can find the volume of the dock below the surface of the water.  We simply look up and plug in values for g and \( \mathrm{\rho} \).<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				V = l * w * h = 8.01 ft^3
+			}\]
+			\[ \mathrm{
+				V = 10 * 4 * h = 8.01 ft^3
+			}\]
+			\[ \mathrm{
+				h = .2 ft
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		Next, we use the submerged volume to find the submerged height.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				\text{height above the water} = .8 ft = 9.6in
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		And we use that to find out how high the surface of the dock is above the surface of the water.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_B = \rho g V
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		Next we want to find how out what the maximum load on the dock is before it becomes submerged.  To do this we want to find out what the buoyancy force is if the dock is completely submerged.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				F_B = 62.4\frac{lbm}{ft^3} 1\frac{lbf}{lbm} 40\text{ft}^3
+			}\]
+			\[ \mathrm{
+				F_B = 2496\text{ lbf}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		We plug in the values and find the buoyancy force if the dock is completely submerged.<br/><br/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			\[ \mathrm{
+				\text{ Maximum load the dock can support} = 2496 - 500 = 1996 \text{ lbf}
+			}\]
+			<br/><br/>
+		</td>
+		<td>
+		We subtract the weight of the dock itself and we are left with the maximum weight the dock can support.<br/><br/>
+		</td>
+	</tr>
+</table>
+
+<hr/ style="clear:both">
+
+<div class="piccenter">
+<table width="400px" align="center">
+<tr>
+<td><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a><br/></td>
+</tr>
+<tr>
+<td>Author: <a href="http://filebox.vt.edu/users/moorej7/">Jacob Moore</a> has liscenced this work under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</td>
+</tr>
+</table>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Adaptive Map - The Centroid in 3D via the First Moment Integral</title>
+
+	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="headerlogo">
+			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
+		</div>
+		<div id="headercourse">
+			<h2>Engineering Statics</h2>
+		</div>
+	</div>
+	
+	<div id="maincontent">
+		<h1>Centroids in 3D via the First Moment Integral</h1>
+				
+		<p>The <strong>centroid</strong> of a volume can be thought of as the 
+		geometric center of that area. It is the average position (x, y, and z 
+		coordinates) of all the points in in the area. If this volume represents 
+		a part with a uniform density (like most single material parts) then the 
+		centroid will be the same as the center of mass.</p>
+		
+		<p>Centroids are useful for a number of situations in the mechanics 
+		course sequence, including the analysis of distributed forces, 
+		determining the center of mass, and as an intermediate step in 
+		determining moments of inertia which are used to determining an object's 
+		resisting to rotational accelerations or an objects resistance to 
+		bending or torsion.</p>
+		
+		<p>Just as we had with centroids of areas, two methods exist for finding 
+		centroids of volumes:</p>
+				
+		<ol>
+			<li>Using calculus and the first moment integral.</li>
+			<li>Using the method of composite parts and tables of centroids for 
+			common volumes.</li>
+		</ol>
+		
+		<p>The tables used in the method of composite parts however are derived 
+		from the first method, so both methods ultimately use the moment 
+		integrals.</p>
+				
+		<h2>Finding the Centroid via the First Moment Integral</h2>
+		
+		<p>When we find the centroid of a three dimensional shape, we will 
+		be looking for x, y, and z coordinates (x bar, y bar, and z bar). This 
+		will be the x, y, and z coordinates of the point that is the centroid of 
+		the shape.</p>
+		
+		<p>Much like the centroid calculations we did with 2D shapes, we are 
+		looking to find the shapes average coordinate in each dimension. We do 
+		this by summing up all the little bits of volume times the x, y, or z 
+		coordinate of that bit of volume and then dividing that sum by the total 
+		volume of the shape. Again we will use calculus to sum up an infinite 
+		number of infinitely small volumes. Specifically this sum will be the 
+		<strong>first, rectangular, volume moment integral</strong> for the shape. 
+		Working in each of the three coordinate directions we wind up with the 
+		following three equations.</p>
+		
+		
+		<figure class="equation">
+			<img alt="Centroid Equation 3D" height="105" src="images/centroidequation.png" width="600">
+		</figure>		
+
+		<p>With these new equations we have the variable dV rather than dA, 
+		since we are integrating over a volume rather than an area. This represents the 
+		rate of change of the volume as we move along an axis from one end to 
+		another. The rate of change of the volume at any point on the shape will 
+		be the <strong>cross sectional area</strong> that is perpendicular to 
+		that axis. Since cross sectional area varies as we move along the axis, 
+		we will need to determine a formula for the cross sectional area at any 
+		point along that axis.</p>
+				
+		<figure class="center">		
+			<img alt="The center of mass" height="428" src="images/centerofmass.png" width="600">
+			<figcaption>The z coordinate of the center of mass.</figcaption>
+		</figure>
+		
+		<p>Using the first moment integral and the equations shown above we can 
+		theoretically find the centroid of any volume as long as we can write an 
+		equation to describe the cross section area at for each direction. For more 
+		complex shapes however, determining these equations and then integrating 
+		these equations may become very time consuming. For these complex 
+		shapes, the method of composite parts or computer tools will most likely 
+		be much faster.</p>
+		
+		<h2>Using Symmetry as a Shortcut</h2>
+		
+		<p>Just as with 2D areas, shape symmetry can provide a shortcut in many 
+		centroid calculations. Remember that the centroid coordinate is the 
+		average x, y, and z coordinate for all the points in the shape. If the 
+		volume has a plane of symmetry, 
+		that means each point on one side of the line must have an equivalent 
+		point on the other side of the line. This means that the average value 
+		(aka the centroid) 
+		must lie within that plane. If the volume has more than one plane 
+		of symmetry, then the centroid must exist at the intersection of these 
+		planes.</p>
+		
+		<figure class="center">		
+			<img alt="Centroids and Symmetry" src="images/symmetry.png">
+			<figcaption>If a volume has a plane of symmetry, the centroid must 
+			lie somewhere in that plane. If the volume has more than one plane 
+			of symmetry, the centroid must exist at the intersection of these 
+			planes.</figcaption>
+		</figure>
+
+	
+	</div>
+	
+	<div id="sidebar">
+		<h2>Video Lecture</h2>
+		<div id="sidevideo">
+			<iframe width="260" height="195" src="http://www.youtube.com/embed/z9k2lzNdZWc" frameborder="0" allowfullscreen></iframe>
+		</div>
+		
+		<h2>Useful Resources</h2>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
+		</div>
+		<div id="resource">
+			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
+			Inertia Table</a>
+		</div>
+		<div id="resource">
+			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
+			Inertia Table</a>
+		</div>
+	</div>
+	
+	<div id="workedproblems">
+		<h2>Worked Problems:</h2>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 1:</h3>
+			<p>The cone shown below is four inches tall and has a four inch 
+			diameter base. Find the x, y, and z coordinates of the centroid.</p>	
+			<img alt="Problem 1 Diagram" src="images/P1.png">
+			</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/IJHwNaOG4-s" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/CenterOfMass_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="problem">
+		<div id="question">
+			<h3>Question 2:</h3>
+			<p>Find the y coordinate of the centroid for the tetrahedron 
+			shown in the image below. (The fourth vertex is at the origin) </p>
+			<img alt="Problem 2 Diagram" src="images/P2.png">
+		</div>
+		<div id="solution">
+			<h3>Solution:</h3>
+			<div id="sidevideo">
+				<iframe width="260" height="195" src="http://www.youtube.com/embed/itu_P4ysw9g" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div id="resource">
+				<a href="pdf/CenterOfMass_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+
+
+	
+	<div id="footer">
+		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
+		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
+	</div>
+</div>
+</body>
+
+</html>
