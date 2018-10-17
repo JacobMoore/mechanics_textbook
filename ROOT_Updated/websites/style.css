@@ -47,6 +47,14 @@ li {
 	margin-top:7px;
 }
 
+a {
+	color:#000000;
+}
+
+a:hover {
+	color:#666666;
+}
+
 #wrapper {
 	width: 1000px;
 	background-color: #EEEEEE;
@@ -88,6 +96,7 @@ li {
 	display: inline;
 	margin: 0px;
 }
+
 #navmenu ul li a {
 	float: left;
 	padding: 10px 20px;	

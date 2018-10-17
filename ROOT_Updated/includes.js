@@ -1,5 +1,15 @@
-function displayMenu()
- {
+function displayHeader(){
+	document.write('<div id="header">')
+	document.write('<div id="headerlogo">')
+	document.write('<img alt="Adaptive Map Logo" height="77" src="http://adaptivemap.ma.psu.edu/icons/titleicon.png" width="300">')
+	document.write('</div>')
+	document.write('<div id="headercourse">')
+	document.write('<h2>Engineering Mechanics</h2>')
+	document.write('</div>')
+	document.write('</div>')
+}
+
+function displayMenuMain(){
 	document.write('<div id="navmenu">');
     document.write('<ul>');
     document.write('<li><a href="index.html">Home</a></li>');
@@ -10,8 +20,7 @@ function displayMenu()
 	document.write('</div>');
  }
 
-function displayMenuSub()
- {
+function displayMenuSub(){
 	document.write('<div id="navmenu">');
     document.write('<ul>');
     document.write('<li><a href="../../../index.html">Home</a></li>');
@@ -22,15 +31,32 @@ function displayMenuSub()
 	document.write('</div>');
  }
 
-function displayFooter()
- {
-	 
+function displayResources(){
+	document.write('<h2>Useful Resources</h2>');
+	document.write('<div id="resource">');
+	document.write('<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>');
+	document.write('</div>');
+	document.write('<div id="resource">');
+	document.write('<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>');
+	document.write('</div>');
+	document.write('<div id="resource">');
+	document.write('<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>');
+	document.write('</div>');
+	document.write('<div id="resource">');
+	document.write('<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of Inertia Table</a>');
+	document.write('</div>');
+	document.write('<div id="resource">');
+	document.write('<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of Inertia Table</a>');
+	document.write('</div>');
+}	
+
+function displayFooter(){
 	document.write('<div id="footer">');
 	document.write('<table>');
 	document.write('<tr>');
-	document.write('<td style="width:200px"><img alt="Creative Commons Icon" height="31" src="icons/cc_icon.png" width="88"></td>');
-	document.write('<td style="width:200px"><img alt="GNU Icon" height="98" src="icons/GNU_logo.jpg" width="100"></td>');
-	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="icons/NSF_Logo.jpg" width="100"></td>');
+	document.write('<td style="width:200px"><img alt="Creative Commons Icon" height="31" src="http://adaptivemap.ma.psu.edu/icons/cc_icon.png" width="88"></td>');
+	document.write('<td style="width:200px"><img alt="GNU Icon" height="98" src="http://adaptivemap.ma.psu.edu/icons/GNU_logo.jpg" width="100"></td>');
+	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="http://adaptivemap.ma.psu.edu/icons/NSF_Logo.jpg" width="100"></td>');
 	document.write('</tr>');
 	document.write('<tr>');
 	document.write('<td style="width:200px">');

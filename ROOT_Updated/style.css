@@ -78,14 +78,6 @@ a:hover {
 	margin: 20px;
 }
 
-.nav li{
-    display:inline;
-}
-.nav a{
-    display:inline-block;
-    padding:10px;
-}
-
 #navmenu {
 	background-color:#666666;
 	clear: both;
@@ -104,6 +96,7 @@ a:hover {
 	display: inline;
 	margin: 0px;
 }
+
 #navmenu ul li a {
 	float: left;
 	padding: 10px 20px;	
@@ -119,14 +112,56 @@ a:hover {
 
 
 #maincontent {
-	width: 900px;
+	width: 700px;
 	background-color:#FFFFFF;
 	float: left; 
 	margin: 0px;
-	padding: 20px 50px;
+	padding: 20px 0px;
 	overflow: hidden;
 }
 
+#sidebar {
+	width: 260px;
+	background-color:#EEEEEE;
+	margin-left:720px;
+	padding:0px;
+}
+#sidebar h2{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+#resource
+{
+	background-color: #444444;
+	border: 1px black solid;
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+}
+#resource:hover{
+	background-color: #888888;
+}
+#resource a {
+	text-decoration:none;
+}
+
+#resource a:link 		{ color:#FFFFFF; }
+#resource a:visited 	{ color:#FFFFFF; }
+#resource a:active		{ color:#FFFFFF; }
+#resource a:hover 		{ color:#FFFFFF; }
+#resource a:focus		{ color:#FFFFFF; }
+
+#workedproblems {
+	width: 1000px;
+	padding: 0px;
+	border-top: 2px #DDDDDD solid;
+	clear: both;	
+}
+#workedproblems h2{
+	text-align: center;
+	margin-bottom: 15px;
+}
 
 #problem {
 	width: 900px;
@@ -137,9 +172,98 @@ a:hover {
 	border: 2px #000000 solid;
 }
 
+#question {
+	display: block;
+	float: left;
+	width: 560px;
+	margin: 0;
+	padding: 20px;
+	border-right: 2px #DDDDDD solid;
+}
+#question img {
+	display: block;
+	margin: 10px auto;
+}
+
+#solution {
+	padding: 20px;
+	margin-left: 600px;
+	border-left: 2px #DDDDDD solid;
+}
+#solution h3 {
+	margin: 30px 5px;
+}
+
 #video {
 	text-align:center;
 }
+
+/* Dealing with the Figures in the Pages  */
+
+figure {
+	display: table;
+    width: 100px;
+    padding:6px;
+    margin:4px;
+    border:1px black solid;
+    background-color:#eeeeee;
+    font-size:10px;
+}
+
+figure.equation {
+	margin-left:auto;
+    margin-right:auto;
+    clear:both;
+    background-color:#FFFFFF;
+    padding: 0;
+    border:0;
+}
+
+figure.center {
+    margin-left:auto;
+    margin-right:auto;
+    clear:both;
+}
+
+figure.left {
+	float:left;
+	margin: 20px;
+}
+
+figure.right {
+	float:right;
+	margin: 20px;
+}
+
+
+img, figcaption {
+    text-align: center;
+    display: table-row;
+    padding:0px;
+    line-height: 140%;
+}
+
+table.figtable {
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
+}
+
+table.equation {
+	margin-left:auto;
+	margin-right:auto;
+	clear:both;
+}
+
+table.equation th, td {
+	padding: 10px;
+	font-size: 20px;
+}
+
+table.equation th {
+	text-align: right;
+}
+
 
 #footer {
 	width: 1000px;
@@ -147,13 +271,19 @@ a:hover {
 	clear: both;
 }
 #footer table {
-	font-size: 10px;
 	margin: 10px auto;
-	text-align: center;
 }
 #footer table td {
+	text-align: center;
+	font-size: 10px;
 	width: 200px;
 	padding: 10px 20px;
+}
+
+#footer td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #footer a:link 		{ color:#444444; }
@@ -161,6 +291,4 @@ a:hover {
 #footer a:active	{ color:#444444; }
 #footer a:hover 	{ color:#444444; }
 #footer a:focus		{ color:#444444; }
-
-
 
