@@ -2,7 +2,8 @@
 <html>
 <head>
 <title>Adaptive Map - Particle Kinematics in 2D Polar Coordinates</title>
-<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -87,54 +88,45 @@
   </div>
   <div id="sidebar">
     <h2>Video Lecture</h2>
-    <div id="sidevideo">
+    <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <h2>Useful Resources</h2>
-    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
-    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
-    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
-    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-      Inertia Table</a> </div>
-    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-      Inertia Table</a> </div>
+    <script language="javascript">displayResources();</script>
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
-    <div id="problem">
-      <div id="question">
+    <div class="problem">
+      <div class="question">
         <h3>Question 1:</h3>
         <p>A radar tracking station gives the following raw to a user at a given point in time. Based on this data, what is the current velocity and acceleration in the r and theta directions? What is the current velocity and acceleration in the x and y directions?</p>
         <img src="images/P1.png" width="500" height="324" alt="Problem 1 Diagram"/></div>
-      <div id="solution">
+      <div class="solution">
         <h3>Solution:</h3>
-        <div id="sidevideo">
+        <div class="video">
           <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
         </div>
         <br/>
         <br/>
-        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div id="problem">
-      <div id="question">
+	  <div class="problem">
+      <div class="question">
         <h3>Question 2:</h3>
         <p>A spotlight is tracking an actor as he moves across the stage. If the actor is moving with a constant velocity as shown below, what values do we need for the spotlight angular velocity (theta dot) and spotlight angular acceleration (theta double dot) so that the spotlight remains fixed on the actor?</p>
         <img src="images/P2.png" width="376" height="432" alt="Problem 2 Diagram"/></div>
-      <div id="solution">
+      <div class="solution">
         <h3>Solution:</h3>
-        <div id="sidevideo">
+        <div class="video">
           <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
         </div>
         <br/>
         <br/>
-        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
-  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-  </div>
+  <script language="javascript">displayFooter();</script>
 </div>
 </body>
 </html>

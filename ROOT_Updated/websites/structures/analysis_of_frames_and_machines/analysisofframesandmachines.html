@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - Analysis of Frames and Machines</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	<style type="text/css">
 	</style>
 	
@@ -26,14 +27,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Analysis of Frames and Machines</h1>
@@ -142,75 +138,58 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/OrZkrU5hQYc" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>Find all the forces acting on each of the members in the 
 			structure below.</p>	
 			<img alt="Problem 1 Diagram" src="images/P1.png">			
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/ix2BuRGMGBs" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/AnalysisOfFramesAndMachines_WorkedExample1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>Find all the forces acting on each of the members in the 
 			structure below.</p>
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/TJjsz5Yt3Y0" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/AnalysisOfFramesAndMachines_WorkedExample2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 3:</h3>
 			<p>If two 150 N forces are exerted on the handles of the bolt cutter 
 			shown below, determine the reaction forces (FR1 and FR2) exerted on 
@@ -218,35 +197,35 @@
 			forces exerted by the bolt cutters).</p>
 			<img alt="Problem 3 Diagram" src="images/P3.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/uLsfSMzc5eQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/AnalysisOfFramesAndMachines_WorkedExample3.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 4:</h3>
 			<p>A 100 lb force is exerted on one side of a TV tray as shown 
 			below. Assuming no friction forces at the base, determine all forces 
 			acting on each of the three parts of the TV tray.</p>
 			<img alt="Problem 3 Diagram" src="images/P4.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/uLsfSMzc5eQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/AnalysisOfFramesAndMachines_WorkedExample4.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>

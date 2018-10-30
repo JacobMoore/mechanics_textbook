@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - Vectors</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
 <script type="text/javascript">
 
@@ -24,14 +25,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Vectors</h1>
@@ -189,116 +185,99 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/msjrZtoi59I" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>Determine the x and y components of the vector shown below.</p>
 				
 			<img alt="Problem 1 Diagram" src="images/P1.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/TRS6jiih96o" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Vectors_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>Determine the x and y components of the vector shown below.</p>	
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/hUrlI6eLGvE" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Vectors_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 3:</h3>
 			<p>The velocity vector of the hockey puck shown below is given in 
 			component form. Determine the magnitude and direction of the 
 			velocity with respect to the axes given.</p>	
 			<img alt="Problem 3 Diagram" src="images/P3.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/3GeIU3Fc_qA" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Vectors_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 4:</h3>
 			<p>Determine the x, y, and z components of the force vector shown 
 			below.</p>	
 			<img alt="Problem 4 Diagram" src="images/P4.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/ZG31PoIfIEc" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Vectors_WorkedProblem4.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 5:</h3>
 			<p>A cable as shown below is used to tether the top of a pole to a 
 			point on the ground. The cable has a tension force of 3 kN that acts 
@@ -306,14 +285,14 @@
 			and z components of the tension force acting on the top of the pole?</p>	
 			<img alt="Problem 5 Diagram" src="images/P5.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/dUJwBohfCTU" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Vectors_WorkedProblem5.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
@@ -323,10 +302,7 @@
 		
 	</div>
 	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+	<script language="javascript">displayFooter();</script>
 </div>
 </body>
 

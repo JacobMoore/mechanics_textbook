@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - Belt Friction</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
 <script type="text/javascript">
 
@@ -24,14 +25,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Belt Friction</h1>
@@ -195,7 +191,7 @@
 		<p>Once we have the maximum value for T2, we can use that to find the 
 		torque at the input pulley and the torque at the output pulley. Note 
 		that these two values will not be the same unless the pulleys are the 
-		same size. To find the toque, we will simply need to find the net moment 
+		same size. To find the torque, we will simply need to find the net moment 
 		exerted by the two tension forces, where the radius of the pulley is the 
 		moment arm.</p>
 
@@ -205,7 +201,7 @@
 		
 		<p>To find the maximum power we can transfer with the belt drive system, 
 		we will use the rotational definition of power, where the power is equal 
-		to the toque times the angular velocity in radians per second. Unlike 
+		to the torque times the angular velocity in radians per second. Unlike 
 		the torque, the power at the input and the output will be the same 
 		assuming no inefficiencies.</p>
 		
@@ -217,35 +213,18 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/1yqG-Hk6g4c" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>A steel cable supports a 60 kg mass and is then run a quarter of 
 			the way around a steel cylinder and supported by a pulling force as 
@@ -258,21 +237,21 @@
 			</ul>
 			<img alt="Problem 1 Diagram" src="images/P1.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/SXtKkoF4xtc" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/BeltFriction_WorkedExample1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>A V belt pulley as shown below is used to transmit a torque. If 
 			the diameter of the pulley below is 5 inches, the resting tension in 
@@ -281,21 +260,21 @@
 			can exert before slipping?</p>
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/RLZxKEJVLeo" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/BeltFriction_WorkedExample2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 3:</h3>
 			<p>A flat belt is being used to transfer power from a motor to an 
 			alternator as shown in the diagram below. The coefficient of 
@@ -305,14 +284,14 @@
 			(Assume contact angles of approximately 180 degrees)</p>	
 			<img alt="Problem 3 Diagram" src="images/P3.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/K7PhVhXgqUQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/BeltFriction_WorkedExample3.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
@@ -320,10 +299,7 @@
 				
 	</div>
 	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+	<script language="javascript">displayFooter();</script>
 </div>
 </body>
 

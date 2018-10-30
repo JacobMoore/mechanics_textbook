@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - The Centroid in 2D via the First Moment Integral</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
 <script type="text/javascript">
 
@@ -24,14 +25,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Centroids in 2D via the First Moment Integral</h1>
@@ -149,88 +145,71 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/0GOAWYHh6Mk" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>Find the x and y coordinates of the centroid of the shape shown 
 			below.</p>	
 			<img alt="Problem 1 Diagram" src="images/P1.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/dZ2O3zwvuP0" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Centroids_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>Find the x and y coordinates of the centroid of the shape shown 
 			below.</p>
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/hmGiCFwgIo8" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Centroids_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 3:</h3>
 			<p>Find the x and y coordinates of the centroid of the shape shown 
 			below.</p>
 			<img alt="Problem 3 Diagram" src="images/P3.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/4MHflda4FBw" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Centroids_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
@@ -240,10 +219,7 @@
 
 
 	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+	<script language="javascript">displayFooter();</script>
 </div>
 </body>
 

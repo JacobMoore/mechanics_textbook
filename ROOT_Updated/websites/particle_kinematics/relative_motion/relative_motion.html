@@ -2,7 +2,8 @@
 <html>
 <head>
 <title>Adaptive Map - Relative Motion</title>
-<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -89,69 +90,60 @@
   </div>
   <div id="sidebar">
     <h2>Video Lecture</h2>
-    <div id="sidevideo">
+    <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <h2>Useful Resources</h2>
-    <div id="resource"> <a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a> </div>
-    <div id="resource"> <a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a> </div>
-    <div id="resource"> <a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a> </div>
-    <div id="resource"> <a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-      Inertia Table</a> </div>
-    <div id="resource"> <a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-      Inertia Table</a> </div>
+    <script language="javascript">displayResources();</script>
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
-    <div id="problem">
-      <div id="question">
+    <div class="problem">
+      <div class="question">
         <h3>Question 1:</h3>
         <p>A police officer notices a car speeding by. If the police car is traveling 30 m/s and the radar gun measures the relative velocity to be 15 m/s, how fast is the speeding car actually going? If the police car immediately begins accelerating at a constant rate and catches up to the speeding car after 15 seconds, what is the rate of acceleration of the police car?</p>
         <img src="images/P1.png" width="500" height="233" alt="Problem 1 Diagram"/></div>
-      <div id="solution">
+      <div class="solution">
         <h3>Solution:</h3>
-        <div id="sidevideo">
+        <div class="video">
           <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
         </div>
         <br/>
         <br/>
-        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div id="problem">
-      <div id="question">
+	  <div class="problem">
+      <div class="question">
         <h3>Question 2:</h3>
         <p>A plane has an airspeed of 250 kilometers per hour (airspeed is the velocity of the plane relative to the air) and is flying though an easterly crosswind with a speed of 20 kilometers per hour. If the plane wants to maintain a direct northerly course, what is the angle the plane must point into the wind (theta)?</p>
         <img src="images/P2.png" width="362" height="443" alt="Problem 2 Diagram"/></div>
-      <div id="solution">
+      <div class="solution">
         <h3>Solution:</h3>
-        <div id="sidevideo">
+        <div class="video">
           <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
         </div>
         <br/>
         <br/>
-        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div id="problem">
-      <div id="question">
+	<div class="problem">
+      <div class="question">
         <h3>Question 3:</h3>
         <p>You are in a boat that is traveling through the water in an area of swift currents. One instrument measures your speed with respect to the water to be 20 ft/s with your boat pointed at a 45 degree angle. GPS however measures your absolute speed and direction to be 25 ft/s at a 55 degree angle. Based on this information, what is the speed and direction of the water current in this area?</p>
         <img src="images/P3.png" width="388" height="403" alt="Problem 3 Diagram"/></div>
-      <div id="solution">
+      <div class="solution">
         <h3>Solution:</h3>
-        <div id="sidevideo">
+        <div class="video">
           <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
         </div>
         <br/>
         <br/>
-        <div id="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
-  <div id="footer"> <img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-    <p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-noncommercial 3.0 Unported License</a>.</p>
-  </div>
+  <script language="javascript">displayFooter();</script>
 </div>
 </body>
 </html>

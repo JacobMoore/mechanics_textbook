@@ -131,7 +131,7 @@ a:hover {
 	margin-bottom: 15px;
 }
 
-#resource
+.resource
 {
 	background-color: #444444;
 	border: 1px black solid;
@@ -139,18 +139,18 @@ a:hover {
 	margin: 10px;
 	text-align: center;
 }
-#resource:hover{
+.resource:hover{
 	background-color: #888888;
 }
-#resource a {
+.resource a {
 	text-decoration:none;
 }
 
-#resource a:link 		{ color:#FFFFFF; }
-#resource a:visited 	{ color:#FFFFFF; }
-#resource a:active		{ color:#FFFFFF; }
-#resource a:hover 		{ color:#FFFFFF; }
-#resource a:focus		{ color:#FFFFFF; }
+.resource a:link 		{ color:#FFFFFF; }
+.resource a:visited 	{ color:#FFFFFF; }
+.resource a:active		{ color:#FFFFFF; }
+.resource a:hover 		{ color:#FFFFFF; }
+.resource a:focus		{ color:#FFFFFF; }
 
 #workedproblems {
 	width: 1000px;
@@ -163,7 +163,7 @@ a:hover {
 	margin-bottom: 15px;
 }
 
-#problem {
+.problem {
 	width: 900px;
 	margin: 20px auto;
 	overflow: hidden;
@@ -172,7 +172,7 @@ a:hover {
 	border: 2px #000000 solid;
 }
 
-#question {
+.question {
 	display: block;
 	float: left;
 	width: 560px;
@@ -180,21 +180,21 @@ a:hover {
 	padding: 20px;
 	border-right: 2px #DDDDDD solid;
 }
-#question img {
+.question img {
 	display: block;
 	margin: 10px auto;
 }
 
-#solution {
+.solution {
 	padding: 20px;
 	margin-left: 600px;
 	border-left: 2px #DDDDDD solid;
 }
-#solution h3 {
+.solution h3 {
 	margin: 30px 5px;
 }
 
-#video {
+video {
 	text-align:center;
 }
 

@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - Wedges</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
 <script type="text/javascript">
 
@@ -24,14 +25,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Wedges</h1>
@@ -90,35 +86,18 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/N1Ia7ol_92g" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>A heavy safe is being pushed away from a wall with a wedge as 
 			shown below. Assume the wedge has an angle of 5 degrees, the 
@@ -129,35 +108,35 @@
 			out from the wall?</p>	
 			<img alt="Problem 1 Diagram" src="images/P1.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/r7Ut0GI8q00" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Wedges_WorkedExample1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 			
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>A wedge as shown below is being used to lift the corner of the 
 			foundation of a house. How large must the pushing force be to exert 
 			a one ton (2000 lb) lifting force?</p>	
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 			</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/kgfh4Mna63M" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/Wedges_WorkedExample2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
@@ -165,10 +144,7 @@
 	
 	</div>
 	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+	<script language="javascript">displayFooter();</script>
 </div>
 </body>
 

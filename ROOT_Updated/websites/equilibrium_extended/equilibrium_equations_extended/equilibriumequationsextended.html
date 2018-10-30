@@ -4,7 +4,8 @@
 <head>
 	<title>Adaptive Map - Equilibrium Equations for an Extended Body</title>
 
-	<link href="../../style.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
+	<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
 <script type="text/javascript">
 
@@ -24,14 +25,9 @@
 
 <body>
 <div id="wrapper">
-	<div id="header">
-		<div id="headerlogo">
-			<img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300">
-		</div>
-		<div id="headercourse">
-			<h2>Engineering Statics</h2>
-		</div>
-	</div>
+	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
 	
 	<div id="maincontent">
 		<h1>Equilibrium Equations for an Extended Body</h1>
@@ -125,77 +121,61 @@
 	
 	<div id="sidebar">
 		<h2>Video Lecture</h2>
-		<div id="sidevideo">
+		<div class="video">
 			<iframe width="260" height="195" src="http://www.youtube.com/embed/9s8hkv_W63o" frameborder="0" allowfullscreen></iframe>
 		</div>
 		
-		<h2>Useful Resources</h2>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>
-		</div>
-		<div id="resource">
-			<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of 
-			Inertia Table</a>
-		</div>
-		<div id="resource">
-			<a href="../../centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of 
-			Inertia Table</a>
-		</div>
+		<script language="javascript">displayResources();</script>
+		
 	</div>
 	
 	<div id="workedproblems">
 		<h2>Worked Problems:</h2>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 1:</h3>
 			<p>The car below has a mass of 1500 lbs with the center of mass 4 ft 
 			behind the front wheels of the car. What are the normal forces on 
 			the front and the back wheels of the car?</p>	
 			<img alt="Problem 1 Diagram" src="images/P1.png" alt="By Ebaychatter0 (Own work) [Public domain], via Wikimedia Commons">		
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/1LD5QW-70PA" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 2:</h3>
 			<p>A 5 meter long beam has a fixed connection to a wall at point A 
 			and a force acting as shown at point B. What are the reaction forces 
 			acting on the beam at point A?</p>
 			<img alt="Problem 2 Diagram" src="images/P2.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/JrVV7k1aQEk" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 3:</h3>
 			<p>A ladder with negligible mass is supporting 120 lb person as 
 			shown below. If the contact point at A is frictionless, and the 
@@ -203,62 +183,62 @@
 			acting at contact points A and B.</p>
 			<img alt="Problem 3 Diagram" src="images/P3.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/WzkAnPdhao4" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 4:</h3>
 			<p>Member ABC is 6 meters long with point B being in the middle. 
 			Determine all forces acting on member ABC.</p>
 			<img alt="Problem 4 Diagram" src="images/P4.png">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/sMQrjwUMpSQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem4.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 5:</h3>
 			<p>While sitting in a chair, a person exerts the forces in the 
 			diagram below. Determine all forces acting on the chair at points A 
 			and B. (Assume A is frictionless and B is a rough surface).</p>
 			<img alt="Problem 5 Diagram" height="437" src="images/P5.png" width="333">
 			</div>
-			<div id="solution">
+			<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/nSOxK1ZMggA" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem5.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 6:</h3>
 			<p>The trailer shown below consists of a deck with a weight of 250 
 			lbs on an axel with wheels with a weight of 350 lbs. Assume the 
@@ -267,22 +247,22 @@
 			from the front must we place the axel(d)?</p>
 			<img alt="Problem 6 Diagram" height="187" src="images/P6.png" 	width="500">
 			</div>
-			<div id="solution">
+			<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/wpEBuitLD5s" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem6.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
 		
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 7:</h3>
 			<p>A 12 in by 24 in flat steel sign is supported by two cables, each 
 			6 inches from the edge of the sign. The sign has a weight of 10 lbs, 
@@ -292,35 +272,35 @@
 			strong must the wind force be to cause this ten degree angle?</p>
 			<img alt="Problem 7 Diagram" height="363" src="images/P7.png" width="457">
 		</div>
-		<div id="solution">
+		<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/pR-0xbj8wF0" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem7.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
 		</div>
 
-		<div id="problem">
-		<div id="question">
+		<div class="problem">
+		<div class="question">
 			<h3>Question 8:</h3>
 			<p>A sixty kilogram acoustic panel is suspended by three cables as 
 			shown below. Assuming the panel has a uniformly distributed weight, 
 			what is the tension in each of the cables?</p>
 			<img alt="Problem 8 Diagram" height="310" src="images/P8.png" width="500">
 		</div>
-			<div id="solution">
+			<div class="solution">
 			<h3>Solution:</h3>
-			<div id="sidevideo">
+			<div class="video">
 				<iframe width="260" height="195" src="http://www.youtube.com/embed/Kbsc1m0f9pQ" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<br/>
 			<br/>
-			<div id="resource">
+			<div class="resource">
 				<a href="pdf/EquilibriumEquationsExtended_WorkedProblem8.pdf" target="_blank">PDF Solution</a>
 			</div>
 		</div>
@@ -329,13 +309,9 @@
 		
 		
 	</div>
-
-
 	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has liscenced this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+	<script language="javascript">displayFooter();</script>
+	
 </div>
 </body>
 
