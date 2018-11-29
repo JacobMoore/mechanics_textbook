@@ -25,13 +25,9 @@
 
 <body>
 <div id="wrapper">
-  <div id="header">
-    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
-    <div id="headercourse">
-      <h2>Engineering Dynamics</h2>
-    </div>
-  </div>
-  <script language="javascript">displayMenuSub();</script>
+  <div id="header">	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Dependent Motion in Particles</h1>
     <p>Dependent motion analysis is used when two or more particles have motions that are in some way connected to one another. The way in which the motion of these particles is connected is known as the constraint. A simple example of a constrained system is shown in the image below. Imagine a pickup truck gets stuck in the sand, and a freind uses a rope to help pull them out. This friend ties one end of the rope to the rear bumper of her car, loops the rope around a bar on the front of the pickup truck, then ties the other end to a stationary tree. In this case the two vehicles will not have the same velocity or acceleration, but their motions are related because they are tied together by the rope. In this case, the rope is acting as the constraint, allowing us to know the velocity or acceleration of one vehicle based on the velocity or acceleraion of the other vehicle.</p>
@@ -62,7 +58,7 @@
     </table>
 	  <p>In these equations, it is importnat to remeber that the values represent the changes in length, rather than direct measures of velocities. Though both vehicles would have positive velocities in the example above (velocities to the right), one L dot value will be positive and one will be negative. This is because the truck is getting closer to the tree while the green car is getting further away. A similar situation will occur for the accelerations, where both vehicles would have positive accelerations even if the L double dot values are a mix of positive and negative values.</p>
   </div>
-  <div id="sidebar">
+  <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>

@@ -25,13 +25,9 @@
 
 <body>
 <div id="wrapper">
-  <div id="header">
-    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
-    <div id="headercourse">
-      <h2>Engineering Dynamics</h2>
-    </div>
-  </div>
-  <script language="javascript">displayMenuSub();</script>
+  <div id="header">	<script language="javascript">displayHeader();</script>
+	
+	<script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Fixed Axis Rotation in Extended Bodies</h1>
     <p>When moving from particle kinematics to <strong>extended body</strong> kinematics, we add the <strong>rotation</strong> of a body into the motion analysis process. Some bodies will translate and rotate at the same time, but many engineered systems have components that simply rotate about some fixed axis. We will start our examination of extended body kinematics by examining these fixed axis rotation problems, where rotation is the only motion we need to worry about.</p>
@@ -134,7 +130,7 @@
     </table>
 	<p>These equations allow us to find the velocity and acceleration of any point on a body rotating about a fixed axis, given that we know the angular velocity of the body (Theta Dot), the angular acceleration of the body (Theta Double Dot), and the distance from the point to the axis of rotation (r).</p>
   </div>
-  <div id="sidebar">
+  <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>

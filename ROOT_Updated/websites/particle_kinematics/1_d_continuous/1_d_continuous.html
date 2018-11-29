@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>Adaptive Map - Particle Kinematics for Continuous Motion</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -24,17 +23,12 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header">
-    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
-    <div id="headercourse">
-      <h2>Engineering Dynamics</h2>
-    </div>
-  </div>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>One Dimensional Continuous Motion    </h1>
-    <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time.    </p>
+    <h1>One Dimensional Continuous Motion</h1>
+    <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time. </p>
     <figure class="center"> <img src="images/position.png" width="482" height="181" alt="The position of a particle in 1D is x"/>
       <figcaption>The position of a particle in one dimension can be described with a single number. If the position is changing over time, we will use a function x(t) to describe the position at any given point in time.</figcaption>
     </figure>
@@ -76,39 +70,39 @@
       </tbody>
     </table>
     <h2>Constant Acceleration Systems:</h2>
-	  <p>In cases where we have a constant acceleration (often due to a constant force), we can start with a constant value for a(t) = a, and work the intergrals from there. Along the way we will add the initial velocty and the initial position as the constants of intergation to wind up with the formulas below.</p>
-	  <table class="equation">
-	    <tbody>
-	      <tr>
-	        <th>Acceleration:</th>
-	        <td>\[a(t)=a\]</td>
-          </tr>
-	      <tr>
-	        <th>Velocity:</th>
-	        <td>\[v(t)=at+v_{0}\]<br></td>
-          </tr>
-	      <tr>
-	        <th>Position:</th>
-	        <td>\[x(t)=\frac{1}{2}at^{2}+v_{0}t+x_{0}\]</td>
-          </tr>
-        </tbody>
+    <p>In cases where we have a constant acceleration (often due to a constant force), we can start with a constant value for a(t) = a, and work the intergrals from there. Along the way we will add the initial velocty and the initial position as the constants of intergation to wind up with the formulas below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a(t)=a\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v(t)=at+v_{0}\]<br></td>
+        </tr>
+        <tr>
+          <th>Position:</th>
+          <td>\[x(t)=\frac{1}{2}at^{2}+v_{0}t+x_{0}\]</td>
+        </tr>
+      </tbody>
     </table>
-	  <p>If we take the equations for the position and the velocity from above then solve both of them for t and set those equations equal to one another we can actually wind up with another equation that directly relates positiion, velocity, and acceleration without needing to know the time.</p>
-	  <table class="equation">
-	    <tbody>
-	      <tr>
-	        <td>\[v^{2}-v{_{0}}^{2}=2a(x-x_{0})\]</td>
-		  </tr>
-        </tbody>
+    <p>If we take the equations for the position and the velocity from above then solve both of them for t and set those equations equal to one another we can actually wind up with another equation that directly relates positiion, velocity, and acceleration without needing to know the time.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[v^{2}-v{_{0}}^{2}=2a(x-x_{0})\]</td>
+        </tr>
+      </tbody>
     </table>
-	  <p>It is important to remember that these equations are only valid when the acceleration is constant. When that is not the case, you will need to use calculus to find the derivatives or interagrals based the equations for position, velocity, and acceleration that you do know.</p>
+    <p>It is important to remember that these equations are only valid when the acceleration is constant. When that is not the case, you will need to use calculus to find the derivatives or interagrals based the equations for position, velocity, and acceleration that you do know.</p>
   </div>
-  <div id="sidebar">
+  <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <script language="javascript">displayResources();</script>
+    <script language="javascript">displayResources();</script> 
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
@@ -126,8 +120,8 @@
         <br/>
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-	  </div>
-	<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
         <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. How far did you travel in metersover the course of those ten seconds.</p>
@@ -141,8 +135,8 @@
         <br/>
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-	  </div>
-	<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>In a rocket sled deceleration experiment, a manned sled is decelerated from a speed of 200 mph (89.4 m/s) to a stop at a constant rate of 18Gs (176.6 m/s<sup>2</sup>). How long does it take for the sled to stop? How far does the sled travel while decelerating.</p>
@@ -156,10 +150,8 @@
         <br/>
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-	  </div>
-	  
-	  
-	<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
         <p>A metalic particle is accelerated in a magnetic field such that its velocity over time is definted by the function v(t) = 4t<sup>2</sup> - 12, where time is in seconds and velocity is in meters per second. If we assume that the particle has an initial position of zero (x<sub>0</sub> = 0), what are the equations that describe the acceleration and position over time?</p>
@@ -173,11 +165,9 @@
         <br/>
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-	  </div>
-    
-    
     </div>
-  <script language="javascript">displayFooter();</script>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>

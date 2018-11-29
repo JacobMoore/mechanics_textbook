@@ -2,8 +2,7 @@
 <html>
 <head>
 <title>Adaptive Map - Particle Kinematics for Non-Continuous Motion</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -24,13 +23,8 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header">
-    <div id="headerlogo"> <img alt="Adaptive Map Logo" height="77" src="../../icons/titleicon.png" width="300"> </div>
-    <div id="headercourse">
-      <h2>Engineering Dynamics</h2>
-    </div>
-  </div>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>One Dimensional Non-Continuous Motion</h1>
@@ -42,18 +36,18 @@
     <p>Analyzing the first time period will be exactly the same as analyzing a continuous function. We will intially need to identify the mathematical function to describe position, or velocity, or acceleration for that first time period. Next we take derivatives to move from position to velocity to acceleration or take intergrals to move from acceleration to velocity to position. Whenever we take an intergral, we need to remember to include the constant of intergration which will represent the intial velocity or the intial position (in the velocity and position equations respectivly).</p>
     <p>For the second, third (and all following) sections, we will do much the same process. We will start by identifiying an equation for the postion, or velocity, or acceleration for that time period. From there we again take derivatives or intergrals as appropriate, but now the constants of intergration will be a little more complicated. Those constants still represent initial velocities and and positions in a sense, but they will be the velocity and position when t=0, not the velocity and position at the start of that section.</p>
     <p>To find the constants of intergration, we are instead going to have to use the transition point, which is the point in time where we are moving from one set of equations to the next. Even though the equations are changing, we cannot have an instantaneous jump in either the position or velocity. An instantaneous jump in either position or velocity would require infinite acceleration, which is physically impossible.</p>
-	<figure class="center"><img src="images/non-continuous-set.png" width="500" height="426" alt="A set of acceleration, velocity, and position plots lined up"/>
+    <figure class="center"><img src="images/non-continuous-set.png" width="500" height="426" alt="A set of acceleration, velocity, and position plots lined up"/>
       <figcaption>This figure shows the acceleration, velocity, and position plots from the car earlier on. Though there are noticeable jumps in the acceleration moving from one section to the next, there are no jumps in the velocity or position as we move from one section to the next. This is because jumps in those plots would require infinite accelerations.</figcaption>
     </figure>
-	<p>To find the velocity equations for the second time frame (or third or fourth etc.), we start by intergrating the acceleration  equation for that same time period. This will lead to an equation with an unknown constant of intergraton. To solve for that constant we look back to the velocity equation for the previous time frame and solve for the velocity at the very end of this prior time period. Since it can't jump instantaneously, this is also the velocity at the start of the current time period. Using this velocity, along with the time t at the transition point, we can solve for the last unknown in the current velocity equation (the constant of intergration).</p>
-	<p>To find the position equation for the second time frame (or third or fourth etc.), we start by intergrating the velocity equation for the same time period (you will need to solve for the unknowns in the velocity equation first, as discussed above). After intergration, we should have one new constant of intergration in the position equation. Just as we did with the velocity equations, we will use the position equation from the prior time frame to solve for the position at the transition point, then use that value along with the known time t to solve for the unknown constant in the current position equation. </p>
+    <p>To find the velocity equations for the second time frame (or third or fourth etc.), we start by intergrating the acceleration  equation for that same time period. This will lead to an equation with an unknown constant of intergraton. To solve for that constant we look back to the velocity equation for the previous time frame and solve for the velocity at the very end of this prior time period. Since it can't jump instantaneously, this is also the velocity at the start of the current time period. Using this velocity, along with the time t at the transition point, we can solve for the last unknown in the current velocity equation (the constant of intergration).</p>
+    <p>To find the position equation for the second time frame (or third or fourth etc.), we start by intergrating the velocity equation for the same time period (you will need to solve for the unknowns in the velocity equation first, as discussed above). After intergration, we should have one new constant of intergration in the position equation. Just as we did with the velocity equations, we will use the position equation from the prior time frame to solve for the position at the transition point, then use that value along with the known time t to solve for the unknown constant in the current position equation. </p>
   </div>
-  <div id="sidebar">
+  <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <script language="javascript">displayResources();</script>
+    <script language="javascript">displayResources();</script> 
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
@@ -72,7 +66,7 @@
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
         <p>A plane with an intial speed of 95 m/s touches down on a runway. For the first second the plane rolls without decelerating. For the next 5 seconds reverse thrust is applied, decelerating the plane at a rate of 4 m/s<sup>2</sup>. Finally, the brakes are applied with reverse thrust increasing the rate of deceleration to 8 m/s<sup>2</sup>. How long does it take for the plane to come to a complete stop? How far does the plane travel before coming to a complete stop?</p>
@@ -87,7 +81,7 @@
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>A satalite records the velocity function shown below over a sixty second time period. During that same time period determine the acceleration and position functions and draw these functions on a plot.</p>
@@ -103,7 +97,7 @@
       </div>
     </div>
   </div>
-  <script language="javascript">displayFooter();</script>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>
