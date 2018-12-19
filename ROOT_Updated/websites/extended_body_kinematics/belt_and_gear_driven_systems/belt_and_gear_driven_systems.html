@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - Belt and Gear Driven Systems</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header"> <script language="javascript">displayHeader();</script> 
+    <script language="javascript">displayMenuSub();</script> 
+  </div>
+  <div id="maincontent">
+    <h1>Kinematics in Belt and Gear Driven Systems</h1>
+    <p>Belt and pulley Systems, along with gear driven systems represent the common ways that engineers transfer rotational motion and torque from one shaft to another shaft. Belts offer flexibility in that the shafts do not need to be right net to one another and gears are more commonly used in high load applications.</p>
+    <table class="figtable">
+      <tr>
+        <td><figure><img src="images/beltdrive.JPG" width="300" height="225" alt="A toothed and non-toothed belt driven system"/>
+            <figcaption>Belts and pulleys are often used to transmit motion and torque from one shaft to another.</figcaption>
+          </figure></td>
+        <td><figure><img src="images/gears.jpg" width="300" height="200" alt="A series of interconnected gears"/>
+            <figcaption>Gears are another common way of transmitting motion and torque from one shaft to another shaft.</figcaption>
+          </figure></td>
+      </tr>
+    </table>
+    <h2>Position, Velocity, and Acceleration in Belt Driven Systems</h2>
+    <p>The diagram below shows a simple belt driven system. Pulley A and Pulley B each have their own radius, and are connected via a belt that we will assume is not slipping relative to the pulleys. Each pulley is undergoing fixed axis rotation and will therefore follow those kinematic rules seperately, however the motion of belt can be used to relate the motion of the two pulleys.</p>
+    <figure class="center"><img src="images/pulleydiagram.png" width="500" height="201" alt="A simple belt driven system with a pulley connecting pulley A and pulley B"/>
+      <figcaption>The diagram above shows a simple belt driven system connecting pulley A and pulley B.</figcaption>
+    </figure>
+    <p>As a constraint, we can assume the speed of the pulley will be uniform throughout the whole loop at any one time. If this was not true the belt would be bunching up in some locations and streching out in other areas. If the belt isn't slipping, the speed of the belt will be the same as the speed of the edge of each of the two pulleys. Setting these two speeds equal to one another and working backwards to relate them to angular velocities, we wind of with the middle equation below. Taking the integral or deriviative allows us to also relate angular displacements or angular accelerations with similar eqautions.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Angular Displacements:</th>
+          <td>\[r_{A}(\Delta \Theta _{A})=r_{B}(\Delta \Theta_{B})\]</td>
+        </tr>
+        <tr>
+          <th>Angular Velocities:</th>
+          <td>\[r_{A}\omega_{A}=r_{B}\omega_{B}\]</td>
+        </tr>
+        <tr>
+          <th>Angular Accelerations:</th>
+          <td>\[r_{A}\alpha_{A}=r_{B}\alpha_{B}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If we have a more complex series of belts and pulleys, we will analyze the system one step at at time. This will include pulleys connected via belts as we had above, as well as pulleys connected via a shaft as shown with pulleys B and C in the diagram below. </p>
+    <figure class="center"><img src="images/pulleycomplexdiagram.png" width="500" height="241" alt="A series of belts and pulleys. Pulleys A and B are connected via a belt, then B and C are on the same shaft, then C and D are connected via pulleys."/>
+      <figcaption>The diagram above shows a multi-stage belt driven system connecting pulley A and pulley D. Pulleys A and B are connected via a belt, then B and C are on the same shaft, then C and D are connected via a belt.</figcaption>
+    </figure>
+    <p>With pulleys on the same shaft, the angular dispacements, the angular velocities, and the angular accelerations will all be the same.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta \Theta_{B}=\Delta \Theta_{C}\]</td>
+          <td>\[\omega_{B}=\omega_{C}\]</td>
+          <td>\[\alpha_{B}=\alpha_{C}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If we know the angular displacement, angular velocity, or angular acceleration of pulley A, we could find the angular displacement, angular velocity, or angular acceleration of pulley D by moving one interaction at a time (finding the motion of pulley B, then C, then D).</p>
+    <h2>Position, Velocity, and Acceleration in Gear Systems</h2>
+    <p>The diagram below shows a simple gear system. Gear A and Gear B each have their own radius, and are interacting at their point of contact. Each gear is undergoing fixed axis rotation and will therefore follow those kinematic rules seperately, however the motion of the teeth at the point of contact can be used to relate the motion of one gear to the next.</p>
+    <figure class="center"><img src="images/geardiagram.png" width="450" height="362" alt="Two gears interacting in a simple gear system"/>
+      <figcaption>The diagram above shows a simple gear system with gears A and B interacting.</figcaption>
+    </figure>
+    <p>As a constraint, we can assume that the speed of the teeth at the point of contact will be the same. If this were not true, the teeth of one gear would be passing through the teeth of the other gear. Setting these these two speeds equal to one another and working backwards to relate the angular velocities we find the second equation below. Taking the integral or deriviative allows us to also relate angular displacements or angular accelerations with similar eqautions.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Angular Displacements:</th>
+          <td>\[r_{A}(\Delta \Theta _{A})=-r_{B}(\Delta \Theta_{B})\]</td>
+        </tr>
+        <tr>
+          <th>Angular Velocities:</th>
+          <td>\[r_{A}\omega_{A}=-r_{B}\omega_{B}\]</td>
+        </tr>
+        <tr>
+          <th>Angular Accelerations:</th>
+          <td>\[r_{A}\alpha_{A}=-r_{B}\alpha_{B}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>You will notice that the equations above match the equations we had for belt driven systems, except for the minus sign on the right side of each equation. This is because meshed gears rotate in opposite directions (if one gear rotates clockwise, the other will rotate counter-clockwise) while pulleys in belt driven systems always rotate in the same direction.</p>
+    <p>Also similar to belt driven systems, we can have compound gear trains with three or more gears similar to the figure below. In these scenarios we will also likely to have gears that are connected via a shaft like the blue and yellow gears shown below. In such situations, the gears on the same shaft will have matching angular displacements, angular velocities, and angular accelerations. As with belt driven systems, you simply need to take the gear train one step at a time, applying the right set of equations to match each step in the interaction.</p>
+    <figure class="center"><img src="images/AnimatedGears.gif" width="320" height="165" alt="A four stage gear train."/>
+      <figcaption>The animated diagram above shows a compound gear train. The red and blue gears interact via meshing teeth, then the blue and yellow gears are on the same shaft, then finally the yellow and green gears interact via meshing teeth.</figcaption>
+    </figure>
+    <p>A concept that is commonly used in gear trains that is not commonly used in belt driven systems is the concept of the <strong>gear ratio</strong>. For any gear train the gear ratio is defined as the angular speed of the input divided by the angular speed of the output. Based on the equations above, we can also prove that the ratio of angular displacements or angular accelerations will similarly be equal to the gear ratio. The gear ratio is always defined as a positive number however, so you will still need to use intuition to determine the direction of of output.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[Gear Ratio=\frac{\omega_{input}}{\omega_{output}}=\frac{\Delta\Theta_{input}}{\Delta\Theta_{output}}=\frac{\alpha_{input}}{\alpha_{output}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In a simple two gear system, the gear ratio will be equal to the radius of the output gear divided by the radius of the input gear, or the number of teeth on the output gear divided by the number of teeth on the input gear (since the number of teeth will be directly proportional to the radius). In compound gear trains this simple calculation below will not work, but if you are given the gear ratio for a compund gear train, you can still apply the equations above.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[Gear Ratio=\frac{\omega_{input}}{\omega_{output}}=\frac{r_{output}}{r_{input}}=\frac{N_{output}}{N_{input}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>If the input pulley A as shown below is rotating at a rate of 10 rad/s, what is the speed of the output pulley at D? How many rotations does D go through in the time it takes for A to make one full rotation?</p>
+        <img src="images/P1.png" width="500" height="226" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A car is moving 40 ft/s on 18 inch diameter wheels. What is the angular velocity of the wheels on the car? If the car is in third gear with a gear ratio of 1.43:1, what is the angular velocity of the engine in rotations per minute? (Hint, the engine is the input to the gear train in the transmission and the wheels are the output of the gear train in the transmission.)</p>
+        <img src="images/P2.jpg" width="500" height="333" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
