@@ -2,8 +2,9 @@
 <html>
 <head>
 <title>Adaptive Map - Relative Motion</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -24,10 +25,9 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header">	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Relative Motion in Particles</h1>
     <p>Relative motion analysis is the analysis of bodies where more than one body is in motion and  we are in some way examining the motion of one moving particle relative to another moving particle. An example would be cars on a highway. If you are in one car moving down the highway with other cars moving down the highway with you, you will all have velocities in a single direction. From your perspective inside the car though, fast cars in front of you will appear to be moving away from you and slow cars in front of you will appear to be moving towards you. By knowing your speed, and by observing how fast the cars are moving away from you or towards you, you could determine, or at least estimate how fast these cars are going. The process of using your speed in conjunction with the relative velocities of the other cars to find the other cars' speed is relative motion analysis.</p>
@@ -43,31 +43,31 @@
           <th>Position:</th>
           <td>\[r_{B/O}=r_{A/O}+r_{B/A}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
     <p>One thing we should notice about the subscripts is that if we keep to our standard naming convention (ending point / starting point) then we should be able to see which points cancel out and which remain. In this case, the A's on the top and bottom on the right cancel out, leaving just a B on the top and an O on the bottom. This matches the subscript on the left of the equation.</p>
     <p>Furthermore, we can take the derivative of this equation to relate velocities, or a double derivative to relate accelerations. This means that if we know any two of the terms in the equations below, we can solve for the third.</p>
-	<table class="equation">
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
           <td>\[v_{B/O}=v_{A/O}+v_{B/A}\]</td>
         </tr>
-		<tr>
+        <tr>
           <th>Acceleration:</th>
           <td>\[a_{B/O}=a_{A/O}+a_{B/A}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-	<h2>Relative Motion in Two Dimensions:</h2>
-	<p>Just as with one dimension, we can start by examining a set of relative positions. In this case we will use the example of two planes moving through the sky. We may wish to deduce the position of plane B on a map, based on our observations from plane A. By using the information we have on our position relative to some set location, along with the relative position read in from on board instrumentation, we should be able to determine the absolute position (including an x and y coordinate) for plane B.</p>
-	<figure class="center"><img src="images/2D_relative_motion.png" width="500" height="193" alt="Relative Motion in 2 dimensions."/>
+    <h2>Relative Motion in Two Dimensions:</h2>
+    <p>Just as with one dimension, we can start by examining a set of relative positions. In this case we will use the example of two planes moving through the sky. We may wish to deduce the position of plane B on a map, based on our observations from plane A. By using the information we have on our position relative to some set location, along with the relative position read in from on board instrumentation, we should be able to determine the absolute position (including an x and y coordinate) for plane B.</p>
+    <figure class="center"><img src="images/2D_relative_motion.png" width="500" height="193" alt="Relative Motion in 2 dimensions."/>
       <figcaption>In a two dimensions we have a fixed reference point O, as well as at least two moving bodies, labeled as A and B in this case. The r vectors represent the distance vectors between bodies, with the subscript indicating the starting and ending point. The subscripts should always be formated end point / starting point.</figcaption>
     </figure>
-	<p>In two dimensions, we will use the same equations as before, except this time we will be using vectors rather than scalar values in our equations.</p>
-	<table class="equation">
+    <p>In two dimensions, we will use the same equations as before, except this time we will be using vectors rather than scalar values in our equations.</p>
+    <table class="equation">
       <tbody>
-		<tr>
+        <tr>
           <th>Position:</th>
           <td>\[\overrightarrow{r}_{B/O}=\overrightarrow{r}_{A/O}+\overrightarrow{r}_{B/A}\]</td>
         </tr>
@@ -75,21 +75,20 @@
           <th>Velocity:</th>
           <td>\[\overrightarrow{v}_{B/O}=\overrightarrow{v}_{A/O}+\overrightarrow{v}_{B/A}\]</td>
         </tr>
-		<tr>
+        <tr>
           <th>Acceleration:</th>
           <td>\[\overrightarrow{a}_{B/O}=\overrightarrow{a}_{A/O}+\overrightarrow{a}_{B/A}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-	<p>To solve these equations, we will almost always break the vector equations down into a set of component equations. This will let us solve these equations with simple algebra. Because we have more than one particle, we usually use rectangular coordinate systems for this with a universal set of x and y coordinates.</p>
-    
+    <p>To solve these equations, we will almost always break the vector equations down into a set of component equations. This will let us solve these equations with simple algebra. Because we have more than one particle, we usually use rectangular coordinate systems for this with a universal set of x and y coordinates.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <script language="javascript">displayResources();</script>
+    <script language="javascript">displayResources();</script> 
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
@@ -108,7 +107,7 @@
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
         <p>A plane has an airspeed of 250 kilometers per hour (airspeed is the velocity of the plane relative to the air) and is flying though an easterly crosswind with a speed of 20 kilometers per hour. If the plane wants to maintain a direct northerly course, what is the angle the plane must point into the wind (theta)?</p>
@@ -123,7 +122,7 @@
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>You are in a boat that is traveling through the water in an area of swift currents. One instrument measures your speed with respect to the water to be 20 ft/s with your boat pointed at a 45 degree angle. GPS however measures your absolute speed and direction to be 25 ft/s at a 55 degree angle. Based on this information, what is the speed and direction of the water current in this area?</p>
@@ -139,7 +138,7 @@
       </div>
     </div>
   </div>
-  <script language="javascript">displayFooter();</script>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>

@@ -25,10 +25,9 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header"> <script language="javascript">displayHeader();</script> 
-    <script language="javascript">displayMenuSub();</script> 
-  </div>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Kinematics in Belt and Gear Driven Systems</h1>
     <p>Belt and pulley Systems, along with gear driven systems represent the common ways that engineers transfer rotational motion and torque from one shaft to another shaft. Belts offer flexibility in that the shafts do not need to be right net to one another and gears are more commonly used in high load applications.</p>
@@ -43,11 +42,11 @@
       </tr>
     </table>
     <h2>Position, Velocity, and Acceleration in Belt Driven Systems</h2>
-    <p>The diagram below shows a simple belt driven system. Pulley A and Pulley B each have their own radius, and are connected via a belt that we will assume is not slipping relative to the pulleys. Each pulley is undergoing fixed axis rotation and will therefore follow those kinematic rules seperately, however the motion of belt can be used to relate the motion of the two pulleys.</p>
+    <p>The diagram below shows a simple belt driven system. Pulley A and Pulley B each have their own radius, and are connected via a belt that we will assume is not slipping relative to the pulleys. Each pulley is undergoing fixed axis rotation and will therefore follow those kinematic rules separately, however the motion of belt can be used to relate the motion of the two pulleys.</p>
     <figure class="center"><img src="images/pulleydiagram.png" width="500" height="201" alt="A simple belt driven system with a pulley connecting pulley A and pulley B"/>
       <figcaption>The diagram above shows a simple belt driven system connecting pulley A and pulley B.</figcaption>
     </figure>
-    <p>As a constraint, we can assume the speed of the pulley will be uniform throughout the whole loop at any one time. If this was not true the belt would be bunching up in some locations and streching out in other areas. If the belt isn't slipping, the speed of the belt will be the same as the speed of the edge of each of the two pulleys. Setting these two speeds equal to one another and working backwards to relate them to angular velocities, we wind of with the middle equation below. Taking the integral or deriviative allows us to also relate angular displacements or angular accelerations with similar eqautions.</p>
+    <p>As a constraint, we can assume the speed of the pulley will be uniform throughout the whole loop at any one time. If this was not true the belt would be bunching up in some locations and stretching out in other areas. If the belt isn't slipping, the speed of the belt will be the same as the speed of the edge of each of the two pulleys. Setting these two speeds equal to one another and working backwards to relate them to angular velocities, we wind of with the middle equation below. Taking the integral or derivative allows us to also relate angular displacements or angular accelerations with similar equations.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -68,7 +67,7 @@
     <figure class="center"><img src="images/pulleycomplexdiagram.png" width="500" height="241" alt="A series of belts and pulleys. Pulleys A and B are connected via a belt, then B and C are on the same shaft, then C and D are connected via pulleys."/>
       <figcaption>The diagram above shows a multi-stage belt driven system connecting pulley A and pulley D. Pulleys A and B are connected via a belt, then B and C are on the same shaft, then C and D are connected via a belt.</figcaption>
     </figure>
-    <p>With pulleys on the same shaft, the angular dispacements, the angular velocities, and the angular accelerations will all be the same.</p>
+    <p>With pulleys on the same shaft, the angular displacements, the angular velocities, and the angular accelerations will all be the same.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -80,11 +79,11 @@
     </table>
     <p>If we know the angular displacement, angular velocity, or angular acceleration of pulley A, we could find the angular displacement, angular velocity, or angular acceleration of pulley D by moving one interaction at a time (finding the motion of pulley B, then C, then D).</p>
     <h2>Position, Velocity, and Acceleration in Gear Systems</h2>
-    <p>The diagram below shows a simple gear system. Gear A and Gear B each have their own radius, and are interacting at their point of contact. Each gear is undergoing fixed axis rotation and will therefore follow those kinematic rules seperately, however the motion of the teeth at the point of contact can be used to relate the motion of one gear to the next.</p>
+    <p>The diagram below shows a simple gear system. Gear A and Gear B each have their own radius, and are interacting at their point of contact. Each gear is undergoing fixed axis rotation and will therefore follow those kinematic rules separately, however the motion of the teeth at the point of contact can be used to relate the motion of one gear to the next.</p>
     <figure class="center"><img src="images/geardiagram.png" width="450" height="362" alt="Two gears interacting in a simple gear system"/>
       <figcaption>The diagram above shows a simple gear system with gears A and B interacting.</figcaption>
     </figure>
-    <p>As a constraint, we can assume that the speed of the teeth at the point of contact will be the same. If this were not true, the teeth of one gear would be passing through the teeth of the other gear. Setting these these two speeds equal to one another and working backwards to relate the angular velocities we find the second equation below. Taking the integral or deriviative allows us to also relate angular displacements or angular accelerations with similar eqautions.</p>
+    <p>As a constraint, we can assume that the speed of the teeth at the point of contact will be the same. If this were not true, the teeth of one gear would be passing through the teeth of the other gear. Setting these these two speeds equal to one another and working backwards to relate the angular velocities we find the second equation below. Taking the integral or derivative allows us to also relate angular displacements or angular accelerations with similar equations.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -114,7 +113,7 @@
         </tr>
       </tbody>
     </table>
-    <p>In a simple two gear system, the gear ratio will be equal to the radius of the output gear divided by the radius of the input gear, or the number of teeth on the output gear divided by the number of teeth on the input gear (since the number of teeth will be directly proportional to the radius). In compound gear trains this simple calculation below will not work, but if you are given the gear ratio for a compund gear train, you can still apply the equations above.</p>
+    <p>In a simple two gear system, the gear ratio will be equal to the radius of the output gear divided by the radius of the input gear, or the number of teeth on the output gear divided by the number of teeth on the input gear (since the number of teeth will be directly proportional to the radius). In compound gear trains this simple calculation below will not work, but if you are given the gear ratio for a compound gear train, you can still apply the equations above.</p>
     <table class="equation">
       <tbody>
         <tr>

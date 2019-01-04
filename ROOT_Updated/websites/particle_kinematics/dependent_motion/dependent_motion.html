@@ -2,8 +2,9 @@
 <html>
 <head>
 <title>Adaptive Map - Relative Motion</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -24,13 +25,12 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header">	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Dependent Motion in Particles</h1>
-    <p>Dependent motion analysis is used when two or more particles have motions that are in some way connected to one another. The way in which the motion of these particles is connected is known as the constraint. A simple example of a constrained system is shown in the image below. Imagine a pickup truck gets stuck in the sand, and a freind uses a rope to help pull them out. This friend ties one end of the rope to the rear bumper of her car, loops the rope around a bar on the front of the pickup truck, then ties the other end to a stationary tree. In this case the two vehicles will not have the same velocity or acceleration, but their motions are related because they are tied together by the rope. In this case, the rope is acting as the constraint, allowing us to know the velocity or acceleration of one vehicle based on the velocity or acceleraion of the other vehicle.</p>
+    <p>Dependent motion analysis is used when two or more particles have motions that are in some way connected to one another. The way in which the motion of these particles is connected is known as the constraint. A simple example of a constrained system is shown in the image below. Imagine a pickup truck gets stuck in the sand, and a friend uses a rope to help pull them out. This friend ties one end of the rope to the rear bumper of her car, loops the rope around a bar on the front of the pickup truck, then ties the other end to a stationary tree. In this case the two vehicles will not have the same velocity or acceleration, but their motions are related because they are tied together by the rope. In this case, the rope is acting as the constraint, allowing us to know the velocity or acceleration of one vehicle based on the velocity or acceleration of the other vehicle.</p>
     <figure class="center"><img src="images/dependent_motion_1D.png" width="600" height="288" alt="A constrained system with two vehicles tied together with a rope"/>
       <figcaption>This represents a constrained system. The motion of the car and the pickup truck will be related to one another via rope that is connecting them.</figcaption>
     </figure>
@@ -41,36 +41,36 @@
           <th>Constraint Equation: Positions</th>
           <td>\[L= 50 ft = 2 L_{A}+L_{B}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-    <p>Once we have a constraint equation that works for positions, we can take the derivative of this equation to find another constraint equation that relates velocities. In this case, the length of the rope is constant, and therefore the derivative of the length will be zero. If we take the deriviative of the constraint equation again, we wind up with a third constraint equation that relates accelerations.</p>
-	<table class="equation">
+    <p>Once we have a constraint equation that works for positions, we can take the derivative of this equation to find another constraint equation that relates velocities. In this case, the length of the rope is constant, and therefore the derivative of the length will be zero. If we take the derivative of the constraint equation again, we wind up with a third constraint equation that relates accelerations.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Constraint Equation: Velocities</th>
           <td>\[\dot{L}=0=2 \dot{L}_{A}+\dot{L}_{B}\]</td>
         </tr>
-		<tr>
+        <tr>
           <th>Constraint Equation: Accelerations</th>
           <td>\[\ddot{L}=0=2 \ddot{L}_{A}+\ddot{L}_{B}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-	  <p>In these equations, it is importnat to remeber that the values represent the changes in length, rather than direct measures of velocities. Though both vehicles would have positive velocities in the example above (velocities to the right), one L dot value will be positive and one will be negative. This is because the truck is getting closer to the tree while the green car is getting further away. A similar situation will occur for the accelerations, where both vehicles would have positive accelerations even if the L double dot values are a mix of positive and negative values.</p>
+    <p>In these equations, it is important to remember that the values represent the changes in length, rather than direct measures of velocities. Though both vehicles would have positive velocities in the example above (velocities to the right), one L dot value will be positive and one will be negative. This is because the truck is getting closer to the tree while the green car is getting further away. A similar situation will occur for the accelerations, where both vehicles would have positive accelerations even if the L double dot values are a mix of positive and negative values.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <script language="javascript">displayResources();</script>
+    <script language="javascript">displayResources();</script> 
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A truck becomes stuck in the sand at a local beach. To help, a freind takes a 50 ft long rope, ties one end to her car, loops the rope around a bar at the front of the truck, and then ties the other end to a stationary tree as shown below. If the car accelerates at a rate of .2 m/s<sup>2</sup>, what will the velocity of the truck be by the time it gets to the tree?</p>
+        <p>A truck becomes stuck in the sand at a local beach. To help, a friend takes a 50 ft long rope, ties one end to her car, loops the rope around a bar at the front of the truck, and then ties the other end to a stationary tree as shown below. If the car accelerates at a rate of .2 m/s<sup>2</sup>, what will the velocity of the truck be by the time it gets to the tree?</p>
         <img src="images/P1.png" width="500" height="255" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -82,7 +82,7 @@
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
         <p>A man has a pulley hooked up a pulley, a rope, and a platform as shown below to lift loads up onto a nearby rooftop. If x is currently 15 meters, y is currently 5 meters, and the man is walking away from the building at a rate of .5 meters per second, what is the current velocity of the platform?</p>
@@ -96,9 +96,9 @@
         <br/>
         <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-	  </div>
+    </div>
   </div>
-  <script language="javascript">displayFooter();</script>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>
