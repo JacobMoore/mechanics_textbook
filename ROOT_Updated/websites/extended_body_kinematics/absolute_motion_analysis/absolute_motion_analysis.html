@@ -33,97 +33,50 @@
     <p><strong>Absolute motion analysis</strong> is one method used to analyze bodies undergoing <strong>general planar motion</strong>. General planar motion is motion where bodies can both translate and rotate at the same time. Besides absolute motion analysis, the alternative is relative motion analysis. Either method can be used for any general planar motion problem, however one method may be significantly easier to apply in certain situations.</p>
 	<p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does nessesaitate using multiple coordiante systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
     <h2>Utilizing Absolute Motion Analysis</h2>
-    <p>To start our discussion on absolute motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two </p>
-	  
-	<figure class="center"><img src="images/roboticarm.png" width="500" height="355" alt="A robotic arm with two sections"/>
-      <figcaption>The diagram above shows a point P on a body rotating about fixed axis O. Point P is a constant distance r away from the fixed point O. We will adapt the polar kinematics equations to find the velocity and acceleration of point P at any given instant.</figcaption>
+    <p>To start our discussion on absolute motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two arm sections of fixed length with motors causing rotations at joint A and joint B.</p>
+	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+      <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
+	<p>The first step in absolute motion analysis is come up with a set of equations describing the position of some point of interest. In this case we will be looking at the position of the end effector of the arm at point C, and we will write an equation for the x position and the y position of this point with respect to the fixed origin point at A. In these equations, anything that is a constant (such as the length of the arm pieces) can be put in as a number, but anything that will change (such as angles theata and phi) will need to remain as variables in these equations even if they are known at the moment. Using the values in the diagram we would wind up with the two following position equations.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <th>Angular Position:</th>
-          <td>\[\theta(t)\]</td>
+          <th>X Position:</th>
+          <td>\[x_{c}=2cos(\theta)+1.5cos(\phi)\]</td>
         </tr>
         <tr>
-          <th>Angular Velocity:</th>
-          <td>\[\omega(t)=\frac{d\theta}{dt}=\dot{\theta}\]</td>
-        </tr>
-        <tr>
-          <th>Angular Acceleration:</th>
-          <td>\[\alpha(t)=\frac{d\omega}{dt}=\frac{d^2\theta}{dt^2}=\ddot{\theta}\]</td>
-        </tr>
+          <th>Y Position:</th>
+          <td>\[y_{c}=2sin(\theta)+1.5sin(\phi)\]</td>
+		  </tr>
       </tbody>
     </table>
-    <p>Also as with one dimensional translational motion, we can use integration to move in the opposite direction (just remember your constants of integration).</p>
+    <p>To find the velocity of point C in the x and y directions, we simply need to take the derivatives of the position equations. The velocity equations for our robotic arm are below.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <th>Acceleration:</th>
-          <td>\[\alpha(t)\]</td>
+          <th>X Velocity:</th>
+          <td>\[v_{xc}=-2sin(\theta)\dot{\theta}-1.5sin(\phi)\dot{\phi}\]</td>
         </tr>
         <tr>
-          <th>Velocity:</th>
-          <td>\[\omega(t)=\int \alpha(t)\]</td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[\theta(t)=\int \omega(t)=\int \int \alpha(t)\]</td>
-        </tr>
+          <th>Y Velocity:</th>
+          <td>\[v_{yc}=2cos(\theta)\dot{\theta}+1.5cos(\phi)\dot{\phi}\]</td>
+		  </tr>
       </tbody>
-    </table>
-    <p>If we have constant angular accelerations, we can also use the following formulas adapted from one dimensional motion.</p>
-    <table class="equation">
+    </table>	  
+	  <p>To find the acceleration of point C in the x and y directions we simply need to take the derivatives of the velocity equations. The acceleration equations for our robotic arm in the x and y directions are shown below.</p>
+      <table class="equation">
       <tbody>
         <tr>
-          <th>Acceleration:</th>
-          <td>\[\alpha(t)=\alpha\]</td>
+          <th>X Acc:</th>
+          <td>\[a_{xc}=-2cos(\theta)\dot{\theta}^{2}-2sin(\theta)\ddot{\theta}-1.5cos(\phi)\dot{\phi}^{2}-1.5sin(\phi)\ddot{\phi}\]</td>
         </tr>
         <tr>
-          <th>Velocity:</th>
-          <td>\[\omega(t)=\alpha t+\omega_{0}\]<br></td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[\theta(t)=\frac{1}{2}\alpha t^{2}+\omega_{0}t+\theta_{0}\]</td>
-        </tr>
-        <tr>
-          <th>Without Time:</th>
-          <td>\[\omega^{2}-\omega{_{0}}^{2}=2\alpha(\theta-\theta_{0})\]</td>
-        </tr>
+          <th>Y Acc:</th>
+          <td>\[a_{yc}=-2sin(\theta)\dot{\theta}^{2}+2cos(\theta)\ddot{\theta}-1.5sin(\phi)\dot{\phi}^{2}+1.5cos(\phi)\ddot{\phi}\]</td>
+		  </tr>
       </tbody>
     </table>
-    <h2>Velocity and Acceleration of a Point on a Rotating Body:</h2>
-    <p>With fixed axis rotation, there is a single point on a body that does not move, however all other points on this body will have some velocity and some acceleration due to the rotation of the body itself. </p>
-    <figure class="center"><img src="images/FixedAxis.png" width="350" height="318" alt="A point on a rotating fixed axis"/>
-      <figcaption>The diagram above shows a point P on a body rotating about fixed axis O. Point P is a constant distance r away from the fixed point O. We will adapt the polar kinematics equations to find the velocity and acceleration of point P at any given instant.</figcaption>
-    </figure>
-    <p>To determine the velocities and accelerations of these points, we will adapt the equations we used for polar coordinates. As a reminder, these equations were as follows:</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v=\dot{r}\hat{u}_{r}+r\dot{\Theta}\hat{u}_{\Theta}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a=(\ddot{r}-r\dot{\Theta}^{2})\hat{u}_{r}+(2\dot{r}\dot{\Theta}+r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>To simplify the above equations, we can note that for a rigid body, the point P never gets any closer or further away from the fixed center point O. This means that the distance r never changes and the r dot and r double dot terms in the above equations are zero. Putting this to work, we can simplify the above equations into the equations below.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v=r\dot{\Theta}\hat{u}_{\Theta}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a=(-r\dot{\Theta}^{2})\hat{u}_{r}+(r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>These equations allow us to find the velocity and acceleration of any point on a body rotating about a fixed axis, given that we know the angular velocity of the body (Theta Dot), the angular acceleration of the body (Theta Double Dot), and the distance from the point to the axis of rotation (r).</p>
+	<p>Once we have the velocity and acceleration equations, we can start solving for any unknowns. If we have known angular velocities and accelerations (theta dot, theta double dot, phi dot, and phi double dot) we can plug those in to find the velocity and acceleration vectors for the end effector. In other instances, we may known or desired motion of the end effector (v<sub>cx</sub>, v<sub>cy</sub>, a<sub>cx</sub>, and a<sub>cy</sub>) and will have to plug those in to the equations to solve for unknowns such as theta dot and so on.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -137,7 +90,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>The robotic arm shown below has a fixed orange base at A and fixed length members AB and BC. Motors at A and B allow for motion. Based on the angular velocities and accelerations shown at each joint, determine the velocity and the acceleration of the end effector at C.</p>
+        <p>The robotic arm shown below has a fixed orange base at A and fixed length members AB and BC. Motors at A and B allow for rotational motion at the joints. Based on the angular velocities and accelerations shown at each joint, determine the velocity and the acceleration of the end effector at C.</p>
         <img src="images/P1.png" width="500" height="253" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -152,7 +105,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>The robotic arm from the previous problem is in the configuration shown below. Assume that theta is currently 30 degrees and that point C currently lies along the x axis. If we want the end effector at C to travel a constant 1 ft/s in the negative x direction, what should the angular velocities and accelerations be at joints A and B?</p>
+        <p>The robotic arm from the previous problem is in the configuration shown below. Assume that theta is currently 30 degrees and that point C currently lies along the x axis. If we want the end effector at C to travel 1 ft/s in the negative x direction, what should the angular velocities be at joints A and B?</p>
         <img src="images/P2.png" width="500" height="235" alt="Problem 2 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -182,7 +135,7 @@
 	<div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>The crank-rocker mechinism as shown below consists of a crank rotating about its fixed center at C at a constant rate of 2 rad/s clockwise and a rocker AB fixed at it's base at A. A pin at point B is fixed to the edge of the crank and can slide along the frictionless slot in AB. In the current state, what is the angular velocity and angular acceleration of rocker AB?</p>
+        <p>The crank-rocker mechinism as shown below consists of a crank rotating about its fixed center at C at a constant rate of 2 rad/s clockwise and a rocker AB fixed at it's base at A. A pin at point B is fixed to the edge of the crank and can slide along the frictionless slot in AB. In the current state, what is the angular velocity of rocker AB?</p>
         <img src="images/P4.png" width="400" height="372" alt="Problem 4 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
