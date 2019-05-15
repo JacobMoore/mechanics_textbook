@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Adaptive Map - Fixed Axis Rotation</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<title>Adaptive Map - Relative Motion Analysis</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -24,126 +25,95 @@
 </head>
 
 <body>
-<div id="wrapper">
-  <div id="header">	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Fixed Axis Rotation in Extended Bodies</h1>
-    <p>When moving from particle kinematics to <strong>extended body</strong> kinematics, we add the <strong>rotation</strong> of a body into the motion analysis process. Some bodies will translate and rotate at the same time, but many engineered systems have components that simply rotate about some fixed axis. We will start our examination of extended body kinematics by examining these fixed axis rotation problems, where rotation is the only motion we need to worry about.</p>
-    <table class="figtable">
-      <tr>
-        <td><figure> <img src="images/antique_motor.jpg" width="225" height="225" alt="Antique motor with flywheel"/>
-            <figcaption>The flywheel on this antique motor is a good example of fixed axis rotation</figcaption>
-          </figure></td>
-        <td><figure> <img src="images/mri.jpg" width="225" height="149" alt="An MRI machine"/>
-            <figcaption>The rotating coils within this MRI machine are another example of fixed axis rotation</figcaption>
-          </figure></td>
-      </tr>
-    </table>
-    <h2>Angular Position, Velocity, and Acceleration.</h2>
-    <p>Just as with translational motion, we will have angular positions, which we can take the derivative of to find angular velocities, which we can again take the derivative of to find angular accelerations. Since we can only have a single axis of rotation in two dimensional problems (rotating about the z axis, with counter-clockwise rotations being positive, and clockwise rotations being negative) the equations will mirror the one dimensional equations used in particle kinematics.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Angular Position:</th>
-          <td>\[\theta(t)\]</td>
-        </tr>
-        <tr>
-          <th>Angular Velocity:</th>
-          <td>\[\omega(t)=\frac{d\theta}{dt}=\dot{\theta}\]</td>
-        </tr>
-        <tr>
-          <th>Angular Acceleration:</th>
-          <td>\[\alpha(t)=\frac{d\omega}{dt}=\frac{d^2\theta}{dt^2}=\ddot{\theta}\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>Also as with one dimensional translational motion, we can use integration to move in the opposite direction (just remember your constants of integration).</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[\alpha(t)\]</td>
-        </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[\omega(t)=\int \alpha(t)\]</td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[\theta(t)=\int \omega(t)=\int \int \alpha(t)\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>If we have constant angular accelerations, we can also use the following formulas adapted from one dimensional motion.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[\alpha(t)=\alpha\]</td>
-        </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[\omega(t)=\alpha t+\omega_{0}\]<br></td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[\theta(t)=\frac{1}{2}\alpha t^{2}+\omega_{0}t+\theta_{0}\]</td>
-        </tr>
-        <tr>
-          <th>Without Time:</th>
-          <td>\[\omega^{2}-\omega{_{0}}^{2}=2\alpha(\theta-\theta_{0})\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <h2>Velocity and Acceleration of a Point on a Rotating Body:</h2>
-	  <p>With fixed axis rotation, there is a single point on a body that does not move, however all other points on this body will have some velocity and some acceleration due to the rotation of the body itself. </p>
-	  <figure class="center"><img src="images/FixedAxis.png" width="350" height="318" alt="A point on a rotating fixed axis"/>
-      <figcaption>The diagram above shows a point P on a body rotating about fixed axis O. Point P is a constant distance r away from the fixed point O. We will adapt the polar kinematics equations to find the velocity and acceleration of point P at any given instant.</figcaption>
+    <h1>Relative Motion Analysis</h1>
+    <p><strong>Relative motion analysis</strong> is one method used to analyze bodies undergoing <strong>general planar motion</strong>. General planar motion is motion where bodies can both translate and rotate at the same time. Besides relative motion analysis, the alternative is absolute motion analysis. Either method can be used for any general planar motion problem, however one method may be significantly easier to apply in certain situations.</p>
+	<p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
+    <h2>Utilizing Relative Motion Analysis</h2>
+    <p>To start our discussion on relative motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two arm sections of fixed length with motors causing rotations at joint A and joint B.</p>
+	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+      <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	  <p>To determine the velocities and accelerations of these points, we will adapt the equations we used for polar coordinates. As a reminder, these equations were as follows:</p>
-	  	<table class="equation">
+	<p>The first step in relative motion analysis is to break the motion down into simple steps and assign a coordinate system (with r and theta directions) to each step in the chain of motion. We will always start at a fixed point and move step by step from there. In the case of our robotic arm, Joint A is the only point that will not be moving so we start there and we have two cases of rotation without extension as we move from A to B then B to C.</p>
+	<p>To since there are two steps to the motion there will be two coordinate systems. The first coordinate system will be attached to member AB, with the r direction going from point A to point B. The theta direction will then be ninety degrees counterclockwise from the r direction. The second coordinate system will be attached to member BC, with the r direction going from point B to point C. Again, the theta direction is ninety degrees counterclockwise from the r direction. At this point it is usually good to identify the angles of each of the r and theta directions with respect to ground. Below is a picture of the robotic arm with both coordinate systems drawn in.</p>
+	<figure class="center"><img src="images/coordinates.png" width="500" height="344" alt="A robotic arm with two sections"/>
+      <figcaption>Two coordinate systems are used in the relative motion analysis of this robotic arm. The first coordinate system is attached to member AB while the second is attached to member BC. The r direction will always line up with the two endpoints of the member while the theta direction will always be ninety degrees counterclockwise from the corresponding r direction.</figcaption>
+    </figure>
+	<p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[\overrightarrow{v}_{C/A}=\overrightarrow{v}_{B/A}+\overrightarrow{v}_{C/B}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[\overrightarrow{a}_{C/A}=\overrightarrow{a}_{B/A}+\overrightarrow{a}_{C/B}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
+	<p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B/A</sub> or v<sub>C/A</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C/A</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
+	<p>To take into account rotation or extension of any individual pieces, we will need to look back to our kinematics equations for polar coordinator systems. Below are the equations we had for velocity and acceleration.</p>
+	<table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
           <td>\[v=\dot{r}\hat{u}_{r}+r\dot{\Theta}\hat{u}_{\Theta}\]</td>
         </tr>
-		<tr>
+        <tr>
           <th>Acceleration:</th>
           <td>\[a=(\ddot{r}-r\dot{\Theta}^{2})\hat{u}_{r}+(2\dot{r}\dot{\Theta}+r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-	<p>To simplify the above equations, we can note that for a rigid body, the point P never gets any closer or further away from the fixed center point O. This means that the distance r never changes and the r dot and r double dot terms in the above equations are zero. Putting this to work, we can simplify the above equations into the equations below.</p>
-	 <table class="equation">
+	<p>In the above equations, r represents the length of the respective arm piece (the length of member AB or BC), r dot represents the rate at which that length is increasing, and r double dot represents the rate at which that rate is increasing. The theta term represents current angle of the arm piece, theta dot is the angular velocity of that arm piece, and theta double dot is the angular acceleration of that arm piece. The u<sub>r</sub> and u<sub>theta</sub> directions are the r and theta directions that are attached to that particular section of the arm (in our earlier drawing u<sub>r1</sub> and u<sub>theta1</sub> were attached to member AB and u<sub>r2</sub> and u<sub>theta2</sub> were attached to member BC).</p>
+	<p>Though it's certainly possible to have a mechanism that is rotating and extending at the same time, we will often have either just simple rotation, or just simple extension along a fixed direction. With <strong>simple rotation</strong>, the r dot and r double dot terms are zero, and our equations reduce down to the following.</p>
+	<table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
           <td>\[v=r\dot{\Theta}\hat{u}_{\Theta}\]</td>
         </tr>
-		<tr>
+        <tr>
           <th>Acceleration:</th>
-          <td>\[a=(-r\dot{\Theta}^{2})\hat{u}_{r}+(r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
+          <td>\[a=-r\dot{\Theta}^{2}\hat{u}_{r}+r\ddot{\Theta}\hat{u}_{\Theta}\]</td>
         </tr>
-	  </tbody>
+      </tbody>
     </table>
-	<p>These equations allow us to find the velocity and acceleration of any point on a body rotating about a fixed axis, given that we know the angular velocity of the body (Theta Dot), the angular acceleration of the body (Theta Double Dot), and the distance from the point to the axis of rotation (r).</p>
+	<p>If we have <strong>simple extension</strong>, where the length of the piece is changing but there is no rotation, the theta dot and theta double dot terms would be zero and our original equations would reduce down to the following.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v=\dot{r}\hat{u}_{r}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a=\ddot{r}\hat{u}_{r}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>If we use the appropriate set of equations for the type of motion in each step and plug in known quantities for angular velocities, angular accelerations, and rates or extension for each piece, we can add these pieces to our relative motion analysis equation from earlier. Again these are vectors so be sure to indicate both the magnitudes and directions when we put them into the equation. </p>
+	<p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
       <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
     </div>
-    <script language="javascript">displayResources();</script>
+    <script language="javascript">displayResources();</script> 
   </div>
   <div id="workedproblems">
     <h2>Worked Problems:</h2>
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A flywheel rotates on a fixed axel in a steam engine. The flywheel is rotating at a rate of 600 rpm before a brake begins decelerating the flywheel at a constant rate of 30 rad/s<sup>2</sup>. What is the time required to bring the flywheel to a complete stop? How many rotations does the flywheel go through while decelerating?</p>
-        <img src="images/P1.jpg" width="500" height="333" alt="Problem 1 Diagram"/></div>
+        <p>The robotic arm shown below has a fixed orange base at A and fixed length members AB and BC. Motors at A and B allow for rotational motion at the joints. Based on the angular velocities and accelerations shown at each joint, determine the velocity and the acceleration of the end effector at C.</p>
+        <img src="images/P1.png" width="500" height="253" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -151,14 +121,14 @@
         </div>
         <br/>
         <br/>
-        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>An 8 cm diamter hard drive platter is rotating at a constant rate of 3600 rpm. What is the velocity of a point on the outer edge of the platter? What is the acceleration experienced by a point on the edge of the platter?</p>
-        <img src="images/P2.jpg" width="400" height="348" alt="Problem 2 Diagram"/></div>
+        <p>The robotic arm from the previous problem is in the configuration shown below. Assume that theta is currently 30 degrees and that point C currently lies along the x axis. If we want the end effector at C to travel 1 ft/s in the negative x direction, what should the angular velocities be at joints A and B?</p>
+        <img src="images/P2.png" width="500" height="235" alt="Problem 2 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -166,11 +136,41 @@
         </div>
         <br/>
         <br/>
-        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A ladder is propped up against a wall as shown below. If the base of the ladder is sliding out at a speed of 2 m/s, what is the speed of the top of the ladder?</p>
+        <img src="images/P3.png" width="400" height="373" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>The crank-rocker mechanism as shown below consists of a crank rotating about its fixed center at C at a constant rate of 2 rad/s clockwise and a rocker AB fixed at it's base at A. A pin at point B is fixed to the edge of the crank and can slide along the frictionless slot in AB. In the current state, what is the angular velocity of rocker AB?</p>
+        <img src="images/P4.png" width="400" height="372" alt="Problem 4 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
-  <script language="javascript">displayFooter();</script>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
 </html>
