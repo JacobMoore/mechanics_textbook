@@ -36,7 +36,7 @@
       <figcaption>In the polar coordinate system the r direction always points from the origin point to the body. The variable "r" is also used to indicate the distance between the two points. The theta direction will always be 90 degrees counter-clockwise from the r direction. Theta is also used to indicate the angle between the r direction and some fixed axis used for reference. The u-r and u-theta vectors represent unit vectors in the r and theta directions respectively.</figcaption>
     </figure>
     <p>Polar coordinate systems work best in systems where a body is being tracked via a distance and an angle such as a radar system tracking a plane. In cases such as this, the raw data from this in the form of an angle and a distance would be direct measures of theta and r respectively. Polar coordinate systems will also serve as the base for extended body motion, where motors and actuators can directly control things like r and theta.</p>
-    <p>The the way the coordinate system is defined, the r-axis will always point from the origin point to the body. The distance from the origin to the point is defined as &quot;r&quot; with no component of the position being in the theta direction.</p>
+    <p>The way the coordinate system is defined, the r-axis will always point from the origin point to the body. The distance from the origin to the point is defined as &quot;r&quot; with no component of the position being in the theta direction.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -45,7 +45,7 @@
         </tr>
       </tbody>
     </table>
-    <p>To find the velocity, we need to take the derivative of the position function over time. Since the distance r can change over time as well as the direction r changing over time to track the body, we need to worry about the derivative of r as well as the derivative of the unit vector. Like we did with the normal-tangential systems, we will use the product rule and then the substitute in a value for the derivative of the unit vector.</p>
+    <p>To find the velocity, we need to take the derivative of the position function over time. Since the distance r can change over time as well as the direction r changing over time to track the body, we need to worry about the derivative of r as well as the derivative of the unit vector. Like we did with the normal-tangential systems, we will use the product rule and then substitute in a value for the derivative of the unit vector.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -67,7 +67,7 @@
     <figure class="center"><img src="images/unit_vector_derivative.png" width="445" height="340" alt="The derivatives of the u-r and u-theta unit vectors"/>
       <figcaption>The derivatives of the u-r and u-theta unit vectors. Notice that the derivative of the u-theta vector is in the negative u-r direction.</figcaption>
     </figure>
-    <p>After substituting in the derivatives of the unit vectors and simplifying the function we arrive at out final equation for the acceleration.</p>
+    <p>After substituting in the derivatives of the unit vectors and simplifying the function we arrive at our final equation for the acceleration.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -94,7 +94,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A radar tracking station gives the following raw to a user at a given point in time. Based on this data, what is the current velocity and acceleration in the r and theta directions? What is the current velocity and acceleration in the x and y directions?</p>
+        <p>A radar tracking station gives the following raw data to a user at a given point in time. Based on this data, what is the current velocity and acceleration in the r and theta directions? What is the current velocity and acceleration in the x and y directions?</p>
         <img src="images/P1.png" width="500" height="324" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
