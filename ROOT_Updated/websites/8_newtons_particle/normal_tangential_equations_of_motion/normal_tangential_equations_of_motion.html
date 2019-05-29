@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Adaptive Map - The Equations of Motion with Normal-Tangential Coordinates</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+	
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>The Equations of Motion with Normal-Tangential Coordinates</h1>
+    <p>Continuing our discussion of kinetics in two dimensions we can examine Newton's Second Law as applied to the normal-tangential coordinate system. In it's basic form, <strong>Newton's Second Law</strong> states that the sum of the forces on a body will be equal to mass of that body times the rate of acceleration. For bodies in motion, we can write this relationship out as the equation of motion.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum \vec{F}=m*\vec{a}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Just as we did with with rectangular coordinates, we will break this single vector equation into two separate scalar equations. This involves identifying the normal and tangential directions and then using sines and cosines to break the given forces and accelerations down into components in those directions.</p>
+    <figure class="center"><img src="images/nt_force.png" width="500" height="309" alt="A plane with a normal-tangential coordinate system and a single force."/>
+      <figcaption>When working in the normal-tangential coordinate system, any given forces or accelerations can be broken down using sines and cosines assuming the angle of the force or acceleration is known relative to the normal and tangential directions.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_{n}=m*a_{n}\]</td>
+        </tr>
+        <tr>
+          <td>\[\sum F_{t}=m*a_{t}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Just as with a the rectangular coordinates, the equations of motion are often used in conjunction with the kinematics equations, which relate positions, velocities and accelerations as discussed in the previous chapter. In particular, we will often substitute the known values below for the normal and tangential components for acceleration.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[a_{n}=v*\dot{\Theta}=\frac{v^2}{\rho}\]</td>
+        </tr>
+        <tr>
+          <td>\[a_{t}=\dot{v}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Normal tangential coordinates can be used in any kinetics problem, however they work best with problems where forces maintain a consistent direction relative to some body in motion. Vehicles in motion are a good example of this where the direction of the forces applied are largely dependent on the current direction of the vehicle, and these forces will rotate with the vehicle as it turns.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A 1000 kg car travels over a hill constant speed of 100 km/hr.  The top of the hill can be approximated as a circle with a 90 m radius. What is the normal force the road exerts on the car? How fast would the car have to be going to get airborne?</p>
+        <img src="images/P1.png" width="458" height="162" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A 2500 lb car is traveling 40 ft/s. The car’s tires have a coefficient of friction with the road of .9. Assuming the car maintains a constant speed, what is the minimum radius of curvature before slipping? Assuming the car is speeding up at a rate of 10 ft/s<sup>2</sup>, what is the minimum radius of curvature before slipping?</p>
+        <img src="images/P2.png" width="282" height="392" alt="Problem 2 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>15 kg boxes are being transported around a curve via a conveyor belt as shown to the right. Assuming the curve has a radius of 3 meters and the boxes are traveling at a constant speed of 1 meter per second. What is the minimum required coefficient of friction needed to ensure the boxes don’t slip as they travel around the curve? </p>
+        <img src="images/P3.jpg" width="480" height="360" alt="Problem 3 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
