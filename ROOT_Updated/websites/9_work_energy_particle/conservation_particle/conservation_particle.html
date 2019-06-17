@@ -40,7 +40,7 @@
     </table>
 	<p>It is important to notice that unlike Newton's Second Law, the above equation is <strong>not</strong> a vector equation. It does not need to be broken down into components which can simplify the process, however, we only have a single equation and therefore can only solve for a single unknown which can limit the method.</p>
 	<h2>Work:</h2>
-	<p>To understand how to use the energy method we first need to understand the concepts of work and energy. <strong>Work</strong> in general is a force exerted over a distance. If we imagine a single, constant force pushing a body in a single direction over some distance, the work done by that force would be equal the magnitude of that force times the distance the body traveled. If we have a force that is opposing the travel (such as friction) it would be negative work.</p>
+	<p>To understand how to use the energy method we first need to understand the concepts of work and energy. <strong>Work</strong> in general is a force exerted over a distance. If we imagine a single, constant force pushing a body in a single direction over some distance, the work done by that force would be equal to the magnitude of that force times the distance the body traveled. If we have a force that is opposing the travel (such as friction) it would be negative work.</p>
 	<figure class="center"><img src="images/work_basic.png" width="600" height="263" alt="A box with a pushing force and a friction force acting on it being pushed over distance d"/>
       <figcaption>In instances with a constant force and a constant direction, the work done to a body will be equal to the magnitude of the force times the distance the body travels. For forces opposing the motion, the work will be negative.</figcaption>
     </figure>
@@ -54,7 +54,7 @@
         </tr>
       </tbody>
     </table>
-	<p>For instances where forces and the direction of travel do not match, the component of the force in the direction of travel is the only piece of the force that will do work. Following through with this logic, forces that a perpendicular to the direction of travel for a body will exert no work on a body because there is no component of the force in the direction of travel.</p>
+	<p>For instances where forces and the direction of travel do not match, the component of the force in the direction of travel is the only piece of the force that will do work. Following through with this logic, forces that are perpendicular to the direction of travel for a body will exert no work on a body because there is no component of the force in the direction of travel.</p>
 	<figure class="center"><img src="images/work_angled.png" width="600" height="288" alt="A box with a pushing force and a force force acting on it being pushed over distance d"/>
       <figcaption>Only the components of a force in the direction of travel exert work on a body. Forces perpendicular to the direction of travel will exert no work on the body.</figcaption>
     </figure>
@@ -68,7 +68,7 @@
         </tr>
       </tbody>
     </table>
-	<p>In the case of a force that does not remain constant, we will need account for the changing force. To do this we will simply integrate the force function over the distance traveled by the body. Just as before, only the component of the force in the direction of travel will count towards the work done and forces opposing travel will be negative work.</p>
+	<p>In the case of a force that does not remain constant, we will need to account for the changing force. To do this we will simply integrate the force function over the distance traveled by the body. Just as before, only the component of the force in the direction of travel will count towards the work done and forces opposing travel will be negative work.</p>
 	<table class="equation">
       <tbody>
         <tr>
@@ -78,7 +78,7 @@
     </table>
 	<h2>Energy:</h2>
 	<p>When discussing energy in engineering dynamics, we will usually break energy down into <strong>kinetic energy</strong> and <strong>potential energy</strong>. Kinetic energy is the the energy mass in motion, while potential energy represents the energy that is stored up due to the position or stresses in a body.</p>
-	<p>In it's equation form, the kinetic energy of a particle is represented by one half of the mass of the body times it's velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
+	<p>In its equation form, the kinetic energy of a particle is represented by one half of the mass of the body times its velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
 	<table class="equation">
       <tbody>
         <tr>
@@ -90,7 +90,7 @@
       </tbody>
     </table>
 	<p>As a note, a body that is rotating will also have rotational kinetic energy, but we will save that for our discussion of work and energy with rigid bodies.</p>
-	<p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravity force and a spring forces will do respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
+	<p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravitational force and a spring force will do, respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
 	<p>The change in gravitational potential energy for any system is represented by the mass of the body, times the value g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) times the vertical change in height between the start position and the end position. In equation form, this is as follows.</p>
 	<figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
       <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
@@ -102,7 +102,7 @@
         </tr>
       </tbody>
     </table>
-	<p>To find the change in elastic potential energy, we will need to know the stiffness of the spring (represented by k, in units of force per distance) as well as the distance the spring has been stretched above or below it's natural resting length (represented by x, in units of distance). Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness times by the distance x squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
+	<p>To find the change in elastic potential energy, we will need to know the stiffness of the spring (represented by k, in units of force per distance) as well as the distance the spring has been stretched or compressed above or below it's natural resting length (represented by x, in units of distance). Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
 	<table class="equation">
       <tbody>
 		<tr>
