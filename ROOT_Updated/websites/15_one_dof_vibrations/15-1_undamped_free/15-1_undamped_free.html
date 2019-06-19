@@ -31,76 +31,191 @@
     <p>Vibrations occur in systems that attempt to return to their resting or equilibrium state when perturbed (or pushed away from their equilibrium state). The simplest vibrations to analyze are undamped, free, one degree of freedom vibrations. </p>
     <p>"Undamped" means that there are no energy losses with movement (whether intentional, by adding dampers, or unintentional, through drag or friction). An undamped system will vibrate forever without any additional applied forces. A simple pendulum is has very low damping, and will swing for a long time before stopping.  ("Damped" means that there are resistive forces and energy losses with movement that cause the system to stop moving eventually.)  </p>
     <p>"Free" means that, after the initial perturbation, the only forces acting on the system are internal to the system (springs, dampers) and/or gravity. A tuning fork continues to vibrate after one initial perturbation (being struck). ("Forced" means there is an external, typically periodic, force acting on the system. A jackhammer vibrates due to having a supply of compressed air continually forcing the bit up and down, and it stops vibrating very quickly without that external periodic forcing). </p>
-    <p>"One degree of freedom" means that we will only consider vibrations along one direction (x) or about one axis (&#952) in each system. </p>
-    <p>OLD STUFF FOLLOWS</p>
-    <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time. </p>
-    <figure class="center"> <img src="images/position.png" width="482" height="181" alt="The position of a particle in 1D is x"/>
-      <figcaption>The position of a particle in one dimension can be described with a single number. If the position is changing over time, we will use the function x(t) to describe the position at any given point in time.</figcaption>
+    <p>"One degree of freedom" means that we will only consider systems with one mass vibrating along one direction (e.g. use variable x) or about one axis (e.g. use variable &#952). Systems having more than one mass or vibrating along or about two or more axes have more than one degree of freedom. </p>
+	  
+	<p>We can derive the equation of the system by setting up a free-body diagram.  Consider a mass sitting on a frictionless surface, attached to a wall via a spring.  </p>
+	
+	<figure class="center"> <img src="images/Slide1.png" width="482" height="250" alt="1DOF linear mass-spring system"/>
+    <figcaption>This is a system consisting of a mass attached to the wall via a spring, sitting on a frictionless surface. The system is currently in equilibrium, where the spring is not stretched or compressed.</figcaption>
     </figure>
-    <p>The velocity of the particle is then the rate of change of the position over time. If the particle is not moving, then position is not changing over time and the velocity is zero. If the particle is moving, we will first need to find the equation for position x(t), and then take the derivative of the position equation to find the velocity equation v(t). Velocity differs from speed in that the velocity has a direction (either positive or negative for now) while the speed is simply the magnitude of the velocity (always a positive number).</p>
-    <p>Next up is the acceleration, which is the rate of change of the velocity over time. If the velocity is not changing, the acceleration will be zero. If the velocity does change over time, then we will need to take the derivative of the velocity equation v(t) to find the acceleration equation a(t). The acceleration is then also the double derivative of the position equation over time. Like the velocity the acceleration has both a magnitude and a direction.</p>
-    <p>To simplify the notation, we often use a dot to indicate a time derivative. This makes the the velocity (the derivative of x) x dot, and the acceleration (the derivative of the derivative of x) x double dot. These relationships and their shorthand notations are all shown below. </p>
-    <table class="equation">
+	  
+	<p>The system above is in equilibrium. It is at rest, and will stay at rest unless some other force acts on it. </p> 
+	  
+  	<figure class="center"> <img src="images/Slide2.png" width="482" height="250" alt="FBD of 1DOF linear mass-spring system"/>
+      <figcaption>Free-body diagram of the system in equilibrium posiiton. Since the spring is at its equilibrium position (neither stretched or unstretched), it does not produce a force. </figcaption>
+    </figure>
+	  
+	<p>To start the system vibrating, we need to perturb it. Perturbation is moving the system away from equilibrium by a small amount. </p>
+	  
+	<figure class="center"> <img src="images/Slide3.png" width="482" height="250" alt="1DOF linear mass-spring system perturbed by x"/>
+      <figcaption>Mass-spring system perturbed by an amount x from equilibrium. This stretches the spring, causing a spring force which tends to pull the mass back toward equilibrium. </figcaption>
+    </figure>  
+	
+	  
+	<p>When we perturb this system, we stretch the spring. This generates a spring force, and the spring force is always in a direction that tends to pull the system back toward equilibrium. </p>
+	<figure class="center"> <img src="images/Slide4.png" width="482" height="250" alt="FBD of perturbed 1DOF linear mass-spring system"/>
+      <figcaption>Mass-spring system perturbed by an amount x from equilibrium. This stretches the spring, causing a spring force which tends to pull the mass back toward equilibrium. </figcaption>
+    </figure>  	  
+	  <p></p>
+	<figure class="center"> <img src="images/Slide6.png" width="482" height="250" alt="Motion of perturbed 1DOF linear mass-spring system"/>
+      <figcaption>Mass-spring system vibration.  After an initial perturbation, the system oscillates between two extreme positions (-x_max and x_max). The extreme positions are turn-around points where the velocity is zero, but the spring force is maximum (maximum stretch/compression) and therefore the acceleration is maximum.  As the system passes through the equilibrium position, the spring is no longer stretched (zero force, zero acceleration), but the velocity is maximum (this can be determined using conservation of energy) and the inertia of the system carries the mass past the equilibrium position. In the absence of damping or the application of another force, the system will oscillate forever. </figcaption>
+    </figure> 
+	  
+	  
+	<p>We can generate the equation of motion of the system, and determine the specifics of how it will vibrate, by analyzing this perturbed state. Recall that the spring force is: </p>
+	<table class="equation">
       <tbody>
         <tr>
-          <th>Position:</th>
-          <td>\[x(t)\]</td>
-        </tr>
+          <td>\[\mathbf{F{_k}}=k \mathbf{x} \]</td>
+		</tr>
         <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=\frac{dx}{dt}=\dot{x}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}=\ddot{x}\]</td>
+          <td>\[\mathbf{F{_k}}=k \textbf{&#952} \]</td>
         </tr>
       </tbody>
     </table>
-    <p>If we instead start with the equation for acceleration, we can take the integral of that equation a(t)  to find the equation for velocity v(t). Unlike the derivatives though we will have an extra step in this process because whenever we integrate we wind up with a constant of integration (which we will usually call C). When we integrate the acceleration equation to find the velocity equation, this constant will be the initial velocity (the velocity at time = 0)</p>
-    <p>Next we can take the integral of the velocity equation v(t) to find the position equation x(t). With this integration we will again wind up with a constant of integration, which in this case will be the initial position (the position at time = 0). These relationships are shown below.</p>
-    <table class="equation">
+	
+	<p>Note that the spring constants in the above equations have different units, depending on whether the spring is linear (N/m) or torsional (N/rad), and that &#952 must be given in radians. The magnitude of the spring force depends on <em>x</em>, the distance <strong>from the spring unstretched length</strong> (not necessarily the equilibrium position of the system). The spring force is in the direction opposite that of the displacement.  That is, if you pull the mass to the right, the spring force points to the left. </p>
+	<p>The process for finding the equation of motion of the system is as follows:</p>
+	<ol>
+	  <li>Sketch the system with a small positive perturbation (<strong>x</strong> or <strong>&#952</strong>).</li>
+		<li>Draw the free-body diagram of the perturbed system.  Ensure that the spring force has a direction opposing the perturbation. </li>
+		<li>Find the one equation of motion for the system in the perturbed coordinate using Newton's Second Law. Keep the same positive direction for position, and assign positive acceleration in the same direction. </li>
+		<li>Move all terms of the equation to one side, and check that all terms are positive.  If all terms are not positive, there is an error in the direction of displacement, acceleration, and/or spring force. </li>
+	  </ol>
+
+	  <p>For the example system above, with mass <em>m</em> and spring constant <em>k</em>, we derive the following:</p>
+	    <table class="equation">
       <tbody>
         <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)\]</td>
+          <td>\[   \sum \mathbf{F} = m \mathbf{a} = m \mathbf{\ddot{x}}    \]</td>
         </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=\int a(t)\]</td>
+		   <tr>
+          <td>\[   -\mathbf{F_k} = m \mathbf{\ddot{x}}  \]</td>
         </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[x(t)=\int v(t)=\int \int a(t)\]</td>
+		   </tr>
+		   <tr>
+          <td>\[   -k\mathbf{x} = m \mathbf{\ddot{x}}   \]</td>
+        </tr>
+		   </tr>
+		   <tr>
+          <td>\[   m \mathbf{\ddot{x}} + k\mathbf{x} = 0  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	  
+	  <p></p>
+<p>This gives us a differential equation that describes the motion of the system. We can rewrite it in normal form: </p>
+	  
+ <table class="equation">
+      <tbody>
+        
+		   <tr>
+          <td>\[   m \mathbf{\ddot{x}} + k\mathbf{x} = 0  \]</td>
+        </tr>
+		   <tr>
+          <td>\[ \Rightarrow \,  \mathbf{\ddot{x}} + \frac{k}{m}\mathbf{x} = 0  \]</td>
+        </tr>
+		 <tr>
+          <td>\[ \Rightarrow \,  \mathbf{\ddot{x}} + \omega_n^2 \mathbf{x} = 0  \]</td>
+        </tr>
+      </tbody>
+    </table>  	  
+<p>The term &#969;<sub>n</sub> is called the <strong>angular natural frequency of the system</strong>, and has units of <em>rads/s</em>. </p>	  
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   \omega_n^2 = \frac{k}{m}  \]</td>
+        </tr>
+		  <tr>
+          <td>\[   \omega_n = \sqrt{\frac{k}{m}}  \]</td>
+        </tr>
+      </tbody>
+    </table>  	  	  
+	  
+	
+<p>Assuming that the initial perturbation of the system can be described by the position and velocity of the mass at <em>t=0</em>, </p>
+	
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   x(0) = x_0  \]</td>
+        </tr>
+		  <tr>
+          <td>\[  v(0) = \dot{x}(0) = v_0  \]</td>
+        </tr>
+      </tbody>
+    </table>  	
+	
+	<p> The solution to the differential equation, that provides the position of the system at time <em>t</em>, <em>x(t)</em> is: </p>
+
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   x(t) = C \sin (\omega_n t + \phi)  \]</td>
+        </tr>
+		  <tr>
+          <td>\[  \text{where:} \,\,  \omega_n = \sqrt{\frac{k}{m}}, \, C = (\frac{v_0}{\omega_n}^2 + x_0^2), \, \phi = \tan^{-1} (\frac{x_0 \omega_n}{v_0})  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	
+	<p>The <strong>amplitude, <em>C</em></strong>, describes the maximum displacement during the oscillations (i.e. <em>x<sub>max</sub></em>) and the <strong>phase, <em>&#981;</em></strong>, describes how the sine function is shifted in time.  </p>
+	
+<figure class="center"> <img src="images/Slide7.png" width="482" height="250" alt="PLot of motion of 1DOF linear mass-spring system"/>
+      <figcaption>Displacement response of the mass spring system (solution to the differential equation).</figcaption>
+    </figure> 	
+	
+	
+	<p>For a system where the there is torsional vibration (that is, the oscillation involves a rotation), the equations are similarly: </p>
+	
+ <table class="equation">
+      <tbody>
+ 		   <tr>
+          <td>\[   I \mathbf{\ddot{\theta}} + k\mathbf{\theta} = 0  \]</td>
+        </tr>
+		   <tr>
+          <td>\[ \Rightarrow \,  \mathbf{\ddot{\theta}} + \frac{k}{I}\mathbf{\theta} = 0  \]</td>
+        </tr>
+		 <tr>
+          <td>\[ \Rightarrow \,  \mathbf{\ddot{\theta}} + \omega_n^2 \mathbf{\theta} = 0  \]</td>
+        </tr>
+		  
+		   <tr>
+          <td>\[ \text{where:} \,\,  \omega_n = \sqrt{\frac{k}{I}}  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	<p>Assuming that the initial perturbation of the system can be described by the position and velocity of the mass at <em>t=0</em>, </p>
+	
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   \theta (0) = \theta_0  \]</td>
+        </tr>
+		  <tr>
+          <td>\[  \omega (0) = \dot{\theta} (0) = \omega_0  \]</td>
         </tr>
       </tbody>
     </table>
-    <h2>Constant Acceleration Systems:</h2>
-    <p>In cases where we have a constant acceleration (often due to a constant force), we can start with a constant value for a(t) = a, and work the integrals from there. Along the way we will add the initial velocity and the initial position as the constants of integration to wind up with the formulas below.</p>
-    <table class="equation">
+	
+	<p> The solution to the differential equation, that provides the position of the system at time <em>t</em>, <em>&#952(t)</em> is: </p>
+
+	<table class="equation">
       <tbody>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)=a\]</td>
+		 <tr>
+          <td>\[   \theta (t) = C \sin (\omega_n t + \phi)  \]</td>
         </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=at+v_{0}\]<br></td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[x(t)=\frac{1}{2}at^{2}+v_{0}t+x_{0}\]</td>
+		  <tr>
+          <td>\[  \text{where:} \,\,  \omega_n = \sqrt{\frac{k}{I}}, \, C = (\frac{\omega_0}{\omega_n}^2 + \theta_0^2), \, \phi = \tan^{-1} (\frac{\theta_0 \omega_n}{\omega_0})  \]</td>
         </tr>
       </tbody>
-    </table>
-    <p>If we take the equations for the position and the velocity from above then solve both of them for t and set those equations equal to one another we can actually wind up with another equation that directly relates position, velocity, and acceleration without needing to know the time.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[v^{2}-v{_{0}}^{2}=2a(x-x_{0})\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>It is important to remember that these equations are only valid when the acceleration is constant. When that is not the case, you will need to use calculus to find the derivatives or integrals based on the equations for position, velocity, and acceleration that you do know.</p>
+    </table>  
+	
+	
+<p></p>
+	
+	
+	  
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -114,8 +229,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. What is the rate of acceleration.</p>
-        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+        <p>Find the maximum amplitude of vibration of the system with mass, m, of 10 kg and spring constant, k, 200 N/m when given an inital displacement of x<sub>0</sub> = 0.1 m and an initial velocity of v<sub>0</sub> = 0.3 m/s. ***WORK THROUGH NUMBERS*** </p>
+        <img alt="Problem 1 Diagram" src="images/Slide8.png" width="482" height="250" > </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -129,8 +244,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. How far did you travel in meters over the course of those ten seconds.</p>
-        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+        <p>Determine the equation of motion of the system from Newton's Second Law.  Assume mass m = 5 kg and spring constant k = 500 kg.  Find the initial displacement, x<sub>0</sub>, such that the mass oscillates over a total range of 0.25 m.  Assume the initial perturbation velocity is zero. *** CHECK NUMBERS***</p>
+        <img alt="Problem 2 Diagram" src="images/Slide9.png" width="482" height="250"> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -144,8 +259,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>In a rocket sled deceleration experiment, a manned sled is decelerated from a speed of 200 mph (89.4 m/s) to a stop at a constant rate of 18Gs (176.6 m/s<sup>2</sup>). How long does it take for the sled to stop? How far does the sled travel while decelerating?</p>
-        <img alt="Problem 3 Diagram" src="images/P3.jpg"> </div>
+        <p>A thin rigid bar of length L and mass m is fixed to a flexible rod mounted to the ceiling.  Assume the rod is massless, and has a tortional spring constant k. Derive the equation of motion of the system in terms of the given variables. Find the angular natural frequency of the system if m = 8 kg, k = 375 N/rad, and L = 1.2 m. *** ADD TO THIS QUESTION? CHECK NUMBERS *** </p>
+        <img alt="Problem 3 Diagram" src="images/Slide10.png" width="482" height="250"> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -154,21 +269,6 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-    <div class="problem">
-      <div class="question">
-        <h3>Question 4:</h3>
-        <p>A metallic particle is accelerated in a magnetic field such that its velocity over time is defined by the function v(t) = 4t<sup>2</sup> - 12, where time is in seconds and velocity is in meters per second. If we assume that the particle has an initial position of zero (x<sub>0</sub> = 0), what are the equations that describe the acceleration and position over time?</p>
-        <img alt="Problem 4 Diagram" src="images/P4.jpg"> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
