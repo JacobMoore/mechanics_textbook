@@ -1,12 +1,12 @@
 function displayHeader(){
-	document.write('<div id="header">')
-	document.write('<div id="headerlogo">')
-	document.write('<img alt="Adaptive Map Logo" height="75" src="http://adaptivemap.ma.psu.edu/icons/titleicon.png" width="300">')
+	document.write('<div id="header">');
+	document.write('<div id="headerlogo">');
+	document.write('<img alt="Adaptive Map Logo" height="75" src="http://mechanicsmap.psu.edu/icons/titleicon.png" width="300">');
 	document.write('</div>')
-	document.write('<div id="headercourse">')
-	document.write('<h2>Engineering Mechanics</h2>')
-	document.write('</div>')
-	document.write('</div>')
+	document.write('<div id="headercourse">');
+	document.write('<h2>Engineering Mechanics</h2>');
+	document.write('</div>');
+	document.write('</div>');
 }
 
 function displayMenuMain(){
@@ -54,14 +54,15 @@ function displayFooter(){
 	document.write('<div id="footer">');
 	document.write('<table>');
 	document.write('<tr>');
-	document.write('<td style="width:300px"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></td>');
-	document.write('<td style="width:300px"><img alt="NSF Icon" height="100" src="http://adaptivemap.ma.psu.edu/icons/NSF_Logo.jpg" width="100"><img alt="Open_PSU" height="45" src="http://adaptivemap.ma.psu.edu/icons/PSU_OER.png" width="100"></td>');
+	document.write('<td style="width:200px"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></td>');
+	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="http://adaptivemap.ma.psu.edu/icons/NSF_Logo.jpg" width="100"></td>');
+	document.write('<td style="width:200px"><img alt="Open_PSU" height="45" src="http://adaptivemap.ma.psu.edu/icons/PSU_OER.png" width="100"></td>');
 	document.write('</tr>');
 	document.write('<tr>');
-	document.write('<td style="width:300px">');
+	document.write('<td style="width:200px">');
 	document.write('Authors: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a>, Majid Chatsaz, <a href="http://mech.ubc.ca/agnes-dentremont/">Agnes d&#39;Entremont</a>, Joan Kowalski, Douglas Miller, and Rungun Nathan have licensed all content under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.');
 	document.write('</td>');
-	document.write('<td style="width:300px">');
+	document.write('<td colspan="2" style="width:400px">');
 	document.write('This work was partially supported by the U.S. National Science Foundation Award # TUES-1044790 as well as the Affordable Course Transformation Program at PSU. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the sponsoring organizations');
 	document.write('</td>');
 	document.write('</tr>');
