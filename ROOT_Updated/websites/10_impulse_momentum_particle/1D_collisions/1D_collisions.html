@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - The Impulse and Momentum Equation for a Particle</title>
+<title>Mechanics Map - Particle Collisions in One Dimension</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
@@ -29,48 +29,69 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Impulse and Momentum in a Particle</h1>
-	<p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. The impulse is usually denoted by the variable J (not to be confused with the polar moment of inertia, which is also J) and the momentum is a body's mass times it's velocity. Impulses and velocities are both vector quantities, giving us the basic equation below.</p>
+    <h1>Particle Collisions in One Dimension</h1>
+	<p>The Impulse-Momentum Method is particularly useful when examining collisions between bodies. When examining a system of bodies, such as the two bodies colliding below, the impulses exerted by <strong>internal forces</strong>, that is the forces exerted between two bodies within the system, will be equal and opposite and hence cancel out.</p>
+	<figure class="center"><img src="images/collision.png" width="254" height="313" alt="Two Billiard balls coliding"/>
+      <figcaption>When two bodies collide, Newton's Third Law ensures that the normal forces from the collision will always be equal and opposite. This means that the impulses will be equal and opposite and will cancel out in our impulse-momentum equation when examining the system of equations.</figcaption>
+    </figure> 
+	<p>Because the <strong>impulsive</strong> forces of the collision are so large over the very short period of the collision, other external forces are typically regarded as insignificant. This means that for our collision, there is no impulse and therefore there is no change to the sum of the momentums of the bodies. This is known as the <strong>conservation of momentum</strong>, and it will hold true for all types of collisions.</p>
 	<table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
-        </tr>
-      </tbody>
-	</table>
-	<p>For two dimensional problems, we can break the single vector equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components.</p>
-	<table class="equation">
-      <tbody>
-        <tr>
-          <td>\[J_{x}=mv_{fx}-mv_{ix}\]</td>
+          <td>\[\sum \vec{J} = 0 =\sum  m \vec{v_{f}}-\sum m \vec{v_{i}}\]</td>
         </tr>
 		<tr>
-          <td>\[J_{y}=mv_{fy}-mv_{iy}\]</td>
+          <td>\[\sum m \vec{v_{f}}=\sum m \vec{v_{i}}\]</td>
         </tr>
       </tbody>
 	</table>
-	<h2>Impulse:</h2>
-	<p>The concept of an <strong>impulse</strong> in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
+	<p>In the case of the collision of two bodies, body A and body B in this case, we can break apart the sums as follows. The subscripts in this case are being used to denote both the body (A or B) and initial or final states (before or after the collision).</p>
 	<table class="equation">
       <tbody>
-        <tr>
-			<td>Constant Magnitude Force:</td>
-          <td>\[\vec{J} = \vec{F}*t\]</td>
-        </tr>
 		<tr>
-			<td>Non-Constant Magnitude Force:</td>
-          <td>\[\vec{J} = \int \vec{F(t)} dt\]</td>
+          <td>\[ m_{A} \vec{v_{Af}}+m_{B} \vec{v_{Bf}}= m_{A} \vec{v_{Ai}}+m_{B} \vec{v_{Bi}}\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>In many cases, we will discuss <strong>impulsive forces</strong>. This is an instance where we have very large forces acting over a very short time frame. In instances of impulsive forces, it is often difficult to measure the exact magnitude of the force or the time. In these cases we may only be able to deduce the magnitude of the impulse as a whole via the observed change in momentum of the body.</p>
-	<figure class="center"><img src="images/tennis.jpg" width="400" height="600" alt="A tennis player hitting a ball"/>
-      <figcaption>The force the tennis racket exerts on the ball will be very large, but it will be exerted over a very short period of time. Because of this, the force is considered an "impulsive" force. It would be difficult to determine the exact magnitude of the force or time frame of the impact, but by examining the velocity of the ball before and after the impact we could deduce the overall magnitude of the impulse as a whole. Photo by DAVID ILIFF. License: CC BY-SA 3.0</figcaption>
-    </figure>
-	<h2>Momentum:</h2>  
-	<p>The momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
-	<h2>Conservation of Momentum:</h2>
-	<p>In instances where there is no impulse exerted on a body, we can use the original equation to deduce that there will be no change in momentum of the body. In this instance, momentum is conserved. This will also hold for systems of bodies, where if no <strong>external</strong> impulses are exerted on the bodies in a system, the momentum will be conserved as a whole. This is the basis of analysis for many collisions, as is discussed in the following sections.</p>
+	</table> 
+	<p>In addition to the conservation of momentum equation, we can also usually generate a second equation we can use  alongside the conservation of momentum. This second equation will depend on the type of collision however, with the three possible collision types being <strong>elastic</strong>, <strong>plastic</strong>, and <strong>semi-elastic</strong>.</p>
+	<h2>Elastic Collisions:</h2>
+	  <p>An elastic collision is a collision in which all energy is assumed to be conserved as kinetic energy. In reality, true elastic collisions do not exist as some energy will always be converted to heat or sound, but in practice two very rigid bodies that collide without much deformation can get very close to the ideal of an elastic collision. An example of a collision that is close to elastic is a set of billiard balls colliding, as in the earlier figure.</p>
+	  <p>An elastic collision conserves energy in addition to momentum, so the conservation of energy equation will be our second equation that we use to supplement the conservation of momentum.</p>
+	<table class="equation">
+	  <tbody>
+		<tr>
+          <td>\[\frac{1}{2}m_{A} \vec{v_{Af}}^{2}+\frac{1}{2}m_{B} \vec{v_{Bf}}^{2}= \frac{1}{2}m_{A} \vec{v_{Ai}}^{2}+\frac{1}{2}m_{B} \vec{v_{Bi}}^{2}\]</td>
+        </tr>
+      </tbody>
+	</table> 
+	<h2>Plastic Collisions:</h2> 
+	<p>A plastic collision is the opposite of an elastic collision in the least amount of kinetic energy is conserved. To make this true, the bodies must deform in such as way that they stick together after the collision. With the two bodies stuck together, they will have matching final velocities.</p>
+	  <table class="equation">
+	  <tbody>
+		<tr>
+          <td>\[\vec{v_{Af}}=\vec{v_{Bf}}\]</td>
+        </tr>
+      </tbody>
+	</table> 
+	<h2>Semi-Elastic Collisions:</h2>
+	  <p>Finally, anything between an elastic collision and a plastic collision is considered a semi-elastic collision. This is a collision where less than one hundred percent of the kinetic energy is conserved, but the objects do not stick together following the collision. In cases of semi-elastic collisions, we will use something called the <strong>coefficient of restitution</strong> (usually denoted by a lowercase e), to supplement our conservation of momentum equation.</p>
+	  <p>The coefficient of restitution is number between 0 and 1 that measures the "bounciness" of the two bodies in the collision. Specifically, for a single body bouncing off a rigid surface, the coefficient of restitution is defined as the negative of the velocity after bouncing off a surface divided by the velocity before bouncing off the surface.</p>
+	  <table class="equation">
+	  <tbody>
+		<tr>
+          <td>\[e=-\frac{\vec{v_{f}}}{\vec{v_{i}}}\]</td>
+        </tr>
+      </tbody>
+	</table> 
+	  <p>A perfectly elastic collision would have a coefficient of restitution of one (no velocity would be lost) while a plastic collision would have a coefficient of restitution of zero. All other collisions will have a coefficient of restitution that lies somewhere in between.</p>
+	  <p>For cases where two bodies are bouncing off of one another, we would simply use relative velocities rather than the velocity of a single body. Using the velocity of body A relative to the velocity of body B, we come up with the equation below.</p>
+	  <table class="equation">
+	  <tbody>
+		<tr>
+          <td>\[e=-\frac{\vec{v_{fA/B}}}{\vec{v_{iA/B}}}=\frac{\vec{v_{fA}}-\vec{v_{fB}}}{\vec{v_{iA}}-\vec{v_{iB}}}\]</td>
+        </tr>
+      </tbody>
+	</table> 
 	</div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -84,8 +105,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A tennis ball (.06 kg) is served to tennis player at a speed of 10 m/s.  The player then returns the ball at a speed of 36 m/s. What is the impulse exerted on the ball? If a high speed camera reveals the impact lasted .02 seconds, what is the average force exerted on the ball during the collision?</p>
-        <img src="images/P1.jpg" width="300" height="457" alt="Problem 1 Diagram"/></div>
+        <p>A cue ball weighing .17kg is traveling 1 m/s impacts a stationary billiard ball with a mass of .15kg as shown below.  If the balls collide directly and the collision is elastic, what will the velocities be after the collision (ignore rotational energies)?</p>
+        <img src="images/P1.png" width="500" height="238" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -99,8 +120,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>A plane with a mass of 80,000 kg is traveling a velocity of 200 meters per second when the engines cut out. 20 seconds later, it’s noticed that the velocity has dropped to 190 m/s. Assuming the plane is not gaining or losing altitude, what is the average drag force on the plane?</p>
-        <img src="images/P2.jpg" width="400" height="266" alt="Problem 2 Diagram"/></div>
+        <p>A 4.2g bullet traveling at 965 m/s becomes lodged in a stationary log with a mass of 1.5kg. Assuming an inelastic collision, determine the velocity of the log and the bullet after the collision. Also determine the percentage of the kinetic energy that is lost in the collision.</p>
+        <img src="images/P2.png" width="472" height="302" alt="Problem 2 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -114,39 +135,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>The plot below shows the thrust generated by the engine on a jet fighter (2500 kg) over ten seconds.  If the plane is starting from rest on a runway and friction and drag are negligible, determine the speed of the plane at the end of these ten seconds.</p>
-        <img src="images/P3.png" width="500" height="219" alt="Problem 3 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	<div class="problem">
-      <div class="question">
-        <h3>Question 4:</h3>
-        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s fires a thruster exerting a force of 600 kN at a 30 degree angle with the current path as shown below.  The thruster is turned off after completing a 90 degree turn as shown below. How long was the thruster on? What is the final velocity?
-		</p>
-        <img src="images/P4.png" width="392" height="285" alt="Problem 4 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	<div class="problem">
-      <div class="question">
-        <h3>Question 5:</h3>
-        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s is traveling 30 degrees from horizontal.  If the capsule is to have the same speed but travel horizontally after 10 seconds, what is the magnitude and direction of the required average thruster force?</p>
-        <img src="images/P5.png" width="500" height="187" alt="Problem 5 Diagram"/></div>
+        <p>Two masses on a frictionless rod as shown below are set to impact with each other.  If the coefficient of restitution between the objects is .6, what is the velocity of each body after the collision? The percentage of the kinetic energy that is lost in the collision? </p>
+        <img src="images/P3.png" width="500" height="245" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
