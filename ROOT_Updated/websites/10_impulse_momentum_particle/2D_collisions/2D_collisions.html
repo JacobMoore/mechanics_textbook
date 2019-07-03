@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - The Impulse and Momentum Equation for a Particle</title>
+<title>Mechanics Map - Particle Collisions in Two Dimensions</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
@@ -29,48 +29,68 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Impulse and Momentum in a Particle</h1>
-	<p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. The impulse is usually denoted by the variable J (not to be confused with the polar moment of inertia, which is also J) and the momentum is a body's mass times it's velocity. Impulses and velocities are both vector quantities, giving us the basic equation below.</p>
+    <h1>Particle Collisions in Two Dimensions</h1>
+	<p>To analyze collisions in two dimensions, we will need to adapt the methods we used for a single dimension. To start, the conservation of momentum equation will still apply to any type of collision.</p>
 	<table class="equation">
       <tbody>
-        <tr>
-          <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
+		<tr>
+          <td>\[ m_{A} \vec{v_{Af}}+m_{B} \vec{v_{Bf}}= m_{A} \vec{v_{Ai}}+m_{B} \vec{v_{Bi}}\]</td>
         </tr>
       </tbody>
 	</table>
-	<p>For two dimensional problems, we can break the single vector equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components.</p>
+	<p>This is of course a vector equation, so we can break all those velocities into components to make our one vector equation into two scalar equations. In the equations below, we break the conservation of momentum equation into x and y components.</p>  
 	<table class="equation">
       <tbody>
-        <tr>
-          <td>\[J_{x}=mv_{fx}-mv_{ix}\]</td>
+		<tr>
+          <td>\[m_{A} v_{Afx}+m_{B} v_{Bfx}= m_{A} v_{Aix}+m_{B} v_{Bix}\]</td>
         </tr>
 		<tr>
-          <td>\[J_{y}=mv_{fy}-mv_{iy}\]</td>
+          <td>\[m_{A} v_{Afy}+m_{B} v_{Bfy}= m_{A} v_{Aiy}+m_{B} v_{Biy}\]</td>
         </tr>
       </tbody>
-	</table>
-	<h2>Impulse:</h2>
-	<p>The concept of an <strong>impulse</strong> in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
+	</table> 
+	<p>In the subscripts for the velocities we label the particle (A or B), the pre or post collision state (i or f) as well as the component (x or y). This triple subscript can make things a bit crowded, but as long as you are methodical about labeling and reading these subscripts it is fairly straightforward. To help ease interpretation, it's recommended that you follow a consistent ordering in the subscripts, labeling body, then pre/post collision, then direction.</p>
+	<p>To supplement the conservation of momentum equations, we will again need to determine the type of collision, classifying the collision as plastic (where the two particles stick together after impact) or elastic or semi-elastic (where the particles bounce off of one another).</p>
+	<h2>Plastic Collisions:</h2>
+	<p>In the case of plastic collisions, the bodies will have the same final velocity as a consequence of sticking together. Rolling this relationship into the above conservation of momentum equations, we wind up with the following equations. These modified equations are usually enough to solve for the unknowns in the equations.</p>
 	<table class="equation">
       <tbody>
-        <tr>
-			<td>Constant Magnitude Force:</td>
-          <td>\[\vec{J} = \vec{F}*t\]</td>
+		<tr>
+          <td>\[m_{(A+B)} v_{fx}= m_{A} v_{Aix}+m_{B} v_{Bix}\]</td>
         </tr>
 		<tr>
-			<td>Non-Constant Magnitude Force:</td>
-          <td>\[\vec{J} = \int \vec{F(t)} dt\]</td>
+          <td>\[m_{(A+B)} v_{fy}= m_{A} v_{Aiy}+m_{B} v_{Biy}\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>In many cases, we will discuss <strong>impulsive forces</strong>. This is an instance where we have very large forces acting over a very short time frame. In instances of impulsive forces, it is often difficult to measure the exact magnitude of the force or the time. In these cases we may only be able to deduce the magnitude of the impulse as a whole via the observed change in momentum of the body.</p>
-	<figure class="center"><img src="images/tennis.jpg" width="400" height="600" alt="A tennis player hitting a ball"/>
-      <figcaption>The force the tennis racket exerts on the ball will be very large, but it will be exerted over a very short period of time. Because of this, the force is considered an "impulsive" force. It would be difficult to determine the exact magnitude of the force or time frame of the impact, but by examining the velocity of the ball before and after the impact we could deduce the overall magnitude of the impulse as a whole. Photo by DAVID ILIFF. License: CC BY-SA 3.0</figcaption>
-    </figure>
-	<h2>Momentum:</h2>  
-	<p>The momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
-	<h2>Conservation of Momentum:</h2>
-	<p>In instances where there is no impulse exerted on a body, we can use the original equation to deduce that there will be no change in momentum of the body. In this instance, momentum is conserved. This will also hold for systems of bodies, where if no <strong>external</strong> impulses are exerted on the bodies in a system, the momentum will be conserved as a whole. This is the basis of analysis for many collisions, as is discussed in the following sections.</p>
+	</table> 
+	<h2>Elastic and Semi-Elastic Collisions:</h2>
+	<p>Unlike the plastic collisions, elastic and semi-elastic collisions will have separate velocities for each of the bodies post-collision. With each body having separate x and y components, this represents four unknown variables. Assuming we know all starting conditions, we will need four separate equations to solve for all unknowns.</p>
+	<p>Unlike the conservation of momentum equation, the conservation of energy equation we would use for elastic collisions is not a vector equation and cannot be broken down into components. Instead we will need to look to the coefficient of restitution, and set it equal to 1 for elastic collisions.</p>
+	<p>To solve these problems, we will first need to set up a specific set of coordinate axes. These axes will be the tangential direction (along the plane of the collision) and the normal direction (perpendicular to the plane of the collision). An example of these directions is shown in the figure below.</p>
+	<figure class="center"><img src="images/normal_tangential.png" width="457" height="449" alt="Two billiard balls colliding"/>
+      <figcaption>In a 2-D collision, it is important to identify the normal and tangential directions. The tangential direction will always be along the plane of impact while the normal direction will be perpendicular to the plane of contact.</figcaption>
+    </figure> 
+	<p>In examining the figure above, we can see something special about the tangential direction in that there are no forces on either body in this direction. With no forces, there is no impulse, and with no impulse there is no change in momentum for either particle individually in the tangential direction. This means that velocity is conserved for each body in the tangential direction on it's own.	Adding to that, momentum as a whole is conserved in the normal direction and the coefficient of restitution equation can be applied to the normal direction and we have the four equations we need to solve most problems.</p> 
+	<table class="equation">
+      <tbody>
+		<tr>
+          <td>\[v_{Atf}=v_{Ati}\]</td>
+        </tr>
+		<tr>
+          <td>\[v_{Btf}=v_{Bti}\]</td>
+        </tr>
+		<tr>
+          <td>\[m_{A} v_{Afn}+m_{B} v_{Bfn}= m_{A} v_{Ain}+m_{B} v_{Bin}\]</td>
+        </tr>
+		<tr>
+          <td>\[m_{A} v_{Afn}+m_{B} v_{Bfn}= m_{A} v_{Ain}+m_{B} v_{Bin}\]</td>
+        </tr>
+		<tr>
+          <td>\[e=-\frac{v_{Afn}-v_{Bfn}}{v_{Ain}-v_{Bin}}\]</td>
+        </tr>
+      </tbody>
+	</table> 
+	<p>To use the above equations, we will need to break all known velocities down into n and t components, then simply plug those values in and solve the above equations. In the end we may also need to convert the found n and t velocity components into x and y components or magnitudes and directions.</p> 
 	</div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -84,8 +104,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A tennis ball (.06 kg) is served to tennis player at a speed of 10 m/s.  The player then returns the ball at a speed of 36 m/s. What is the impulse exerted on the ball? If a high speed camera reveals the impact lasted .02 seconds, what is the average force exerted on the ball during the collision?</p>
-        <img src="images/P1.jpg" width="300" height="457" alt="Problem 1 Diagram"/></div>
+        <p>Two cars collide at an intersection as shown below.  The cars become entangled with one another sticking together after the impact.  Based on the information given below on the initial velocities and assuming both cars slide away from the crash at the 30 degree angle as shown, what must the initial velocity of car B been before the impact.</p>
+        <img src="images/P1.png" width="476" height="322" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -99,8 +119,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>A plane with a mass of 80,000 kg is traveling a velocity of 200 meters per second when the engines cut out. 20 seconds later, it’s noticed that the velocity has dropped to 190 m/s. Assuming the plane is not gaining or losing altitude, what is the average drag force on the plane?</p>
-        <img src="images/P2.jpg" width="400" height="266" alt="Problem 2 Diagram"/></div>
+        <p>Two pucks as shown below collide obliquely while sliding on a smooth surface as shown below. Assume the coefficient of restitution is .7 and time of impact is .001s. What is the final speed of each puck? What is the average force exerted on each puck during the impact?</p>
+        <img src="images/P2.png" width="500" height="209" alt="Problem 2 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -111,53 +131,7 @@
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-    <div class="problem">
-      <div class="question">
-        <h3>Question 3:</h3>
-        <p>The plot below shows the thrust generated by the engine on a jet fighter (2500 kg) over ten seconds.  If the plane is starting from rest on a runway and friction and drag are negligible, determine the speed of the plane at the end of these ten seconds.</p>
-        <img src="images/P3.png" width="500" height="219" alt="Problem 3 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
     </div>
-	<div class="problem">
-      <div class="question">
-        <h3>Question 4:</h3>
-        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s fires a thruster exerting a force of 600 kN at a 30 degree angle with the current path as shown below.  The thruster is turned off after completing a 90 degree turn as shown below. How long was the thruster on? What is the final velocity?
-		</p>
-        <img src="images/P4.png" width="392" height="285" alt="Problem 4 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	<div class="problem">
-      <div class="question">
-        <h3>Question 5:</h3>
-        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s is traveling 30 degrees from horizontal.  If the capsule is to have the same speed but travel horizontally after 10 seconds, what is the magnitude and direction of the required average thruster force?</p>
-        <img src="images/P5.png" width="500" height="187" alt="Problem 5 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	</div>
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>
