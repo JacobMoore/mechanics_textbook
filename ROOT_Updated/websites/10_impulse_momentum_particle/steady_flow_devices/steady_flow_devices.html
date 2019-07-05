@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Steady Flow Devices</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Steady Flow Devices</h1>
+	<p>A <strong>steady flow device</strong> is any device that will have a continuous flow of material through it. Some examples of steady flow devices include pipes, nozzles, diffusers, and pumps. Generally the material flowing through the device is a gas or liquid, and if the device in any way changes the velocity of the fluid then that fluid will exert a force on the steady flow device in return.</p>
+	<figure class="center"><img src="images/firehose.jpg" width="500" height="332" alt="Several people holding a firehose"/>
+      <figcaption>The nozzle on the fire hose is an example of a steady flow device. Because the nozzle changes the velocity of the water as it exits the hose, it will take a force to hold the nozzle in place.</figcaption>
+    </figure>  
+	<p>In order to determine the forces at play on a steady flow device, we will start with our impulse and momentum equation.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
+        </tr>
+      </tbody>
+	</table> 
+	<p>Because this is a continuous process, it doesn't really make sense to have an initial and final velocities. Instead we will have an inlet and outlet velocities. Also, the mass will need to be changed to the mass flow rate (the mass entering or leaving the device per unit time) to deal with the continuous flow nature of the system.</p>
+	<figure class="center"><img src="images/massflow.png" width="400" height="195" alt="A nozzle with input and output"/>
+    <figcaption>The mass flow rate is a more appropriate measure for steady flow devices than standard mass.</figcaption>
+    </figure>
+	<p>Dividing our initial impulse-momentum equation by time on both sides will give us the desired mass flow rate on the right, while the time will on the left will cancel out the time component of the impulse.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\frac{\vec{F}*t}{t} = \frac{m_{out}}{t} \vec{v_{out}}-\frac{m_{in}}{t} \vec{v_{in}}\]</td>
+        </tr>
+      </tbody>
+	</table>   
+	<p>Simplifying this equation we will arrive at our final equation, which relates the force our steady flow device exerts on the fluid to the mass flow rates and velocities at the inlet and outlet. The force the fluid exerts on the device would simply be equal and opposite to the force below.</p>  
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{F} = \dot{m}_{out} \vec{v_{out}}-\dot{m}_{in} \vec{v_{in}}\]</td>
+        </tr>
+      </tbody>
+	</table>
+	<p>One final note is that these equations are that they are vector equations. If the device is changing the direction of the flow of a fluid you will need to break the force and velocities into x and y components and split the above equation into x and y components.</p>
+	<h2>Finding Mass Flow Rate:</h2>
+	<p>If the mass flow rate in or out of your device is not given directly, you may need to find those values. First we can use a simply identity, knowing the mass flow rate will be equal to the density of the fluid times the volumetric flow rate. Furthermore, the volumetric flow rate can be related to the geometry of the device, in that it will be equal to the average velocity of the fluid at the inlet or outlet times the cross sectional area at the inlet or outlet. Putting this all together, we arrive at the following formulas.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\dot{m}= \rho \dot{V} = \rho \vec{v} A\]</td>
+        </tr>
+      </tbody>
+	</table><strong></strong>
+	</div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A fire fighter supports a hose as shown below.  The hose has a volumetric flow rate of 60 gal/min and nozzle reduces in diameter from 4 cm to 2 cm.  What force will the fire fighter have to exert, in Newtons, to  keep the hose in place? Photo by Macomb Paynes. License: CC BY-NC-SA 2.0</p>
+        <img src="images/P1.jpg" width="500" height="333" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>An 90 degree elbow joint redirects the flow along a 3 cm diameter pipe.  If water (density=1000 kg/m^3) is traveling through the pipe with an average speed of 5 m/s, what is the magnitude and direction of the force the water exerts on the elbow joint?</p>
+        <img src="images/P2.png" width="462" height="444" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	</div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
