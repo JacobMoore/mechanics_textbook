@@ -163,6 +163,17 @@ a:hover {
 	margin-bottom: 15px;
 }
 
+#practiceproblems {
+	width: 1000px;
+	padding: 0px;
+	border-top: 2px #DDDDDD solid;
+	clear: both;	
+}
+#practiceproblems h2{
+	text-align: center;
+	margin-bottom: 15px;
+}
+
 .problem {
 	width: 900px;
 	margin: 20px auto;
@@ -192,6 +203,13 @@ a:hover {
 }
 .solution h3 {
 	margin: 30px 5px;
+}
+
+.importbox {
+	display: block;
+	float: center;
+	width: 860px;
+	padding: 20px;
 }
 
 video {
