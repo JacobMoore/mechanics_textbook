@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - The Equations of Motion with Polar Coordinates</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>The Equations of Motion with Polar Coordinates</h1>
+	<p>To finish our discussion of the equations of motion in two dimensions, we will examine Newton's Second law as it is applied to the polar coordinate system. In its basic form, <strong>Newton's Second Law</strong> states that the sum of the forces on a body will be equal to mass of that body times the rate of acceleration. For bodies in motion, we can write this relationship out as the equation of motion.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum \vec{F}=m*\vec{a}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Just as we did with with rectangular and normal-tangential coordinates, we will break this single vector equation into two separate scalar equations. This involves identifying the r and theta directions and then using sines and cosines to break the given forces and accelerations down into components in those directions.</p>
+    <figure class="center"><img src="images/polar_acceleration.png" width="600" height="373" alt="A rocket with a known acceration broken down into r and theta components."/>
+      <figcaption>When working in the polar coordinate system, any given forces or accelerations can be broken down using sines and cosines assuming the angle of the force or acceleration is known relative to the r and theta directions.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_{n}=m*a_{r}\]</td>
+        </tr>
+        <tr>
+          <td>\[\sum F_{t}=m*a_{\theta}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	 <p>Just as with our other coordinate systems, the equations of motion are often used in conjunction with the kinematics equations, which relate positions, velocities and accelerations as discussed in the previous chapter. In particular, we will often substitute the known values below for the r and theta components for acceleration.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[a_{r}=\ddot{r}-r\dot{\Theta}^{2}\]</td>
+        </tr>
+        <tr>
+          <td>\[a_{\theta}=2\dot{r}\dot{\Theta}+r\ddot{\Theta}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Polar coordinates can be used in any kinetics problem, however they work best with problems where there is a stationary body tracking some moving body (such as a radar dish) or there is a particle rotating around some fixed point. These equations will also come back into play when we start examining rigid body kinematics.</p> 
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A device consists of two, one-half kilogram masses tethered to a central shaft. The tethers are each .75 meters long and each tether currently makes a 25 degree angle with the central shaft. Assume the central shaft is spinning at a constant rate. What is the rate at which the shaft is spinning? If we want it to spin at exactly 100 rpm, what should the angle of the tethers be?</p>
+        <img src="images/P1.png" width="370" height="453" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A catapult design consists of a steel weight on a frictionless rod. The rod spins at a constant rate of 4 radians per second and when theta is 45 degrees from horizontal, the 30 lb weight is released from its position 2 ft from the center of rotation of the shaft. What is the force the shaft exerts on the weight at the instant before and the instant after it is released? What is the acceleration of the weight along the shaft the instant after it is released?</p>
+      <img src="images/P2.png" width="411" height="407" alt="Problem 2 Diagram"/>
+		</div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
