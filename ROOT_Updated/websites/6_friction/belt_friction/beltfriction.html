@@ -6,6 +6,7 @@
 
 	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 	
 <script type="text/javascript">
 
@@ -77,7 +78,7 @@
 				<img alt="Belt Without Friction" height="269" src="images/belt1.png" width="200">
 				<figcaption>With equal tensions on each side of the belt, only a 
 				non-uniform normal force exists between the belt and the 
-				surface.</figcaption>
+				surface.\[T_{1}=T_{2}\]</figcaption>
 			</figure>
 		</td>	
 		<td>
@@ -85,7 +86,7 @@
 				<img alt="Belt with Friction" height="286" src="images/belt2.png" width="200">
 				<figcaption>With unequal tensions, a friction force will also be 
 				present opposing the relative sliding of the belt to the 
-				surface.</figcaption>
+				surface.\[T_{1}< T_{2}\]</figcaption>
 			</figure>
 		</td>
 		</tr>
@@ -117,7 +118,7 @@
 		<figure class="center">	
 			<img alt="Belt Friction Equation" height="374" src="images/belteqn.png" width="600">
 			<figcaption>The maximum value of T2 before the belt starts slipping 
-			can be determined with the equation above.</figcaption>
+			can be determined with the equation above.\[T_{2max}=T_{1}e^{\mu _{s}\beta }\]</figcaption>
 		</figure>
 		
 		<h3>Friction in V Belts</h3>
@@ -135,6 +136,7 @@
 		"enhanced" coefficient of friction that takes into account the increased 
 		normal and friction forces possible because of the groove.</p>
 		
+        <p>\[T_{2max}=T_{1}e^{\mu _{s\left ( enh \right )\beta }}\] where... \[\mu _{s\left ( enh \right )}=\frac{\mu _{s}}{sin\left ( \frac{\alpha }{2} \right )}\]</p>
 		<figure class="center">	
 			<img alt="Friction for V Belts" height="284" src="images/vbelteqn.png" width="600">
 			<figcaption>In a V belt, the "enhanced" coefficient of friction 
@@ -194,21 +196,23 @@
 		same size. To find the torque, we will simply need to find the net moment 
 		exerted by the two tension forces, where the radius of the pulley is the 
 		moment arm.</p>
-
-		<figure class="equation">	
-			<img alt="Maximum torque before slipping" src="images/toqueeqn.png">					
-		</figure>
+        
+        <p>Maximum input torque before slipping</p>
+        
+        <p>\[\vec{M}_{input max}=\left ( T_{2max}-T_1 \right )\left ( r_{input} \right )\]</p>
+        
+        <p>Maximum output torque before slipping</p>
+        
+        <p>\[\vec{M}_{output max}=\left ( T_{2max}-T_1 \right )\left ( r_{output} \right )\]</p>
 		
 		<p>To find the maximum power we can transfer with the belt drive system, 
 		we will use the rotational definition of power, where the power is equal 
 		to the torque times the angular velocity in radians per second. Unlike 
 		the torque, the power at the input and the output will be the same 
 		assuming no inefficiencies.</p>
-		
-		<figure class="equation">						
-			<img alt="Power transfer in belt drive systems" height="52" src="images/powereqn.png" width="600">
-		</figure>
-		
+        
+        <p>\[P_{max}=\left ( M_{input max} \right )\left ( \omega _{input} \right )=\left ( M_{output max} \right )\left ( \omega _{output} \right )\]</p>
+			
 	</div>
 	
 	<div id="sidebar"> <br/>
