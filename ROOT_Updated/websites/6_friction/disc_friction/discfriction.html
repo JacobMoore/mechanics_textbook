@@ -6,7 +6,8 @@
 
 	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -71,6 +72,10 @@
 		however into an equal moment exerted by each point. Points further from 
 		the center of rotation will exert a larger moment than points closer to 
 		the center of rotation because they will have a larger moment arm.</p>
+        
+        \[\vec{F}=\mu _k \vec{F}_{N}\]
+        \[\vec{F}_i=\vec{F}_0\]
+        \[\vec{M}_i\neq \vec{M}_0\]        
 		
 		<figure class="center">
 			<img alt="Friction in a Collar Bearning" height="238" src="images/collarfriction.png" width="400">
@@ -86,9 +91,7 @@
 		kinetic coefficient of friction, times the normal force pressure at that point 
 		(p), times the distance from that point to the center of rotation (r).</p>
 		
-		<figure class="equation">
-			<img alt="Moment due to disc friction" height="94" src="images/eq1.png" width="472">
-		</figure>
+        \[\vec{M}=\int_{A}d\vec{M}=\int_{A}\mu _k*p*r*dA\]
 		
 		<p>To simplify things we can move the constant coefficient of friction, 
 		and the constant normal force pressure term outside of the integral. We 
@@ -99,18 +102,14 @@
 		(dr) term time the 
 		circumference of the circle at r. These changes lead to the equation 
 		below.</p>
-		
-		<figure class="equation">		
-			<img alt="" height="111" src="images/eq2.png" width="523">
-		</figure>
+        
+        \[\vec{M}=\mu _k \left ( \frac{\vec{F}_{load}}{\pi \left ( R_{0}^{2}-R_{i}^{2} \right )} \right )\int_{R_i}^{R_0}r*\left ( 2\pi r \right )dr\]
 		
 		<p>Finally we can evaluate the integral from the inner radius to the 
 		outer radius. If we evaluate the integral and simplify we will end up 
 		with the final equation below.</p>
-		
-		<figure class="equation">		
-			<img alt="Moment due to disc friction" height="125" src="images/eq3.png" width="413">
-		</figure>
+        
+        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
 		
 		<h2>Other Contact Area Shapes</h2>
 		
@@ -127,10 +126,8 @@
 		at the top of the page we simply set the inner radius to zero and we can 
 		simplify the formula. If we do so, the original formula is reduced to 
 		the equation below.</p>
-		
-		<figure class="equation">
-			<img alt="Disc Friction" height="98" src="images/eq4.png" width="287">
-		</figure>
+        
+        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} R_0\]
 
 		<h3>Circular Arcs (Disc Brakes)</h3>
 		
@@ -143,6 +140,14 @@
 		contact area when examining a single brake pad. Most disc brakes however have a 
 		pair of pads however (one on each side of the rotating disc), so we will 
 		need to double the moment in our equation for the usual pair of pads.</p>
+        
+        <p>Single Brake Pad</p>
+        
+        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
+        
+        <p>Brake pad on each side</p>
+        
+        \[\vec{M}=\frac{4}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
 		
 		<figure class="center">
 			<img alt="Disc Brakes" height="348" src="images/discbrake.png" width="600">

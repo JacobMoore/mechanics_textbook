@@ -6,7 +6,8 @@
 
 	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -103,22 +104,24 @@
 		the equilibrium equations for the nut. Second the nut is sliding, 
 		indicating that the friction force will be equal to the normal force 
 		times the kinetic coefficient of friction.</p>
-		
-		<figure class="equation">
-			<img alt="Equilibrium Equations" height="205" src="images/eq1.png" width="500">
-		</figure>
-		
+        
+        \[\vec{F}_f= \mu_k*\vec{F}_N\]
+        
+        \[\sum \vec{F}_x=\vec{F}_{push}-\vec{F}_N*sin\left ( \theta  \right )-\mu _k*\vec{F}_N*cos\left ( \theta  \right )=0\]
+        
+        \[\sum \vec{F}_y=\vec{F}_{push}-\vec{F}_N*cos\left ( \theta  \right )-\mu _k*\vec{F}_N*sin\left ( \theta  \right )=0\]
+
 		<p>We can then simplify the equation above into a single equation 
 		relating the load force and the pushing force.</p>
-		
-		<figure class="equation">
-			<img alt="Simplified Equation" src="images/eq2.png">		
-		</figure>
-		
+        
+        \[\vec{F}_{push}=\frac{sin\left ( \theta  \right )+\mu_k*cos\left ( \theta  \right )}{cos\left ( \theta  \right )-\mu_k*sin\left ( \theta \right )}*\vec{F}_{load}\]
+
 		<p>In reality the pushing force is not a single force at all. It is the 
 		forces preventing the nut from rotating with the screw. The cumulative 
 		pushing force will really cause an equal and opposite moment to the 
 		input moment that is spinning the shaft.</p>
+        
+        <p>\[\vec{M}=\vec{F}*d\]</p>
 
 		<figure class="center">
 			<img alt="The pushing force and the input moment" height="360" src="images/moment.png" width="320">			
@@ -133,11 +136,9 @@
 		driving our screw, to the force that the nut on the screw is pressing 
 		forward with. Screw systems are usually designed to nallow fairly small 
 		input moments to push very large load forces.</p>
-		
-		<figure class="equation">
-			<img alt="Final Equation" src="images/eq3.png">		
-		</figure>
-		
+        
+        \[\vec{T}=\frac{sin\left ( \theta \right )+\mu_k*cos\left ( \theta \right )}{cos\left ( \theta \right )-\mu_k*sin\left ( \theta \right )}*\vec{F}_{load}*r_{shaft}\]
+
 		<h2>Self Locking Screws</h2>
 		
 		<p>Imagine we apply a torque to a power screw to lift a body, then when 
@@ -188,6 +189,10 @@
 		(relating the friction force to the normal force) and leave the lead 
 		angle as an unknown. This lets us create the free body diagram as shown 
 		below and gives us the equilibrium equations below.</p>
+    
+        \[\sum \vec{F}_x=-\vec{F}_N*sin\left ( \theta \right )+\mu_s*\vec{F}_N*cos\left ( \theta \right )=0\]
+    
+        \[\sum \vec{F}_y=-\vec{F}_{load}+\vec{F}_N*cos\left ( \theta \right )+\mu_s*\vec{F}_N*sin\left ( \theta \right )=0\]
 		
 		<figure class="center">
 			<img alt="Self Locking Angle in Power Screws" height="397" src="images/lockinganglefbd.png" width="500">	
@@ -200,11 +205,8 @@
 		This new equation shown below gives us the self locking angle. Systems 
 		with lead angles smaller than this will be self locking, while systems 
 		with lead angles larger than this will not be self locking.</p>
-		
-		<figure class="equation">	
-			<img alt="Power Screw Self Locking Angle Equation" height="81" src="images/selflockingeq.png" width="340">
-		</figure>
-
+    
+        \[\theta_{locking}=tan^{-1}\left ( \mu_s \right )\]
 			
 	</div>
 	
