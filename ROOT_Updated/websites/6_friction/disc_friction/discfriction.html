@@ -73,9 +73,19 @@
 		the center of rotation will exert a larger moment than points closer to 
 		the center of rotation because they will have a larger moment arm.</p>
         
-        \[\vec{F}=\mu _k \vec{F}_{N}\]
-        \[\vec{F}_i=\vec{F}_0\]
-        \[\vec{M}_i\neq \vec{M}_0\]        
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[F=\mu _k\; F_{N}\]</td>
+        </tr>
+        <tr>
+            <td> \[F_i=F_0\]</td>
+        </tr>
+        <tr>
+            <td>\[M_i\neq M_0\] </td>
+        </tr>
+    </tbody>
+</table>     
 		
 		<figure class="center">
 			<img alt="Friction in a Collar Bearning" height="238" src="images/collarfriction.png" width="400">
@@ -90,8 +100,17 @@
 		contact area. The moment at each individual point will be equal to the 
 		kinetic coefficient of friction, times the normal force pressure at that point 
 		(p), times the distance from that point to the center of rotation (r).</p>
+        
+<table class="equation">
+    <tbody>
+        <tr>
+            <td> \[M=\int_{A}dM=\int_{A}\mu _k*p*r*dA\]</td>
+        </tr>
+    </tbody>
+</table>
+
+
 		
-        \[\vec{M}=\int_{A}d\vec{M}=\int_{A}\mu _k*p*r*dA\]
 		
 		<p>To simplify things we can move the constant coefficient of friction, 
 		and the constant normal force pressure term outside of the integral. We 
@@ -103,14 +122,29 @@
 		circumference of the circle at r. These changes lead to the equation 
 		below.</p>
         
-        \[\vec{M}=\mu _k \left ( \frac{\vec{F}_{load}}{\pi \left ( R_{0}^{2}-R_{i}^{2} \right )} \right )\int_{R_i}^{R_0}r*\left ( 2\pi r \right )dr\]
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[M=\mu _k \left ( \frac{F_{load}}{\pi \left ( R_{0}^{2}-R_{i}^{2} \right )} \right )\int_{R_i}^{R_0}r*\left ( 2\pi r \right )dr\]</td>
+        </tr>
+    </tbody>
+</table>
+        
+        
 		
 		<p>Finally we can evaluate the integral from the inner radius to the 
 		outer radius. If we evaluate the integral and simplify we will end up 
 		with the final equation below.</p>
         
-        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
-		
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[M=\frac{2}{3}\mu _k\; F_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]</td>
+        </tr>
+    </tbody>
+</table>
+
+
 		<h2>Other Contact Area Shapes</h2>
 		
 		<h3>Solid Circular Contact Area</h3>
@@ -127,7 +161,13 @@
 		simplify the formula. If we do so, the original formula is reduced to 
 		the equation below.</p>
         
-        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} R_0\]
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[M=\frac{2}{3}\mu _k\; F_{load}\; R_0\]</td>
+        </tr>
+    </tbody>
+</table>
 
 		<h3>Circular Arcs (Disc Brakes)</h3>
 		
@@ -143,12 +183,24 @@
         
         <p>Single Brake Pad</p>
         
-        \[\vec{M}=\frac{2}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
-        
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[M=\frac{2}{3}\mu _k\; F_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]</td>
+        </tr>
+    </tbody>
+</table>
+
         <p>Brake pad on each side</p>
         
-        \[\vec{M}=\frac{4}{3}\mu _k \vec{F}_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]
-		
+<table class="equation">
+    <tbody>
+        <tr>
+            <td>\[M=\frac{4}{3}\mu _k\; F_{load} \left ( \frac{R_{0}^{3}-R_{i}^{3}}{R_{0}^{2}-R_{i}^{2}} \right )\]</td>
+        </tr>
+    </tbody>
+</table>
+        
 		<figure class="center">
 			<img alt="Disc Brakes" height="348" src="images/discbrake.png" width="600">
 			<figcaption>The contact area in disc brakes is often approximated as 
