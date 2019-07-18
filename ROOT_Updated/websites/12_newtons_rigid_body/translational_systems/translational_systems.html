@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - The Equations of Motion with Polar Coordinates</title>
+<title>Mechanics Map - Translational Systems</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
@@ -29,41 +29,36 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>The Equations of Motion with Polar Coordinates</h1>
-	<p>To finish our discussion of the equations of motion in two dimensions, we will examine Newton's Second law as it is applied to the polar coordinate system. In its basic form, <strong>Newton's Second Law</strong> states that the sum of the forces on a body will be equal to mass of that body times the rate of acceleration. For bodies in motion, we can write this relationship out as the equation of motion.</p>
+    <h1>Rigid Body Translation</h1>
+	  <p>With rigid bodies, we have to examine <strong>moments</strong> and at least the <strong>possibility of rotation</strong> along with the forces and accelerations we examined with particles. Some rigid bodies will translate but not rotate (translational systems), some will rotate but not translate (fixed axis roation) and some will rotate and translate (general planar motion). Overall we will start with an examination of translational systems, then examine fixed axis rotation, then pull everything together for general planar motion.</p>
+	<figure class="center"><img src="images/braking_car.JPG" width="459" height="281" alt="A car braking."/>
+      <figcaption>The braking car in this picture is an example of a translational system. Though the car experiences a significant decceleration, it does not expereience any significant rotation while it slows down. Public domain image by Sgt. Amber Blanchard.</figcaption>
+    </figure>
+	<p>As the start of our analysis, we will go back to Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions.</p>
     <table class="equation">
       <tbody>
         <tr>
           <td>\[\sum \vec{F}=m*\vec{a}\]</td>
         </tr>
+		<tr>
+          <td>\[\sum \vec{M}=I*\vec{\alpha}\]</td>
+        </tr>
       </tbody>
     </table>
-	<p>Just as we did with with rectangular and normal-tangential coordinates, we will break this single vector equation into two separate scalar equations. This involves identifying the r and theta directions and then using sines and cosines to break the given forces and accelerations down into components in those directions.</p>
-    <figure class="center"><img src="images/polar_acceleration.png" width="600" height="373" alt="A rocket with a known acceration broken down into r and theta components."/>
-      <figcaption>When working in the polar coordinate system, any given forces or accelerations can be broken down using sines and cosines assuming the angle of the force or acceleration is known relative to the r and theta directions.</figcaption>
-    </figure>
-    <table class="equation">
+	<p>As we did with particles, we can break the vector force equation into components, turning the one vector equation into two scalar equations (in the x and y directions respectivly). As for the moment equation, a translational system by definition will have zero angular acceleration. With the angular acceleration being zero, the sum of the moments must all be equal to zero. This is similar to statics problems, however there is one big difference we must take into account. <strong>The moments must be taken about the center of mass of the body.</strong> Setting the moments to zero about other points will lead to invalid solutions for any body experiencing an acceleration. Putting these specifics into action, we wind up with the three base <strong>equations of motion</strong> below. To solve for unknown forces or accelerations, we simply draw a free body diagram, put the knowns and unknowns into these equations, and solve for the unknowns.</p>
+	<table class="equation">
       <tbody>
         <tr>
-          <td>\[\sum F_{n}=m*a_{r}\]</td>
+          <td>\[\sum F_{x}=m*a_{x}\]</td>
         </tr>
-        <tr>
-          <td>\[\sum F_{t}=m*a_{\theta}\]</td>
+		<tr>
+          <td>\[\sum F_{y}=m*a_{y}\]</td>
         </tr>
-      </tbody>
-    </table>
-	 <p>Just as with our other coordinate systems, the equations of motion are often used in conjunction with the kinematics equations, which relate positions, velocities and accelerations as discussed in the previous chapter. In particular, we will often substitute the known values below for the r and theta components for acceleration.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[a_{r}=\ddot{r}-r\dot{\Theta}^{2}\]</td>
-        </tr>
-        <tr>
-          <td>\[a_{\theta}=2\dot{r}\dot{\Theta}+r\ddot{\Theta}\]</td>
+		<tr>
+          <td>\[\sum M_{COM}=0\]</td>
         </tr>
       </tbody>
     </table>
-    <p>Polar coordinates can be used in any kinetics problem, however they work best with problems where there is a stationary body tracking some moving body (such as a radar dish) or there is a particle rotating around some fixed point. These equations will also come back into play when we start examining rigid body kinematics.</p> 
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -77,8 +72,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A device consists of two, one-half kilogram masses tethered to a central shaft. The tethers are each .75 meters long and each tether currently makes a 25 degree angle with the central shaft. Assume the central shaft is spinning at a constant rate. What is the rate at which the shaft is spinning? If we want it to spin at exactly 100 rpm, what should the angle of the tethers be?</p>
-        <img src="images/P1.png" width="370" height="453" alt="Problem 1 Diagram"/></div>
+        <p>A refrigerator is 2.5 feet wide, 6 feet tall and weighs 80 lbs. The center of mass is 1.25 feet from either side and 2 feet up from the base. If the refrigerator is on a conveyer belt that is accelerating the fridge at a rate of 1 ft/s2, what are the normal forces at each of the feet?</p>
+        <img src="images/P1.png" width="500" height="272" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -87,22 +82,6 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-    <div class="problem">
-      <div class="question">
-        <h3>Question 2:</h3>
-        <p>A catapult design consists of a steel weight on a frictionless rod. The rod spins at a constant rate of 4 radians per second and when theta is 45 degrees from horizontal, the 30 lb weight is released from its position 2 ft from the center of rotation of the shaft. What is the force the shaft exerts on the weight at the instant before and the instant after it is released? What is the acceleration of the weight along the shaft the instant after it is released?</p>
-      <img src="images/P2.png" width="411" height="407" alt="Problem 2 Diagram"/>
-		</div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
     </div>
