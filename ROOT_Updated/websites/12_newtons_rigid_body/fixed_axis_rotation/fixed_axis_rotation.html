@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Fixed Axis Rotation</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Fixed Axis Rotation</h1>
+	  <p>With rigid bodies, we have to examine <strong>moments</strong> and at least the <strong>possibility of rotation</strong> along with the forces and accelerations we examined with particles. Some rigid bodies will translate but not rotate (translational systems), some will rotate but not translate (fixed axis rotation) and some will rotate and translate (general planar motion). Here we will examine rigid body rotation about a fixed axis. As the name would suggest, fixed axis rotation is the analysis of any rigid body that rotates about some axis that does not move. Many devices rotate about their center, though the objects do not need to rotate about their center point for this analysis to work.</p>
+	<figure class="center"><img src="images/pitching_machine.jpg" width="500" height="332" alt="A pitching machine"/>
+      <figcaption>The wheel on this pitching machine is an example of fixed axis rotation. Image by Abigor under a CC-BY 2.0 license.</figcaption>
+    </figure>
+	<p>We will again start with Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum \vec{F}=m*\vec{a}\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum \vec{M}=I*\vec{\alpha}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Because the axis of rotation is assumed to be stationary, the acceleration at that point will be equal to zero. This in turn means that the sum of the forces in both the x and y directions must be equal to zero. For the moment equation, we will also be focusing on the fixed axis of rotation (which we will call point O). We will specifically need to take the moments about point O and also we will need to make sure to take the mass moment of inertia (I) about that same point O. More information on how to find the mass moment of inertia of a body can be found in Appendix 2.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_{x}=0\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum F_{y}=0\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum M_{O}=I_{O}*\alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>By setting up a free body diagram, filling in the knowns and unknowns in the above equations, and solving for those unknowns we can determine forces, moments, accelerations, or angular accelerations.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>An 8cm diameter hard drive platter accelerates at a constant rate of 150 rad/s<sup>2</sup>. If the hard drive weighs a uniformly distributed .05 kg and we approximate the hard drive as a flat circular disc, what moment does the motor need to exert to accelerate the drive at this rate?</p>
+        <img src="images/P1.jpg" width="400" height="348" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>The drum in a washing machine can be approximated as a cylinder .4 meters in diameter and .3 meters in height with a uniformly distributed mass of 35 kilograms when full. If we wish to achieve an acceleration of 15 rad/s<sup>2</sup>, what torque must the motor exert at the center of the drum?</p>
+        <img src="images/P2.png" width="500" height="236" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
