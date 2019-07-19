@@ -96,7 +96,7 @@
       <tbody>
         
 		   <tr>
-          <td>\[   m {\ddot{x}} + c \dot(x) + k {x} = 0  \]</td>
+          <td>\[   m {\ddot{x}} + c \dot{x} + k {x} = 0  \]</td>
         </tr>
 		   <tr>
           <td>\[ \Rightarrow \,   {\ddot{x}} + \frac{c}{m} \dot{x} + \frac{k}{m} {x} = 0  \]</td>
@@ -129,7 +129,49 @@
 		</tr>
       </tbody>
     </table>  	 
-<p>Critical damping comes from the solution of the differential equation, and occurs when:  </p>
+<p>The expression for critical damping comes from the solution of the differential equation.  The solution to the system differential equation is of the form: </p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   x(t) = ae^{rt}  \]</td>
+        </tr>
+      </tbody>
+    </table>  	 
+	<p>Where <em>a</em> is a constant, and the value(s) of <em>r</em> can be obtained by differentiating this general form of the solution and substituting into the equation of motion. </p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   m r^2 e^{rt} + c r  e^{rt}  + k  e^{rt}  = 0  \]</td>
+        </tr>
+		  <tr>
+          <td>\[  \Rightarrow (m r^2  + c r    + k ) e^{rt}   = 0  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	<p>Because the exponential term is never zero, we can divide both sides by that term and get:</p>
+	
+	<table class="equation">
+      <tbody>
+		
+		  <tr>
+          <td>\[  m r^2  + c r    + k    = 0  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	
+
+	<p>Using the quadratic formula, we can find the roots of the equation:</p>
+	
+	<table class="equation">
+      <tbody>
+		
+		  <tr>
+          <td>\[  r_{1,2} = (\frac{-c \pm \sqrt{c^2 - 4mk}}{2m}) \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	
+	<p>Critical damping occurs when the term under the square root sign equals zero:  </p>
 	<table class="equation">
       <tbody>
 		 <tr>
@@ -140,7 +182,7 @@
         </tr>
       </tbody>
     </table>  	
-	<p>There are four basic cases for the damping ratio. </p>
+	<p>There are four basic cases for the damping ratio. For the solutions that follow in each case, we will assume that the initial perturbaion displacement of the system is x<sub>0</sub> and the initial perturbation velocity of the system is v<sub>0</sub>.</p>
 	
 <p>1. <strong> &#950; = 0: Undamped.</strong> </p>
 <table class="equation">
@@ -152,6 +194,10 @@
     </table>  		
 	<p>This is the case covered in the previous section.  Undamped systems oscillate about the equilibrium position continuously, unless some other force is applied. </p>
 	
+		  <figure class="center"> <img src="images/Slide15.png" width="482" height="250" alt="undamped system response"/>
+      <figcaption>Response of an undamped system.</figcaption>
+    </figure>
+	
 <p>2. <strong> &#950; > 1: Overdamped.</strong> </p>
 	<table class="equation">
       <tbody>
@@ -160,25 +206,67 @@
         </tr>
       </tbody>
     </table>  
-	<p>Overdamped systems move slowly toward equilibrium without oscillating.</p>
+	<p>Roots are both real and negative, but not equal to each other. Overdamped systems move slowly toward equilibrium without oscillating.</p>
+	
+	  <figure class="center"> <img src="images/Slide16.png" width="482" height="250" alt="Overdamped system response"/>
+      <figcaption>Response of an overdamped system.</figcaption>
+    </figure>
 	
 	<p>The solution for an overdamped system is: </p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[ x(t) = a_1 e^{(\frac{-c + \sqrt{c^2 - 4mk}}{2m} ) t} + a_2 e^{(\frac{-c - \sqrt{c^2 - 4mk}}{2m} ) t}  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	
+	<p>Where:</p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[ a_1 = \frac{-v_0 + r_2 x_0}{r_2 - r_1}  \]</td>
+        </tr>
+		   <tr>
+          <td>\[ a_2 = \frac{v_0 + r_1 x_0}{r_2 - r_1}  \]</td>
+        </tr>
+      </tbody>
+    </table>  
 	
 	
 <p>3. <strong> &#950; = 1: Critically-damped.</strong> </p>
 	<table class="equation">
       <tbody>
 		 <tr>
-          <td>\[  c^2 = 4mk \]</td>
+          <td>\[  c^2 = 4mk (=c_c^2) \]</td>
         </tr>
       </tbody>
     </table>  
-	<p>Critically-damped systems will allow the fastest return to equilibrium without oscillation. </p>
+	<p>Roots are real and both equal to -&#969;<sub>n</sub>. Critically-damped systems will allow the fastest return to equilibrium without oscillation. </p>
 	
-	
+	<figure class="center"> <img src="images/Slide17.png" width="482" height="250" alt="Critically-damped system response"/>
+      <figcaption>Response of an critically-damped system.</figcaption>
+    </figure>
 	
 	<p>The solution for a critically-damped system is: </p>
-	
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[  x(t) - (A + Bt) e^{-\omega_n t} \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	<p>Where:</p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[  A = x_0\]</td>
+        </tr>
+		   <tr>
+          <td>\[  B = v_0 + x_0 \omega_n\]</td>
+        </tr>
+      </tbody>
+    </table>  
 	
 <p>4. <strong> &#950; < 1: Underdamped.</strong>  </p>
 	
@@ -191,12 +279,38 @@
     </table>  
 	
 	
-	<p>Underdamped systems do oscillate around the equilibrium point.  Unlike undamped systems, the amplitude of the oscillations diminishes until the system eventually stops moving at the equilibrium position. </p>
+	<p>The roots are complex numbers.  Underdamped systems do oscillate around the equilibrium point.  Unlike undamped systems, the amplitude of the oscillations diminishes until the system eventually stops moving at the equilibrium position. </p>
+	
+	<figure class="center"> <img src="images/Slide18.png" width="482" height="250" alt="Underdamped system response"/>
+      <figcaption>Response of an underdamped system.</figcaption>
+    </figure>
 	
 		<p>The solution for an underdamped system is: </p>
 	
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[  x(t) = \lbrack C_1 \sin (\omega_d t) + C_2 \cos(\omega_d t) \rbrack e^{-\omega_n \zeta t} \]</td>
+        </tr>
+      </tbody>
+    </table>  
 	
-	<p>where &#969;<sub>d</sub> is call the <strong>damped natural frequency</strong>: </p>
+	<p>Where:</p>
+	<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[  C_1 = \frac{v_0 + \omega_n \zeta x_0}{\omega_d}\]</td>
+        </tr>
+		   <tr>
+          <td>\[  C_2 = x_0\]</td>
+        </tr>
+		  <tr>
+          <td>\[  \zeta = \frac{c}{2m \omega_n}\]</td>
+        </tr>
+      </tbody>
+    </table>  
+	
+	<p>&#969;<sub>d</sub> is called the <strong>damped natural frequency</strong> of the system. It is always less than &#969;<sub>n</sub>: </p>
 	
 	<table class="equation">
       <tbody>
@@ -206,6 +320,12 @@
       </tbody>
     </table>
 	
+	
+	
+	<figure class="center"> <img src="images/Slide19.png" width="482" height="250" alt="Four types of system response"/>
+      <figcaption>Responses for all four types of system (or values of damping ratio). All four systems have the same mass and spring values, and have been given the same initial perturbations (initial position and initial velocity: this is apparent because they start at the same y-intercept and have the same slope at x=0).</figcaption>
+    </figure>
+	<p>In the figure above, we can see that the critically-damped response results in the system returning to equilibrium the fastest. Also, we can see that the underdamped system amplitude is quite attenuated compared to the undamped case.  </p>
 	
   </div>
   <div id="sidebar"> <br/>
@@ -245,36 +365,6 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-    <div class="problem">
-      <div class="question">
-        <h3>Question 3:</h3>
-        <p>In a rocket sled deceleration experiment, a manned sled is decelerated from a speed of 200 mph (89.4 m/s) to a stop at a constant rate of 18Gs (176.6 m/s<sup>2</sup>). How long does it take for the sled to stop? How far does the sled travel while decelerating?</p>
-        <img alt="Problem 3 Diagram" src="images/P3.jpg"> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-    <div class="problem">
-      <div class="question">
-        <h3>Question 4:</h3>
-        <p>A metallic particle is accelerated in a magnetic field such that its velocity over time is defined by the function v(t) = 4t<sup>2</sup> - 12, where time is in seconds and velocity is in meters per second. If we assume that the particle has an initial position of zero (x<sub>0</sub> = 0), what are the equations that describe the acceleration and position over time?</p>
-        <img alt="Problem 4 Diagram" src="images/P4.jpg"> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
