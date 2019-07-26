@@ -29,7 +29,7 @@
   <div id="maincontent">
     <h1>Friction (Coloumb) Damped Free Vibration</h1>
     <p>Friction can also provide vibration damping. In this case, however, the damping is <strong>not</strong> proportional to the magnitude of velocity.  It only depends on the direction of velocity. </p>
-    <p>We remember from **** [insert link to appropriate chapter] that the force of friction in sliding depends only on the coefficient of kinetic friction, &#956<sub>k</sub>, and the normal force, F<sub>N</sub>.</p>
+    <p>We remember from <a href="websites/6_friction/dry_friction/dryfriction.html">the section on dry friction</a> that the force of friction in sliding depends only on the coefficient of kinetic friction, &#956<sub>k</sub>, and the normal force, F<sub>N</sub>.</p>
     
     <table class="equation">
       <tbody>
@@ -47,9 +47,41 @@
       </tbody>
     </table>
     <p>Where sgn is the "sign" function, a function that captures the sign (direction) of velocity. The above equation then indicates that the direction of friction is always opposite the direction of velocity, but the magnitude of velocity does not make a difference in the magnitude of friction. </p>
-    <p>If we consider our simple linear mass-spring system, the magnitude of F<sub>f</sub> does not change with velocity, unlike with viscous damping.  If we plotted both types of damping for the same system, we would get: ****</p>
-    
+	
+	<p>The equation of motion of the system becomes:</p>  
+	 <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ m \ddot{x} + \mu mg \, \text{sgn}(\dot{x}) + kx = 0 \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	<p>And the solution to this equation of motion is:</p>  
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ x(t) = (x_0 - \frac{(2n-1)\mu m g}{k})\cos \omega_n t + \frac{\mu mg}{k}(-1)^{n+1} \]</td>
+        </tr>
+      </tbody>
+    </table>    
+	<p>If we plot the response, we can see that there are several differences from a system with viscous damping.  </p>  
 	  
+	<figure class="center"> <img src="images/Slide21.png" width="482" height="250" alt="Friction damping response"/>
+      <figcaption>Response of the system in friction damping.</figcaption>
+    </figure>
+	  
+	  <p>Some differences when compared to viscous damping include:
+	  <ol>
+	  <li>The system oscillates at the natural frequency of the system, not a damped natural frequency.</li>
+		  <li>The bounding curves are linear, not exponential. </li>
+		  <li>The system does not return to zero.  This is because the magnitude of the friction force does not diminish as the system amplitude reduces, and at some point the spring force is no longer able to overcome the static friction that the system experiences when it changes direction (<em>v = 0</em>). </li>
+	  </ol></p>
+	<h2>Comparison to Viscous Underdamped System</h2>
+    <p>If we consider our simple linear mass-spring system, the magnitude of F<sub>f</sub> does not change with velocity, unlike with viscous damping.  If we plotted both types of damping for the same system, we would get the following:</p>
+    <figure class="center"> <img src="images/Slide22.png" width="482" height="250" alt="Friction damping vs viscous damping response"/>
+      <figcaption>Response of the system in friction damping and in viscous damping, for the same initial conditions (<em>x<sub>0</sub>, v<sub>0</sub></em>), spring constants and masses. </figcaption>
+    </figure>
+	  <p>Note that the viscous damping has more reduction in amplitude earlier, but continues oscillating past the point when the friction-damped system has stopped. </p>
 	  
   </div>
   <div id="sidebar"> <br/>
