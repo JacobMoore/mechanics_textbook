@@ -43,75 +43,8 @@
         </tr>
       </tbody>
     </table>  	  
-    <p>OLD STUFF FROM HERE</p>
-    <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time. </p>
-    <figure class="center"> <img src="images/position.png" width="482" height="181" alt="The position of a particle in 1D is x"/>
-      <figcaption>The position of a particle in one dimension can be described with a single number. If the position is changing over time, we will use the function x(t) to describe the position at any given point in time.</figcaption>
-    </figure>
-    <p>The velocity of the particle is then the rate of change of the position over time. If the particle is not moving, then position is not changing over time and the velocity is zero. If the particle is moving, we will first need to find the equation for position x(t), and then take the derivative of the position equation to find the velocity equation v(t). Velocity differs from speed in that the velocity has a direction (either positive or negative for now) while the speed is simply the magnitude of the velocity (always a positive number).</p>
-    <p>Next up is the acceleration, which is the rate of change of the velocity over time. If the velocity is not changing, the acceleration will be zero. If the velocity does change over time, then we will need to take the derivative of the velocity equation v(t) to find the acceleration equation a(t). The acceleration is then also the double derivative of the position equation over time. Like the velocity the acceleration has both a magnitude and a direction.</p>
-    <p>To simplify the notation, we often use a dot to indicate a time derivative. This makes the the velocity (the derivative of x) x dot, and the acceleration (the derivative of the derivative of x) x double dot. These relationships and their shorthand notations are all shown below. </p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Position:</th>
-          <td>\[x(t)\]</td>
-        </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=\frac{dx}{dt}=\dot{x}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}=\ddot{x}\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>If we instead start with the equation for acceleration, we can take the integral of that equation a(t)  to find the equation for velocity v(t). Unlike the derivatives though we will have an extra step in this process because whenever we integrate we wind up with a constant of integration (which we will usually call C). When we integrate the acceleration equation to find the velocity equation, this constant will be the initial velocity (the velocity at time = 0)</p>
-    <p>Next we can take the integral of the velocity equation v(t) to find the position equation x(t). With this integration we will again wind up with a constant of integration, which in this case will be the initial position (the position at time = 0). These relationships are shown below.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)\]</td>
-        </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=\int a(t)\]</td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[x(t)=\int v(t)=\int \int a(t)\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <h2>Constant Acceleration Systems:</h2>
-    <p>In cases where we have a constant acceleration (often due to a constant force), we can start with a constant value for a(t) = a, and work the integrals from there. Along the way we will add the initial velocity and the initial position as the constants of integration to wind up with the formulas below.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a(t)=a\]</td>
-        </tr>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v(t)=at+v_{0}\]<br></td>
-        </tr>
-        <tr>
-          <th>Position:</th>
-          <td>\[x(t)=\frac{1}{2}at^{2}+v_{0}t+x_{0}\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>If we take the equations for the position and the velocity from above then solve both of them for t and set those equations equal to one another we can actually wind up with another equation that directly relates position, velocity, and acceleration without needing to know the time.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[v^{2}-v{_{0}}^{2}=2a(x-x_{0})\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>It is important to remember that these equations are only valid when the acceleration is constant. When that is not the case, you will need to use calculus to find the derivatives or integrals based on the equations for position, velocity, and acceleration that you do know.</p>
+    <p>This system will have a solution of the form:</p>
+    
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
