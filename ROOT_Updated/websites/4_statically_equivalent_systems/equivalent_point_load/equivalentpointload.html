@@ -6,6 +6,7 @@
 
 	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 	
 <script type="text/javascript">
 
@@ -105,11 +106,15 @@
 		<p>The magnitude of the equivalent point load will be equal to the area 
 		under the force function. This will be the integral of the force 
 		function over it's entire length (in this case from x = 0 to x = 2).</p>
-		
-		<figure class="equation">		
-			<img alt="2D Surface Force Via Intergration Equation" height="92" src="images/eq_int1.png" width="300">
-		</figure>
-		
+        
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[F_{eq}=\int_{xmin}^{xmax}F\left ( x \right )dx\]</td>
+                </tr>
+            </tbody>
+        </table>
+
 		<p>Now that we have the magnitude of the equivalent point load 
 		such that it matches the magnitude of the original force, we need to 
 		adjust the position (xeq) such that it would cause the same <strong>
@@ -121,11 +126,15 @@
 		If we set these two things equal to one another and then solve for the 
 		position of the equivalent point load (xeq) we are left with the 
 		following equation.</p>
-		
-		<figure class="equation">		
-			<img alt="2D Surface Force Via Intergration Equation" height="91" src="images/eq_xint1.png" width="300">
-		</figure>
-		
+
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[x_{eq}=\frac{\int_{xmin}^{xmax}\left ( F\left ( x \right ) *x\right )dx}{F_{eq}}\]</td>
+                </tr>
+            </tbody>
+        </table>
+        
 		<p>Now that we have the magnitude, direction, and position of the 
 		equivalent point load, we can draw the point load in our original 
 		diagram. This point force can be used in place of the distributed force 
@@ -186,11 +195,15 @@
 		integrate this function F(x,y) in terms of the area, we will furthermore 
 		need to break the integral down and integrate over x and then integrate 
 		over y.</p>
-		
-		<figure class="equation">
-			<img alt="3D Equation" height="67" src="images/eq_int2.png" width="500">
-		</figure>
-		
+        
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[F_{eq}=\int F\left ( x,y \right )dA=\int_{ymin}^{ymax}\left ( \int_{xmin}^{xmax} F\left ( x,y \right )dx\right )dy\]</td>
+                </tr>
+            </tbody>
+        </table>
+
 		<p>Once we solve for the magnitude of the equivalent point load, we can 
 		then solve position of the equivalent point load. Since the force is 
 		spread over a surface, we will need to calculate both the x (xeq) and 
@@ -198,11 +211,18 @@
 		these values is similar to what was done with only an x value, except we 
 		change the moment arm value to match the equivalent point load 
 		coordinate we are looking for.</p>
-		
-		<figure class="equation">
-			<img alt="" height="175" src="images/eq_xint2.png" width="300">
-		</figure>
-		
+        
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[x_{eq}=\frac{\int \left ( F\left ( x,y \right ) *x\right )dA}{F_{eq}}\]</td>
+                </tr>
+                <tr>
+                    <td>\[y_{eq}=\frac{\int \left ( F\left ( x,y \right ) *y\right )dA}{F_{eq}}\]</td>
+                </tr>
+            </tbody>
+        </table>
+
 		<p>In each of the equations above, we will need to expand out the area 
 		integral into x and y integrals (as we did for Feq) in order to be able 
 		to solve them.</p>
@@ -230,19 +250,36 @@
 		these variables (F(x,y,z)). To find the magnitude of the equivalent 
 		point load we integrate over the volume, breaking the volume integral 
 		down into x, y, and then z integrals.</p>
-		
-		<figure class="equation">
-			<img alt="Body Force Via Intergation" height="158" src="images/eq_int3.png" width="500">
-		</figure>
-		
+        
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[F_{eq}=\int F\left ( x,y,z \right )dV\]</td>
+                </tr>
+                <tr>
+                    <td>\[=\int_{zmin}^{zmax}\left ( \int_{ymin}^{ymax}\left ( \int_{xmin}^{xmax}F\left ( x,y,z \right)dx \right) dy \right) dz\]</td>
+                </tr>
+            </tbody>
+        </table>
+
 		<p>To find the point of application of the equivalent point load, we 
 		will need to find all three coordinate positions. To do this we will 
 		expand out the equations we used with two coordinates to include the 
 		third coordinate (zeq).</p>
-		
-		<figure class="equation">
-			<img alt="Body Force EPL position" height="253" src="images/eq_xint3.png" width="300">
-		</figure>
+        
+        <table class="equation">
+            <tbody>
+                <tr>
+                    <td>\[x_{eq}=\frac{\int \left ( F\left ( x,y,z \right )*x \right )dV}{F_{eq}}\]</td>
+                </tr>
+                <tr>
+                    <td>\[y_{eq}=\frac{\int \left ( F\left ( x,y,z \right )*y \right )dV}{F_{eq}}\]</td>
+                </tr>
+                <tr>
+                    <td>\[z_{eq}=\frac{\int \left ( F\left ( x,y,z \right )*z \right )dV}{F_{eq}}\]</td>
+                </tr>
+            </tbody>
+        </table>
 		
 		<p>Again you can expand the volume integrals out here like you have done 
 		for the magnitude of the equivalent point load.</p>

@@ -1,0 +1,299 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Rotating Frame Analysis</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Rotating Frame Analysis</h1>
+    <p><strong>Rotating frame analysis</strong> is a specialized part of relative motion analysis.  It is typically performed in Cartesian (x-y) coordinates for rigid bodies.  In the previous section, rotating frames in polar coordinates were used to solve problems with formulae similar to those in particle kinematics.  We will adopt a slightly different notation that is specialized to rigid bodies. These formulae are the most general planar kinematics formulae - that is, they can always be used, and will provide the correct answer.  But they are unnecessarily complicated for many types of motion, such as pure rotation.  </p>
+		
+	<p>Rotating frame analysis is really important for cases where objects are <strong>not pinned</strong> to each other.  When do you use rotating frames? When one object is sliding against another object, or two objects are not even in contact, but you want to know something about the motion relationship between them and/or are given information about the motion relationship between them. </p>
+	<p>  </p>
+	
+    <h2>Reference Frames</h2>
+    <p>In most of the preceding material, you have worked with the fixed reference frame, <em>O<sub>xyz</sub></em>, and a translation (but not rotating) reference frame attached to the rigid body at a point <em>A</em>, frame <em>A<sub>x'y'z'</sub></em>. </p> 
+	  
+	<figure class="center"><img src="images/Slide5frames.png" width="500" height="363" alt="Translating reference frames"/>
+      <figcaption>A rigid body with a translating (not rotating) reference frame, <em>x'y'z'</em>, attached at point <em>A</em>, relative to the fixed frame, <em>xyz</em>, at <em>O</em>.</figcaption>
+    </figure>  
+	  
+	  <p>This has given us relative motion equations: </p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[\vec{r}_{B/O}=\vec{r}_{A/O}+\vec{r}_{B/A}\]</td>
+        </tr>
+        <tr><tr>
+          <th>Velocity:</th>
+          <td>\[\vec{v}_{B/O}=\vec{v}_{A/O}+\vec{r}_{B/A} = \vec{v}_{A/O}+ \vec{\omega} \times \vec{v_{B/A}}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[ \vec{a}_{B/O}=\vec{a}_{A/O}+\vec{a}_{B/A}= \vec{a_{A/O}} + \vec{\alpha} \times \vec{a_{B/A}} - \omega^2 \vec{r_{B/A}} \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	  
+	  
+	<p>Note that the notation <em>r<sub>B/O</sub></em>, where <em>O</em> is the fixed frame, can also be written <em>r<sub>B</sub></em>. Both indicate an absolute position (or velocity or acceleration) - that is, a value with respect to the fixed frame, <em>O</em>. </p>  
+	<h2>Rotating Frames</h2>  
+	<p>Now, we will consider a reference frame that is attached to a point on the rigid body <strong>and both rotating and translating with the rigid body</strong>. We will introduce some extra terms to account for the rotation of the frame. </p>  
+	  
+	<p>Consider a rigid body with frame <em>x'y'z'</em> at point <em>A</em>. <em>x'y'z'</em> translates and rotates with the body.  A bug, <em>B</em>, is crawling along the body. </p>  
+	  
+	<figure class="center"><img src="images/Slide1.png" width="610" height="363" alt="Rotating reference frame, rigid body with bug"/>
+      <figcaption>A rigid body with a translating AND rotating reference frame, <em>x'y'z'</em>, attached at point <em>A</em>. A bug, <em>B</em>, is crawling along the rigid body, with a velocity relative to the rotating frame.  The bug is currently above a sticker, <em>C</em>, that is rigidly fixed to the rigid body. >.</figcaption>
+    </figure>   
+	  
+	  <p>For an observer sitting at <em>A</em>, the bug appears to be crawling away in a straight line. But for an observer sitting at <em>O</em>, the bug does not look like it is moving in a straight line, because the body it is crawling on is also moving (translating and rotating). We would like to describe the motion of the bug as seen by an observer at <em>O</em>.  To remind ourselves that we are dealing with a rotating frame attached to one body, we use capital omega (&#937;) to denote the angular velocity of the object that the rotating frame is attached to, and omega dot for the angular acceleration of the object with the rotating frame attached.  Finally, we use brackets and the subscript "rel" to denote values of velocity or acceleration expressed with respect to the rotating frame. </p>
+	
+	  <p>Recall that vectors have both magnitude and direction. We can express a vector in components with respect to the i and j unit vectors: </p>
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\overrightarrow{r}_{B/O}=r_{B/O, x} \hat{i}+r_{B/O, y} \hat{j}\]</td>
+        </tr>
+      </tbody>
+    </table>  
+	  
+	  <p>Normally, when we take a time derivative of such an expression, the length of the vector (i.e. the <em>r<sub>B/O, x</sub></em> and <em>r<sub>B/O, y</sub></em> terms) change, but the unit vectors do not.  In the case of the rotating frame, the unit vectors change.  Now, they don't change in length - they remain unit vectors.  But they are attached to a rotating body, which means they also rotate. That is, their directions change, and we have to account for that when deriving velocity and acceleration expressions.</p>
+	  
+	  <figure class="center"><img src="images/Slide31rotunitvect.png" width="500" height="363" alt="Rotating unit vectors"/>
+      <figcaption>When the reference frame rotates with the rotating rigid body, the unit vectors change with time.</figcaption>
+    </figure> 
+	  
+	  <p>You can see we get small vectors <em>di'</em> and <em>dj'</em> that describe the change in direction of the unit vectors, and the magnitude of that change is directly related to &#937;, the angular velocity of the rigid body and the rotating frame. </p>
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \frac{d\hat{i'}}{dt} = \Omega \hat{k} \times \hat{i'} = \Omega \hat{j'}\]</td>
+        </tr>
+		  <tr>
+          <td>\[ \frac{d\hat{j'}}{dt} = \Omega \hat{k} \times \hat{j'} = -\Omega \hat{i'}\]</td>
+        </tr>
+      </tbody>
+    </table>  
+	  
+	  <p>When we differentiate the relative position of the bug,<em> B</em>, with respect to the rotating frame, <em>A</em>, we have: </p>
+	  
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \frac{d\vec{r}_{B/A}}{dt} = (\dot{r}_{B/A,x'} \,\hat{i'}+ \dot{r}_{B/A,y'}\,\hat{j'}) + \vec{\Omega} \times ({r_{B/A,x'}}\,\hat{i'}+ {r_{B/A,y'}}\,\hat{j'})\]</td>
+        </tr>
+		  </tbody>
+    </table>
+	  
+		  <table class="equation">
+      <tbody>
+		  <tr>
+			  <th> New term: </th>
+          <td>\[  (\dot{r}_{B/A,x'} \,\hat{i'}+ \dot{r}_{B/A,y'} \,\hat{j'})  = (\vec{v}_{B/A})_{rel} \]</td>
+        </tr>
+		  <tr>
+			  <th> Same as before: </th>
+          <td>\[  \vec{\Omega} \times ({r_{B/A,x'}} \,\hat{i'} + {r_{B/A,y'}} \,\hat{j'})  = \vec{\Omega} \times \vec{r}_{B/A} \]</td>
+        </tr>
+      </tbody>
+    </table> 
+	  
+	  <p>The new term above describes the motion of the bug due to the rotation of the rigid body (and the <em>x'y'z'</em> frame), while the familiar term above describes the motion of the bug as seen by an observer fixed to <em>x'y'z'</em>.  Our final expression for the velocity of the bug with respect to the fixed frame is:</p>
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \vec{v}_{B/O} = \vec{v}_{A/O} + \vec{\Omega} \times \vec{r}_{B/A} + (\vec{v}_{B/A})_{rel} \] </td>
+        </tr>
+		  </tbody>
+    </table>
+	  
+	  <p>This final expression has the new term, <em>(v<sub>B/A</sub>)<sub>rel</sub></em>, which describes the motion of the bug as viewed from the rotating frame. You can note that if the bug is not moving, <em>(v<sub>B/A</sub>)<sub>rel</sub></em> = 0, and we get the familiar expression from tranlating frames. Thus, this expression is the most general relative velocity expression. </p>
+	  
+	  <p>We can similarly derive an acceleration equation by differentiating the above velocity equation. The final expression is:</p>
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \vec{a}_{B/O}  =  \vec{a}_{A/O} + \dot{\vec{\Omega}} \times \vec{r}_{B/A} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}_{B/A}) \, ... \]</td>
+        </tr>
+		  <tr>
+          <td>\[ ... + 2 \vec{\Omega} \times (\vec{v}_{B/A})_{rel} + (\vec{a}_{B/A})_{rel} \]</td>
+        </tr>
+		  </tbody>
+    </table>
+		  <table class="equation">
+      <tbody>
+		  <tr>
+			  <th> Motion of rotating frame attached to rigid body: </th>
+          <td>\[  \vec{a}_{A/O} + \dot{\vec{\Omega}} \times \vec{r}_{B/A} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}_{B/A}) \]</td>
+        </tr>
+		  <tr>
+			  <th> Corialis acceleration - interaction of object motion wrt rotating frame and motion of rotating frame: </th>
+          <td>\[  2 \vec{\Omega} \times (\vec{v}_{B/A})_{rel} \]</td>
+        </tr>
+		   <tr>
+			  <th> Motion of object wrt rotating frame: </th>
+          <td>\[  (\vec{a}_{B/A})_{rel} \]</td>
+        </tr>
+      </tbody>
+    </table>   
+	  
+	  <p>Note that, for planar (2D) motion: </p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[  \vec{\Omega} \times (\vec{\Omega} \times \vec{r}_{B/A}) = -\Omega^2 \vec{r}_{B/A})  \]</td>
+        </tr>
+		  </tbody>
+    </table>
+	  
+	  <p>Again, if the bug is sitting still, both "rel" terms become zero (it is not moving wrt the rigid body), and we are left with the same relative motion expression used with translating frames.  So, you can always use this expression.</p>
+	  
+	 <p>When tackling these problems, there are several important things to remember:</p> 
+	  <ol>
+	  <li>You need to pick the correct body to attach the rotating frame to. The correct body will have another body sliding against it.  If the object of interest is pinned to the body you chose, it might not be correct. </li>
+	  <li>It is often helpful to align your rotating frame such that you end up with a simplified "rel" term or terms.  For example, line up the x' axis with the direction of movement of the bug, so that <em>(v<sub>B/A</sub>)<sub>rel</sub></em> is only in the <em>x'</em>-direction.</li>
+	  <li>The components of all terms of any one equation must be computed along the same i and j directions.  If the frames are not aligned, you must pick ONE FRAME and express all terms along that the directions of the ONE FRAME. (You may be able to switch between frames in different equations, but make sure you are careful with notation!)</li>
+	  <li>When you are given information in a problem, pay careful attention to what frame is being referred to. </li>
+	  <li>Make sure you include all the terms in the acceleration equation!  It's easy to miss one.  You should have five terms.</li>  
+	  </ol>
+	  <p>These are some of the most complex problems in planar kinematics, so take your time!</p>
+
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>You are designing an emergency brake for an amusement park ride that rotates riders about <em>B</em> at an angular velocity of 9 rad/s, while also rotating the rider compartment about <em>A</em>. Due to a mechanism (not shown), the rider completes three rotations about <em>B</em> for each rotation of the arm about <em>A</em>. You want to be able to stop the ride quickly, but very high accelerations can cause brain injuries. </p>
+
+        <p>Find the maximum braking angular acceleration, <em>α<sub>A</sub></em>, that you can apply about <em>A</em> such that the resultant head acceleration of a rider in the position shown does not exceed 363 m/s<sup>2</sup>. Let R = 4 m, r = 2 m.  ***MODIFY TO INCLUDE RELATIVE VEL OR REMOVE***
+        </p>
+        <img src="images/headaccl.png" width="500" height="290" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A camera drone, <em>D</em>, flies over a car race in a curved trajectory (centre <em>O</em>) with a constant ground-speed velocity of <em>v<sub>D</sub></em> = 9 m/s. At the moment shown, car <em>C</em> is travelling with velocity of <em>v<sub>C</sub></em> = 12 m/s and an acceleration of <em>a<sub>C</sub></em> = 2 m/s<sup>2</sup> as shown. Assume <em>d<sub>1</sub></em> = 7.5 m, <em>d<sub>2</sub></em> = 3 m.</p>
+		  <p>a) Find the velocity of the car <u>as observed by the camera on drone D</u> at this instant. </p>
+		  <p>b) Find the acceleration of the car <u>as observed by the camera on drone D</u> at this instant. </p>
+        <img src="images/drone.png" width="400" height="500" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+<div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A breathing exercise video graphic (somewhat similar to <a href="https://www.youtube.com/watch?v=9tOJZQhO_Uw" title="breathing_video">this one</a>) shows a small circle moving in a constrained circular path (constant radius 80 cm) at a <strong>constant</strong> angular velocity of 0.4 rad/s around an expanding and contracting inner circle. The inner circle expands and contracts sinusoidally, from a minimum radius of 30 cm to a maximum radius of 60 cm. The distance from the centre of the inner circle to a point on the edge of the inner circle can be described by the equation <em>r</em>=0.45-0.15 <em>sin⁡θ</em> (in m), where <em>θ</em> is the position of the small circle (zero at <em>x</em>-axis). </p>
+
+        <p>Find the velocity and acceleration of point <em>B</em> on the edge of the inner circle as viewed by an observer on the small circle at point <em>A</em> (Fig. (c)). <em>θ</em>=45°,  <em>α</em>=45° </p>
+        <img src="images/breathing_graphic.png" width="500" height="300" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+<div id="practiceproblems">
+	  <h2>Practice Problems:</h2>
+		<div class="problem">
+			<h3>Practice Problem 1:</h3>
+			<div class="importbox">
+			<iframe  width="860" height="700"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
+   				 &answersSubmitted=0&
+   				 &sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-113.pg&
+   				 &problemSeed=1&
+  			     &courseID=daemon_course&
+  			  &userID=daemon&
+   				 &course_password=daemon&
+ 			   &showSummary=1&
+ 			   &displayMode=MathJax&
+ 			   &problemIdentifierPrefix=102&
+ 			   &language=en&
+  			&outputformat=sticky">
+			</iframe>
+			</div>
+		</div>
+			  <div class="problem">
+			<h3>Practice Problem 2:</h3>
+			<div class="importbox">
+			<iframe  width="860" height="720"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
+   				 &answersSubmitted=0&
+   				 &sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-119.pg&
+   				 &problemSeed=1&
+  			     &courseID=daemon_course&
+  			  &userID=daemon&
+   				 &course_password=daemon&
+ 			   &showSummary=1&
+ 			   &displayMode=MathJax&
+ 			   &problemIdentifierPrefix=102&
+ 			   &language=en&
+  			&outputformat=sticky">
+			</iframe>
+			</div>
+		</div>
+	  </div>	  
+	  
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

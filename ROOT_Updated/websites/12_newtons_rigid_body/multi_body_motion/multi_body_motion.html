@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Multi-Body Kinetics</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Multi-Body Kinetics</h1>
+	  <p>In cases where multiple connected rigid bodies are undergoing some sort of motion, we can extend our analysis of general planar motion to this multi-body situation. In these cases, which we will call multi-body kinetics problems, we will analyze each body independently as we did for general planar motion, but we will also need to pay attention to the Newton's Third Law pairs. Each body will have forces exerted on it by the surrounding bodies, and it will exert equal and opposite forces back through those same connections.</p>
+	<figure class="center"><img src="images/robotic_arms.jpg" width="500" height="403" alt="An industrial robotic arm"/>
+      <figcaption>These robotic arms are a good example of a multi-body kinetics problem. As one section of the arm accelerates, it will exert forces on the other arm sections it is connected to. Image by Chris Chesher CC-BY-NC-SA 2.0.</figcaption>
+    </figure>
+	<p>To analyze a multi-body system, we will start by drawing a free body diagram of each body in motion. Be sure to identify the center of mass, as well as identifying all known and unknown forces, and known and unknown moments acting on the body. When drawing forces at connection points, be sure to make the forces equal and opposite on the connected body to satisfy Newton's Third Law. It is also sometimes helpful to label any key dimensions as well as using dashed lines to identify any known accelerations or angular accelerations. Often, you will need to solve a kinematics problem using absolute motion analysis of relative motion analysis in order to determine the accelerations of the centers of mass and the angular accelerations for each body. Make sure all these accelerations are with respect to ground.</p>
+	<p>Next we move onto identify the equations of motion for each body in the system. In two dimensions, we will use the same three equations we used for general planar motion. Be sure to find the the accelerations of all the centers of masses, find all moments about the center of mass, and take the mass moments of inertia about the center of mass of each body.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_{x}=m*a_{x}\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum F_{y}=m*a_{y}\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum M_{COM}=I*\alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Plugging the known forces, moments, and accelerations into the above equations we can solve for up to three unknowns per body. If more than three unknowns exist in any one set of equations, you will need to start with an adjacent body. Once unknown forces are determined on one body, they can become knowns on the connected body, reducing the number of unknowns to solve for.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A robotic arm has two sections (OA and AB) with section OA having a mass of 10 kg and section AB having a mass of 7 kg. Treat each section as a slender rod. If we wish to accelerate member AB from a standstill at a rate of 3 rad/s2 and keep the right section stationary, what moments must we exert at joints O and A?</p>
+        <img src="images/P1.png" width="500" height="201" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+	  </div>
+    </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

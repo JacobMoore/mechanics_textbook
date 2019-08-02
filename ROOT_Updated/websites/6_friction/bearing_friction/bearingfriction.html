@@ -7,7 +7,8 @@
 	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
 	<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
 	
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+    <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34631101-1']);
@@ -63,10 +64,19 @@
 		rotating relative to the bearing, then the friction force will be equal 
 		to kinetic coefficient of friction times the normal force of the bearing 
 		on the shaft.</p>
+        
+         <p>If the climb angle is assumed to be small, then...</p>
 		
-		<figure class="equation">
-			<img alt="Bearing Friction Equation" height="159" src="images/bearingfrictionequation.png" width="433">
-		</figure>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[F_{load}=F_{N}\]</td>
+        </tr>
+        <tr>
+          <td>\[F_{f}=\mu _{k}* F_{N}\]</td>
+        </tr>
+      </tbody>
+    </table>
 		
 		<p>The friction force will then be exerting a moment about the center of 
 		the shaft opposing the rotation of the shaft. Unless some other moment 
@@ -75,9 +85,13 @@
 		equal to the magnitude of the friction force times the radius of the 
 		shaft.</p>
 		
-		<figure class="equation">	
-			<img alt="Bearing Friction Moment Equation" height="61" src="images/bearingfrictionmomnetequation.png" width="290">
-		</figure>
+<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[M_{f}=r_{shaft}* \left( \mu _k* F_{N} \right)\]</td>
+		</tr>
+      </tbody>
+    </table>
 		
 		<p>Another important factor to keep in mind is that most bearings are 
 		lubricated. This can significantly lower the coefficients of friction 
