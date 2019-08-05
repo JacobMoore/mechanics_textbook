@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - The Conservation of Energy for a Rigid Body</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>The Conservation of Energy for a Rigid Body</h1>
+	<p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems. Generally, this method is called the <strong>Energy Method</strong> or the <strong>Conservation of Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the conservation of energy.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W=\Delta KE + \Delta  PE\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>It is important to notice that unlike Newton's Second Law, the above equation is <strong>not</strong> a vector equation. It does not need to be broken down into components which can simplify the process, however, we only have a single equation and therefore can only solve for a single unknown which can limit the method.</p>
+	<h2>Work in Rigid Body Problems:</h2>
+	<p>For work done to a rigid body, we must consider any force applied over a distance as we did for particles, as well as any moment exerted over some angle of rotation. If these are <strong>constant</strong> forces and <strong>constant</strong> moments, we simply multiple the force times the distance and the moment times the angle of rotation to find the overall work done in the problem. As with particles, these are the components of forces in the direction of travel, with forces opposing the motion counting as negative work. Similarly these are moments in the direction of rotation with moments opposing the rotation counting as negative work. Both types of work are additive, with all work being lumped together for analysis.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W=F*d+M*\Delta\theta\]</td>
+		</tr>
+      </tbody>
+    </table>   
+	  <p>In instances of <strong>non-constant</strong> forces and <strong>non-constant</strong> moments, we will need to integrate the forces and moments over the distance traveled and the angle of rotation respectively.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W=\int_{x1}^{x2} F(d)+\int_{\theta1}^{\theta2} M(\theta)\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>Energy:</h2>
+	<p>In rigid bodies, as with particles, we will break energy into <strong>kinetic energy</strong> and <strong>potential energy</strong>. Kinetic energy is the the energy mass in motion, while potential energy represents the energy that is stored up due to the position or stresses in a body.</p>
+	<p>In its equation form, the kinetic energy of a rigid body is represented by one half of the mass of the body times its velocity squared plus one half of the mass moment of inertia times the angular velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[KE=\frac{1}{2}mv^{2}+\frac{1}{2}I\omega^{2}\]</td>
+        </tr>
+		<tr>
+          <td>\[\Delta KE=\left (\frac{1}{2}mv_{f}^{2}-\frac{1}{2}mv_{i}^{2}\right )+\left (\frac{1}{2}I\omega_{f}^{2}-\frac{1}{2}I\omega_{i}^{2}\right )\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravitational force and a spring force will do, respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
+	<p>The change in gravitational potential energy for any system is represented by the mass of the body, times the value g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) times the vertical change in height between the start position and the end position. In equation form, this is as follows.</p>
+	<figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
+      <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
+    </figure>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta PE_{gravity}=m*g*\Delta h\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Unlike work and kinetic energy, there is no rotational version of gravitational potential energy, so this is exactly the same as we had for particles.</p>
+	<p>To determine the change in elastic potential energy, we will have to identify any linear springs (as we had for particles) as well as any torsional springs and the spring constants for each of these springs.</p>
+	<figure class="center"><img src="images/mousetrap.jpg" width="500" height="315" alt="A mousetrap"/>
+      <figcaption>The torsional spring in this mousetrap releases it's elastic potential energy to slam the trap shut. Public domain image by Evan-Amos.</figcaption>
+    </figure>
+	<p>To find the change in elastic potential energy, we will need to know the stiffness of any spring in the problem (represented by k, in units of force per distance for linear springs or moment per angle of twist for torsional springs) as well as the distance or angle the spring has been stretched above or below it's natural resting position. This difference from resting position is represented by distance x for linear springs, or angle theta for torsional springs. Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared or the angle theta squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
+	<table class="equation">
+      <tbody>
+		<tr>
+          <td>\[\Delta PE_{linear spring}=\frac{1}{2}kx_{f}^{2}-\frac{1}{2}kx_{i}^{2}\]</td>
+        </tr>
+		<tr>
+          <td>\[\Delta PE_{torsional spring}=\frac{1}{2}k\theta_{f}^{2}-\frac{1}{2}k\theta_{i}^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Going back to our original conservation of energy equation, we simply plug the appropriate terms on each side (work on the left and energies on the right) and balance the two sides to solve for any unknowns. Terms that do not exist or do not change (such as elastic potential energy in a problem with no springs, or delta KE in a problem where there is no change in the speed of the body) can be set to zero. Again, there is only one equation, so we can only solve for a single unknown unless we supplement the conservation of energy equation with other relationship equations.</p>
+	</div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The turntable on a record player consists of a disk 12 inches in diameter with a weight of 5lbs. The motor accelerates the turntable from rest to it’s operating speed of 33.33 rpm in one rotation. What is the work done by the motor? What is the average torque the motor exerted?</p>
+        <img src="images/P1.jpg" width="500" height="433" alt="Problem 1 Diagram"/>
+		<p>Image by Ron Clausen CC-BY-SA 4.0</p></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ZkopO1aTj54" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A system as shown below is used to passively slow the lowering of a gate.  The gate can be approximated as a flat plate on it’s edge with a mass of 25 kg and a height of 2m. What would the angular velocity of the gate be without the spring? If we want to reduce the angular velocity at the bottom to 25% of it’s original value what should the spring constant be? Assume the spring is unstretched as shown in the diagram.</p>
+        <img src="images/P2.png" width="500" height="238" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/T_5JT4XFQN8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A 5 kg spherical ball with a radius of .05m as shown below is placed on a degree degree ramp. If the ball rolls without slipping, what is the velocity of the ball at the bottom of the ramp?</p>
+        <img src="images/P3.png" width="500" height="169" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/UkcpT1lfIDY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A 16 kg half cylinder is placed on a hard, flat surface as shown below and released from rest. What will the maximum angular velocity be as it rocks back and forth?</p>
+        <img src="images/P4.png" width="500" height="179" alt="Problem 4 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/DfSMeUm1SG8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>A mechanism consists of two, 3 kilogram wheels connected to a 2 kilogram bar as shown below. Based on the dimensions in the diagram, what is the minimum required initial velocity for the wheels to ensure the mechanism makes it all the way through one rotation without rocking backwards?</p>
+        <img src="images/P5.png" width="500" height="179" alt="Problem 5 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/DfSMeUm1SG8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	</div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
