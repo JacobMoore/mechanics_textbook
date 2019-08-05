@@ -40,9 +40,9 @@
 		<p>A key part to this process that was not present in centroid 
 		calculations is the adjustment for position. Moments of inertia for the 
 		parts of the body can only be added if they all have the same axis of 
-		rotation. The moments of inertia are in the table are generally listed 
-		relative to that shape's centroid though. Since each part has it's own 
-		individual centroid coordinate, we cannot simply add these numbers up. 
+		rotation. The moments of inertia in the table are generally listed 
+		relative to that shape's centroid though. Because each part has its own 
+		individual centroid coordinate, we cannot simply add these numbers. 
 		We will use something called the <strong>Parallel Axis Theorem</strong> 
 		to adjust the moments of inertia so that they are all taken about some 
 		standard point. Once the moments of inertia are adjusted with the 
@@ -56,7 +56,7 @@
 		or axis we were going to take the moment of inertia about. We then 
 		measured all distances from that point or axis, where the distances were 
 		the moment arms in our moment integrals. If we pick a different point or 
-		axis to serve as the center all of these distances will be different, 
+		axis to serve as the center, then all of these distances will be different, 
 		which means that we will get a different moment of inertia.</p>
 		
 		<figure class="center">
@@ -67,7 +67,7 @@
 		
 		<p>For the instance on the right however, each of these distance vectors 
 		can be broken down into a vector from the origin to the centroid, and 
-		then a vector out from the centroid to all the points in the shape. 
+		then a vector from the centroid to all the points in the shape. 
 		Similarly, we can find the overall moment of inertia by adding two sets 
 		of moment integrals. The first moment integral will add up all the 
 		distance vectors from the origin to the centroid (This will be like a 
@@ -78,21 +78,21 @@
 		
 		<figure class="center">
 			<img alt="Parallel Axis Theorem" height="499" src="images/parallelaxistherorem.png" width="500">
-			<figcaption>The Parallel Axis Theorem states that a bodies moment of 
+			<figcaption>The Parallel Axis Theorem states that a body's moment of 
 			inertia about any given axis is the moment of inertia about the 
 			centroid plus the mass of the body times the distance between the 
 			point and the centroid squared.</figcaption>
 		</figure>		
 
 		<p>This works for both mass and area moments of inertia as well as for 
-		both rectangular and polar moments of inertia. Above the mass moment of 
+		both rectangular and polar moments of inertia. Above, the mass moment of 
 		inertia is listed, but if we substitute in areas instead of masses we 
 		can use it for area moments of inertia. </p>
 		
 		<figure class="center">
 			<img alt="Parellel Axis Theorem" height="371" src="images/massorarea.png" width="323">
 			<figcaption>For mass moments of inertia we will use the mass of the 
-			body and for area moments of inertia we will use the area of the 
+			body, and for area moments of inertia we will use the area of the 
 			shape.</figcaption>
 		</figure>
 		
@@ -109,7 +109,7 @@
 
 		
 		<p>With these equations we can see that the moment of inertia of a body 
-		is always lowest about it's centroid (where d = 0), and that the further 
+		is always lowest about its centroid (where d = 0), and that the further 
 		we move away from the centroid the larger the moment of inertia will 
 		become.</p>
 		
@@ -125,7 +125,7 @@
 			<li>For each of the individual shapes we will want to identify the 
 			area or mass (where holes or cavities count as negative areas or 
 			masses), the coordinates of the centroid, and the shape's 
-			moment of inertia about it's centroid. It is often useful to list these values in a table in order to 
+			moment of inertia about its centroid. It is often useful to list these values in a table in order to 
 			more easily keep track of the values.</li>
 			<li>Next we will want to identify the common point we will take the 
 			overall moment of inertia about. Sometimes this will be given to us 
@@ -140,7 +140,7 @@
 			d values.</li>
 			<li>Next use the distances and the area or mass to calculate the 
 			correction for your moments of inertia (m d squared or A d squared). 
-			Add these corrections to your the moments of inertia about the 
+			Add these corrections to the moments of inertia about the 
 			centroids to get the corrected moments of inertia.</li>
 			<li>Add the corrected moments of inertia to find the total moment of 
 			inertia for the combined shape.</li>
@@ -153,7 +153,7 @@
 			<img alt="Moment of Interia Table" height="392" src="images/momentofinertiatable.png" width="600">
 			<figcaption>It is easiest to list areas, centroid coordinates, 
 			moments of inertia, distance corrections, and corrected moments of 
-			inertia in a table. The overall moments of will be the sums of the 
+			inertia in a table. The overall moments will be the sums of the 
 			corrected moment of inertia columns.&nbsp; </figcaption>
 		</figure>
 	
@@ -176,7 +176,7 @@
 			<h3>Question 1:</h3>
 			<p>Use the parallel axis theorem to find the mass moment of inertia 
 			of this slender rod with mass m and length L about the z axis at 
-			it's end point.</p>	
+			its end point.</p>	
 			<img alt="Problem 1 Diagram" src="images/P1.png">
 			</div>
 		<div class="solution">

@@ -28,7 +28,21 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Viscous Damped Harmonic Forced Vibrations</h1>
-    <p></p>
+    <p>As described in the previous section, many vibrations are caused by an external harmonic forcing function (such as rotating unbalance). While we assumed that the natural vibrations of the system eventually damped out somehow, leaving the forced vibrations at steady-state, by explicitly including viscous damping in our model we can evaluate the system through the transient stage when the natural vibrations are present. </p>
+	  <figure class="center"> <img src="images/Slide23.png" width="500" height="300" alt="Damped system with forcing function"/>
+      <figcaption>A mass-spring-damper system with an external force, F, applying a harmonic excitation. </figcaption>
+    </figure>
+	  <p>Consider the system above.  The equation of the system becomes:  </p>
+	  <table class="equation">
+      <tbody>
+		   <tr>
+          <td>\[   m {\ddot{x}} + c \dot{x} + k {x} = F_0 \sin \omega_0 t  \]</td>
+        </tr>
+		   <tr>
+          <td>\[ \Rightarrow \,   {\ddot{x}} + \frac{c}{m} \dot{x} + \frac{k}{m} {x} = \frac{F_0}{m} \sin \omega_0 t  \]</td>
+        </tr>
+      </tbody>
+    </table>  	  
     <p>OLD STUFF FROM HERE</p>
     <p>Imagine we have a particle that is moving along a single axis. At any given point in time, this particle will have a position, which we can quantify with a single number which we will call x. This value will measure the distance from some set origin point to the position of the particle. If the particle is moving over time, we will need a function to describe the position over time x(t). This is an equation where if we plug a value for t, it will give us the position at that time. </p>
     <figure class="center"> <img src="images/position.png" width="482" height="181" alt="The position of a particle in 1D is x"/>
