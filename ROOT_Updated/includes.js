@@ -31,6 +31,26 @@ function displayMenuSub(){
 	document.write('</div>');
  }
 
+
+function displayResourcesMain(){
+	document.write('<h2>Useful Resources</h2>');
+	document.write('<div class="resource">');
+	document.write('<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>');
+	document.write('</div>');
+	document.write('<div class="resource">');
+	document.write('<a href="http://www.bluebit.gr/matrix-calculator/linear_equations.aspx" target="_blank">Matrix Equation Solver</a>');
+	document.write('</div>');
+	document.write('<div class="resource">');
+	document.write('<a href="http://www.wolframalpha.com/examples/Vectors.html" target="_blank">Wolfram Vector Operation Calculator</a>');
+	document.write('</div>');
+	document.write('<div class="resource">');
+	document.write('<a href="websites/centroidtables/centroids2D/centroids2D.html" target="_blank">2D Centroid Location and Area Moment of Inertia Table</a>');
+	document.write('</div>');
+	document.write('<div class="resource">');
+	document.write('<a href="websites/centroidtables/centroids3D/centroids3D.html" target="_blank">3D Centroid Location and Mass Moment of Inertia Table</a>');
+	document.write('</div>');
+}	
+
 function displayResources(){
 	document.write('<h2>Useful Resources</h2>');
 	document.write('<div class="resource">');

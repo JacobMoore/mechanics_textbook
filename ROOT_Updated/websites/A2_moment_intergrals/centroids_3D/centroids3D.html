@@ -34,7 +34,7 @@
 				
 		<p>The <strong>centroid</strong> of a volume can be thought of as the 
 		geometric center of that area. It is the average position (x, y, and z 
-		coordinates) of all the points in in the area. If this volume represents 
+		coordinates) of all the points in the area. If this volume represents 
 		a part with a uniform density (like most single material parts) then the 
 		centroid will be the same as the center of mass.</p>
 		
@@ -42,8 +42,8 @@
 		course sequence, including the analysis of distributed forces, 
 		determining the center of mass, and as an intermediate step in 
 		determining moments of inertia which are used to determining an object's 
-		resisting to rotational accelerations or an objects resistance to 
-		bending or torsion.</p>
+		resistance to rotational accelerations or  
+		bending and torsion.</p>
 		
 		<p>Just as we had with centroids of areas, two methods exist for finding 
 		centroids of volumes:</p>
@@ -54,7 +54,7 @@
 			common volumes.</li>
 		</ol>
 		
-		<p>The tables used in the method of composite parts however are derived 
+		<p>The tables used in the method of composite parts, however, are derived 
 		from the first method, so both methods ultimately use the moment 
 		integrals.</p>
 				
@@ -66,7 +66,7 @@
 		the shape.</p>
 		
 		<p>Much like the centroid calculations we did with 2D shapes, we are 
-		looking to find the shapes average coordinate in each dimension. We do 
+		looking to find the shape's average coordinate in each dimension. We do 
 		this by summing up all the little bits of volume times the x, y, or z 
 		coordinate of that bit of volume and then dividing that sum by the total 
 		volume of the shape. Again we will use calculus to sum up an infinite 
@@ -81,7 +81,7 @@
 		</figure>		
 
 		<p>With these new equations we have the variable dV rather than dA, 
-		since we are integrating over a volume rather than an area. This represents the 
+		because we are integrating over a volume rather than an area. This represents the 
 		rate of change of the volume as we move along an axis from one end to 
 		another. The rate of change of the volume at any point on the shape will 
 		be the <strong>cross sectional area</strong> that is perpendicular to 
@@ -96,8 +96,8 @@
 		
 		<p>Using the first moment integral and the equations shown above we can 
 		theoretically find the centroid of any volume as long as we can write an 
-		equation to describe the cross section area at for each direction. For more 
-		complex shapes however, determining these equations and then integrating 
+		equation to describe the cross section area for each direction. For more 
+		complex shapes, however, determining these equations and then integrating 
 		these equations may become very time consuming. For these complex 
 		shapes, the method of composite parts or computer tools will most likely 
 		be much faster.</p>
@@ -110,14 +110,14 @@
 		volume has a plane of symmetry, 
 		that means each point on one side of the line must have an equivalent 
 		point on the other side of the line. This means that the average value 
-		(aka the centroid) 
+		(aka. the centroid) 
 		must lie within that plane. If the volume has more than one plane 
 		of symmetry, then the centroid must exist at the intersection of these 
 		planes.</p>
 		
 		<figure class="center">		
 			<img alt="Centroids and Symmetry" src="images/symmetry.png">
-			<figcaption>If a volume has a plane of symmetry, the centroid must 
+			<figcaption>If a volume has a plane of symmetry, then the centroid must 
 			lie somewhere in that plane. If the volume has more than one plane 
 			of symmetry, the centroid must exist at the intersection of these 
 			planes.</figcaption>
