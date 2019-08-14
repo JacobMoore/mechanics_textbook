@@ -30,7 +30,7 @@
     <h1>Undamped Harmonic Forced Vibrations</h1>
     <p>Often, mechanical systems are not undergoing free vibration, but are subject to some applied force that causes the system to vibrate. In this section, we will consider only harmonic (that is, sine and cosine) forces, but any changing force can produce vibration. </p>
 	<p>When we consider the free-body diagram of the system, we now have an additional force to add, namely the external harmonic excitation. </p>
-	  <figure class="center"> <img src="images/Slide24.png" width="500" height="300" alt="Undamped system with forcing function"/>
+	  <figure class="center"> <img src="images/Slide24.png" width="500" height="285" alt="Undamped system with forcing function"/>
       <figcaption>A mass-spring system with an external force, F, applying a harmonic excitation. </figcaption>
     </figure>
 	  <p>The equation of motion of the system above will be: </p>
@@ -61,35 +61,96 @@
         </tr>
       </tbody>
     </table> 
-<p>The solution to this system consists of two part: a particular solution, <em>x<sub>p</sub></em> (related to the forcing function), and a complementary solution, <em>x<sub>c</sub></em> (which is the solution to the system without forcing). </p>
+<p>The solution to this system consists of the superposition of two solutions: a particular solution, <em>x<sub>p</sub></em> (related to the forcing function), and a complementary solution, <em>x<sub>c</sub></em> (which is the solution to the system without forcing). </p>
 <p>As we <a href="../15-1_undamped_free/15-1_undamped_free.html">saw previously</a>, the complementary solution is the solution to the undamped free system:</p>
+
+<p>We can obtain the particular solution by assuming a solution of the form:</p>
+
 <table class="equation">
       <tbody>
 		 <tr>
-          <td>\[   x(t) = C \sin (\omega_n t + \phi)  \]</td>
-        </tr>
-		  <tr>
-          <td>\[  \text{where:} \,\,  \omega_n = \sqrt{\frac{k}{m}}, \, C = \sqrt{(\frac{v_0}{\omega_n})^2 + x_0^2}, \, \phi = \tan^{-1} (\frac{x_0 \omega_n}{v_0})  \]</td>
+          <td>\[   x_p = D \sin (\omega_0 t)  \]</td>
         </tr>
       </tbody>
     </table>  
-<p>We can obtain the particular solution by assuming a solution of the form:</p>
-<p>CONTINUE THIS</p>
 
-<figure class="center"> <img src="images/Slide27.png" width="500" height="300" alt="Complementary solution"/>
+<p>Where <em>&#969;<sub>0</sub></em> is the frequency of the harmonic forcing function.  We differentiate this form of the solution, and then sub into the above equation of motion:</p>
+
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   \ddot{x_p} = - \omega_0^2 D \sin (\omega_0 t)  \]</td>
+        </tr>
+		  <tr>
+          <td>\[   -m \omega_0^2 D \sin (\omega_0 t) + k D \sin (\omega_0 t) = F_0 \sin ( \omega_0 t)  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+
+<p>Solving for <em>D</em>, we find <em>D</em> and the the particular solution, <em>x<sub>p</sub></em>:</p>
+
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   D = \frac{\displaystyle \frac{F_0}{k}}{1- \left( \displaystyle \frac{\omega_0}{\omega_n} \right)^2} \]</td>
+        </tr>
+		  <tr>
+          <td>\[  x_p = \frac{\displaystyle \frac{F_0}{k}}{1- \left( \displaystyle \frac{\omega_0}{\omega_n} \right)^2} \sin ( \omega_0 t)  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+
+<p>Thus, the general solution for a forced, undamped system is:</p>
+
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   x_G(t) = \frac{ \displaystyle \frac{F_0}{k}}{1- \left(  \displaystyle \frac{\omega_0}{\omega_n} \right)^2} \sin ( \omega_0 t) + C \sin (\omega_n t + \phi) \]</td>
+        </tr>
+      </tbody>
+    </table>  
+
+<figure class="center"> <img src="images/Slide27.png" width="500" height="285" alt="Complementary solution"/>
       <figcaption>The complementary solution of the equation of motion.  This represents the natural response of the system, and oscillates at the angular natural frequency. This is the transient response. </figcaption>
     </figure>
 <p></p>
-<figure class="center"> <img src="images/Slide28.png" width="500" height="300" alt="Particular solution"/>
+<figure class="center"> <img src="images/Slide28.png" width="500" height="285" alt="Particular solution"/>
       <figcaption>The particular solution of the equation of motion.  This represents the forced response of the system, and oscillates at the angular forced frequency. This is the steady-state response. </figcaption>
     </figure>
 <p></p>
-<figure class="center"> <img src="images/Slide29.png" width="500" height="300" alt="General solution"/>
+<figure class="center"> <img src="images/Slide29.png" width="500" height="285" alt="General solution"/>
       <figcaption>The general solution of the equation of motion.  This represents the combined response of the system, and the sum of the complementary (or natural) and particular (or forced) responses. </figcaption>
     </figure>
 
+<p>The above figures show the two responses at different frequencies.  Recall that the value of <em>&#969;<sub>n</sub></em> comes from the physical characteristics of the system (m, k) and <em>&#969;<sub>0</sub></em> comes from the force being applied to the system. These responses are summed, to achieve the blue response (general solution) in the third figure. </p>
+
 	  <h2>Steady-state Response</h2>
 	  <p>In reality, this superimposed response does not last long.  Every real system has some damping, and the natural response of the system will be damped out. As long as the external harmonic force is applied, however, the response to it will remain. When evaluating the response of the system to a harmonic forcing function, we will typically consider the steady-state response, when the natural response has been damped out and the response to the forcing function remains. </p>
+
+<h2>Amplitude of Forced Vibration</h2>
+<p>The amplitude of the steady-state forced vibration depends on the ratio of the forced frequency to the natural frequency. As <em>&#969;<sub>0</sub></em> approaches <em>&#969;<sub>n</sub></em> (ratio approaches 1), the magnitude, <em>D</em>, becomes very large. We can define a magnification factor: </p>
+
+<table class="equation">
+      <tbody>
+		 <tr>
+          <td>\[   MF = \displaystyle \frac{ \frac{\displaystyle \frac{F_0}{k}}{1- \left( \displaystyle \frac{\omega_0}{\omega_n} \right)^2}}{\displaystyle \frac{F_0}{k}} = \frac{1}{1- \left( \displaystyle \frac{\omega_0}{\omega_n} \right)^2} \]</td>
+        </tr>
+      </tbody>
+    </table>  
+
+<figure class="center"> <img src="images/Slide87.png" width="353" height="395" alt="Magnification Factor"/>
+      <figcaption>The magnification factor, <em>MF</em>, is defined as the ratio of the amplitude of the steady-state vibration to the displacement that would be achieved by static deflection. </figcaption>
+    </figure>
+
+<p>From the figure above, we can discuss various cases:</p>
+<ul>
+<li><strong><em>&#969;<sub>0</sub></em> = <em>&#969;<sub>n</sub></em></strong>: <strong>resonance</strong> occurs. This results in very large amplitude vibrations, and is associated with high stress and failure to the system.  </li>
+	<li><strong><em>&#969;<sub>0</sub></em> ~ 0, <em>MF</em> ~ 1</strong>: The forcing function is nearly static, leaving essentially the static deflection and limited natural vibration.   </li>
+	<li><strong><em>&#969;<sub>0</sub></em> &lt; <em>&#969;<sub>n</sub></em></strong>: Magnification is positive and greater than 1, meaning the vibrations are in phase (when the force acts to the left, the system displaces to the left) and the amplitude of vibration is larger than the static deflection. </li>
+<li><strong><em>&#969;<sub>0</sub></em> &gt; <em>&#969;<sub>n</sub></em></strong>: Magnification is negative and the absolute value is typically smaller than 1, meaning the vibration is out of phase with the motion of the forcing function (when the force acts to the left, the system displaces to the right) and the amplitude of vibration is smaller than the static deflection. </li>
+	<li><strong><em>&#969;<sub>0</sub></em> &gt;&gt; <em>&#969;<sub>n</sub></em></strong>: The force is changing direction too fast for the block's motion to respond. </li>
+</ul>
+
 	  <h2>Rotating Unbalance</h2>
 	<p>One common cause of harmonic forced vibration in mechanical systems is rotating unbalance.  This occurs when the axis of rotation does not pass through the centre of mass. In this situation, instead of the centre of mass remaining stationary, it experiences some acceleration. This causes a force on the axle that changes direction as the center of mass rotates.  We can represent this as a small mass, <em>m</em>, rotating about the axis of rotation at some distance, called an eccentricity, <em>e</em>. The forced angular frequency, &#969;<sub>0</sub>, in this case is the angular frequency of the rotating system.  </p>
 	  
@@ -109,8 +170,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. What is the rate of acceleration.</p>
-        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+        <p>A 10 kg fan is fixed to a lightweight beam. The static weight of the fan deflects the beam by 20 mm.  If the blade is designed to spin at <em>&#969;</em> = 15 rad/s, and the blade is mounted off-center (equivalent to a 1.5 kg mass at 50 mm from the axis of rotation), determine the steady-state amplitude of vibration. </p>
+        <img alt="Problem 1 Diagram" src="images/Slide33.png" width="500" height="285"> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -124,8 +185,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>You are in a van that steadily accelerates from 20 m/s to 35 m/s over the course of 10 seconds. How far did you travel in meters over the course of those ten seconds.</p>
-        <img alt="Problem 1 Diagram" src="images/P1.jpg"> </div>
+        <p>You are designing a stylish fan that uses only one blade. Approximate that blade as a thin rod with density per unit length of 20g/cm.  The overall fan weight is 8 kg, and it is mounted on a lightweight beam.  If the static weight of the fan deflects the beam by 80 mm, find the length of blade than will cause resonance if the fan is designed to spin at <em>&#969;</em> = 15 rad/s. </p>
+        <img alt="Problem 2 Diagram" src="images/Slide34.png" width="500" height="285"> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -136,6 +197,23 @@
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
+	  
+	  <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A 150 kg mass is supported on three springs.  Find the spring constant, <em>k</em> [N/m], required for a magnification factor of 2 when <em>F(t) = 25 sin(4t)</em>. </p>
+        <img alt="Problem 2 Diagram" src="images/Slide32.png" width="500" height="285"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	  
 	  <div id="practiceproblems">
 	  <h2>Practice Problems:</h2>
 		<div class="problem">
