@@ -1,15 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	
 <title>Mechanics Map - Static Equilibrium</title>
-
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-<!-- Google Analytics Code -->	
+<!-- Google Analytics Code -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -23,117 +21,58 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Static Equilibrium</h1>
-				
-		<p>Objects in static equilibrium are objects that are not accelerating 
-		(either linear acceleration or angular acceleration). These objects may 
-		be stationary, such as a building or a bridge, or they may have a 
-		constant velocity, such as a car or truck moving at a constant speed on 
-		a straight patch of road.</p>
-		
-		<table class="figtable"><tr>
-		<td>
-			<figure>
-				<img alt="High Rise Building (Public Domain)" height="266" src="images/highrise.jpg" width="200">
-				<figcaption>Because this high rise building maintains a velocity 
-				of zero over time, the members and overall structure are in 
-				equilibrium.</figcaption>
-			</figure>
-		</td>	
-		<td>
-			<figure>
-			<img alt="Truck on Highway (Public Domain)" height="187" src="images/truck.jpg" width="250">
-			<figcaption>Assuming that this truck is maintaining a constant speed 
-			and direction, this truck is in equilibrium because its velocity is 
-			not changing over time.</figcaption>
-			</figure>
-		</td>
-		</tr>
-		</table>
-		
-		<p>Newton's Second Law states that the force exerted on an object is 
-		equal to the mass of the object times the acceleration it experiences. 
-		Therefore, if we know that the acceleration of an object is equal to 
-		zero, then we can assume that the sum of all forces acting on the object 
-		is zero. Individual forces acting on the object, represented by 
-		force vectors, may not have zero magnitude but the sum of all the force 
-		vectors will always be equal to zero for objects in equilibrium. 
-		Engineering statics is the study of objects in static equilibrium, and 
-		the simple assumption of all forces adding up to zero is the basis for 
-		the subject area of engineering statics.</p>
-        
-<div style="margin: 10px; border:1px solid black;">   
-<table class="equation">
-    <tbody>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Static Equilibrium</h1>
+    <p>Objects in static equilibrium are objects that are not accelerating (either linear acceleration or angular acceleration). These objects may be stationary, such as a building or a bridge, or they may have a constant velocity, such as a car or truck moving at a constant speed on a straight patch of road.</p>
+    <table class="figtable">
+      <tr>
+        <td><figure> <img alt="A high rise building" height="266" src="images/highrise.jpg" width="200">
+            <figcaption>Because this high rise building is stationary with no acceleration, the members and overall structure are in equilibrium.</figcaption>
+          </figure></td>
+        <td><figure> <img alt="A truck on a highway" height="187" src="images/truck.jpg" width="250">
+            <figcaption>Assuming that this truck is maintaining a constant speed and direction, this truck is in equilibrium because its velocity is not changing over time.</figcaption>
+          </figure></td>
+      </tr>
+    </table>
+    <p>Newton's Second Law states that the force exerted on an object is equal to the mass of the object times the acceleration it experiences. Therefore, if we know that the acceleration of an object is equal to zero, then we can assume that the sum of all forces acting on the object is zero. Individual forces acting on the object, represented by force vectors, may not have zero magnitude but the sum of all the force vectors will always be equal to zero for objects in equilibrium. Engineering statics is the study of objects in static equilibrium, and the simple assumption of all forces adding up to zero is the basis for the subject area of engineering statics.</p>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[\sum \vec{F}=m\vec{a}\]</td>
+          <td colspan="2">\[\sum \vec{F}=m\vec{a}\]</td>
         </tr>
         <tr>
-            <td>\[a=0\]</td>
+          <td>\[a=0\]</td>
+		  <td>\[\sum \vec{F}=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Equilibrium follows a similar pattern for angular accelerations. The rotational equivalent of Newton's Second Law states that the moment exerted on an object is equal to the moment of inertia of that object times the angular acceleration of the object. If we know the angular acceleration of an object is equal to zero, then we know the sum of all moments acting on the object is equal to zero.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td colspan="2">\[\sum \vec{M}=I\vec{\alpha}\]</td>
         </tr>
         <tr>
-            <td>Therefore...</td>
+          <td>\[\alpha=0\]</td>
+		  <td>\[\sum \vec{M}=0\]</td>
         </tr>
-        <tr>
-            <td>\[\sum \vec{F}=0\]</td>
-        </tr>
-    </tbody>
-</table>
-    </div>    
-        &nbsp;
-        
-<div style="margin: 10px; border:1px solid black;">   
-        
-        <table class="equation">
-    <tbody>
-        <tr>
-            <td>\[\sum \vec{M}=I\vec{\alpha}\]</td>
-        </tr>
-        <tr>
-            <td>\[\alpha=0\]</td>
-        </tr>
-        <tr>
-            <td>Therefore...</td>
-        </tr>
-        <tr>
-            <td>\[\sum \vec{M}=0\]</td>
-        </tr>
-    </tbody>
-</table>
-        </div>
-
-		<p>Equilibrium follows a similar pattern for angular accelerations. The 
-		rotational equivalent of Newton's Second Law states that the moment exerted 
-		on an object is equal to the moment of inertia of that object times the 
-		angular acceleration of the object. If we know the angular acceleration 
-		of an object is equal to zero, then we know the sum of all moments 
-		acting on the object is equal to zero.</p>
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/mTyExoHTo1M" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
-	
+      </tbody>
+    </table>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/mTyExoHTo1M" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

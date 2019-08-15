@@ -1,11 +1,10 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
 <title>Mechanics Map - Equilibrium Equations for Concurrent Force Systems</title>
-
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
 <script type="text/javascript">
@@ -21,333 +20,196 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Equilibrium Analysis for Concurrent Force Systems</h1>
-				
-		<p>If a body is in static equilibrium, then by definition that body is 
-		not accelerating. If we know that the body is not accelerating then we 
-		know that <strong>the sum of the forces acting on that body must be 
-		equal to zero</strong>. This is the basis for equilibrium analysis for a 
-		particle.</p>
-		
-		<p>We must also remember that forces are vectors, they have both a 
-		magnitude and a direction. In order to add together the vectors we will 
-		use the vector components in the x, y and sometimes z directions. To 
-		ensure that the sum of the vectors is truly equal to zero, the sum of 
-		the magnitudes of the components in any one direction must be equal to 
-		zero. To solve the equilibrium equations we will break the single vector 
-		equation (sum of forces is equal to zero) down into two scalar equations 
-		for 2D problems (sum of the x components of the force vectors is equal 
-		to zero, and sum of the y components of the force vectors is equal to 
-		zero) or down into three scalar equations for 3D problems (sum of the x 
-		components of the force vectors is equal to zero, sum of the y 
-		components of the force vectors is equal to zero, and sum of the z 
-		components of the force vectors is equal to zero).</p>
-        
-<table class="equation">
-    <tbody>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Equilibrium Analysis for Concurrent Force Systems</h1>
+    <p>If a body is in static equilibrium, then by definition that body is not accelerating. If we know that the body is not accelerating then we know that <strong>the sum of the forces acting on that body must be equal to zero</strong>. This is the basis for equilibrium analysis for a particle.</p>
+    <p>In order to solve for any unknowns in our sum of forces equation, we actually need to turn the one vector equation into a set of scalar equations. For two dimensional problems, we will split our one vector equation down into two scalar equations. We do this by summing up all the x components of the force vectors and setting them equal to zero in our first equation, and summing up all the y components of the force vectors and setting them equal to zero in our second equation.</p>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[\sum \vec{F}=0\]</td>
+			<td colspan="2">\[\sum \vec{F}=0\]</td>
         </tr>
-    </tbody>
-</table>
-        
-<table class="equation">
-    <tbody>
         <tr>
-            <td>\[\sum F_x=0\]</td>
-            <td>AND</td>
-            <td>\[\sum F_y=0\]</td>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
         </tr>
-    </tbody>
-</table>
-        
-        <table class="equation">
-    <tbody>
+      </tbody>
+    </table>
+    <p>We do something similar in three dimensional problems except we will break all our force vectors down into x, y, and z components, setting the sum of x components equal to zero for our first equation, the sum of all the y components equal to zero for our second equation, and the sum of all our z components equal to zero for our third equation.</p>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[\sum \vec{F}=0\]</td>
+          <td colspan="3">\[\sum \vec{F}=0\]</td>
         </tr>
-    </tbody>
-</table>
-        
-<table class="equation">
-    <tbody>
         <tr>
-            <td>\[\sum F_x=0\]</td>
-            <td>AND</td>
-            <td>\[\sum F_y=0\]</td>
-            <td>AND</td>
-            <td>\[\sum F_z=0\]</td>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum F_z=0\]</td>
         </tr>
-    </tbody>
-</table>
-		<table class="figtable"><tr>
-		<td>
-			<figure>
-				<img alt="2D Equilibrium Equations" height="135" src="images/2Dequations.png" width="200">
-				<figcaption>In two dimensional problems, the sum of forces in 
-				the x direction and the sum of forces in the y direction must be 
-				equal to zero</figcaption>
-			</figure>
-		</td>	
-		<td>
-			<figure>
-				<img alt="3D Equilibrium Equations" height="152" src="images/3Dequations.png" width="300">
-				<figcaption>In three dimensional problems, the sum of forces in 
-				the x direction, the sum of forces in the y direction, and the 
-				sum of forces in the z direction must be equal to zero.</figcaption>
-			</figure>
-		</td>
-		</tr>
-		</table>
-		
-		<p>Once we have written out the equilibrium equations, we can solve the 
-		equations for any unknown forces.</p>
-		
-		<h3>Finding the Equilibrium Equations:</h3>
-		
-		<p>The first step in finding the equilibrium equations is to draw a free 
-		body diagram of the body being analyzed. This diagram should show all 
-		the force vectors acting on the body. In the free body diagram, provide 
-		values for any of the know magnitudes or directions for the force 
-		vectors and provide variable names for any unknowns (either magnitudes 
-		or directions).</p>
-		
-		<figure class="center">
-			<img alt="A free body diagram" height="272" src="images/freebodydiagram.png" width="600">
-			<figcaption>The first step in equilibrium analysis is drawing a free 
-			body diagram. This is done by removing everything but the body and 
-			drawing in all forces acting on the body. It is also useful to label 
-			all forces, key dimensions, and angles.</figcaption>
-		</figure>
-		
-		<p>Next you will need to chose the x, y, and z axes. These axes do need 
-		to be perpendicular to one another, but they do not necessarily have to 
-		be horizontal or vertical. If you choose coordinate axes that line up 
-		with some of your force vectors you will simplify later analysis.</p>
-		
-		<p>Once you have chosen axes, you need to break down all of the force 
-		vectors into components along the x, y and z directions (see the vector 
-		decomposition page for more details on this process). Your first 
-		equation will be the sum of the magnitudes of the components in the x 
-		direction being equal to zero, the second equation will be the sum of 
-		the magnitudes of the components in the y direction being equal to zero, 
-		and the third (if you have a 3D problem) will be the sum of the 
-		magnitudes in the z direction being equal to zero.</p>
-		
-		<p>Once you have your equilibrium equations, you can solve these 
-		formulas for unknowns. The number of unknowns that you will be able to 
-		solve for will be the number or equations that you have.</p>
-		
-		<h3>Particle vs. Extended Body Analysis:</h3>
-		<p>For any body in equilibrium, the sum of the forces and the sum 
-		  of the moments have to be equal to zero. For a <strong>particle</strong>, 
-		  or for a <strong>concurrent force system</strong>, there will be <strong>no 
-		    moments acting on the body</strong> though. For this reason the moment 
-		  equation or equations will not be helpful for particles (the equation would end up 
-		  being zero is equal to zero). Therefore particle analysis will rely 
-		  solely on the sum of the forces being equal to zero. When we start 
-		  analyzing extended bodies with non-concurrent forces we will begin to 
-		  encounter moments, and we will need to ensure the the sum of the moments 
-		  as well as the sum of the forces are also equal to zero.</p>
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-		
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>The diagram below shows a 3lb box (Box A) sitting on top of a 5lb 
-			box (box B). Determine the magnitude and direction of all the forces 
-			acting on box B.</p>	
-			<img alt="Problem 1 Diagram" src="images/P1.png">			
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>A 600 lb barrel rests in a trough as shown below. The barrel is 
-			supported by two normal forces (F2 and F3). Determine the magnitude 
-			of both of these normal forces. </p>
-			<img alt="Problem 2 Diagram" src="images/P2.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/qKhZvf55Bc0" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 3:</h3>
-			<p>A 6 kg traffic light is supported by two cables as shown below. 
-			Find the tension in each of the cables supporting the traffic light.</p>
-			<img alt="Problem 3 Diagram" src="images/P3.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/Oi2yDg1SmrI" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 4:</h3>
-			<p>A 400 kg wrecking ball rests against a surface as shown below. 
-			Assuming the wrecking ball is currently in equilibrium, determine 
-			the tension force in the cable supporting the wrecking ball and the 
-			normal force that exists between the wrecking ball and the surface. </p>
-			<img alt="Problem 4 Diagram" src="images/P4.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/gETMTfy5Sew" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem4.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 5:</h3>
-			<p>Barrels A and B are supported in a foot truck as seen below. 
-			Assuming the barrels are in equilibrium, determine all forces acting 
-			on barrel B.</p>
-			<img alt="Problem 5 Diagram" src="images/P5.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/8DgrClhT4AM" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem5.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 6:</h3>
-			<p>Three soda cans, each weighing 0.75 lbs and having a diameter of 4 inches, are stacked in a formation as shown below. Assuming no friction forces, determine the normal forces acting on can B.
-</p>
-			<img alt="Problem 6 Diagram" src="images/P6.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/lAUahV7Mml4" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem6.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 7:</h3>
-			<p>The skycam shown below is supported by three cables. Assuming the 
-			skycam has a mass of 20kg and that it is currently in equilibrium 
-			find the tension in each of the three cables supporting the skycam.</p>
-			<img alt="Problem 7 Diagram" src="images/P7.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/FD3yKyfXkGU" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem7.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 8:</h3>
-			<p>A hot air balloon is tethered to the ground with three cables as 
-			shown below. If the balloon is pulling upwards with a force of 
-			900lbs, what is the tension in each of the three cables?</p>
-			<img alt="Problem 8 Diagram" height="554" src="images/P8.png" width="500">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/HQqNGJR3ybQ" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/ConcurrentEquilibrium_WorkedProblem8.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-	</div>
-
-	<script language="javascript">displayFooter();</script>
-	
+      </tbody>
+	</table>
+    <p>Once we have written out the equilibrium equations, we can solve the 
+      equations for any unknown forces.</p>
+    <h3>Finding the Equilibrium Equations:</h3>
+    <p>The first step in finding the equilibrium equations is to <strong>draw a free body diagram</strong> of the body being analyzed. This diagram should show all the known and unknown force vectors acting on the body. In the free body diagram, provide values for any of the know magnitudes or directions for the force vectors and provide variable names for any unknowns (either magnitudes or directions).</p>
+    <figure class="center"> <img alt="A free body diagram" height="272" src="images/freebodydiagram.png" width="600">
+      <figcaption>The first step in equilibrium analysis is drawing a free body diagram. This is done by removing everything but the body and drawing in all forces acting on the body. It is also useful to label all forces, key dimensions, and angles.</figcaption>
+    </figure>
+    <p>Next you will need to chose the x, y, and z axes. These axes do need to be perpendicular to one another, but they do not necessarily have to be horizontal or vertical. If you choose coordinate axes that line up with some of your force vectors you will simplify later analysis.</p>
+    <p>Once you have chosen axes, you need to break down all of the force vectors into components along the x, y and z directions (see the vectors page in Appendix 1 if you need more guidance on this). Your first equation will be the sum of the magnitudes of the components in the x direction being equal to zero, the second equation will be the sum of the magnitudes of the components in the y direction being equal to zero, and the third (if you have a 3D problem) will be the sum of the magnitudes in the z direction being equal to zero. Collectively these are known as the <strong>equilibrium equations</strong>.</p>
+    <p>Once you have your equilibrium equations, you can solve them for unknowns using algebra. The number of unknowns that you will be able to solve for will be the number of equilibrium equations that you have. In instances where you have more unknowns than equations, the problem is known as a <strong>statically indeterminate problem</strong> and you will need additional information to solve for the given unknowns.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/M9K-4a0iHgU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The diagram below shows a 3lb box (Box A) sitting on top of a 5lb 
+          box (box B). Determine the magnitude and direction of all the forces 
+          acting on box B.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/J54OZSitzzM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A 600 lb barrel rests in a trough as shown below. The barrel is 
+          supported by two normal forces (F2 and F3). Determine the magnitude 
+          of both of these normal forces. </p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/qKhZvf55Bc0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A 6 kg traffic light is supported by two cables as shown below. 
+          Find the tension in each of the cables supporting the traffic light.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/Oi2yDg1SmrI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A 400 kg wrecking ball rests against a surface as shown below. 
+          Assuming the wrecking ball is currently in equilibrium, determine 
+          the tension force in the cable supporting the wrecking ball and the 
+          normal force that exists between the wrecking ball and the surface. </p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/gETMTfy5Sew" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>Barrels A and B are supported in a foot truck as seen below. 
+          Assuming the barrels are in equilibrium, determine all forces acting 
+          on barrel B.</p>
+        <img alt="Problem 5 Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/8DgrClhT4AM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 6:</h3>
+        <p>Three soda cans, each weighing 0.75 lbs and having a diameter of 4 inches, are stacked in a formation as shown below. Assuming no friction forces, determine the normal forces acting on can B. </p>
+        <img alt="Problem 6 Diagram" src="images/P6.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/lAUahV7Mml4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem6.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 7:</h3>
+        <p>The skycam shown below is supported by three cables. Assuming the 
+          skycam has a mass of 20kg and that it is currently in equilibrium 
+          find the tension in each of the three cables supporting the skycam.</p>
+        <img alt="Problem 7 Diagram" src="images/P7.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/FD3yKyfXkGU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem7.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 8:</h3>
+        <p>A hot air balloon is tethered to the ground with three cables as 
+          shown below. If the balloon is pulling upwards with a force of 
+          900lbs, what is the tension in each of the three cables?</p>
+        <img alt="Problem 8 Diagram" height="554" src="images/P8.png" width="500"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/HQqNGJR3ybQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/ConcurrentEquilibrium_WorkedProblem8.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>
