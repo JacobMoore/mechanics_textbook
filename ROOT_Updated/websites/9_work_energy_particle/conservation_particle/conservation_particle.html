@@ -30,88 +30,88 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>The Conservation of Energy for a Particle</h1>
-	<p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems. Generally, this method is called the <strong>Energy Method</strong> or the <strong>Conservation of Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the conservation of energy.</p>
-	<table class="equation">
+    <p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems. Generally, this method is called the <strong>Energy Method</strong> or the <strong>Conservation of Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the conservation of energy.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[W=\Delta KE + \Delta  PE\]</td>
         </tr>
       </tbody>
     </table>
-	<p>It is important to notice that unlike Newton's Second Law, the above equation is <strong>not</strong> a vector equation. It does not need to be broken down into components which can simplify the process, however, we only have a single equation and therefore can only solve for a single unknown which can limit the method.</p>
-	<h2>Work:</h2>
-	<p>To understand how to use the energy method we first need to understand the concepts of work and energy. <strong>Work</strong> in general is a force exerted over a distance. If we imagine a single, constant force pushing a body in a single direction over some distance, the work done by that force would be equal to the magnitude of that force times the distance the body traveled. If we have a force that is opposing the travel (such as friction) it would be negative work.</p>
-	<figure class="center"><img src="images/work_basic.png" width="600" height="263" alt="A box with a pushing force and a friction force acting on it being pushed over distance d"/>
+    <p>It is important to notice that unlike Newton's Second Law, the above equation is <strong>not</strong> a vector equation. It does not need to be broken down into components which can simplify the process, however, we only have a single equation and therefore can only solve for a single unknown which can limit the method.</p>
+    <h2>Work:</h2>
+    <p>To understand how to use the energy method we first need to understand the concepts of work and energy. <strong>Work</strong> in general is a force exerted over a distance. If we imagine a single, constant force pushing a body in a single direction over some distance, the work done by that force would be equal to the magnitude of that force times the distance the body traveled. If we have a force that is opposing the travel (such as friction) it would be negative work.</p>
+    <figure class="center"><img src="images/work_basic.png" width="600" height="263" alt="A box with a pushing force and a friction force acting on it being pushed over distance d"/>
       <figcaption>In instances with a constant force and a constant direction, the work done to a body will be equal to the magnitude of the force times the distance the body travels. For forces opposing the motion, the work will be negative.</figcaption>
     </figure>
-	<table class="equation">
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[W_{push}=F_{push}*d\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[W_{friction}=-F_{friction}*d\]</td>
         </tr>
       </tbody>
     </table>
-	<p>For instances where forces and the direction of travel do not match, the component of the force in the direction of travel is the only piece of the force that will do work. Following through with this logic, forces that are perpendicular to the direction of travel for a body will exert no work on a body because there is no component of the force in the direction of travel.</p>
-	<figure class="center"><img src="images/work_angled.png" width="600" height="288" alt="A box with a pushing force and a force force acting on it being pushed over distance d"/>
+    <p>For instances where forces and the direction of travel do not match, the component of the force in the direction of travel is the only piece of the force that will do work. Following through with this logic, forces that are perpendicular to the direction of travel for a body will exert no work on a body because there is no component of the force in the direction of travel.</p>
+    <figure class="center"><img src="images/work_angled.png" width="600" height="288" alt="A box with a pushing force and a force force acting on it being pushed over distance d"/>
       <figcaption>Only the components of a force in the direction of travel exert work on a body. Forces perpendicular to the direction of travel will exert no work on the body.</figcaption>
     </figure>
-	<table class="equation">
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[W_{push}=F_{push}cos(\theta)*d\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[W_{normal}=0\]</td>
         </tr>
       </tbody>
     </table>
-	<p>In the case of a force that does not remain constant, we will need to account for the changing force. To do this we will simply integrate the force function over the distance traveled by the body. Just as before, only the component of the force in the direction of travel will count towards the work done and forces opposing travel will be negative work.</p>
-	<table class="equation">
+    <p>In the case of a force that does not remain constant, we will need to account for the changing force. To do this we will simply integrate the force function over the distance traveled by the body. Just as before, only the component of the force in the direction of travel will count towards the work done and forces opposing travel will be negative work.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[W=\int_{x1}^{x2} F(d)\]</td>
         </tr>
       </tbody>
     </table>
-	<h2>Energy:</h2>
-	<p>When discussing energy in engineering dynamics, we will usually break energy down into <strong>kinetic energy</strong> and <strong>potential energy</strong>. Kinetic energy is the the energy mass in motion, while potential energy represents the energy that is stored up due to the position or stresses in a body.</p>
-	<p>In its equation form, the kinetic energy of a particle is represented by one half of the mass of the body times its velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
-	<table class="equation">
+    <h2>Energy:</h2>
+    <p>When discussing energy in engineering dynamics, we will usually break energy down into <strong>kinetic energy</strong> and <strong>potential energy</strong>. Kinetic energy is the the energy mass in motion, while potential energy represents the energy that is stored up due to the position or stresses in a body.</p>
+    <p>In its equation form, the kinetic energy of a particle is represented by one half of the mass of the body times its velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[KE=\frac{1}{2}mv^{2}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[\Delta KE=\frac{1}{2}mv_{f}^{2}-\frac{1}{2}mv_{i}^{2}\]</td>
         </tr>
       </tbody>
     </table>
-	<p>As a note, a body that is rotating will also have rotational kinetic energy, but we will save that for our discussion of work and energy with rigid bodies.</p>
-	<p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravitational force and a spring force will do, respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
-	<p>The change in gravitational potential energy for any system is represented by the mass of the body, times the value g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) times the vertical change in height between the start position and the end position. In equation form, this is as follows.</p>
-	<figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
+    <p>As a note, a body that is rotating will also have rotational kinetic energy, but we will save that for our discussion of work and energy with rigid bodies.</p>
+    <p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravitational force and a spring force will do, respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
+    <p>The change in gravitational potential energy for any system is represented by the mass of the body, times the value g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) times the vertical change in height between the start position and the end position. In equation form, this is as follows.</p>
+    <figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
       <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
     </figure>
-	<table class="equation">
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[\Delta PE_{gravity}=m*g*\Delta h\]</td>
         </tr>
       </tbody>
     </table>
-	<p>To find the change in elastic potential energy, we will need to know the stiffness of the spring (represented by k, in units of force per distance) as well as the distance the spring has been stretched or compressed above or below it's natural resting length (represented by x, in units of distance). Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
-	<table class="equation">
+    <p>To find the change in elastic potential energy, we will need to know the stiffness of the spring (represented by k, in units of force per distance) as well as the distance the spring has been stretched or compressed above or below it's natural resting length (represented by x, in units of distance). Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
+    <table class="equation">
       <tbody>
-		<tr>
+        <tr>
           <td>\[\Delta PE_{spring}=\frac{1}{2}kx_{f}^{2}-\frac{1}{2}kx_{i}^{2}\]</td>
         </tr>
       </tbody>
     </table>
-	<p>Going back to our original conservation of energy equation, we simply plug the appropriate terms on each side (work on the left and energies on the right) and balance the two sides to solve for any unknowns. Terms that do not exist or do not change (such as elastic potential energy in a problem with no springs, or delta KE in a problem where there is no change in the speed of the body) can be set to zero.</p>
-	</div>
+    <p>Going back to our original conservation of energy equation, we simply plug the appropriate terms on each side (work on the left and energies on the right) and balance the two sides to solve for any unknowns. Terms that do not exist or do not change (such as elastic potential energy in a problem with no springs, or delta KE in a problem where there is no change in the speed of the body) can be set to zero.</p>
+  </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
@@ -124,7 +124,12 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A 16 lb crate slides down a ramp as shown to the below. If the crate is released from a height of 10 ft, what is the work done by gravity? What is the change in gravitational potential energy?</p>
+        <p>A 16 pound crate slides down a ramp as shown to the below. The crate is released from a height of 10 feet.
+        <ul>
+          <li>What is the work done by gravity?</li>
+          <li>What is the change in gravitational potential energy?</li>
+        </ul>
+        </p>
         <img src="images/P1.png" width="369" height="461" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -154,8 +159,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>A 2,000 lb wrecking ball hangs from the end of a 40 ft cable.  If the wrecking ball is released from an angle of 40 degrees from vertical, what would the expected maximum velocity at the bottom point of the travel path be?
-		</p>
+        <p>A 2,000 pound wrecking ball hangs from the end of a 40 ft cable.  If the wrecking ball is released from an angle of 40 degrees from vertical, what would the expected maximum velocity at the bottom point of the travel path be? </p>
         <img src="images/P3.png" width="412" height="589" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -167,11 +171,15 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>A 24,000 kg aircraft is launched from an aircraft carrier using the a hydraulic catapult.  If the force the catapult exerts over the 90 meter runway is shown below, what is the work done by the catapult? What is the speed of the plane at the end of the runway?
-		</p>
+        <p>A 24,000 kilogram aircraft is launched from an aircraft carrier using the a hydraulic catapult.  If the force the catapult exerts over the 90 meter runway is shown in the graph below.
+        <ul>
+          <li>What is the work done by the catapult?</li>
+          <li>What is the speed of the plane at the end of the runway?</li>
+        </ul>
+        </p>
         <img src="images/P4.png" width="500" height="272" alt="Problem 4 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -183,8 +191,7 @@
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	</div>
-	</div>
+  </div>
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>
