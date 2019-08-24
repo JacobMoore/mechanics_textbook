@@ -30,48 +30,48 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Impulse and Momentum in a Particle</h1>
-	<p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. The impulse is usually denoted by the variable J (not to be confused with the polar moment of inertia, which is also J) and the momentum is a body's mass times it's velocity. Impulses and velocities are both vector quantities, giving us the basic equation below.</p>
-	<table class="equation">
+    <p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. The impulse is usually denoted by the variable J (not to be confused with the polar moment of inertia, which is also J) and the momentum is a body's mass times it's velocity. Impulses and velocities are both vector quantities, giving us the basic equation below.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>For two dimensional problems, we can break the single vector equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components.</p>
-	<table class="equation">
+    </table>
+    <p>For two dimensional problems, we can break the single vector equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[J_{x}=mv_{fx}-mv_{ix}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[J_{y}=mv_{fy}-mv_{iy}\]</td>
         </tr>
       </tbody>
-	</table>
-	<h2>Impulse:</h2>
-	<p>The concept of an <strong>impulse</strong> in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
-	<table class="equation">
+    </table>
+    <h2>Impulse:</h2>
+    <p>The concept of an <strong>impulse</strong> in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
+    <table class="equation">
       <tbody>
         <tr>
-			<td>Constant Magnitude Force:</td>
+          <td>Constant Magnitude Force:</td>
           <td>\[\vec{J} = \vec{F}*t\]</td>
         </tr>
-		<tr>
-			<td>Non-Constant Magnitude Force:</td>
+        <tr>
+          <td>Non-Constant Magnitude Force:</td>
           <td>\[\vec{J} = \int \vec{F(t)} dt\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>In many cases, we will discuss <strong>impulsive forces</strong>. This is an instance where we have very large forces acting over a very short time frame. In instances of impulsive forces, it is often difficult to measure the exact magnitude of the force or the time. In these cases we may only be able to deduce the magnitude of the impulse as a whole via the observed change in momentum of the body.</p>
-	<figure class="center"><img src="images/tennis.jpg" width="400" height="600" alt="A tennis player hitting a ball"/>
+    </table>
+    <p>In many cases, we will discuss <strong>impulsive forces</strong>. This is an instance where we have very large forces acting over a very short time frame. In instances of impulsive forces, it is often difficult to measure the exact magnitude of the force or the time. In these cases we may only be able to deduce the magnitude of the impulse as a whole via the observed change in momentum of the body.</p>
+    <figure class="center"><img src="images/tennis.jpg" width="400" height="600" alt="A tennis player hitting a ball"/>
       <figcaption>The force the tennis racket exerts on the ball will be very large, but it will be exerted over a very short period of time. Because of this, the force is considered an "impulsive" force. It would be difficult to determine the exact magnitude of the force or time frame of the impact, but by examining the velocity of the ball before and after the impact we could deduce the overall magnitude of the impulse as a whole. Photo by DAVID ILIFF. License: CC BY-SA 3.0</figcaption>
     </figure>
-	<h2>Momentum:</h2>  
-	<p>The momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
-	<h2>Conservation of Momentum:</h2>
-	<p>In instances where there is no impulse exerted on a body, we can use the original equation to deduce that there will be no change in momentum of the body. In this instance, momentum is conserved. This will also hold for systems of bodies, where if no <strong>external</strong> impulses are exerted on the bodies in a system, the momentum will be conserved as a whole. This is the basis of analysis for many collisions, as is discussed in the following sections.</p>
-	</div>
+    <h2>Momentum:</h2>
+    <p>The momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
+    <h2>Conservation of Momentum:</h2>
+    <p>In instances where there is no impulse exerted on a body, we can use the original equation to deduce that there will be no change in momentum of the body. In this instance, momentum is conserved. This will also hold for systems of bodies, where if no <strong>external</strong> impulses are exerted on the bodies in a system, the momentum will be conserved as a whole. This is the basis of analysis for many collisions, as is discussed in the following sections.</p>
+  </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
@@ -84,7 +84,12 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>A tennis ball (.06 kg) is served to tennis player at a speed of 10 m/s.  The player then returns the ball at a speed of 36 m/s. What is the impulse exerted on the ball? If a high speed camera reveals the impact lasted .02 seconds, what is the average force exerted on the ball during the collision?</p>
+        <p>A tennis ball (.06 kg) is served to tennis player at a speed of 10 m/s.  The player then returns the ball at a speed of 36 m/s.
+        <ul>
+          <li>What is the impulse exerted on the ball?</li>
+          <li>If a high speed camera reveals the impact lasted .02 seconds, what is the average force exerted on the ball during the collision?</li>
+        </ul>
+        </p>
         <img src="images/P1.jpg" width="300" height="457" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -126,11 +131,15 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s fires a thruster exerting a force of 600 kN at a 30 degree angle with the current path as shown below.  The thruster is turned off after completing a 90 degree turn as shown below. How long was the thruster on? What is the final velocity?
-		</p>
+        <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s fires a thruster exerting a force of 600 kN at a 30 degree angle with the current path as shown below.  The thruster is turned off after completing a 90 degree turn as shown below.
+        <ul>
+          <li>How long was the thruster on?</li>
+          <li>What is the final velocity?</li>
+        </ul>
+        </p>
         <img src="images/P4.png" width="392" height="285" alt="Problem 4 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -142,7 +151,7 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 5:</h3>
         <p>A satellite with a mass of 12,000 kg and a speed of 600 m/s is traveling 30 degrees from horizontal.  If the capsule is to have the same speed but travel horizontally after 10 seconds, what is the magnitude and direction of the required average thruster force?</p>
@@ -157,7 +166,7 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	</div>
+  </div>
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>

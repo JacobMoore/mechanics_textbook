@@ -30,69 +30,69 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Particle Collisions in One Dimension</h1>
-	<p>The Impulse-Momentum Method is particularly useful when examining collisions between bodies. When examining a system of bodies, such as the two bodies colliding below, the impulses exerted by <strong>internal forces</strong>, that is the forces exerted between two bodies within the system, will be equal and opposite and hence cancel out.</p>
-	<figure class="center"><img src="images/collision.png" width="254" height="313" alt="Two Billiard balls coliding"/>
+    <p>The Impulse-Momentum Method is particularly useful when examining collisions between bodies. When examining a system of bodies, such as the two bodies colliding below, the impulses exerted by <strong>internal forces</strong>, that is the forces exerted between two bodies within the system, will be equal and opposite and hence cancel out.</p>
+    <figure class="center"><img src="images/collision.png" width="254" height="313" alt="Two Billiard balls coliding"/>
       <figcaption>When two bodies collide, Newton's Third Law ensures that the normal forces from the collision will always be equal and opposite. This means that the impulses will be equal and opposite and will cancel out in our impulse-momentum equation when examining the system of equations.</figcaption>
-    </figure> 
-	<p>Because the <strong>impulsive</strong> forces of the collision are so large over the very short period of the collision, other external forces are typically regarded as insignificant. This means that for our collision, there is no impulse and therefore there is no change to the sum of the momentums of the bodies. This is known as the <strong>conservation of momentum</strong>, and it will hold true for all types of collisions.</p>
-	<table class="equation">
+    </figure>
+    <p>Because the <strong>impulsive</strong> forces of the collision are so large over the very short period of the collision, other external forces are typically regarded as insignificant. This means that for our collision, there is no impulse and therefore there is no change to the sum of the momentums of the bodies. This is known as the <strong>conservation of momentum</strong>, and it will hold true for all types of collisions.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[\sum \vec{J} = 0 =\sum  m \vec{v_{f}}-\sum m \vec{v_{i}}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[\sum m \vec{v_{f}}=\sum m \vec{v_{i}}\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>In the case of the collision of two bodies, body A and body B in this case, we can break apart the sums as follows. The subscripts in this case are being used to denote both the body (A or B) and initial or final states (before or after the collision).</p>
-	<table class="equation">
+    </table>
+    <p>In the case of the collision of two bodies, body A and body B in this case, we can break apart the sums as follows. The subscripts in this case are being used to denote both the body (A or B) and initial or final states (before or after the collision).</p>
+    <table class="equation">
       <tbody>
-		<tr>
+        <tr>
           <td>\[ m_{A} \vec{v_{Af}}+m_{B} \vec{v_{Bf}}= m_{A} \vec{v_{Ai}}+m_{B} \vec{v_{Bi}}\]</td>
         </tr>
       </tbody>
-	</table> 
-	<p>In addition to the conservation of momentum equation, we can also usually generate a second equation we can use  alongside the conservation of momentum. This second equation will depend on the type of collision however, with the three possible collision types being <strong>elastic</strong>, <strong>plastic</strong>, and <strong>semi-elastic</strong>.</p>
-	<h2>Elastic Collisions:</h2>
-	  <p>An elastic collision is a collision in which all energy is assumed to be conserved as kinetic energy. In reality, true elastic collisions do not exist as some energy will always be converted to heat or sound, but in practice two very rigid bodies that collide without much deformation can get very close to the ideal of an elastic collision. An example of a collision that is close to elastic is a set of billiard balls colliding, as in the earlier figure.</p>
-	  <p>An elastic collision conserves energy in addition to momentum, so the conservation of energy equation will be our second equation that we use to supplement the conservation of momentum.</p>
-	<table class="equation">
-	  <tbody>
-		<tr>
+    </table>
+    <p>In addition to the conservation of momentum equation, we can also usually generate a second equation we can use  alongside the conservation of momentum. This second equation will depend on the type of collision however, with the three possible collision types being <strong>elastic</strong>, <strong>plastic</strong>, and <strong>semi-elastic</strong>.</p>
+    <h2>Elastic Collisions:</h2>
+    <p>An elastic collision is a collision in which all energy is assumed to be conserved as kinetic energy. In reality, true elastic collisions do not exist as some energy will always be converted to heat or sound, but in practice two very rigid bodies that collide without much deformation can get very close to the ideal of an elastic collision. An example of a collision that is close to elastic is a set of billiard balls colliding, as in the earlier figure.</p>
+    <p>An elastic collision conserves energy in addition to momentum, so the conservation of energy equation will be our second equation that we use to supplement the conservation of momentum.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
           <td>\[\frac{1}{2}m_{A} \vec{v_{Af}}^{2}+\frac{1}{2}m_{B} \vec{v_{Bf}}^{2}= \frac{1}{2}m_{A} \vec{v_{Ai}}^{2}+\frac{1}{2}m_{B} \vec{v_{Bi}}^{2}\]</td>
         </tr>
       </tbody>
-	</table> 
-	<h2>Plastic Collisions:</h2> 
-	<p>A plastic collision is the opposite of an elastic collision in the least amount of kinetic energy is conserved. To make this true, the bodies must deform in such as way that they stick together after the collision. With the two bodies stuck together, they will have matching final velocities.</p>
-	  <table class="equation">
-	  <tbody>
-		<tr>
+    </table>
+    <h2>Plastic Collisions:</h2>
+    <p>A plastic collision is the opposite of an elastic collision in the least amount of kinetic energy is conserved. To make this true, the bodies must deform in such as way that they stick together after the collision. With the two bodies stuck together, they will have matching final velocities.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
           <td>\[\vec{v_{Af}}=\vec{v_{Bf}}\]</td>
         </tr>
       </tbody>
-	</table> 
-	<h2>Semi-Elastic Collisions:</h2>
-	  <p>Finally, anything between an elastic collision and a plastic collision is considered a semi-elastic collision. This is a collision where less than one hundred percent of the kinetic energy is conserved, but the objects do not stick together following the collision. In cases of semi-elastic collisions, we will use something called the <strong>coefficient of restitution</strong> (usually denoted by a lowercase e), to supplement our conservation of momentum equation.</p>
-	  <p>The coefficient of restitution is number between 0 and 1 that measures the "bounciness" of the two bodies in the collision. Specifically, for a single body bouncing off a rigid surface, the coefficient of restitution is defined as the negative of the velocity after bouncing off a surface divided by the velocity before bouncing off the surface.</p>
-	  <table class="equation">
-	  <tbody>
-		<tr>
+    </table>
+    <h2>Semi-Elastic Collisions:</h2>
+    <p>Finally, anything between an elastic collision and a plastic collision is considered a semi-elastic collision. This is a collision where less than one hundred percent of the kinetic energy is conserved, but the objects do not stick together following the collision. In cases of semi-elastic collisions, we will use something called the <strong>coefficient of restitution</strong> (usually denoted by a lowercase e), to supplement our conservation of momentum equation.</p>
+    <p>The coefficient of restitution is number between 0 and 1 that measures the "bounciness" of the two bodies in the collision. Specifically, for a single body bouncing off a rigid surface, the coefficient of restitution is defined as the negative of the velocity after bouncing off a surface divided by the velocity before bouncing off the surface.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
           <td>\[e=-\frac{\vec{v_{f}}}{\vec{v_{i}}}\]</td>
         </tr>
       </tbody>
-	</table> 
-	  <p>A perfectly elastic collision would have a coefficient of restitution of one (no velocity would be lost) while a plastic collision would have a coefficient of restitution of zero. All other collisions will have a coefficient of restitution that lies somewhere in between.</p>
-	  <p>For cases where two bodies are bouncing off of one another, we would simply use relative velocities rather than the velocity of a single body. Using the velocity of body A relative to the velocity of body B, we come up with the equation below.</p>
-	  <table class="equation">
-	  <tbody>
-		<tr>
+    </table>
+    <p>A perfectly elastic collision would have a coefficient of restitution of one (no velocity would be lost) while a plastic collision would have a coefficient of restitution of zero. All other collisions will have a coefficient of restitution that lies somewhere in between.</p>
+    <p>For cases where two bodies are bouncing off of one another, we would simply use relative velocities rather than the velocity of a single body. Using the velocity of body A relative to the velocity of body B, we come up with the equation below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
           <td>\[e=-\frac{\vec{v_{fA/B}}}{\vec{v_{iA/B}}}=-\frac{\vec{v_{Af}}-\vec{v_{Bf}}}{\vec{v_{Ai}}-\vec{v_{Bi}}}\]</td>
         </tr>
       </tbody>
-	</table> 
-	</div>
+    </table>
+  </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
@@ -120,7 +120,12 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>A 4.2g bullet traveling at 965 m/s becomes lodged in a stationary log with a mass of 1.5kg. Assuming an inelastic collision, determine the velocity of the log and the bullet after the collision. Also determine the percentage of the kinetic energy that is lost in the collision.</p>
+        <p>A 4.2g bullet traveling at 965 m/s becomes lodged in a stationary log with a mass of 1.5kg.
+        <ul>
+          <li>What is the the velocity of the log and the bullet immediately after the collision?</li>
+          <li>What percentage of the kinetic energy was lost in the collision?</li>
+        </ul>
+        </p>
         <img src="images/P2.png" width="472" height="302" alt="Problem 2 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -135,7 +140,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>Two masses on a frictionless rod as shown below are set to impact with each other.  If the coefficient of restitution between the objects is .6, what is the velocity of each body after the collision? The percentage of the kinetic energy that is lost in the collision? </p>
+        <p>Two masses on a frictionless rod as shown below are set to impact with each other.  If the coefficient of restitution between the objects is .6, what is the velocity of each body after the collision?</p>
         <img src="images/P3.png" width="500" height="245" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -147,7 +152,7 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	</div>
+  </div>
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>
