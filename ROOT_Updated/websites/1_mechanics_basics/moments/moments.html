@@ -1,11 +1,10 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Moments</title>
-
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
+<title>Mechanics Map - Moments</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
 <script type="text/javascript">
@@ -21,166 +20,69 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Moments</h1>
-						
-		<p>A <strong>moment</strong> (also sometimes called a torque) is defined as the "tendency of a force to rotate a body". 
-		Where forces cause linear accelerations, moments cause <strong>angular 
-		accelerations</strong>. In this way moments, can be thought of as twisting 
-		forces.</p>
-		
-		<figure class="center">	
-			<img alt="The tendancy of a force to rotate a body" height="273" src="images/momentrotation.png" width="600">
-			<figcaption>Imagine two boxes on an icy surface. The force on box A 
-			would simply cause the box to begin accelerating, but the force on 
-			box B would cause the box to both accelerate and to begin to rotate. 
-			The force on box B is exerting a moment, where the force on box A is 
-			not.</figcaption>
-		</figure>
-		
-		<h2>The Vector Representation of a Moment:</h2>
-		
-		<p>Moments, like forces, can be represented as vectors and have a 
-		magnitude, a direction, and a "point of application". For moments 
-		however a better name for the point of application is the <strong>axis 
-		of rotation</strong>. This will be the point or axis about which we will 
-		determine all the moments. </p>
-				
-		<h3>Magnitude:</h3>
-		
-		<p>The magnitude of a moment is the degree to which the moment will 
-		cause angular acceleration in the body it is acting on. It is 
-		represented by a scalar (a single number). The magnitude of the moment 
-		can be thought of as the strength of the twisting force exerted on the 
-		body. When a moment is represented as a vector, the magnitude of the 
-		moment is usually explicitly labeled. though the length of the moment 
-		vector also often corresponds to the relative magnitude of the moment.</p>
-		<p>The magnitude of the moment is measured in units of force times 
-		distance. The standard metric units for the magnitude of moments are 
-		newton meters, and the standard English units for a moment are foot 
-		pounds.</p>
-        
-<table class="equation">
-    <tbody>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Moments</h1>
+    <p>A <strong>moment</strong> (also sometimes called a torque) is defined as the "tendency of a force to rotate a body". Where forces cause linear accelerations, moments cause <strong>angular accelerations</strong>. In this way moments, can be thought of as twisting forces.</p>
+    <figure class="center"> <img alt="The tendancy of a force to rotate a body" height="273" src="images/momentrotation.png" width="600">
+      <figcaption>Imagine two boxes on an icy surface. The force on box A would simply cause the box to begin accelerating, but the force on box B would cause the box to both accelerate and to begin to rotate. The force on box B is exerting a moment, where the force on box A is not.</figcaption>
+    </figure>
+    <h2>The Vector Representation of a Moment:</h2>
+    <p>Moments, like forces, can be represented as vectors and have a magnitude, a direction, and a "point of application". For moments however a better name for the point of application is the <strong>axis of rotation</strong>. This will be the point or axis about which we will determine all the moments. </p>
+    <h3>Magnitude:</h3>
+    <p>The magnitude of a moment is the degree to which the moment will cause angular acceleration in the body it is acting on. It is represented by a scalar (a single number). The magnitude of the moment can be thought of as the strength of the twisting force exerted on the body. When a moment is represented as a vector, the magnitude of the moment is usually explicitly labeled. though the length of the moment vector also often corresponds to the relative magnitude of the moment.</p>
+    <p>The magnitude of the moment is measured in units of force times distance. The standard metric units for the magnitude of moments are newton meters, and the standard English units for a moment are foot pounds.</p>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[M=F*d\]</td>
+          <td>\[M=F*d\]</td>
         </tr>
-    </tbody>
-</table>
-        
-<table class="equation">
-    <tbody>
+      </tbody>
+    </table>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[Metric: N*m\]</td>
+          <td>\[Metric: N*m\]</td>
         </tr>
-    </tbody>
-</table> 
-        
-<table class="equation">
-    <tbody>
+      </tbody>
+    </table>
+    <table class="equation">
+      <tbody>
         <tr>
-            <td>\[English: lb*ft\]</td>
+          <td>\[English: lb*ft\]</td>
         </tr>
-    </tbody>
-</table>
-        
-
-				
-		<h3>Direction:</h3>
-		
-		<p>In a two dimensional problem, the direction can be thought of 
-		as a scalar quantity corresponding to the direction of rotation the 
-		moment would cause. A moment that would cause a counter-clockwise 
-		rotation is a positive moment and a moment that would cause a clockwise 
-		rotation is a negative moment.</p>
-		
-		<figure class="right">	
-			<img alt="The Right Hand Rule" height="249" src="images/rhr.png" width="300">
-			<figcaption>To use the right hand rule, align your right hand as 
-			shown so that your thumb lines up with the axis of rotation for the 
-			moment and your curled fingers point in the direction of 
-			rotation for your moment. If you do this, your thumb will be 
-			pointing in the direction of the moment vector.</figcaption>
-		</figure>
-		
-		<p>In a three dimensional problem however, a body can rotate about an 
-		axis in any direction. If this is the case we need a vector to represent 
-		the direction of the moment. The direction of the moment vector will 
-		line up with the axis of rotation that moment would cause, but to 
-		determine which of the two directions we can use along that axis we have 
-		available we use the right hand rule. To use the right hand rule, align 
-		your right hand as shown so that your thumb lines up with the axis of 
-		rotation for the moment and your curled fingers point in the direction of 
-		rotation for your moment. If you do this, your thumb will be 
-		pointing in the direction of the moment vector.</p>
-		
-		<p>If we look back to two dimensional problems, all rotations occur 
-		about an axis pointing directly into or out of the page (the z axis). 
-		Using the right hand rule, counter-clockwise rotations are represented 
-		by a vector in the positive z direction and clockwise rotations are 
-		represented by a vector in the negative z direction.</p>
-		
-		<h3>Axis of Rotation:</h3>
-		
-		<p>In engineering statics problems we can choose any point/axis as the 
-		axis of rotation. The choice of this point will affect the magnitude and 
-		direction of the resulting moment however, and the moment is only valid 
-		about that point.</p>
-		
-		<figure class="center">	
-			<img alt="The magnitude and direction of a moment depends upon the chosen axis of rotation" height="192" src="images/momentpoint.png" width="450">
-			<figcaption>The magnitude and direction of a moment depends upon the 
-			chosen axis of rotation. For example, the single force above would 
-			cause diffrent moments about Point A and Point B, because it would 
-			cause different rotations depending on the point we fix in place.</figcaption>
-		</figure>
-		
-		<p>Though we can take the moment about any point in a statics problem, 
-		if we are <strong>adding</strong> together the moments from multiple 
-		forces, all the moments must be taken about a <strong>common axis of 
-		rotation</strong>. Moments taken about different points cannot be added 
-		together to find a 'net moment'</p>
-		
-		<p>Additionally, if we move into the subject of dynamics, where bodies 
-		are moving, we will want to relate moments to angular accelerations. For 
-		this to work, we will need to take the moments either about a single 
-		point that does not move (such as the hinge on a door) or we will need 
-		to take the moments about the center of mass of the body. Summing 
-		moments about other axes of rotation will not result in valid 
-		calculations.</p>
-		
-		<h2>Calculating Moments:</h2>
-		
-		<p>To calculate the moment that a force exerts on a body, we will have 
-		two main options: <strong>scalar methods</strong> and <strong>vector 
-		methods</strong>. Scalar methods are generally faster for two 
-		dimensional problems where a body can only rotate clockwise or 
-		counter-clockwise, while vector methods are generally faster for three 
-		dimensional problems where the axis of rotation is more complex.</p>
-
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/bQE4idPhdXY" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+      </tbody>
+    </table>
+    <h3>Direction:</h3>
+    <p>In a two dimensional problem, the direction can be thought of as a scalar quantity corresponding to the direction of rotation the  moment would cause. A moment that would cause a counter-clockwise rotation is a positive moment and a moment that would cause a clockwise rotation is a negative moment.</p>
+    <figure class="right"> <img alt="The Right Hand Rule" height="249" src="images/rhr.png" width="300">
+      <figcaption>To use the right hand rule, align your right hand as shown so that your thumb lines up with the axis of rotation for the moment and your curled fingers point in the direction of rotation for your moment. If you do this, your thumb will be pointing in the direction of the moment vector.</figcaption>
+    </figure>
+    <p>In a three dimensional problem however, a body can rotate about an axis in any direction. If this is the case we need a vector to represent the direction of the moment. The direction of the moment vector will line up with the axis of rotation that moment would cause, but to determine which of the two directions we can use along that axis we have available we use the right hand rule. To use the right hand rule, align your right hand as shown so that your thumb lines up with the axis of rotation for the moment and your curled fingers point in the direction of rotation for your moment. If you do this, your thumb will be pointing in the direction of the moment vector.</p>
+    <p>If we look back to two dimensional problems, all rotations occur about an axis pointing directly into or out of the page (the z axis). Using the right hand rule, counter-clockwise rotations are represented by a vector in the positive z direction and clockwise rotations are represented by a vector in the negative z direction.</p>
+    <h3>Axis of Rotation:</h3>
+    <p>In engineering statics problems we can choose any point/axis as the axis of rotation. The choice of this point will affect the magnitude and direction of the resulting moment however, and the moment is only valid about that point.</p>
+    <figure class="center"> <img alt="The magnitude and direction of a moment depends upon the chosen axis of rotation" height="192" src="images/momentpoint.png" width="450">
+      <figcaption>The magnitude and direction of a moment depends upon the chosen axis of rotation. For example, the single force above would cause different moments about Point A and Point B, because it would cause different rotations depending on the point we fix in place.</figcaption>
+    </figure>
+    <p>Though we can take the moment about any point in a statics problem, if we are <strong>adding</strong> together the moments from multiple forces, all the moments must be taken about a <strong>common axis of rotation</strong>. Moments taken about different points cannot be added together to find a 'net moment'</p>
+    <p>Additionally, if we move into the subject of dynamics, where bodies are moving, we will want to relate moments to angular accelerations. For this to work, we will need to take the moments either about a single point that does not move (such as the hinge on a door) or we will need to take the moments about the center of mass of the body. Summing moments about other axes of rotation will not result in valid calculations.</p>
+    <h2>Calculating Moments:</h2>
+    <p>To calculate the moment that a force exerts on a body, we will have two main options: <strong>scalar methods</strong> and <strong>vector methods</strong>. Scalar methods are generally faster for two dimensional problems where a body can only rotate clockwise or counter-clockwise, while vector methods are generally faster for three dimensional problems where the axis of rotation is more complex.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/bQE4idPhdXY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

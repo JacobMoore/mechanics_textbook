@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Bodies and Free Body Diagrams</title>
+<title>Mechanics Map - Bodies and Free Body Diagrams</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,257 +19,151 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Free Body Diagrams</h1>
-		
-		<p>A free body diagram is a tool used to solve engineering mechanics 
-		problems. As the name suggests, the purpose of the diagram is to "free" 
-		the body from all other objects and surfaces around it so that it can be 
-		studied in isolation. We will also draw in any forces or moments acting 
-		on the body, including those forces and moments exerted by the 
-		surrounding bodies and surfaces that we removed.</p>
-		<p>The 
-		diagram below shows a ladder supporting a person&nbsp; and the free body diagram of that ladder. 
-		As you can see, the ladder is separated from all other objects and all 
-		forces acting on the ladder are drawn in with key dimensions and angles 
-		shown.</p>
-		
-		<figure class="center">
-			<img alt="Free Body Diagram" height="428" src="images/freebodydiagram.png" width="600">
-			<figcaption>A ladder with a man standing on it is shown on the left. 
-			Assuming friction only at the base, a free body diagram of the 
-			ladder is shown on the right.</figcaption>
-		</figure>
-		
-		<h2>Constructing the Free Body Diagram</h2>
-		
-		<p>The first step in solving most mechanics problems will be to 
-		construct a free body diagram. This simplified diagram will allow us to 
-		more easily write out the equilibrium equations for statics or strengths 
-		of materials problems, or the equations of motion for dynamics problems.</p>
-		
-		<p>To construct the diagram we will use the following process.</p>
-		
-		<ol>
-		<li>First draw the body being analyzed, separated from all other surrounding bodies and surfaces. Pay close attention to the boundary, identifying what is part of the body, and what is part of the surroundings.</li>
-		<li>Second, draw in all <strong>external</strong> forces and moments acting directly on the body. Do not include any forces or moments that do not directly act on the body being analyzed. Do not include any forces that are <strong>internal</strong> to the body being analyzed. Some common types of forces seen in mechanics problems are:
-			<ul>
-				<li><strong>Gravitational Forces:</strong> Unless otherwise noted, the 
-				mass of an object will result in a gravitational weight force applied 
-				to that body. This weight is usually given in 
-				pounds in the English system, and is modeled as 9.81 (g) times 
-				the mass of the body in kilograms for the metric system 
-				(resulting in a weight in Newtons). This force will 
-				always point down towards the center of the earth and act on the 
-				center of mass of the body. </li>
-		<figure class="center">
-			<img alt="Gravitational Forces" height="173" src="images/gravityforces.png" width="450">
-			<figcaption>Gravitational forces always act downward on the center 
-			of mass.</figcaption>
-		</figure>
-				<li><strong>Normal Forces (or Reaction Forces): </strong>Every object in direct contact with 
-				the body will exert a normal force on that body which prevents 
-				the two objects from occupying the same space at the same time. 
-				Note that only objects in direct contact can exert normal forces 
-				on the body.
-				<ul>
-					<li>An object in contact with another object or surface will 
-					experience a normal force that is perpendicular (hence 
-					normal) to the surfaces in contact.</li>
-					<figure class="center">
-						<img alt="Normal Forces" height="248" src="images/normal1.png" width="450">
-						<figcaption>Normal forces always act perpendicular to 
-						the surfaces in contact. The barrel in the hand truck 
-						shown on the left has a normal force at each contact 
-						point.</figcaption>
-					</figure>
-					<li>Joints or connections between bodies can also cause 
-					reaction forces or moments, and we will have one force or 
-					moment for each type of motion or rotation the connection 
-					prevents. </li>
-					<figure class="center">
-						<img alt="Reaction forces at Joints" height="382" src="images/normal2.png" width="450">
-						<figcaption>The roller on the left allows for rotation 
-						and movement along the surface, but a normal force in 
-						the y direction prevents motion vertically. The pin 
-						joint in the center allows for rotation, but normal 
-						forces in the x and y directions prevent motion in all 
-						directions. The fixed connection on the right has a 
-						normal forces preventing motion in all directions and a 
-						reaction moment preventing rotation.</figcaption>
-					</figure>
-				</ul>
-				</li>
-				<li><strong>Friction Forces:</strong> Objects in direct contact with the 
-				body can also exert friction forces on the body, which will resist 
-				the two bodies sliding against one another. These forces will 
-				always be perpendicular to the surfaces in contact. Friction is 
-				the subject of an entire chapter in this book, but for simple 
-				scenarios we usually assume rough or smooth surfaces.<ul>
-					<li>For smooth surfaces we assume that there is no friction 
-					force.</li>
-					<li>For rough surfaces we assume that the bodies will not 
-					slide relative to one another no matter what. In this case 
-					the friction force is always just large enough to prevent 
-					this sliding.</li>
-				<figure class="center">
-						<img alt="Friction Forces" height="326" src="images/friction.png" width="450">
-						<figcaption>For a smooth surface we assume only a normal 
-						force perpendicular to the surface. For a rough surface 
-						we assume normal and friction forces are present.</figcaption>
-				</figure>
-				</ul>
-				</li>
-				<li><strong>Tension in Cables:</strong> Cables, wires or ropes attached to the body will exert a tension force on the body in the direction of the cable. These forces will always pull on the body, as ropes, cables and other flexible tethers cannot be used for pushing.</li>
-				<figure class="center">
-						<img alt="Tension in Cables" height="164" src="images/tension.png" width="450">
-						<figcaption>The tension force in cables always acts along the direction of the cable and will always be a pulling force.</figcaption>
-				</figure>
-				<li>The above forces are the most common, but other forces such 
-				as pressure from fluids, spring forces and magnetic forces may 
-				exist and may act on the body.</li>
-			</ul>
-		</li>
-		<li>Once the forces are identified and added to the free body diagram, 
-		the last step is to label any key dimensions and angles on the diagram.</li>
-		</ol>
-
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="146" src="http://www.youtube.com/embed/InC7TWSzyr4" frameborder="0" allowfullscreen></iframe>	
-		</div>
-			
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>The drawing below shows two boxes sitting on a table. Draw a free 
-			body diagram of box A and box B.</p>
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/RMVa9kioALs" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/FreeBodyDiagrams_WorkedExample1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>Two equally sized barrels are being transported in a hand truck 
-			as shown below. Draw a free body diagram of each of the two barrels.</p>
-			<img alt="Problem 2 Diagram" src="images/P2.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/1a9gjFOIpK8" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/FreeBodyDiagrams_WorkedExample2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 3:</h3>
-			<p>The car shown below is moving and then slams on the brakes 
-			locking up all four wheels. The distance between the two wheels is 8 
-			feet and the center of mass is 3 feet behind and 2.5 feet above the 
-			point of contact between the front wheel and the ground. Draw a free 
-			body diagram of the car as it comes to a stop.</p>
-			<img alt="Problem 3 Diagram" src="images/P3.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/GiB3_fSlJBA" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/FreeBodyDiagrams_WorkedExample3" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 4:</h3>
-			<p>A 600 lb load is supported by a 5 meter long, 100 lb cantilever 
-			beam. Assume the beam is firmly anchored to the wall. Draw a free 
-			body diagram of the beam.</p>
-			<img alt="Problem 4 Diagram" src="images/P4.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/8xSKVzT8c_s" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/FreeBodyDiagrams_WorkedExample4.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 5:</h3>
-			<p>The main arm of a crane has a mass of 400kg (assume the center of 
-			mass is at the midpoint of the arm) and supports a 200 kg load and a 
-			600 kg counterweight. The arm is connected to the vertical support 
-			via a pin joint and two flexible cables. Draw a free body diagram of 
-			the arm.</p>
-			<img alt="Problem 5 Diagram" src="images/P5.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/0V7ULRnnhmA" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/FreeBodyDiagrams_WorkedExample5.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		<div id="practiceproblems">
-	  <h2>Practice Problems:</h2>
-	  <div class="problem">
-			<h3>Practice Problem 1:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="1300"
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Free Body Diagrams</h1>
+    <p>A free body diagram is a tool used to solve engineering mechanics problems. As the name suggests, the purpose of the diagram is to "free" the body from all other objects and surfaces around it so that it can be studied in isolation. We will also draw in any forces or moments acting on the body, including those forces and moments exerted by the surrounding bodies and surfaces that we removed.</p>
+    <p>The diagram below shows a ladder supporting a person and the free body diagram of that ladder. As you can see, the ladder is separated from all other objects and all forces acting on the ladder are drawn in with key dimensions and angles shown.</p>
+    <figure class="center"> <img alt="Free Body Diagram" height="428" src="images/freebodydiagram.png" width="600">
+      <figcaption>A ladder with a man standing on it is shown on the left. Assuming friction only at the base, a free body diagram of the ladder is shown on the right.</figcaption>
+    </figure>
+    <h2>Constructing the Free Body Diagram</h2>
+    <p>The first step in solving most mechanics problems will be to construct a free body diagram. This simplified diagram will allow us to more easily write out the equilibrium equations for statics or strengths of materials problems, or the equations of motion for dynamics problems.</p>
+    <p>To construct the diagram we will use the following process.</p>
+    <ol>
+      <li>First draw the body being analyzed, separated from all other surrounding bodies and surfaces. Pay close attention to the boundary, identifying what is part of the body, and what is part of the surroundings.</li>
+      <li>Second, draw in all <strong>external</strong> forces and moments acting directly on the body. Do not include any forces or moments that do not directly act on the body being analyzed. Do not include any forces that are <strong>internal</strong> to the body being analyzed. Some common types of forces seen in mechanics problems are:
+        <ul>
+          <li><strong>Gravitational Forces:</strong> Unless otherwise noted, the mass of an object will result in a gravitational weight force applied to that body. This weight is usually given in pounds in the English system, and is modeled as 9.81 (g) times the mass of the body in kilograms for the metric system (resulting in a weight in Newtons). This force will always point down towards the center of the earth and act on the center of mass of the body. </li>
+          <figure class="center"> <img alt="Gravitational Forces" height="173" src="images/gravityforces.png" width="450">
+            <figcaption>Gravitational forces always act downward on the center of mass.</figcaption>
+          </figure>
+          <li><strong>Normal Forces (or Reaction Forces): </strong>Every object in direct contact with the body will exert a normal force on that body which prevents the two objects from occupying the same space at the same time. Note that only objects in direct contact can exert normal forces on the body.
+            <ul>
+              <li>An object in contact with another object or surface will experience a normal force that is perpendicular (hence normal) to the surfaces in contact.</li>
+              <figure class="center"> <img alt="Normal Forces" height="248" src="images/normal1.png" width="450">
+                <figcaption>Normal forces always act perpendicular to the surfaces in contact. The barrel in the hand truck shown on the left has a normal force at each contact point.</figcaption>
+              </figure>
+              <li>Joints or connections between bodies can also cause reaction forces or moments, and we will have one force or moment for each type of motion or rotation the connection prevents. </li>
+              <figure class="center"> <img alt="Reaction forces at Joints" height="382" src="images/normal2.png" width="450">
+                <figcaption>The roller on the left allows for rotation and movement along the surface, but a normal force in the y direction prevents motion vertically. The pin joint in the center allows for rotation, but normal forces in the x and y directions prevent motion in all directions. The fixed connection on the right has a normal forces preventing motion in all directions and a reaction moment preventing rotation.</figcaption>
+              </figure>
+            </ul>
+          </li>
+          <li><strong>Friction Forces:</strong> Objects in direct contact with the body can also exert friction forces on the body, which will resist the two bodies sliding against one another. These forces will always be perpendicular to the surfaces in contact. Friction is the subject of an entire chapter in this book, but for simple scenarios we usually assume rough or smooth surfaces.
+            <ul>
+              <li>For smooth surfaces we assume that there is no friction force.</li>
+              <li>For rough surfaces we assume that the bodies will not slide relative to one another no matter what. In this case the friction force is always just large enough to prevent this sliding.</li>
+              <figure class="center"> <img alt="Friction Forces" height="326" src="images/friction.png" width="450">
+                <figcaption>For a smooth surface we assume only a normal force perpendicular to the surface. For a rough surface we assume normal and friction forces are present.</figcaption>
+              </figure>
+            </ul>
+          </li>
+          <li><strong>Tension in Cables:</strong> Cables, wires or ropes attached to the body will exert a tension force on the body in the direction of the cable. These forces will always pull on the body, as ropes, cables and other flexible tethers cannot be used for pushing.</li>
+          <figure class="center"> <img alt="Tension in Cables" height="164" src="images/tension.png" width="450">
+            <figcaption>The tension force in cables always acts along the direction of the cable and will always be a pulling force.</figcaption>
+          </figure>
+          <li>The above forces are the most common, but other forces such as pressure from fluids, spring forces and magnetic forces may exist and may act on the body.</li>
+        </ul>
+      </li>
+      <li>Once the forces are identified and added to the free body diagram, the last step is to label any key dimensions and angles on the diagram.</li>
+    </ol>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="146" src="http://www.youtube.com/embed/InC7TWSzyr4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The drawing below shows two boxes sitting on a table. Draw a free body diagram of box A and box B.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/RMVa9kioALs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Two equally sized barrels are being transported in a hand truck as shown below. Draw a free body diagram of each of the two barrels.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/1a9gjFOIpK8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>The car shown below is moving and then slams on the brakes locking up all four wheels. The distance between the two wheels is 8 feet and the center of mass is 3 feet behind and 2.5 feet above the point of contact between the front wheel and the ground. Draw a free body diagram of the car as it comes to a stop.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/GiB3_fSlJBA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A 600 lb load is supported by a 5 meter long, 100 lb cantilever beam. Assume the beam is firmly anchored to the wall. Draw a free body diagram of the beam.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/8xSKVzT8c_s" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>The main arm of a crane has a mass of 400kg (assume the center of mass is at the midpoint of the arm) and supports a 200 kg load and a 600 kg counterweight. The arm is connected to the vertical support via a pin joint and two flexible cables. Draw a free body diagram of the arm.</p>
+        <img alt="Problem 5 Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/0V7ULRnnhmA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="1300"
 				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
    				 &answersSubmitted=0&
    				 &sourceFilePath=Library/UBC/MECH/MECH2/set220PracticeReviewQuiz/PracticeReviewQuiz20.pg&
@@ -282,14 +175,13 @@
  			   &displayMode=MathJax&
  			   &problemIdentifierPrefix=102&
  			   &language=en&
-  			&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>	
-			<div class="problem">
-			<h3>Practice Problem 2:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="1500"
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 2:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="1500"
 				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
    				 &answersSubmitted=0&
    				 &sourceFilePath=Library/UBC/MECH/MECH2/set220PracticeReviewQuiz/PracticeReviewQuiz19.pg&
@@ -301,15 +193,12 @@
  			   &displayMode=MathJax&
  			   &problemIdentifierPrefix=102&
  			   &language=en&
-  			&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>	
-		</div>
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>
