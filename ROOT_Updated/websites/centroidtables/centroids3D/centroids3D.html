@@ -1,35 +1,29 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - 3D Centroid and Mass Moment of Intertia Table</title>
+<title>Mechanics Map - 3D Centroid and Mass Moment of Intertia Table</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
-	<style>
-		table {
-    		border-collapse: collapse;
-    		margin-left:auto; 
-    		margin-right:auto;
-		}
-	
-		table, th, td{
-			border: 2px solid black;
-		}
-		
-		th, td{
-			text-align: center;
-			vertical-align: center;
-			padding: 15px;
-		}
-		
-		td img { 
-			display: inline; 
-		}
-						
-	</style>
-	
+<style>
+table {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+table, th, td {
+	border: 2px solid black;
+}
+th, td {
+	text-align: center;
+	vertical-align: center;
+	padding: 15px;
+}
+td img {
+	display: inline;
+}
+</style>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -43,89 +37,75 @@
   })();
 
 </script>
-		
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent" style="width:1000px">
-		<h1>Centroids and Mass Moments of Inertia for Homogeneous 3D Volumes</h1>
-		
-		<br>
-		
-		<table style="width:950px">
-			<tr>
-				<td style="width:550px"><strong>Shape with Volume and Centroid Location Shown</strong></td>
-				<td style="width:350px"><strong>Mass Moments of Inertia</strong></td>
-			</tr>
-			<tr>
-				<td style="text-align: center;"><img alt="Centroid of a Slender Rod" height="400" src="images/slenderrod.png" width="236"></td>
-				<td><img alt="Mass Moment of Interia of a Slender Rod" height="204" src="images/slenderrodeq.png" width="316"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Flat Rectangular Plate" height="255" src="images/flatplate.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Flat Rectangular Plate" height="305" src="images/flatplateeq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Flat Circular Plate" height="302" src="images/flatdisc.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Flat Circular Plate" height="219" src="images/flatdisceq.png" width="275"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Thin Ring" height="306" src="images/ring.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Thin Ring" height="197" src="images/ringeq.png" width="284"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Rectangular Prism" height="451" src="images/rectprism.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Rectangular Prism" height="292" src="images/rectprismeq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Cylinder" height="591" src="images/cylinder.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Cylinder" height="169" src="images/cylindereq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Cylindrical Shell" height="553" src="images/thincylshell.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Cylindrical Shell" height="151" src="images/thincylshelleq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Half Cylinder" height="607" src="images/halfcylinder.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Half Cylinder" height="284" src="images/halfcylindereq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Sphere" height="599" src="images/sphere.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Sphere" height="106" src="images/sphereeq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Spherical Shell" height="524" src="images/sphereshell.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Spherical Shell" height="101" src="images/sphereshelleq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Hemisphere" height="492" src="images/hemisphere.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Hemisphere" height="198" src="images/hemisphereeq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Hemispherical Shell" height="419" src="images/hemisphereshell.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Hemispherical Shell" height="203" src="images/hemisphereshelleq.png" width="320"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Cone" height="526" src="images/cone.png" width="500"></td>
-				<td><img alt="Mass Moment of Interia for a Cone" height="204" src="images/coneeq.png" width="320"></td>
-			</tr>
-			
-		</table>
-
-	</div>
-	
-	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has 
-		licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent" style="width:1000px">
+    <h1>Centroids and Mass Moments of Inertia for Homogeneous 3D Volumes</h1>
+    <br>
+    <table style="width:950px">
+      <tr>
+        <td style="width:550px"><strong>Shape with Volume and Centroid Location Shown</strong></td>
+        <td style="width:350px"><strong>Mass Moments of Inertia</strong></td>
+      </tr>
+      <tr>
+        <td style="text-align: center;"><img alt="Centroid of a Slender Rod" height="400" src="images/slenderrod.png" width="236"></td>
+        <td><img alt="Mass Moment of Interia of a Slender Rod" height="204" src="images/slenderrodeq.png" width="316"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Flat Rectangular Plate" height="255" src="images/flatplate.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Flat Rectangular Plate" height="305" src="images/flatplateeq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Flat Circular Plate" height="302" src="images/flatdisc.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Flat Circular Plate" height="219" src="images/flatdisceq.png" width="275"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Thin Ring" height="306" src="images/ring.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Thin Ring" height="197" src="images/ringeq.png" width="284"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Rectangular Prism" height="451" src="images/rectprism.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Rectangular Prism" height="292" src="images/rectprismeq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Cylinder" height="591" src="images/cylinder.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Cylinder" height="169" src="images/cylindereq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Cylindrical Shell" height="553" src="images/thincylshell.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Cylindrical Shell" height="151" src="images/thincylshelleq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Half Cylinder" height="607" src="images/halfcylinder.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Half Cylinder" height="284" src="images/halfcylindereq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Sphere" height="599" src="images/sphere.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Sphere" height="106" src="images/sphereeq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Spherical Shell" height="524" src="images/sphereshell.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Spherical Shell" height="101" src="images/sphereshelleq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Hemisphere" height="492" src="images/hemisphere.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Hemisphere" height="198" src="images/hemisphereeq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Hemispherical Shell" height="419" src="images/hemisphereshell.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Hemispherical Shell" height="203" src="images/hemisphereshelleq.png" width="320"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Cone" height="526" src="images/cone.png" width="500"></td>
+        <td><img alt="Mass Moment of Interia for a Cone" height="204" src="images/coneeq.png" width="320"></td>
+      </tr>
+    </table>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

@@ -1,35 +1,29 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - 2D Centroid and Moment of Interia Table</title>
+<title>Mechanics Map - 2D Centroid and Moment of Interia Table</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
-	<style>
-		table {
-    		border-collapse: collapse;
-    		margin-left:auto; 
-    		margin-right:auto;
-		}
-	
-		table, th, td{
-			border: 2px solid black;
-		}
-		
-		th, td{
-			text-align: center;
-			vertical-align: center;
-			padding: 15px;
-		}
-		
-		td img { 
-			display: inline; 
-		}
-
-	</style>
-	
+<style>
+table {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+table, th, td {
+	border: 2px solid black;
+}
+th, td {
+	text-align: center;
+	vertical-align: center;
+	padding: 15px;
+}
+td img {
+	display: inline;
+}
+</style>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -43,77 +37,60 @@
   })();
 
 </script>
-	
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent" style="width:1000px">
-		<h1>Centroids and Area Moments of Inertia for 2D Shapes</h1>
-		
-		<br>
-		
-		<table style="width:950px">
-			<tr>
-				<td style="width:550px"><strong>Shape with Area and Centroid Location Shown</strong></td>
-				<td style="width:200px"><strong>Rectangular Area Moments of Inertia</strong></td>
-				<td style="width:200px"><strong>Polar Area Moments of Inertia</strong></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Rectangle" height="414" src="images/rectangle.png" width="500"></td>
-				<td><img alt="Rectangluar Area Moment of Inertia for a Rectangle" height="213" src="images/rectanglerecteq.png" width="180"></td>
-				<td><img alt="Polar Area Moment of Interia for a Rectangle" height="80" src="images/rectangleploareq.png" width="180"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Right Triangle" height="405" src="images/righttriangle.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Interia Right Triangle" height="311" src="images/righttrianglerecteq.png" width="180"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Non-Right Triangle" height="405" src="images/triangle.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Inertia Triangle" height="187" src="images/trianglerecteq.png" width="180"></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Circle" height="493" src="images/circle.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Inertia Circle" height="204" src="images/circlerecteq.png" width="180"></td>
-				<td><img alt="Polar Area Moment of Inertia Circle" height="110" src="images/circlepolareq.png" width="180"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Circular Annulus" height="503" src="images/annulus.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Inertia Annulus" height="141" src="images/annulusrecteq.png" width="180"></td>
-				<td><img alt="Polar Area Moment of Inertia Annulus" height="79" src="images/annuluspolareq.png" width="180"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Semicircle" height="395" src="images/semicircle.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Inertia Semicircle" height="206" src="images/semicirclerecteq.png" width="180"></td>
-				<td><img alt="Polar Area Moment of Inertia Semicircle" height="112" src="images/semicirclepolareq.png" width="180"></td>
-			</tr>
-			<tr>
-				<td><img alt="Centroid of a Ellipse" height="397" src="images/ellipse.png" width="500"></td>
-				<td><img alt="Rectangular Area Moment of Inertia Ellipse" height="147" src="images/ellipserecteq.png" width="180"></td>
-				<td></td>
-			</tr>
-
-
-
-
-
-		</table>
-
-	</div>
-	
-	
-	<div id="footer">
-		<img alt="Creative Commons License" height="31" src="../../icons/cc_icon.png" width="88">
-		<p>Author: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a> has 
-		licensed this work under a <a 										href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</p>
-	</div>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent" style="width:1000px">
+    <h1>Centroids and Area Moments of Inertia for 2D Shapes</h1>
+    <br>
+    <table style="width:950px">
+      <tr>
+        <td style="width:550px"><strong>Shape with Area and Centroid Location Shown</strong></td>
+        <td style="width:200px"><strong>Rectangular Area Moments of Inertia</strong></td>
+        <td style="width:200px"><strong>Polar Area Moments of Inertia</strong></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Rectangle" height="414" src="images/rectangle.png" width="500"></td>
+        <td><img alt="Rectangluar Area Moment of Inertia for a Rectangle" height="213" src="images/rectanglerecteq.png" width="180"></td>
+        <td><img alt="Polar Area Moment of Interia for a Rectangle" height="80" src="images/rectangleploareq.png" width="180"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Right Triangle" height="405" src="images/righttriangle.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Interia Right Triangle" height="311" src="images/righttrianglerecteq.png" width="180"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Non-Right Triangle" height="405" src="images/triangle.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Inertia Triangle" height="187" src="images/trianglerecteq.png" width="180"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Circle" height="493" src="images/circle.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Inertia Circle" height="204" src="images/circlerecteq.png" width="180"></td>
+        <td><img alt="Polar Area Moment of Inertia Circle" height="110" src="images/circlepolareq.png" width="180"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Circular Annulus" height="503" src="images/annulus.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Inertia Annulus" height="141" src="images/annulusrecteq.png" width="180"></td>
+        <td><img alt="Polar Area Moment of Inertia Annulus" height="79" src="images/annuluspolareq.png" width="180"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Semicircle" height="395" src="images/semicircle.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Inertia Semicircle" height="206" src="images/semicirclerecteq.png" width="180"></td>
+        <td><img alt="Polar Area Moment of Inertia Semicircle" height="112" src="images/semicirclepolareq.png" width="180"></td>
+      </tr>
+      <tr>
+        <td><img alt="Centroid of a Ellipse" height="397" src="images/ellipse.png" width="500"></td>
+        <td><img alt="Rectangular Area Moment of Inertia Ellipse" height="147" src="images/ellipserecteq.png" width="180"></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+ 
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

@@ -72,7 +72,7 @@ function displayResources(){
 
 function displayFooter(){
 	document.write('<div id="footer">');
-	document.write('<table>');
+	document.write('<table style="border:0px">');
 	document.write('<tr>');
 	document.write('<td style="width:200px"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></td>');
 	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="http://adaptivemap.ma.psu.edu/icons/NSF_Logo.jpg" width="100"></td>');
