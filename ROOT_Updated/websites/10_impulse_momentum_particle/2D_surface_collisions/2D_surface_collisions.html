@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Particle Collisions with a Surface</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Particle Collisions with a Surface</h1>
+    <p>Here we will use the term <strong>surface collision</strong> to describe any instance where a body impacts and rebounds off a solid and unmoving surface. A clear example of a surface collision is a basketball bouncing off a hard floor. The basketball will have some velocity before the collision and some second velocity after the collision, with the floor exerting an impulsive force during the collision that causes this change in velocity.</p>
+    <p>To analyze this collision, we will first need to set up a normal direction (perpendicular to the surface) and a tangential direction (parallel to the surface) for our problem, and break our velocities down into components in these directions. Assuming minimal friction during the impact, we will have an impulsive impact force acting entirely in the normal direction. This fact will form the basis for our analysis.</p>
+    <figure class="center"><img src="images/basketball.png" width="548" height="393" alt="A basketball bouncing off a hard floor"/>
+      <figcaption>In a surface collision, the impulsive collision force will act in the normal direction. Because there is no force in the tangential direction, the velocity in the tangential direction will not change.</figcaption>
+    </figure>
+    <p>Because the impact force acts entirely in the normal direction, there will be no other significant force to change the momentum of the body in the tangential direction. Assuming the mass remains constant for the body, this means that the <strong>velocity must remain constant in the tangential direction</strong> because of the conservation of momentum.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[v_{it}=v_{ft}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>To relate the velocities in the normal direction before and after the collision, we will use the coefficient of restitution discussed on the previous page. Because the impact force is entirely in the normal direction, the coefficient of restitution relationship also specifically applies to the velocities in the normal direction.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[e=-\frac{v_{ni}}{v_{nf}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This relationship can be applied to elastic collisions (where <em>e</em> would be equal to 1), semi-elastic collisions (where <em>e</em> would be some number between 0 and 1) and in-elastic collisions (where <em>e</em> would be equal to 0).</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A basketball with an initial speed of 3 meters per second impacts a hard floor at the sixty degree angle as shown below. If the collision has a coefficient of restitution of .8, what is the expected speed and angle of the basketball after the impact?</p>
+        <img src="images/P1.png" width="487" height="313" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A bounce test is used to sort ripe cranberries from unripe cranberries. In this test cranberries are dropped vertically onto a steel plate sitting at a 45 degree angle. After the impact, a cranberry is observed to bounce off at an angle of 20 degrees below horizontal. Based on this information, what is the coefficient of restitution for the cranberry?</p>
+        <img src="images/P2.png" width="356" height="384" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

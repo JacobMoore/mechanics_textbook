@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Rigid Body Surface Collisions</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Rigid Body Collisions with a Surface</h1>
+    <p>In instances where a moving rigid body impacts a solid and immovable surface, the resulting impact can seem chaotic. However, we can still use the ideas of impulse and momentum to predict this impact behavior.</p>
+    <p>Just as it was with particles, an important first step in solving rigid body impact with a surface problems is to identify the normal and tangential directions. The normal direction will be perpendicular to the surface being impacted while the tangential direction will be parallel to the surface being impacted. Also important for rigid body impact is to identify both the center of mass for the body and the point of impact between the body and the surface.</p>
+    <figure class="center"><img src="images/droppedwrench.png" width="390" height="293" alt="A wrench dropped on a rigid floor"/>
+      <figcaption>Dropping a wrench on a concrete floor is a good example of rigid body impact with a solid surface. The first step in solving these problems is to identify the normal and tangential directions, which will be perpendicular and parallel to the surface respectively. Also important is identifying the center of mass (C) and point of impact (A).</figcaption>
+    </figure>
+    <p>To predict the linear velocities after impact in the n and t directions, as well as the angular velocity after the impact (a total of three unknowns) we will need three equations. These equations will come in the form of the conservation of momentum in the t direction, as well as two equations based on the coefficient of restitution for the velocity in the n direction and the angular velocity after the impact.</p>
+    <p>For momentum, we will notice that the normal forces during impact will always be in the normal direction. Assuming negligible friction forces (which would be in the tangential direction) we will have no change in momentum in the tangential direction and therefore <strong>no change in velocity in the tangential direction for the center of mass of the body</strong>. This gives us the first equation we can use.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[v_{tCf}= v_{tCi}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Next examining the coefficient of restitution will give us another equation. Specifically, the coefficient of restitution relates the <strong>velocities before an after the collision in the normal direction at the point of impact</strong>.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[e=-\frac{v_{Anf}}{v_{Ani}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the collision is elastic we would also conserve the kinetic energy of the body, giving us our third equation. More generally however the coefficient of restitution can be used to quantify the amount of energy lost on the collision, with more elastic collisions conserving a higher percentage of energy and more inelastic equations conserving less kinetic energy. The equation below can be used for any elastic or semi elastic collision with a surface. Using the third equation below, we simply set e equal to one for elastic collisions or e equal to the coefficient of restitution for semi-elastic collisions.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[e^2*KE_{f}=KE_{i}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Between the three equations above and whatever relevant kinematics relationships are necessary we should be able to solve for up to three unknowns, allowing us to completely predict the velocities after in impact assuming we know the pre-impact velocities and the coefficient of restitution for the impact itself.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>An 80 centimeter long 1 kilogram metal bar falling at 2 meters per second strikes the edge of a table as shown below. Assuming a coefficient of restitution of .9, what is the expected velocity and angular velocity of the bar after impact?</p>
+        <img src="images/P1.png" width="500" height="385" alt="Problem 1 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>An 80 centimeter long 1 kilogram metal bar is falling without rotating at a 45 degree angle onto a frictionless rigid surface. Assuming the initial velocity before the impact is 1 meter per second and a coefficient of restitution of .7, what is the expected velocity and angular velocity of the bar after impact?</p>
+        <img src="images/P2.png" width="403" height="455" alt="Problem 2 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
