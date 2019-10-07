@@ -47,11 +47,11 @@
       <tbody>
         <tr>
           <th>Velocity:</th>
-          <td>\[\overrightarrow{v}_{C/A}=\overrightarrow{v}_{B/A}+\overrightarrow{v}_{C/B}\]</td>
+          <td>\[\vec{v}_{C/A}=\vec{v}_{B/A}+\vec{v}_{C/B}\]</td>
         </tr>
         <tr>
           <th>Acceleration:</th>
-          <td>\[\overrightarrow{a}_{C/A}=\overrightarrow{a}_{B/A}+\overrightarrow{a}_{C/B}\]</td>
+          <td>\[\vec{a}_{C/A}=\vec{a}_{B/A}+\vec{a}_{C/B}\]</td>
         </tr>
       </tbody>
     </table>
@@ -99,6 +99,78 @@
     </table>
 	<p>If we use the appropriate set of equations for the type of motion in each step and plug in known quantities for angular velocities, angular accelerations, and rates or extension for each piece, we can add these pieces to our relative motion analysis equation from earlier. Again these are vectors so be sure to indicate both the magnitudes and directions when we put them into the equation. </p>
 	<p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
+	  
+	  <h2>Alternate notation for rigid body relative motion</h2>
+	  <p>In some cases, we want to analyze multiple points on the same or several rigid bodies.  Another notation used for this is:</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Position:</th>
+          <td>\[\vec{r_B} = \vec{r_A} + \vec{r_{B/A}}\]</td>
+        </tr>
+		  <tr>
+          <th>Velocity:</th>
+          <td>\[\vec{v_B} = \vec{v_A} + \vec{v_{B/A}} = \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[\vec{a_B} = \vec{a_A} + \vec{a_{B/A}} = \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} + \vec{\omega} \times (\vec{\omega} \times \vec{r_{B/A}}) \]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>In this notation, <em>A</em> and <em>B</em> are two points on the same rigid body. When we use only one subscript, that indicates the position/velocity/acceleration of that point with respect to the fixed coordinate system.  Because the body is rigid, the two points will not change the distance between them, but the position vector between them can change orientation (which is where the relative velocity between the two points comes from). Omega is the angular velocity of that rigid body (analogous to theta dot) and alpha is the angular acceleration of that rigid body (analogous to theta double dot). </p>
+	  <p>For planar motion, where the angular velocity vector (out of plane) is always perpendicular to the position vector (in the plane), the acceleration can be simplified to: </p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[\vec{a_B} = \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} - \omega^2 \vec{r_{B/A}} \]</td>
+        </tr>
+      </tbody>
+    </table>
+	  
+	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+      <figcaption>As previously, this robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
+    </figure>
+	  <p>If we consider the same robotic arm, we can translate our previous notation to the new rigid body notation: </p>
+	  <table class="equation">
+      <tbody>
+		   <tr>
+          <td>\[\dot{\theta} \hat{k} = \vec{\omega_{AB}} \]</td>
+        </tr>
+		   <tr>
+          <td>\[\dot{\phi} \hat{k} = \vec{\omega_{BC}} \]</td>
+        </tr>
+		  		   <tr>
+          <td>\[\ddot{\theta} \hat{k} = \vec{\alpha_{AB}} \]</td>
+        </tr>
+		   <tr>
+          <td>\[\ddot{\phi} \hat{k} = \vec{\alpha_{BC}} \]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>All vectors will be defined with respect to the <em>x</em> and <em>y</em> coordinates in the coordinate system shown, rather than the radial and theta directions as above.  </p>  
+	<p>If we want to find the velocity and acceleration of the end point, C, knowing the angular velocities and accelerations, we will find the following relationships: </p>  
+	<table class="equation">
+      <tbody>
+		  <tr>
+          <th>Velocity at point B:</th>
+          <td>\[\vec{v_B} = \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}}\]</td>
+			 </tr>
+		  <tr>
+          <th>Velocity at point C:</th>
+		<td>\[\vec{v_C} = \vec{v_B} + \vec{\omega} \times \vec{r_{C/B}} = \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}} + \vec{\omega} \times \vec{r_{C/B}}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration at point B:</th>
+          <td>\[\vec{a_B} = \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} - \omega^2 \vec{r_{B/A}}  \]</td>
+		        </tr>
+		  <tr>
+          <th>Acceleration at point C:</th>
+			<td>\[\vec{a_C} = \vec{a_B} + \vec{\alpha} \times \vec{r_{C/B}} - \omega^2 \vec{r_{C/B}} =  \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} - \omega^2 \vec{r_{B/A}}  + \vec{\alpha} \times \vec{r_{C/B}} - \omega^2 \vec{r_{C/B}} \]</td>
+        </tr>
+      </tbody>
+	  
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
