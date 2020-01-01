@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - Particle Collisions with a Surface</title>
+<title>Mechanics Map - Surface Collisions and the Coefficient of Restitution</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
@@ -29,7 +29,7 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Particle Collisions with a Surface</h1>
+    <h1>Surface Collisions and the Coefficient of Restitution</h1>
     <p>Here we will use the term <strong>surface collision</strong> to describe any instance where a body impacts and rebounds off a solid and unmoving surface. A clear example of a surface collision is a basketball bouncing off a hard floor. The basketball will have some velocity before the collision and some second velocity after the collision, with the floor exerting an impulsive force during the collision that causes this change in velocity.</p>
     <p>To analyze this collision, we will first need to set up a normal direction (perpendicular to the surface) and a tangential direction (parallel to the surface) for our problem, and break our velocities down into components in these directions. Assuming minimal friction during the impact, we will have an impulsive impact force acting entirely in the normal direction. This fact will form the basis for our analysis.</p>
     <figure class="center"><img src="images/basketball.png" width="548" height="393" alt="A basketball bouncing off a hard floor"/>
@@ -43,11 +43,19 @@
         </tr>
       </tbody>
     </table>
-    <p>To relate the velocities in the normal direction before and after the collision, we will use the coefficient of restitution discussed on the previous page. Because the impact force is entirely in the normal direction, the coefficient of restitution relationship also specifically applies to the velocities in the normal direction.</p>
+    <p>To relate the velocities in the normal direction before and after the collision, we will use something called the <strong>coefficient of restitution</strong>. The coefficient of restitution is number between 0 and 1 that measures the "bounciness" of the body and the surface in the collision. Specifically, for a single body being bounced perpendicular off of a surface, the coefficient of restitution is defined as the speed of the body immediately after bouncing off a surface divided by the speed immediately before bouncing off the surface. If we use velocities in place of speed, we will put a negative sign in our equation because the bounce causes a change in direction for the body.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[e=-\frac{v_{f}}{v_{i}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>In instances where the body is being bounced off the surface at an angle, the impact force is entirely in the normal direction and the coefficient of restitution relationship specifically applies to the components of the velocities in the normal direction.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[e=-\frac{v_{ni}}{v_{nf}}\]</td>
+          <td>\[e=-\frac{v_{nf}}{v_{ni}}\]</td>
         </tr>
       </tbody>
     </table>
@@ -56,7 +64,7 @@
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
-      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/MaY6YEWhwJc" frameborder="0" allowfullscreen></iframe>
     </div>
     <script language="javascript">displayResources();</script> 
   </div>
