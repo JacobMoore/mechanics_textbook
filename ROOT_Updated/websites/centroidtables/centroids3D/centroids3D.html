@@ -13,13 +13,11 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 }
-table, th, td {
-	border: 2px solid black;
-}
-th, td {
+#maintable td, maintable th {
 	text-align: center;
 	vertical-align: center;
 	padding: 15px;
+	border: 2px solid black;
 }
 td img {
 	display: inline;
@@ -47,7 +45,7 @@ td img {
   <div id="maincontent" style="width:1000px">
     <h1>Center of Mass and Mass Moments of Inertia for Homogeneous Bodies</h1>
     <br>
-    <table style="width:950px">
+    <table id="maintable" style="width:950px">
       <tr>
         <td style="width:550px"><strong>Shape with Volume and Center of Mass Location Shown</strong></td>
         <td style="width:350px"><strong>Mass Moments of Inertia</strong></td>

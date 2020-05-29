@@ -12,14 +12,12 @@ table {
 	border-collapse: collapse;
 	margin-left: auto;
 	margin-right: auto;
-}
-table, th, td {
-	border: 2px solid black;
-}
-th, td {
+}	
+#maintable td, maintable th {
 	text-align: center;
 	vertical-align: center;
 	padding: 15px;
+	border: 2px solid black;
 }
 td img {
 	display: inline;
@@ -47,7 +45,7 @@ td img {
   <div id="maincontent" style="width:1000px">
     <h1>Centroids and Area Moments of Inertia for 2D Shapes</h1>
     <br>
-    <table style="width:950px">
+    <table id="maintable" style="width:950px">
       <tr>
         <td style="width:550px"><strong>Shape with Area and Centroid Location Shown</strong></td>
         <td style="width:200px"><strong>Rectangular Area Moments of Inertia</strong></td>
@@ -59,8 +57,8 @@ td img {
 			<img alt="Centroid of a Rectangle" height="307" src="images/rectangle.png" width="400">
 		  	\[Area=bh\]
 		</td>
-        <td>\[I_{x}=\frac{1}{12}bh^{3}\] \[I_{y}=\frac{1}{12}b^{3}h\]</td>
-        <td>\[J_{z}=\frac{1}{12}bh(b^{2}+h^{2})\]</td>
+        <td border: 2px>\[I_{x}=\frac{1}{12}bh^{3}\] \[I_{y}=\frac{1}{12}b^{3}h\]</td>
+        <td >\[J_{z}=\frac{1}{12}bh(b^{2}+h^{2})\]</td>
       </tr>
       <tr>
         <td>
