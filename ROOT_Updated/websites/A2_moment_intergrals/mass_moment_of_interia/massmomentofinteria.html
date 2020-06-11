@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - The Mass Moment of Interia</title>
+<title>Mechanics Map - The Mass Moment of Inertia</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,194 +20,143 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>The Mass Moment of Inertia</h1>
-		
-		<p>The Second Moment Integral, often just called the <strong>Moment of 
-		Inertia</strong>, can be useful in engineering mechanics calculations 
-		for a number of reasons. </p>
-		
-		<p>For example:</p>
-		
-		<ul>
-			<li>The <strong>Second Rectangular Area Moment of Inertia</strong> 
-			of a beam's cross section represents that beam's resistance to 
-			bending.</li>
-			<li>The <strong>Second Polar Area Moment of Inertia</strong> of a 
-			shaft's cross section represents that shaft's resistance to torsion.</li>
-			<li>The <strong>Second Mass Moment of Inertia</strong> represents a 
-			body's resistance to angular accelerations.</li>
-		</ul>
-				
-		<p>Each of these three types of moments of inertia can be calculated via
-		<strong>integration</strong> or via <strong>composite parts</strong> and 
-		the<strong> parallel axis theorem</strong>. On this page we are going to 
-		focus on calculating the mass moment of inertia via integration.</p>
-		
-		<h2>Moments, Angular Accelerations, and the Mass Moment of Inertia</h2>
-<figure class="center">		
-		<img alt="Newton's Second Law" height="276" src="images/newtonssecondlaw.png" width="500">
-		<figcaption>The mass moment of inertia relates the moment applied to 
-			a body to that body's angular acceleration.</figcaption>
-		</figure>
-		
-		<p>The mass moment of inertia is a moment integral, specifically the 
-		second, 3D, polar, mass moment integral. To see why this relates moments 
-		and angular accelerations, we start by examining a point mass on the end 
-		of a massless stick as shown below. Imagine we want to rotate the stick 
-		about the left end by applying a moment there. We want to relate the 
-		moment exerted to the angular acceleration of the stick about this 
-		point.</p>
-		
-		<figure class="center">		
-			<img alt="Moments and Angular Acceleration for a Mass on a stick" height="226" src="images/massonstick.png" width="600">
-			<figcaption>Starting with the traditional form of Newton's Second 
-			Law, we can substitute in values to find the relationship between 
-			the moment and angular acceleration for a point mass on the end of a 
-			massless stick.</figcaption>
-		</figure>
-		
-		<p>To relate these two variables, we start with the traditional form of 
-		Newton's Second Law, stating that the force exerted on the point mass by 
-		the stick will be equal to the mass times the acceleration of the point 
-		mass (F = m a). Next we substitute some values. The force due to the 
-		moment will be the magnitude of the moment over the moment arm (d), and 
-		the acceleration of a point around a fixed axis is the angular 
-		acceleration times the distance between the point and the axis of 
-		rotation (d). If we substitute these values for F and a, we end up 
-		with an equation stating that the moment exerted at the end of the stick 
-		will be equal to the mass times the distance squared times the angular 
-		acceleration.</p>
-		
-		<p>If we were to have multiple masses all connected together with 
-		massless sticks such that they form a single body as shown below, then 
-		we would need to add up all the mass times distance squared terms to 
-		relate the moment exerted on the body to the angular acceleration.</p>
-		
-		<figure class="center">		
-			<img alt="The Second Mass Moment of Intergral" height="430" src="images/massmomentintergral.png" width="600">
-			<figcaption>Approximating a rigid body as an infinite number of 
-			infinitely small masses all connected to the axis of rotation, 
-			we can sum all the m d squared terms with integration.</figcaption>
-		</figure>
-		
-		<p>For rigid bodies with mass distributed over some volume, we can think 
-		of the body as a collection of very small point masses all connected 
-		with a stick back to the central axis of rotation. Using integration to 
-		sum up this infinite number of infinitely small masses, we end up with 
-		the second polar mass moment integral.</p>
-		
-		<p>This moment integral for the shape, called the mass moment of 
-		inertia, relates the moment and the angular acceleration for the body 
-		about a set axis of rotation.</p>
-		
-		<figure class="equation">
-			<img alt="The Mass Moment of Inertia" height="115" src="images/massmomentofint.png" width="220">
-		</figure>
-		
-		<h2>Calculating the Mass Moment of Inertia via Integration</h2>
-		
-		<p>The first step in calculating the mass moment of inertia is to 
-		determine the axis of rotation. Unlike mass, the mass moment of inertia 
-		is <strong>dependent on the axis of rotation</strong>. After choosing 
-		the axis of rotation, it is helpful to draw the  the shape with the axis 
-		of rotation included.</p>
-		
-		<p>Next we will be integrating over the mass of the object. The mass at 
-		any one location will be the volume times the density, and if we have a 
-		uniform density then we can bring the density outside of the integral 
-		leaving us with a density times a volume integral.</p>
-		
-		<figure class="equation">
-			<img alt="Pulling the density out of the mass intergral" height="282" src="images/volumemomentint.png" width="282">
-		</figure>
-
-		<p>Remembering that d is measured from the axis of rotation, we need to 
-		define dV in terms of a radius (r) moving outwards from the axis of 
-		rotation. The rate of change of the volume (dV) will be the area at 
-		exactly r distance away from that axis times the rate of change of r. 
-		This will be a cylindrical area that changes with the value of r. We 
-		therefore need to define this area as an equation relating the area to 
-		the value of r. We multiply that by r squared for the second moment 
-		integral and evaluate from the minimum radius out to the maximum radius 
-		from the axis of rotation.</p>
-		
-		<figure class="center">		
-			<img alt="The Mass Moment of Interia" height="406" src="images/conemassmoment.png" width="600">
-			<figcaption>The mass moment of inertia for a general shape.&nbsp; </figcaption>
-		</figure>
-
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/QBmw-9N9oD8" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-		
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>A thin circular disc has a mass of 6 kg and a radius of .3 
-			meters. Determine the mass moment of inertia for the disc about the 
-			z axis.</p>	
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/e1ZDv6xDUV8" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/MassMoment_WorkedExample1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>Determine the mass moment of inertia about the z axis for this 
-			general cone with base radius R, height h, and mass m.</p>	
-			<img alt="Problem 2 Diagram" src="images/P2.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/rL7xWl9FfWc" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/MassMoment_WorkedExample2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-				<div id="practiceproblems">
-	  <h2>Practice Problems:</h2>
-		<div class="problem">
-			<h3>Practice Problem 1:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="640"
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>The Mass Moment of Inertia</h1>
+    <p>The <strong>Mass Moment of Inertia</strong> represents a body's resistance to angular accelerations about an axis, just as mass represents a body's resistance to linear accelerations. This is represented in an equation with the rotational version of Newton's Second Law.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[F=m a\]</td>
+        </tr>
+		<tr>
+          <td>\[M=I \alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Just as with Area Moments of Inertia, the mass moment of inertia can be calculated via moment integrals or via the method of composite parts and the parallel axis theorem. This page will only discuss the integration method, as the method of composite parts is discussed on a separate page.</p>
+    <h2>The Mass Moment of Inertia and Angular Accelerations</h2>
+    <p>The mass moment of inertia is a moment integral, specifically the second, polar, mass moment integral. To see why this relates moments and angular accelerations, we start by examining a point mass on the end of a massless stick as shown below. Imagine we want to rotate the stick about the left end by applying a moment there. We want to relate the moment exerted to the angular acceleration of the stick about this point.</p>
+    <figure class="center"> <img alt="Moments and Angular Acceleration for a Mass on a stick" height="224" src="images/massonstick.png" width="500">
+      <figcaption>A point mass on the end of a massless stick. We are attempting to rotate the mass about it's left end by exerting a moment there.</figcaption>
+    </figure>
+    <p>To relate the moment and the angular acceleration, we need to start with the traditional form of Newton's Second Law, stating that the force exerted on the point mass by the stick will be equal to the mass times the acceleration of the point mass (F = m a). In this case the moment will be related to the force in that the force exerted on the mass times the length of the stick (d) is equal to the moment. We can also relate the linear acceleration of the mass in that the linear acceleration is the angular acceleration times the length of the rod (d). If we take these two substitutions and put them into the original F = m a equation, we can wind up with an equation that relates the moment and the angular acceleration for our scenario. A simplified version of this new relationship states that the moment will be equal to the mass times the distance squared times the angular acceleration. This mass times distance squared term (relating the moment and angular acceleration) forms the basis for the mass moment of inertia.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td colspan="2">\[F=m*a\]</td>
+        </tr>
+        <tr>
+          <td>\[M=F*d\]</td>
+          <td>\[a=d*\alpha\]</td>
+        </tr>
+        <tr>
+          <td colspan="2">\[M=(m*d^2)*\alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Taking our situation one step further, if we were to have multiple masses all connected to a central point, the moment and angular acceleration would be related by the sum of all the mass times distance squared terms.</p>
+    <figure class="center"> <img alt="Multiple masses on the end of massless sticks all connected to a central point" height="261" src="images/multi_mass_on_stick.png" width="400">
+      <figcaption>For multiple mass systems, we would simply sum up all the mass times distance squared terms to relate moments and angular accelerations.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[M=\sum (m*d^2)*\alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Taking the final step, rigid bodies with mass distributed over a volume are like an infinite number of small masses about an axis of rotation. Rather than the massless sticks holding everything in place, the mass is simply held in place by the material around it. To relate the moment and angular acceleration in this case, we use integration to add up the infinite number of small mass times distance squared terms.</p>
+    <figure class="center"> <img alt="The Second Mass Moment of Intergral" height="272" src="images/massmomentintergral.png" width="389">
+      <figcaption>Approximating a rigid body as an infinite number of infinitely small masses all connected to the axis of rotation, we can sum all the mass times distance squared terms with integration.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[M=\int_{m} (dm*d^2)*\alpha\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This moment integral can be calculated for any given shape, called the mass moment of inertia, relates the moment and the angular acceleration for the body about a set axis of rotation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I=\int_{m} (dm*d^2)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Calculating the Mass Moment of Inertia via Integration</h2>
+    <p>The first step in calculating the mass moment of inertia is to determine the axis of rotation you will be using. Unlike mass, the mass moment of inertia is dependent upon for the <strong>point</strong> and <strong>axis</strong> that we are rotating about. We can easily demonstrate this with something like a broomstick, where depending on the position and the direction of the axis we are rotating about, it can be more or less difficult to rotate the broomstick.</p>
+    <figure class="center"> <img alt="A broomstick being rotated about different axes" height="270" src="images/broomstick.png" width="600">
+      <figcaption>The mass moment of inertia will vary depending upon the point and direction of the axis of rotation.</figcaption>
+    </figure>
+    <p>After choosing the axis of rotation, it is helpful to draw the shape with the axis of rotation included. This is a polar integral, so we will be taking the mass integral radiating outwards from this axis of rotation.</p>
+    <p>Also, We are integrating over the mass, and the mass at any given point will be the density times the volume. If the object we are examining has a uniform density, as is often the case, we can pull that density constant outside of the integral, leaving a integral of the volume reaming. Density is rarely given in these instances, but if you can determine the overall mass and overall volume you can use that as well. If we put all of this into the original equation we had above we wind up with the following.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I=\rho*\int_{rmin}^{rmax} (dV*r^2)=\frac{m}{V}*\int_{rmin}^{rmax} (dV*r^2)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For the polar integral, we need to define dV in terms of a radius (r) moving outwards from the axis of rotation. The rate of change of the volume (dV) will be the cylindrical surface area at a given radius times rate at which that radius is increasing (dr). The height, radius, and holes in this cylindrical surface may all be changing so this dV term may become quite complex, but technically we could find this for mathematical function for any shape. Once we have the dV function in terms of r, we multiply that function by r squared and we will evaluate the integral.</p>
+    <figure class="center"> <img alt="The Mass Moment of Interia" height="406" src="images/conemassmoment.png" width="600">
+      <figcaption>The mass moment of inertia for a general shape.</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/QBmw-9N9oD8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A thin circular disc has a mass of 6 kg and a radius of .3 
+          meters. Determine the mass moment of inertia for the disc about the 
+          z axis.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/e1ZDv6xDUV8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MassMoment_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Determine the mass moment of inertia about the z axis for this 
+          general cone with base radius R, height h, and mass m.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/rL7xWl9FfWc" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MassMoment_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="640"
 				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
    				 &answersSubmitted=0&
    				 &sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-055.pg&
@@ -219,14 +168,13 @@
  			   &displayMode=MathJax&
  			   &problemIdentifierPrefix=102&
  			   &language=en&
-  			&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>	
-	<div class="problem">
-			<h3>Practice Problem 2:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="740"
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 2:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="740"
 				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
    				 &answersSubmitted=0&
    				 &sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-053.pg&
@@ -238,15 +186,13 @@
  			   &displayMode=MathJax&
  			   &problemIdentifierPrefix=102&
  			   &language=en&
-  			&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>	
-	
-	  <div class="problem">
-			<h3>Practice Problem 3:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="800"
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 3:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="800"
 				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
    				 &answersSubmitted=0&
    				 &sourceFilePath=Library/UBC/MECH/MECH2/setNewDynamicsProbs/221dynMOI1.pg&
@@ -258,15 +204,12 @@
  			   &displayMode=MathJax&
  			   &problemIdentifierPrefix=102&
  			   &language=en&
-  			&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>		
-		</div>
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

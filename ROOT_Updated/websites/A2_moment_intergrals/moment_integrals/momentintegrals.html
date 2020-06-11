@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Moment Integrals</title>
+<title>Mechanics Map - Moment Integrals</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,167 +20,55 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Moment Integrals</h1>
-						
-		<figure class="right">	
-			<img alt="Moment Integral" src="images/equation1.png">			
-			<figcaption>This first moment integral sums up the&nbsp; moments 
-			across some area where both the magnitude of the force and the 
-			moment arm can change with position. </figcaption>
-		</figure>
-		
-		<p>A <strong>moment integral</strong> is a general concept that can be 
-		applied in a number of ways. As the name implies the moment integral 
-		uses calculus to <strong>sum the moments</strong> of a force distributed 
-		over some area (where the force and the moment arm can change with 
-		position) or to
-		<strong>sum the moments that would be needed to cause a uniform angular 
-		acceleration </strong>(where the mass and the distance from the 
-		rotational axis change with position). Some of the applications of moment integrals include:</p>
-		
-		<ol>
-			<li>Finding the equivalent point load for a distributed force.</li>
-			<li>Finding the centroid of a 2D or 3D shape.</li>
-			<li>Finding the center of mass for a 2D or 3D shape.</li>
-			<li>Finding the rectangular or polar "moment of inertia" for a shape 
-			or volume in order to determine the object's relationship between 
-			moments and angular accelerations.</li>
-		</ol>
-		
-		<p>When looking at moment integrals, there are number of different types 
-		of moment integrals. These types include:</p>
-		
-		<ul>
-			<li>2D vs. 3D Moment Integrals</li>
-			<li>Area/Volume vs. Mass Moment Integrals</li>
-			<li>First vs. Second Moment Integrals</li>
-			<li>Rectangular vs. Polar Moment Integrals</li>
-		</ul>
-		
-		<p>Any combination of these different types is possible (for example a 
-		First, Rectangular, 2D, Area Moment of Inertia or a Second, Polar, 3D, 
-		Mass Moment of Inertia). However, only some combinations will have 
-		practical applications and will be discussed in detail on future pages.</p>
-		
-		<h3>2D vs. 3D Moment Integrals</h3>
-		
-		<p>Technically we can take the moment integral in any number of 
-		dimensions, but for practical purposes we will almost always be dealing with either 2D areas or 3D 
-		volumes. The number of dimensions will affect the complexity of the 
-		calculations (with 3D Moment integrals being more involved), and the 
-		nature of the problem (whether it is a 2D or 3D system) will determine 
-		the type of moment integral needed. Often this is not listed in the type 
-		of moment integral, requiring you to assume the type based on the 
-		context of the problem (meaning it may be written as a Second, 
-		Polar, Mass Moment of Inertia rather than a Second, Polar, 3D, Mass 
-		Moment of Inertia).</p>
-		
-		<h3>Area/Volume vs. Mass Moments Integrals</h3>
-		
-		<p>The next distinction in moments of inertia is between area/volume 
-		moment integrals and mass moment integrals. Area or volume moment 
-		integrals (used for 2D areas and 3D volumes respectively) are used to 
-		find centroids and equivalent point loads for distributed forces. 
-		These are integrated over some area or volume with the assumption that each little 
-		bit of area or volume is equally weighted. Mass moment integrals, used 
-		for center of mass or angular acceleration calculations, are also 
-		usually integrated over the entire area or volume but take into account 
-		possible changes in density, recognizing that not all bits of the shape 
-		should be equally weighted. In cases of a uniform density part, the mass 
-		moment integral is simply the area/volume moment integral times the 
-		density of the part. Since it is usually easier to calculate the 
-		area/volume moment integrals, we will sometimes use the area/volume 
-		moment integrals to find the mass moment integrals for parts made of a 
-		single uniform material.</p>
-		
-		<h3>First vs. Second Moments Integrals</h3>
-		
-		<p>The first moment integral uses the <strong>distance</strong> from the center axis or 
-		point to calculate the moment. First moment integrals are useful in calculating 
-		the equivalent point load, the centroid, and the center of mass of an 
-		object, because on each of these we need to sum up the moments, which is 
-		equal to the force (F) times the moment arm (d).</p>
-		
-		<figure class="center">				
-			<img alt="The First Moment Integral" height="353" src="images/firstmoment.png" width="600">
-			<figcaption>The first moment integral is useful in finding the 
-			total moment exerted by a force distributed over an area.</figcaption>
-		</figure>
-		
-		<p>Second moments of inertia use the <strong>distance squared</strong>, and 
-		are useful in relating moments to angular accelerations.</p>
-		
-		<figure class="center">	
-			<img alt="Second Moment Intergral" height="301" src="images/secondmoment.png" width="600">			
-			<figcaption>The second moment integral is useful in determining the 
-			relationship between the moment and angular acceleration of a rigid 
-			body.</figcaption>
-		</figure>
-		
-		<p>The figure above shows how the moment and angular acceleration of a 
-		mass on the end of a stick are related by the mass times the distance 
-		squared. For a rigid bodies we imagine them as an infinite number of 
-		point masses, each on the end of a massless stick leading back to the 
-		axis of rotation. The sum of all of these mass times distance squared 
-		terms relates the overall moment exerted on the body to the overall 
-		angular acceleration of the body.</p>
-		
-		<h3>Rectangular vs. Polar Moments Integrals</h3>
-				
-		<p>Finally we will talk about <strong>rectangular moments integrals</strong> 
-		versus <strong>polar moments integrals</strong>. This is a difference in 
-		how we define the distance in our moment integral. Let's start with the 
-		distinction in 2D. If our distance is measured from some axis (for 
-		example the x-axis, or the y-axis) then it is a rectangular moment 
-		integral. If on the other hand the distance is measured from some point 
-		(such as the origin) then it is a polar moment integral.</p>
-		
-		<figure class="center">	
-			<img alt="2D rectangular versus polar moment intergrals" src="images/2D_rectangularpolar.png">			
-			<figcaption>In 2D, if we measure the distance from some axis 
-			(similar to what x and y do here) then we have a rectangular 
-			moment integral. If we measure the distance from some point 
-			(such as r does) then we have a polar moment integral.</figcaption>
-		</figure>
-		
-		<p>In three dimensional problems, the definitions change slightly. For 
-		rectangular moment integrals the distance will be measured from some 
-		plane (such as the xy plane, xz plane, or yz plane). This will 
-		correspond to the x, y or z coordinates of a point. For a polar moment 
-		integrals the distance will be measured from some axis (such as the the 
-		x, y, or z axis). </p>
-		
-		<figure class="center">	
-			<img alt="3D rectangular versus polar moment integrals" src="images/3D_rectangularpolar.png">			
-			<figcaption>In 3D, if we measure from some plane (like x and y 
-			do) then we have a rectangular moment integral. If we measure 
-			the distance from some axis (such as r does) then we have a 
-			polar moment integral.</figcaption>
-		</figure>
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/IGked34rZi4" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Moment Integrals</h1>
+    <p>A <strong>moment integral</strong>, as the name implies, is the general concept using integration to determine the net moment of a force that is spread over an area or volume. Because moments are generally a force times a distance, and because distributed forces are spread out over a range of distances, we will need to use calculus to to determine the net moment exerted by a distributed force.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\int M=\int F(d)*d\]</td>
+        </tr>
+      </tbody>
+	</table>
+	<p>Beyond the most literal definition of a moment integral, the term 'moment integral' is also general applied the process of integrating distributed <strong>areas</strong> or <strong>masses</strong> that will be resiting some moment about a set axis.</p>
+	<p>Some of the applications of moment integrals include:</p>
+    <ol>
+		<li>Finding point loads that are equivalent to distributed loads (the <strong>equivalent point load</strong>)</li>
+		<li>Finding the <strong>centroid</strong> (geometric center) or <strong>center of mass</strong> for 2D and 3D shapes.</li>
+		<li>Finding the <strong>area moment of inertia</strong> for a beam cross section, which will be one factor in that beam's resistance to bending.</li>
+		<li>Finding the <strong>polar area moment of inertia</strong> for a shaft cross section, which will be one factor in that shaft's resistance to torsion.</li>
+		<li>Finding the <strong>mass moment of inertia</strong>, indicating a body's resistance to angular accelerations.</li>
+    </ol>
+    <p>When looking at moment integrals, there are number of different types of moment integrals. These will include moment integrals in one dimension, two dimensions, and three dimensions, moment integrals of force functions, of areas/volumes, or of mass distributions, first order or second order moment integrals, and rectangular or polar moment integrals.</p>
+    <p>Any combination of these different types is possible (for example a first, rectangular, 2D, area moment integral or a second, polar, 3D, mass moment integral). However, only some combinations will have practical applications and will be discussed in detail on future pages.</p>
+    <h3>1D, 2D, and 3D Moment Integrals</h3>
+    <p>Technically we can take the moment integral in any number of dimensions, but for practical purposes we will never deal with moment integrals beyond 3 dimensions. The number of dimensions will affect the complexity of the calculations (with 3D Moment integrals being the more involved than 1D or 2D moment integrals), but the nature of the problem will dictate the dimensions needed. Often this is not listed in the type of moment integral, requiring you to assume the type based on the context of the problem.</p>
+    <h3>Force, Area/Volume, and Mass Moments Integrals</h3>
+    <p>The next distinction in moment integrals is regard what we are integrating. Generally, we can integrate force functions over some distance, area, or volume, we can integrate the area or volume function itself, or we can integrate the mass distribution over the area or volume. Each of these types of moment integrals has a different purpose and will start with a different mathematical function to integrate, but the integration process beyond that will be very similar.</p>
+    <h3>First vs. Second Moments Integrals</h3>
+    <p>For moment integrals we will always be multiplying the force function, area or volume function, of the mass distribution function by a distance, or a distance squared. First moment integrals just multiply the initial function by the distance, while second moment integrals multiply the function by the distance squared. Again the type of moment integral we will use depends upon our application, with things like equivalent point load, centroids, and center of mass relying on first moment integrals, and area moments of inertia, polar moments of inertia, and mass moments of inertia relying on second moment integrals. As you can probably deduce from this list, second moment integrals, are often labeled as a '<strong>moment of inertia</strong>'</p>
+    <h3>Rectangular vs. Polar Moments Integrals</h3>
+    <p>Finally we will talk about <strong>rectangular moments integrals</strong> versus <strong>polar moments integrals</strong>. This is a difference in how we define the distance in our moment integral. Let's start with the distinction in 2D. If our distance is measured from some axis (for example the x-axis, or the y-axis) then it is a rectangular moment integral. If on the other hand the distance is measured from some point (such as the origin) then it is a polar moment integral.</p>
+    <figure class="center"> <img alt="2D rectangular versus polar moment intergrals" src="images/2D_rectangularpolar.png">
+      <figcaption>In 2D, if we measure the distance from some axis (similar to what x and y do here) then we have a rectangular moment integral. If we measure the distance from some point (such as r does) then we have a polar moment integral.</figcaption>
+    </figure>
+	<p>This distinction is important for how we will take the integral. For rectangular moment integrals we will move left to right or bottom to top. For polar moment integrals we will instead take the integral by radiating out from the center point.</p>
+    <p>In three dimensional problems, the definitions change slightly. For rectangular moment integrals the distance will be measured from some plane (such as the xy plane, xz plane, or yz plane). Again we will integrate left to right, bottom to top, or now back to front with distances corresponding to the x, y or z coordinates of that point. For a polar moment integrals the distance will be measured from some axis (such as the the x, y, or z axis), and we will integrate by radiating outward from that axis.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/IGked34rZi4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

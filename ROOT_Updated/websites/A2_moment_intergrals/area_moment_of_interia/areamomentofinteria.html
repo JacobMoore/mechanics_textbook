@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - The Rectangular Area Moment of Inertia</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>The Area Moments of Inertia</h1>
+    <p>Area moments of inertia are used in engineering mechanics courses to determine a bodies resistance to bending loads or torsional loads. Specifically, the area moment of inertia refers to the <strong>second, area, moment integral</strong> of a shape, with I<sub>xx</sub> representing the moment of inertia about the x axis, I<sub>yy</sub> representing the moment of inertia about the y axis, and J<sub>zz</sub> (also called the polar moment of inertia) representing the moment of inertia about the z axis. The moment of inertia about each axis represents the shapes resistance to a moment applied about that respective axis. Moments about the x and y axes would tend to bend an object, while moments about the z axis would tend to twist the body.</p>
+    <figure class="center"> <img alt="The moment of intertia represents a shapes resistance to moments about that axis" height="388" src="images/three_axes.png" width="500">
+      <figcaption>The moments of inertia for the cross section of a shape about each axis represents the shape's resistance to moments about that axis. Moments applied about the x and y axis represent bending moments, while moments about the z axis represent a torsional moments.</figcaption>
+    </figure>
+    <p>Just as with centroids, each of these moments of inertia can be calculated via <strong>integration</strong> or via <strong>composite parts</strong> and the<strong> parallel axis theorem</strong>. On this page we are going to focus on calculating the area moments of inertia via moment integrals.</p>
+    <h2>Bending Stresses and the Second Area Moment</h2>
+    <p>When an object is subjected to a bending moment, that body will experience both internal tensile stresses and compressive stresses as shown in the diagram below. These stresses exert a net moment to counteract the loading moment, but exert no net force so that the body remains in equilibrium.</p>
+    <figure class="center"> <img alt="Beam Bending and the Second Rectangualr Area Moment of Interia" height="223" src="images/beambending.png" width="500">
+      <figcaption>A bending moment and the resulting internal tensile and compressive stresses needed to ensure the beam is in equilibrium.</figcaption>
+    </figure>
+    <p>As we can see in the diagram, there is some central plane along which there are no tensile or compressive stresses. This is known as the neutral surface, and if there are no other forces present it will run through the centroid of the cross section. As we move up or down from the neutral surface the stresses increase linearly. The moment exerted by this stress at any point will be the stress times moment arm, which also linearly increases as we move away from the neutral surface. This means that the resistance to bending provided by any point in the cross section is directly proportional to the distance from the neutral axis squared. We can sum up the resistances to bending then by using the second rectangular area moment of inertia, where our distances are measured from the neutral axis.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I=\int_{A}(dA*d^2)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Assuming we put the origin point at the centroid and that the x axis is the neutral surface, the distance from the neutral surface to any point is simply the y coordinate of that point. Similarly, if we apply a moment about the y axis, and had a neutral surface that ran along the y axis, the distance from the neutral axis would simply be the x coordinate of the point. For this reason, I<sub>xx</sub> includes y as the distance, while I<sub>yy</sub> includes x as the distance.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I_{xx}=\int_{ymin}^{ymax}(dA*y^2)\]</td>
+          <td>\[I_{yy}=\int_{xmin}^{xmax}(dA*x^2)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Calculating the Rectangular Area Moment of Inertia via Integration</h2>
+    <p>To determine the area moment of inertia, start by drawing out the area under analysis, and include the axes you are taking the moment of inertia about. This is important, since the moment of inertia will vary depending on the axis chosen. In cases on bending stresses you will want to put the origin on the neutral surface, which will be at the centroid of the area. If the centroid is not given to you, you will need to determine the centroid as discussed in prior sections.</p>
+    <p>To take the moment of inertia about the x axis through this point (I<sub>xx</sub>) we will use the general formula discussed earlier. We will be moving from bottom to top, integrating the rate of change of the area as we go, times the y value squared. The rate of change of area (dA) as we move upwards will be the <strong>width</strong> of the object at any given y value times the rate at which we are moving. Unless the width remains constant, the width will need to be represented as a mathematical function in terms of y.</p>
+    <figure class="center"> <img alt="Moment of Inertia about the X axis" height="412" src="images/momentintx.png" width="600">
+      <figcaption>The rectangular moment of inertia about the x axis.</figcaption>
+    </figure>
+    <p>To find the moment of inertia about the y axis through a given point (I<sub>yy</sub>) we will move left to right using the distances from the y axis in out moment integral (in this case the x coordinates of each point). Moving from left to right, the rate of change of the area will be the <strong>height</strong> of the shape at any given x value the rate at which we are moving left to right. Again we will need to describe this with an mathematical function if the height is not constant. We will multiply this function by x squared for the second moment integral and this will give us the moment of inertia about the y axis.</p>
+    <figure class="center"> <img alt="Moment of Intertia about the Y axis" height="401" src="images/momentiny.png" width="600">
+      <figcaption>The rectangular moment of inertia about the y axis.</figcaption>
+    </figure>
+    <h2>Torsional Stresses and the Polar Moment of Inertia</h2>
+    <p>When an object is subjected to a torsional moment, that object will experience internal shearing forces as shown in the diagram below. These stresses are oriented in such a way that they will counteract the torsional moment, but do not exert any net force on the shaft so that shaft stays in equilibrium.</p>
+    <figure class="center"> <img alt="Torsional Loading in a Shaft" height="352" src="images/torsion.png" width="472">
+      <figcaption>Torsion causes internal shearing stresses that counteract the moment but exert no net force.</figcaption>
+    </figure>
+    <p>As we can see in the diagram, there is a central axis along which there are no shearing stresses. This is known as the neutral axis, and if there are no other forces present, then this will travel through the centroid of the shaft's cross section. As we move away from the neutral axis in any direction the stresses will increase linearly. The moment exerted by the stress at any point will be the stress times the moment arm, which also increases linearly as we move away from the neutral axis. This means that the resistance to torsional loading provided by any one point on the cross section is directly proportional the square of the distance between the point and neutral axis. We can sum up the resistances to torsional loading then using the second polar area moment of inertia, where our distances are measured from the neutral axis (r), a single point in the shaft's cross section.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[J_{zz}=\int_{rmin}^{rmax}(dA*r^2)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Calculating the Polar Area Moment of Inertia via Integration</h2>
+    <p>The first step in determining the polar moment of inertia is to draw the area and identify the point about which we are taking the moment of inertia. In the case of torsional loading, we will usually want to pick the point at which the neutral axis travels through the shaft's cross section, which in the absence of other types of loading will be the centroid of the cross section. If the centroid is not clearly identified, you will need to determine the centroid as discussed in previous sections.</p>
+    <p>To take the moment of inertia about this central point, we will be measuring all distances outward from this point. Rather than moving left to right or top to bottom, we will instead be integrating from the center radiating outward in all directions. We will be going from the minimum distance from the center for our shape (zero unless there is a central hole in our area) to the maximum distance to the center. We will again be integrating the rate of change of area, which in this case will be a a function for the <strong>circumference</strong> at a given radius times the rate as which we are moving outwards times the given radius squared.</p>
+    <figure class="center"> <img alt="The Polar Area Moment of Interia" height="395" src="images/polarmonentint.png" width="600">
+      <figcaption>The Polar Moment of Inertia About the Neutral Axis</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/7MQxCzWRCdw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Find the rectangular moments of inertia for this shape about both 
+          the X and Y axes though the centroid. Leave the answer in terms of 
+          the generic width (b) and height (h) of the rectangle. </p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/PL6QIBL_rPw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/RectangularAreaMomentOfInteria_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Find the polar moments of inertia for this circular area about its centroid. Leave the answer in terms of the generic radius R. </p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/peqSVmDjThA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/PolarAreaMoment_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>Find the polar moment of inertia of this hollow circular shape about its centroid.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/Jw696gGSDM8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/PolarAreaMoment_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="1150"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
+   				 &answersSubmitted=0&
+   				 &sourceFilePath=Library/OPES/opes_Statics/Beams/MOI_I_unequal_flange_01.pg&
+   				 &problemSeed=1&
+  			     &courseID=daemon_course&
+  			  &userID=daemon&
+   				 &course_password=daemon&
+ 			   &showSummary=1&
+ 			   &displayMode=MathJax&
+ 			   &problemIdentifierPrefix=102&
+ 			   &language=en&
+  			&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
