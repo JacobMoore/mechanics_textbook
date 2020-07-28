@@ -54,7 +54,7 @@ function displayResourcesMain(){
 function displayResources(){
 	document.write('<h2>Useful Resources</h2>');
 	document.write('<div class="resource">');
-	document.write('<a href="websites/Statics and Dynamics Units and Conversion Table.pdf" target="_blank">Units and Conversion Table</a>');
+	document.write('<a href="http://mechanicsmap.psu.edu/websites/UnitConversion.pdf" target="_blank">Units and Conversion Table</a>');
 	document.write('</div>');
 	document.write('<div class="resource">');
 	document.write('<a href="http://www.wolframalpha.com/examples/EquationSolving.html" target="_blank">Wolfram Equation Solver</a>');
