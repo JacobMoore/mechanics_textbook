@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Dot Product</title>
+<title>Mechanics Map - Dot Product</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,146 +20,107 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Dot Product</h1>
-		
-		<p>The dot product (also sometimes called the scalar product) is a 
-		mathematical operation that can be performed on any two vectors with the 
-		same number of elements. The result of the dot product operation will be a
-		single scalar value that is equal to the magnitude of the first vector, 
-		times the magnitude of the second vector, times the cosine of the angle 
-		between the two vectors (at least for 2 and 3 dimensional vectors).</p>
-		
-		<figure class="equation">
-			<img alt="Dot Product Equation" height="89" src="images/dotproducteq1.png" width="371">
-		</figure>
-
-		
-		<p>If the second vector in the dot product operation is a unit vector 
-		(thus having a magnitude of 1), the dot product will represent the 
-		magnitude of the first vector in the direction of the unit vector.</p>
-				
-		<figure class="center">
-			<img alt="Dot Product with a Unit Vector" height="196" src="images/dotproductunitvector.png" width="533">
-			<figcaption>The dot product of a vector with a unit vector will give 
-			you the magnitude of the first vector in the direction of the unit 
-			vector.</figcaption>
-		</figure>
-
-		<p>As an alternative to the above method of calculating the dot product, 
-		you can also break each vector down into components and take the sum of each 
-		set of components multiplied together as shown in the equation below. 
-		Either of these two methods will yield the same result.</p>
-		
-		<figure class="equation">	
-			<img alt="Dot Product Equation" height="76" src="images/dotproducteq2.png" width="563">
-		</figure>
-		
-		<p>Finally, as with all vector operations, we can use computer tools 
-		such as the dot command in MATLAB or the Wolfram Vector Operation 
-		Calculator tool linked to in the left panel.</p>
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/eVyFJWfqVmc" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>Find the dot product of force vector A with the unit vector shown 
-			with direction B.</p>
-				
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/JJ3aXtIZwZ0" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/DotProduct_WorkedExample1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>Calculate the dot product of vector A with vector B by hand.</p>	
-			<img alt="Problem 2 Diagram" src="images/P2.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/NuuYcDNeja4" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/DotProduct_WorkedExample2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 3:</h3>
-			<p>Calculate the dot product of vector A with vector B using MATLAB.</p>	
-			<img alt="Problem 3 Diagram" src="images/P2.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/B8PKJtL63C0" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 4:</h3>
-			<p>Calculate the dot product of vector A with vector B using the 
-			Wolfram Vector Operation Calculator.</p>	
-			<img alt="Problem 3 Diagram" src="images/P2.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/2FZSXFASFiQ" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-		</div>
-		</div>
-		
-		
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Dot Product</h1>
+    <p>The <strong>dot product</strong> (also sometimes called the scalar product) is a mathematical operation that can be performed on any two vectors with the same number of elements. The result is a scalar number equal to the magnitude of the first vector, times the magnitude of the second vector, times the cosine of the angle between the two vectors.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{A}\cdot \vec{B}= \left | A \right |  \left | B \right | cos(\theta )\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In engineering mechanics, the dot product is used almost exclusively with a second vector being a <strong>unit vector</strong>. If the second vector in the dot product operation is a unit vector (thus having a magnitude of 1), the dot product will then represent the magnitude of the first vector in the direction of the unit vector. In this respect, a dot product is useful in determining the component of a given vector in any given direction, where the direction is given in terms of a unit vector.</p>
+    <figure class="center"> <img alt="Dot Product with a Unit Vector" height="224" src="images/dotproductunitvector.png" width="500">
+      <figcaption>The dot product of a vector with a unit vector will give you the magnitude of the first vector in the direction of the unit vector.</figcaption>
+    </figure>
+    <p>As an alternative to the above equation for calculating the dot product, we can also calculate the dot product without knowing the angle between the vectors (theta). For this method we break each vector down into components and take the sum of each set of components multiplied together as shown in the equation below.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{A}\cdot \vec{B}= \left( A_{x}*B_{x} \right )+\left( A_{y}*B_{y} \right )+\left( A_{z}*B_{z} \right )\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Finally, as with many vector operations, the true strength of the dot product is that computers can calculate them very quickly. Both MATLAB, and the Wolfram Vector Operation Calculator tool linked to in the left panel are able to computer dot products for you.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/-MMHU4UhutQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Find the dot product of force vector A with the unit vector shown 
+          with direction B.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/JJ3aXtIZwZ0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/DotProduct_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Calculate the dot product of vector A with vector B by hand.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/NuuYcDNeja4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/DotProduct_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>Calculate the dot product of vector A with vector B using MATLAB.</p>
+        <img alt="Problem 3 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/B8PKJtL63C0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Calculate the dot product of vector A with vector B using the 
+          Wolfram Vector Operation Calculator.</p>
+        <img alt="Problem 3 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/2FZSXFASFiQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

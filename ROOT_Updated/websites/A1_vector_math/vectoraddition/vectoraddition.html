@@ -5,6 +5,7 @@
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
 <script type="text/javascript">
 
@@ -27,42 +28,21 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Vector Addition</h1>
-    <p><strong>Forces</strong>, <strong>velocities</strong>, and <strong> accelerations</strong> can all be represented as vectors and you will 
-      often need to find the <strong>sum</strong> of these vectors during 
-      problem solving. To do this you will need to add the vectors.</p>
-    <p>The sum of any number of vectors can be determined geometrically 
-      using the following strategy. Starting with one of the vectors as the 
-      base, we redraw the second vector so that the tail of the second vector 
-      begins at the tip of the first vector. We can repeat this with a third 
-      vector, putting the tail of the third vector at the tip of the second 
-      vector. From here we repeat this pattern until all vectors are drawn 
-      this way. Once the vectors are all drawn tip to tail, the sum of all 
-      the vectors will be the vector connecting the tail of the first vector 
-      to the tip of the last vector.</p>
-    <figure class="center"> <img alt="Geometric Vector Addition" height="500" src="images/geometricaddition.png" width="350">
-      <figcaption>The geometric addition of vectors involves putting the 
-        vectors tip to tail as shown above.</figcaption>
+    <p>The most common thing we will need to do with many vector quantities is to add them up. The sum of these vector quantities is the <strong>net</strong> vector quantity. For example, if we have a number of forces acting on a body, the sum of those forces is known as the net force.</p>
+    <p>The sum of any number of vectors can be determined <strong>geometrically</strong> using the following strategy. Starting with one of the vectors as the base, we redraw the second vector so that the tail of the second vector begins at the tip of the first vector. We can repeat this with a third vector, a forth vector and so on, putting the tail of each vector at the tip of the last vector until we have added taken all vectors into account. Once the vectors are all drawn tip to tail, the sum of all the vectors will be the vector connecting the tail of the first vector to the tip of the last vector.</p>
+    <figure class="center"> <img alt="Geometric Vector Addition" height="326" src="images/geometricaddition.png" width="600">
+      <figcaption>The geometric addition of vectors involves putting the vectors tip to tail as shown above.</figcaption>
     </figure>
-    <p>The easiest way to determine the magnitude and direction of the sum 
-      of the vectors is to add the vectors in component form. This means that 
-      we will need to separate each vector into x, y, and possibly z 
-      components. As we can see in the diagram below, the x component of the 
-      sum of all the vectors will be the sum of all the x components of the 
-      individual vectors. Similarly the y and z components of the sum of the 
-      vectors will be the sum of all the y components and the sum of all the z 
-      components respectively.</p>
-    <figure class="center"> <img alt="Vector Addition via Components" height="219" src="images/componentaddition.png" width="500">
-      <figcaption>By summing all the components in a given direction, we 
-        can find the component of the sum of the vectors in that direction.</figcaption>
+    <p>In practice, The easiest way to determine the magnitude and direction of the sum of the vectors is to add the vectors in <strong>component form</strong>. This starts by separating each vector into x, y, and possibly z components. As we can see in the diagram below, the x component of the sum of all the vectors will be the sum of all the x components of the individual vectors. Similarly the y and z components of the sum of the vectors will be the sum of all the y components and the sum of all the z components respectively.</p>
+    <figure class="center"> <img alt="Vector Addition via Components" height="281" src="images/componentaddition.png" width="600">
+      <figcaption>By summing all the components in a given direction, we can find the component of the sum of the vectors in that direction.</figcaption>
     </figure>
-    <p>Once we find the sum of the sum of the vectors in component form we 
-      can convert this sum vector back to a magnitude and direction if 
-      necessary.</p>
+    <p>Once we find the sum of the components in each direction, we can either leave the net vector in component form, or we can use the Pythagorean theorem and inverse tangent functions to convert the vector back into a magnitude and direction as detailed on the "vectors" page.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
-      <iframe width="260" height="195" src="http://www.youtube.com/embed/7NpGjYgjioI" frameborder="0" allowfullscreen></iframe>
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/0tv92MX2_ro" frameborder="0" allowfullscreen></iframe>
     </div>
     <script language="javascript">displayResources();</script> 
   </div>
@@ -122,37 +102,13 @@
     <div class="problem">
       <h3>Practice Problem 1:</h3>
       <div class="importbox">
-        <iframe  width="860" height="640"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
-   				 &answersSubmitted=0&
-   				 &sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/passenger_jet_01.pg&
-   				 &problemSeed=1&
-  			     &courseID=daemon_course&
-  			  &userID=daemon&
-   				 &course_password=daemon&
- 			   &showSummary=1&
- 			   &displayMode=MathJax&
- 			   &problemIdentifierPrefix=102&
- 			   &language=en&
-  			&outputformat=sticky"> </iframe>
+        <iframe  width="860" height="640" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/passenger_jet_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
       </div>
     </div>
     <div class="problem">
       <h3>Practice Problem 2:</h3>
       <div class="importbox">
-        <iframe  width="860" height="600"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?
-   				 &answersSubmitted=0&
-   				 &sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/stalled_car_01.pg&
-   				 &problemSeed=1&
-  			     &courseID=daemon_course&
-  			  &userID=daemon&
-   				 &course_password=daemon&
- 			   &showSummary=1&
- 			   &displayMode=MathJax&
- 			   &problemIdentifierPrefix=102&
- 			   &language=en&
-  			&outputformat=sticky"> </iframe>
+        <iframe  width="860" height="600" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/stalled_car_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
       </div>
     </div>
   </div>

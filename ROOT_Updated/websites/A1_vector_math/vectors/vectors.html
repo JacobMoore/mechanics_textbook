@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Vectors</title>
+<title>Mechanics Map - Vectors</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,290 +20,179 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Vectors</h1>
-		
-		<figure class="right">
-			<img alt="A force as a vector" src="images/vector.png">			
-			<figcaption>The force the man exerts on the box has both a magnitude 
-			and a direction. It is represented as a vector in&nbsp; engineering 
-			analysis.</figcaption>
-		</figure>
-
-		
-		<p><strong>Vectors</strong> are used in engineering analysis to 
-		represent quantities that have both a <strong>magnitude</strong> and a
-		<strong>direction</strong>. Many engineering quantities, such as forces, 
-		displacements, velocities, and accelerations, will need to be 
-		represented as vectors for analysis. Vector quantities contrast with
-		<strong>scalar</strong> values (such as mass and speed) which have a 
-		magnitude but no direction.</p>
-		
-		<h2>Vector Representation:</h2>
-						
-		<p>In terms of representing vectors, there are two forms we can use to 
-		represent vectors. These two forms are:</p>
-		
-		<p><strong>Magnitude and Direction Form</strong>: Where the magnitude is 
-		given as a single quantity and the direction is given as an angle.</p>
-		
-		<p><strong>Component Form</strong>: Where the magnitude in the 
-		horizontal and vertical directions are given. By having the two 
-		components of the magnitude we can determine both the magnitude and the 
-		direction of the vector.</p>
-				
-		<figure class="center">
-			<img alt="A vector as a magnitude and direction and in component form" height="152" src="images/vectorrep.png" width="600">
-			<figcaption>The drawing above shows a force as vector. On the left 
-			the vector is represented as a magnitude and a direction. On the 
-			right the same force is represented in terms of its x and y 
-			components.</figcaption>
-		</figure>
-		
-		<h2>Converting Between Forms in 2D</h2>
-		
-		<p>For our analysis, we will often find it advantageous to have the 
-		vectors in one form or the other, and will therefore need to convert the 
-		vector from a magnitude and direction to component form or vice versa. 
-		To do this we will use right triangles and trigonometry.</p>
-		
-		<h3>Going from a magnitude and direction to component form</h3>
-		
-		<p>To go from a magnitude and direction to component form we will first 
-		draw a right triangle with the hypotenuse being the original vector. The 
-		horizontal arm of the triangle will then be the x component of the 
-		vector while the vertical arm is the y component of the vector. If we 
-		know the angle of the vector with respect to either horizontal or 
-		vertical, we can use the sine and cosine relationship to find the x and 
-		y components.</p>
-		
-		<figure class="center">
-			<img alt="Vector Magnitude and Direction to Component Form" height="241" src="images/magtocomponent.png" width="600">
-			<figcaption>Using sine 
-			and cosine relationships, we can find the x and y components of a vector.</figcaption>
-		</figure>
-		
-		<p>It is important to remember that how we measure the angle will affect 
-		the sine and cosine relationships. Multiplying the magnitude by the sine 
-		will always give us the opposite leg and multiplying the magnitude by 
-		the cosine will always give us the adjacent leg.</p>
-		
-		<figure class="center">
-			<img alt="Be careful with sine and cosines" height="206" 
-			src="images/magtocomponent2.png" width="600">
-			<figcaption>Depending upon how we measure the angle, the sine/cosine 
-			may be either the x or y component. Remember the sine will give you 
-			the opposite leg while the cosine will give you the adjacent leg.</figcaption>
-		</figure>
-		
-		<h3>Going from component form to a magnitude and direction</h3>
-		
-		<p>To find the magnitude and the direction of a vector using components, 
-		we will use the same process in reverse. We will draw the components as 
-		the legs of a right triangle, where the hypotenuse of the triangle shows 
-		the magnitude and direction of the vector.</p>
-		
-		<p>To find the magnitude of the vector we will use the Pythagorean 
-		Theorem, taking the square root of the sum of the squares of each 
-		component. To find the angle, we can easily use the inverse tangent 
-		function, relating the opposite and adjacent legs of our right triangle.</p>
-		
-		<figure class="center">
-			<img alt="Converting a vector from components back into magnitude and direction form" src="images/componenttomag.png">
-   			<figcaption>We will use the Pythagorean Theorem and the inverse 
-			tangent function to convert the vector back into magnitude and 
-			direction form. </figcaption>
-		</figure>
-		
-		<p>If we know the magnitude of the hypotenuse, we can also use the 
-		inverse sine and cosine functions in place of the inverse tangent 
-		function to find the angle. As with the previous conversion, it is 
-		important to clearly identify the opposite leg, the adjacent leg, and 
-		the hypotenuse in our diagrams and to think of these when applying the 
-		inverse trig functions.</p>
-		
-		<h2>Converting Between Forms in 3D</h2>
-		
-		<p>In three dimensions, we will have either three components (x, y, and 
-		z) for component form or a magnitude and two angles for the direction in 
-		magnitude and direction form. To convert between forms we will need to 
-		draw in two sets of right triangles. The hypotenuse of the first 
-		triangle will be the original vector and one of the legs will be one of 
-		the three components. The other leg will then be the hypotenuse of 
-		the second triangle. The legs of this second triangle will then be the 
-		remaining two components as shown in the diagram below. Use sine and 
-		cosine relationships to find the magnitude of each component along the 
-		way.</p>
-		
-		<figure class="center">
-			<img alt="Converting a 3D vector from a magnitude and direction to component form" height="458" src="images/3D1.png" width="600">
-			<figcaption>For 3D vectors we will need to draw two right triangles 
-			to convert between forms.</figcaption>
-		</figure>
-		
-		<p>To go from component form back to a magnitude and direction, we will 
-		use the 3D form of the Pythagorean Theorem (the magnitude will be the 
-		square root of the sum of the three components squared) and we can again 
-		use the inverse trig functions to find the angles. We simply need to 
-		work backwards through the two right triangles.</p>
-		
-		<h3>Alternative method for finding components of 3D vectors</h3>
-		
-		<p>Sometimes, as with the tension in a cable, the geometry of the cable 
-		is given in component form rather than as angles. In cases such as this 
-		an alternative method can be used to find the components of the tension 
-		in the cable. Rather than using trigonometry, this method instead relies 
-		on ratios. The ratios of the components of the cable to the overall 
-		length of the cable will be the same as the ratio of the corresponding 
-		tension components to the overall magnitude of the tension.</p>
-		
-		<p>To use this method we will first need to find the overall length of 
-		the cable using the Pythagorean Theorem. To find the x component of the 
-		tension force, we simply multiply the overall magnitude of the tension 
-		force by the x component of the length over the overall length of the 
-		cable. We can then repeat with the y and z components.</p>
-		
-		<figure class="center">
-			<img alt="Alterentative method for finding the components of a 3D vector." 
-			height="440" src="images/3D2.png" width="600">
-			<figcaption>The alternative method of breaking a vector down into 
-			component form relies on the ratios of the cable components to the 
-			overall length of the cable.</figcaption>
-		</figure>
-
-
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/msjrZtoi59I" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>Determine the x and y components of the vector shown below.</p>
-				
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/TRS6jiih96o" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/Vectors_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>Determine the x and y components of the vector shown below.</p>	
-			<img alt="Problem 2 Diagram" src="images/P2.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/hUrlI6eLGvE" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/Vectors_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 3:</h3>
-			<p>The velocity vector of the hockey puck shown below is given in 
-			component form. Determine the magnitude and direction of the 
-			velocity with respect to the axes given.</p>	
-			<img alt="Problem 3 Diagram" src="images/P3.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/3GeIU3Fc_qA" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/Vectors_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 4:</h3>
-			<p>Determine the x, y, and z components of the force vector shown 
-			below.</p>	
-			<img alt="Problem 4 Diagram" src="images/P4.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/ZG31PoIfIEc" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/Vectors_WorkedProblem4.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 5:</h3>
-			<p>A cable as shown below is used to tether the top of a pole to a 
-			point on the ground. The cable has a tension force of 3 kN that acts 
-			along the direction of the cable as shown below. What are the x, y, 
-			and z components of the tension force acting on the top of the pole?</p>	
-			<img alt="Problem 5 Diagram" src="images/P5.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/dUJwBohfCTU" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/Vectors_WorkedProblem5.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-
-		
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Vectors</h1>
+    <p><strong>Vectors</strong> are used in engineering mechanics to represent quantities that have both a <strong>magnitude</strong> and a <strong>direction</strong>. Many engineering quantities, such as forces, displacements, velocities, and accelerations, will need to be represented as vectors for analysis. Vector quantities contrast with <strong>scalar</strong> values (such as mass, area, or speed) which have a magnitude but no direction.</p>
+	<figure class="center"> <img alt="A force as a vector" src="images/vector.png" height="212" width="372">
+      <figcaption>The force below is represented as a vector. It has both a magnitude and a direction.</figcaption>
+    </figure>
+	<p>When dealing with vectors in equations, engineers commonly denote something as a vector by putting an arrow over the variable. Variables without an arrow over top of them represent a scalar quantity, or simply the magnitude of that vector quantity.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+		  <td align="center">Vector Quantity:</td>
+          <td>\[\vec{F}\]</td>
+        </tr>
+		<tr>
+		  <td align="right">Scalar Quantity:</td>
+          <td>\[F\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>In contrast with scalar quantities, we cannot add, subtract, multiply or divide them by simply adding, subtracting, multiplying or dividing the magnitudes. The directions will also play a critical role in solving equations that contain vector quantities.</p>
+    <h2>Vector Representation:</h2>
+    <p>To represent a vector quantity, we will generally have two options. These two options are:</p>
+	<ul>
+	<li><strong>Magnitude and Direction Form</strong>: Where the magnitude is given as a single quantity and the direction is given via an angle or combination of angles.</li>
+    <li><strong>Component Form</strong>: Where the magnitude and direction are given through component magnitudes in each coordinate direction.</li>
+    </ul>
+    <figure class="center"> <img alt="A vector as a magnitude and direction and in component form" height="135" src="images/vectorrep.png" width="600">
+      <figcaption>The drawing above shows a force as vector. On the left the vector is represented as a magnitude and a direction. On the 
+        right the same force is represented in terms of its x and y components.</figcaption>
+    </figure>
+	<p>The magnitude and direction form of vector quantities are often used at the start and end of a problem. This is because it is often easier to measure things likes forces and velocities as a magnitude and direction at the start of a problem, and it is often easier to visualize the final result as a magnitude and direction at the end. Vectors represented as a magnitude and direction need to be shown visually through the use of an arrow, where the magnitude is the length of the arrow, and the direction is shown through the arrow head and an angle or angles relative to some known axes or other direction.</p>
+	<p>The component form of a vector is often used in middle of the problem because it is far easier to do math with vector quantities in component form. Vectors can be represented in component form in one of two ways. First we can use square brackets to indicate a vector, with the x, y, and possibly z components separated by commas. Alternatively, we can write out a vector in component form using the magnitudes in front of unit vectors to indicate directions (generally the i, j, and k unit vectors for the x, y , and z directions respectively). Neither of these component forms relies on a visual depiction of the vector as with the magnitude and direction form, though it is important to clearly identify the coordinate system in earlier diagrams.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+		  <td align="center">With Brackets:</td>
+          <td>\[\vec{F}=\left [ 3, 4, 5 \right ]\]</td>
+        </tr>
+		<tr>
+		  <td align="center">With Unit Vectors:</td>
+          <td>\[\vec{F}=3\hat{i}+4\hat{j}+5\hat{k}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>Converting Between Vector Representations in 2D</h2>
+    <p>For our analysis, we will often find it advantageous to have the vectors in one form or the other, and will therefore need to convert the vector from a magnitude and direction to component form or vice versa. To do this we will use right triangles and trigonometry.</p>
+    <h3>Going from a magnitude and direction to component form</h3>
+    <p>To go from a magnitude and direction to component form we will first draw a right triangle with the hypotenuse being the original vector. The horizontal arm of the triangle will then be the x component of the vector while the vertical arm is the y component of the vector. If we know the angle of the vector with respect to either horizontal or vertical, we can use the sine and cosine relationship to find the x and y components.</p>
+    <figure class="center"> <img alt="Vector Magnitude and Direction to Component Form" height="241" src="images/magtocomponent.png" width="600">
+      <figcaption>Using sine and cosine relationships, we can find the x and y components of a vector.</figcaption>
+    </figure>
+    <p>It is important to remember that how we measure the angle will affect the sine and cosine relationships. Multiplying the magnitude by the sine will always give us the opposite leg and multiplying the magnitude by the cosine will always give us the adjacent leg.</p>
+    <figure class="center"> <img alt="Be careful with sine and cosines" height="206" src="images/magtocomponent2.png" width="600">
+      <figcaption>Depending upon how we measure the angle, the sine/cosine may be either the x or y component. Remember the sine will give you the opposite leg while the cosine will give you the adjacent leg.</figcaption>
+    </figure>
+    <h3>Going from component form to a magnitude and direction</h3>
+    <p>To find the magnitude and the direction of a vector using components, we will use the same process in reverse. We will draw the components as the legs of a right triangle, where the hypotenuse of the triangle shows the magnitude and direction of the vector.</p>
+    <p>To find the magnitude of the vector we will use the Pythagorean Theorem, taking the square root of the sum of the squares of each component. To find the angle, we can easily use the inverse tangent function, relating the opposite and adjacent legs of our right triangle.</p>
+    <figure class="center"> <img alt="Converting a vector from components back into magnitude and direction form" src="images/componenttomag.png">
+      <figcaption>We will use the Pythagorean Theorem and the inverse tangent function to convert the vector back into magnitude and  direction form. </figcaption>
+    </figure>
+    <p>If we know the magnitude of the hypotenuse, we can also use the inverse sine and cosine functions in place of the inverse tangent function to find the angle. As with the previous conversion, it is important to clearly identify the opposite leg, the adjacent leg, and the hypotenuse in our diagrams and to think of these when applying the inverse trig functions.</p>
+    <h2>Converting Between Vector Representations in 2D</h2>
+    <p>In three dimensions, we will have either three components (x, y, and z) for component form or a magnitude and two angles for the direction in magnitude and direction form. To convert between forms we will need to draw in two sets of right triangles. The hypotenuse of the first triangle will be the original vector and one of the legs will be one of the three components. The other leg will then be the hypotenuse of the second triangle. The legs of this second triangle will then be the remaining two components as shown in the diagram below. Use sine and cosine relationships to find the magnitude of each component along the way. This general process of two consecutive right triangles will always hold true, but depending on angles that are given or chosen which components end up being which leg can vary. Carefully plotting everything out in a diagram is important for this reason.</p>
+    <figure class="center"> <img alt="Converting a 3D vector from a magnitude and direction to component form" height="458" src="images/3D1.png" width="600">
+      <figcaption>For 3D vectors we will need to draw two right triangles to convert between forms.</figcaption>
+    </figure>
+    <p>To go from component form back to a magnitude and direction, we will use the 3D form of the Pythagorean Theorem (the magnitude will be the square root of the sum of the three components squared) and we can again use the inverse trig functions to find the angles. We simply need to work backwards through the two right triangles in our problem, so again it is important to carefully draw out your diagrams.</p>
+    <h3>Alternative method for finding components of 3D vectors</h3>
+    <p>Sometimes, as with the tension in a cable, the geometry of the cable is given in component form rather than as angles. In cases such as this we could use geometry to figure out the angles and then use those angles to figure out and components, but there is a mathematical shortcut that will allow us to solve for the components more quickly involving the ratio of lengths. Specifically, the ratios of the components of the cable length to the overall length of the cable will be the same as the ratio of the corresponding force components to the overall magnitude of the force.</p>
+    <p>To use this method we will first need to find the overall length of the cable (or other physical geometric feature) using the Pythagorean Theorem. Once we have that overall length, we find a ratio by taking the x component of the length divided by the overall length. To find the x component of the force, we simply multiply the overall magnitude of the force by this ratio of lengths (Lx/L). The process for the y and z components follows a similar path, except the ratios would include the y and z component lengths instead of the x component.</p>
+    <figure class="center"> <img alt="Alterentative method for finding the components of a 3D vector." height="460" src="images/3D2.png" width="600">
+      <figcaption>The alternative method of breaking a vector down into component form relies on the ratios of the cable components to the overall length of the cable.</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/2RO7VZ_u0Iw" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Determine the x and y components of the vector shown below.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/TRS6jiih96o" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/Vectors_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Determine the x and y components of the vector shown below.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/hUrlI6eLGvE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/Vectors_WorkedProblem2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>The velocity vector of the hockey puck shown below is given in 
+          component form. Determine the magnitude and direction of the 
+          velocity with respect to the axes given.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/3GeIU3Fc_qA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/Vectors_WorkedProblem3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Determine the x, y, and z components of the force vector shown 
+          below.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ZG31PoIfIEc" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/Vectors_WorkedProblem4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>A cable as shown below is used to tether the top of a pole to a 
+          point on the ground. The cable has a tension force of 3 kN that acts 
+          along the direction of the cable as shown below. What are the x, y, 
+          and z components of the tension force acting on the top of the pole?</p>
+        <img alt="Problem 5 Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/dUJwBohfCTU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/Vectors_WorkedProblem5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

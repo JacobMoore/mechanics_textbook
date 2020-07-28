@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Matrix Equations</title>
+<title>Mechanics Map - Matrix Equations</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,165 +20,87 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Solving Systems of Equations with Matrices</h1>
-		
-		<p>A <strong>system</strong> of equations, is any set of equations that 
-		share some variables such as the set of three equations shown below. </p>
-		
-		<figure class="center">
-			<img alt="A system of linear equations" height="163" src="images/system.png" width="350">
-			<figcaption>The set of equations above is an example of a system of 
-			linear equations.</figcaption>
-		</figure>
-		
-		<p>In courses such as statics and dynamics we will often end up with a 
-		system of linear equations and be asked to solve for the unknowns in those 
-		equations. When we have just a few equations in our system, this can 
-		easily be done with algebraic methods such as substitution or 
-		elimination though addition or subtraction. For larger systems of 
-		equations however, the easiest way to solve for the unknowns is to 
-		convert the system of equations into a single matrix equation, and then 
-		use computer tools to solve the matrix equation.</p>
-		
-		<p>This method will only work with systems of <strong>linear equations</strong>. 
-		This means that we can only multiply the variables in the equations by a 
-		constant. We cannot do things such as raise the variables to a power, have the variables 
-		as an exponent, take the log of the variables, or multiply variables 
-		together. Any of these operations would make the system of equations 
-		non-linear, and will prevent us from converting them to a matrix 
-		equation.</p>
-		
-		<p>Additionally, to have a solvable matrix equation we will need to have 
-		the <strong>same number of equations as unknown variables</strong>. For 
-		example, above we have a system of equations with three equations and 
-		three unknown variables. If these numbers do not match we will not be 
-		able to solve the matrix equation later on.</p>
-		
-		<h2>Converting a System of Equations to a Matrix Equation:</h2>
-		
-		<p>The first step in converting a system of equations into a matrix 
-		equation is to rearrange the equations into a consistent format. 
-		Generally we will put all the variables with their coefficients on one 
-		side of the equation and the constants on the other side of the 
-		equation. Additionally, it is best to list the variables in the same 
-		order in each equation. This process of rearranging the equations will 
-		make conversion later on easier.</p>
-		
-		<figure class="center">
-			<img alt="The matrix conversion process" height="225" src="images/matrixconversion.png" width="600">
-			<figcaption>To convert a system of equations into a single matrix 
-			equation, we will first rearrange the equations for a consistent 
-			order, then we will write out the coefficient (A), variable (X), and 
-			constant (B) matrices.</figcaption>
-		</figure>
-		
-		<p>Next we will begin the process of writing out the three matrices that 
-		make up the matrix equation. These three matrices are the coefficient 
-		matrix (often referred to as the A matrix), the variable matrix (often 
-		referred to as the X matrix), and the constant matrix (often referred to 
-		as the B matrix).</p>
-		
-		<ul>
-		<li>The <strong>coefficient matrix</strong> (or A matrix) is an N x N matrix (where N is 
-		the number of equations / number of unknown variables) that contains all 
-		the coefficients for the variables. Each row of the matrix represents a single equation 
-		while each column represents a single variable (it is sometimes helpful 
-		to write the variable at the top of each column). For instances where a 
-		variable does not show up in an equation, we assume a coefficient of 0.</li>
-		<li>The <strong>variable matrix</strong> (or X matrix) is a 1 x N matrix 
-		that contains all the unknown variables. It is important that the order 
-		of the variables in the coefficient matrix match the order of the 
-		variables in the variable matrix.</li>
-		<li>Finally, on the other side of the equal sign we have the <strong>
-		constant matrix</strong> (or B matrix). This is a N x 1 matrix 
-		containing all the constants from the right side of the equations. It 
-		is important that the order of the constants matches the order of 
-		equations in the coefficient matrix.</li>
-		</ul>
-		
-		<p>Once we have the three matrices set up we are ready to solve for the 
-		unknowns in the variable matrix.</p>
-		
-		<h2>Solving the Matrix Equation:</h2>
-		
-		<p>Starting with our A, X, and B matrices in the matrix equation below, 
-		we are looking to solve for for values of the unknown variables that are 
-		contained in our X matrix.</p>
-		
-		<figure class="equation">
-			<img alt="The matrix equation" height="79" src="images/matrixequation.png" width="233">
-		</figure>
-
-		<p>For a scalar equation, we would simply do this by dividing both sides 
-		by A, where the value for X would be B/A. With matrix equation we will 
-		instead need to multiple both sides of the equation by the inverse of 
-		the A matrix. This will cancel out the A matrix on the left side, 
-		leaving only the X matrix that you are looking for. This means that 
-		multiplying the inverse of the A matrix times the B matrix will give you 
-		a 1 x N matrix containing the solution for all the variables. The value in  
-		each row of the solution will correspond to the variable listed in the 
-		same row of the X matrix.</p>
-		
-		<figure class="equation">	
-			<img alt="Solving the matrix equation" height="166" src="images/solvingmatrixequation.png" width="357">
-		</figure>
-
-		
-		<p>It is possible to find the inverse of the A matrix by hand and to 
-		multiply this by hand with the B matrix, but using computer tools such 
-		as MATLAB or the Matrix Equation Solver in the panel on the left will 
-		make these calculations far easier.</p>
-				
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/8uAWCyv8Y8k" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>The equilibrium equations for the body shown below are listed on 
-			the right. Convert the system of equations into a single matrix 
-			equation and solve for the unknowns.</p>
-				
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/QX-hJhXTEe0" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/MatrixEquations_WorkedExample1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Solving Systems of Equations with Matrices</h1>
+    <p>A <strong>system of equations</strong>, is any set of equations that share some variables. A <strong>linear equation</strong> is an equation that consists entirely of constants and simple variables. These variables can only be multiplied by a constant, and cannot be multiplied together, raised to an exponent, used on logs or square roots, or use other more complex mathematical functions. An example of a system of linear equations is provided below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[F_{AX}+F_{BX}=0\]</td>
+        </tr>
+        <tr>
+          <td>\[F_{AY}-8=0\]</td>
+        </tr>
+        <tr>
+          <td>\[-16+4F_{AY}+8F_{AX}=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In courses such as statics and dynamics we will often wind up with a system of linear equations and be asked to solve for the unknowns in those equations. When we have just a few equations in our system, we will generally solve the equations by hand using algebraic methods such as substitution or elimination though addition or subtraction. For larger and more complex problems we can wind up with larger systems of equations and at some point the math may become difficult to handle by hand. For these large systems of linear equations, the easiest way to solve for the unknowns is to convert the system of equations into a single matrix equation, and then use computer tools to solve the matrix equation for unknowns. Some computer tools will let you enter the system of equations manually, but in the background the computer is probably just converting it to a matrix equation in the background. For this reason it can be useful to understand this process.</p>
+    <p>In terms of assumptions, it is important to mention that this method will only work with systems of <strong>linear equations</strong>, and to have a solvable matrix equation we will need to have the <strong>same number of equations as unknown variables</strong>. For example, above we have a system of equations with three equations and three unknown variables. If these numbers do not match we will not be able to solve the matrix equation using the method described below.</p>
+    <h2>Converting a System of Equations to a Matrix Equation:</h2>
+    <p>The first step in converting a system of equations into a matrix equation is to rearrange the equations into a consistent format. Generally we will put all the variables with their coefficients on one side of the equation and the constants on the other side of the equation. Additionally, it is best to list the variables in the same order in each equation. This process of rearranging the equations will make conversion later on easier.</p>
+    <figure class="center"> <img alt="The matrix conversion process" height="225" src="images/matrixconversion.png" width="600">
+      <figcaption>To convert a system of equations into a single matrix equation, we will first rearrange the equations for a consistent  order, then we will write out the coefficient (A), variable (X), and constant (B) matrices.</figcaption>
+    </figure>
+    <p>Next we will begin the process of writing out the three matrices that make up the matrix equation. These three matrices are the coefficient matrix (often referred to as the A matrix), the variable matrix (often referred to as the X matrix), and the constant matrix (often referred to as the B matrix).</p>
+    <ul>
+      <li>The <strong>coefficient matrix</strong> (or A matrix) is an N x N matrix (where N is the number of equations / number of unknown variables) that contains all the coefficients for the variables. Each row of the matrix represents a single equation while each column represents a single variable (it is sometimes helpful to write the variable at the top of each column). For instances where a variable does not show up in an equation, we assume a coefficient of 0.</li>
+      <li>The <strong>variable matrix</strong> (or X matrix) is a 1 x N matrix that contains all the unknown variables. It is important that the order of the variables in the coefficient matrix match the order of the variables in the variable matrix.</li>
+      <li>Finally, on the other side of the equal sign we have the <strong> constant matrix</strong> (or B matrix). This is a N x 1 matrix containing all the constants from the right side of the equations. It is important that the order of the constants matches the order of equations in the coefficient matrix.</li>
+    </ul>
+    <p>Once we have the three matrices set up we are ready to solve for the unknowns in the variable matrix.</p>
+    <h2>Solving the Matrix Equation:</h2>
+    <p>Starting with our A, X, and B matrices in the matrix equation below, we are looking to solve for for values of the unknown variables that are contained in our X matrix.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[[A][X]=[B]\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For a scalar equation, we would simply do this by dividing both sides by A, where the value for X would be B/A. With matrix equation we will instead need to multiple both sides of the equation by the inverse of the A matrix. This will cancel out the A matrix on the left side, leaving only the X matrix that you are looking for. On the left we will have the inverse of the A matrix times the B matrix. The result of this operation will be a 1 x N matrix containing the solution for all the variables. The value in  each row of the solution will correspond to the variable listed in the same row of the X matrix.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[[X]=[A]^{-1}[B]\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>It is possible to find the inverse of the A matrix by hand and then multiply this with the B matrix, but this process would take longer than just solving the equations using algebra. The true strength of the method is that computer tools such as MATLAB or Wolfram Alpha can perform the matrix inversion and multiplication for you.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/ZLaeFbqR9QU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The equilibrium equations for the body shown below are listed on the right. Convert the system of equations into a single matrix equation and solve for the unknowns.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/QX-hJhXTEe0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MatrixEquations_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>
