@@ -1,13 +1,11 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
 <title>Mechanics Map - Point Forces</title>
-
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
-<!-- Google Analytics Code -->	
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+
+<!-- Google Analytics Code -->
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -21,211 +19,109 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Point Forces</h1>
-						
-		<p>A point force is any force where the <strong>point of application</strong> is 
-		considered to be a <strong>single point</strong>. In reality, most forces are technically surface forces, where the 
-		force is applied over an area, but when the area is small enough (in 
-		comparison to the bodies being analyzed) it can often be approximated as 
-		a point force. Because point forces can be represented as a single 
-		vector (rather than a field of vectors for distributed forces), they are 
-		much easier to work with in engineering analysis. For this reason, point 
-		forces are used in place of distributed forces in engineering analysis 
-		whenever possible. Below are some examples of where it is appropriate to 
-		use point forces.</p>
-		
-		<table class="figtable">
-		<tr>
-		<td>
-			<figure>
-				<img alt="Port Crane based on work by maxronnersjo [CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons" height="184" src="images/crane.png" width="200">
-				<figcaption>The tensions in the cables supporting this container 
-				can be treated as point forces pulling in the direction of the 
-				cables.</figcaption>
-			</figure>
-		</td>	
-		<td>
-			<figure>
-				<img alt="Cello Being Played, Based on work by Levi [Public domain], via Wikimedia Commons" height="158" src="images/cello.png" width="200">
-				<figcaption>The friction force between the bow and string on 
-				this cello can be treated as a point force.</figcaption>
-			</figure>
-		</td>
-		</tr>
-		<tr>
-		<td>
-			<figure>
-				<img alt="Volleyball" height="181" src="images/volleyball.png" width="200">
-				<figcaption>Though gravitational forces are technically body 
-				forces, they are often approximated as a single point force 
-				acting on the center of gravity of the object.</figcaption>
-			</figure>
-		</td>	
-		<td>
-			<figure>
-				
-				<img alt="Table Free Body Diagram based on work of Seahen [LGPL (http://www.gnu.org/licenses/lgpl.html)], via Wikimedia Commons" 
-				height="200" src="images/table.png" width="200">
-				<figcaption>The gravitational force and the normal forces acting 
-				on each leg of this table can all be approximated as point 
-				forces.</figcaption>
-			</figure>
-		</td>
-		</tr>
-		</table>
-		
-		<figure class="right">	
-			<img alt="Line of Action of a Force" height="172" src="images/lineofaction.png" width="300">
-			<figcaption>The line of action of a point force is the line along 
-			which the force acts.</figcaption>
-		</figure>
-		
-		<p>In addition to the magnitude, direction, and point of application of 
-		the point force, another important term to understand is the <strong>line of 
-		action</strong> of the force. The line of action of a force is the line along 
-		which the force acts. Given the direction and point of application, one 
-		can find the line of action, but this term will be important in 
-		discussing concurrent forces and in the principle of transmissibility.</p>	
-		
-		<h2>Force Vector Representation:</h2>	
-		
-		<p>When vectors are drawn to form free body diagrams, the magnitude and direction are usually 
-		given in one of two formats:</p>
-		
-		<ul>
-		<li>Overall magnitude and angle(s) to indicate direction (often called
-		<strong>magnitude and direction form</strong>).</li>
-		<li>Magnitudes in each of the coordinate directions (often called
-		<strong>component form</strong>).</li>
-		</ul>
-		
-		<p>In either format we will need two values to fully define a force 
-		vector in a 2D system (either a magnitude and a single angle or a 
-		magnitude in each of the two coordinate axes), and three values to fully 
-		define a force vector in a 3D system (either a magnitude and two angles 
-		or a magnitude in each of the three coordinate axes). Below are some 
-		examples of force vectors in both representations.</p>
-		
-		<figure class="center">
-			<img alt="2D Force Representations" height="201" src="images/2Dforces.png" width="500">
-			<figcaption>The same force can be represented with a magnitude and 
-			an angle as shown in the left or with magnitudes in each of the 
-			coordinate axes on the right.</figcaption>
-		</figure>
-		
-		<figure class="center">
-			
-			<img alt="3D Force Representations" height="209" src="images/3Dforces.png" width="500">
-			<figcaption>In three dimensions forces are represented with either a 
-			magnitude and two directions as shown on the left or with magnitudes 
-			in each of the three coordinate axes as shown on the right.</figcaption>
-		</figure>
-
-		<h2>Changing Force Vector Forms:</h2>
-		
-		<p>Because the two different forms of the vector are equivalent, we can 
-		switch between representations without changing the problem. Often in 
-		engineering problems, it will initially be easier to write the force in 
-		magnitude and angle form but later, analysis will be easier if forces are 
-		written in component form. To switch from magnitude and direction form 
-		to component form you will use right triangles and trigonometry to 
-		determine the component of the overall magnitude in each direction. This 
-		is a simple vector decomposition, and more information on this process 
-		can be seen on the vector decomposition page. To switch back from 
-		component form into magnitude and direction form you simply use the 
-		reverse of this initial process.</p>
-		
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/kq8vqOKhKeA" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>The tension force on the box below is given in magnitude and 
-			direction form. Redraw the diagram with the tension force given in 
-			component form.</p>
-			<img alt="Problem 1 Diagram" height="263" src="images/P1.png" width="500">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/ZERURXWnlDg" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/PointForces_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 2:</h3>
-			<p>The force acting on the cantilever beam shown below is given in 
-			component form. Redraw the diagram with the force given in magnitude 
-			and direction form.</p>
-			<img alt="Problem 2 Diagram" height="276" src="images/P2.png" width="500"></div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/M3UjDfZzRHY" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/PointForces_WorkedProblem2.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-
-		<div class="problem">
-		<div class="question">
-			<h3>Question 3:</h3>
-			<p>The force shown below is given in magnitude and direction form. 
-			Redraw the diagram with the force vector given in component form.</p>
-			<img alt="Problem 3 Diagram" height="302" src="images/P3.png" width="299">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/DroNv0TxnyA" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/PointForces_WorkedProblem3.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-	</div>
-	
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
-	
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Point Forces</h1>
+    <p>A point force is any force where the <strong>point of application</strong> is considered to be a <strong>single point</strong>. In reality, most forces are technically surface forces, where the force is applied over an area, but when the area is small enough (in comparison to the bodies being analyzed) it can often be approximated as a point force. Because point forces can be represented as a single vector (rather than a field of vectors for distributed forces), they are much easier to work with in engineering analysis. For this reason, point forces are used in place of distributed forces in engineering analysis whenever possible. Below are some examples of where it is appropriate to use point forces.</p>
+    <table class="figtable">
+      <tr>
+        <td><figure> <img alt="Cargo container supported by cables." height="184" src="images/crane.png" width="200">
+            <figcaption>The tensions in the cables supporting this container can be treated as point forces pulling in the direction of the cables. Adapted from Image by maxronnersjo CC-BY-SA 3.0.</figcaption>
+          </figure></td>
+        <td><figure> <img src="images/cello.png" alt="Bow being drawn across the strings of a cello" width="200" height="158">
+            <figcaption>The friction force between the bow and string on this cello can be treated as a point force. Adapted from Public Domain image by Levi.</figcaption>
+          </figure></td>
+      </tr>
+      <tr>
+        <td><figure> <img alt="Volleyball" src="images/volleyball.png" width="200" height="181">
+            <figcaption>Though gravitational forces are technically body forces, they are often approximated as a single point force acting on the center of gravity of the object. Adapted from Public Domain image, no author listed.</figcaption>
+          </figure></td>
+        <td><figure> <img alt="Forces on a Small End Table" height="200" src="images/table.png" width="200">
+            <figcaption>The gravitational force and the normal forces acting on each leg of this table can all be approximated as point forces. Adapted from Public Domain image by Seahen.</figcaption>
+          </figure></td>
+      </tr>
+    </table>
+    <figure class="right"> <img alt="Line of Action of a Force" height="172" src="images/lineofaction.png" width="300">
+      <figcaption>The line of action of a point force is the line along which the force acts.</figcaption>
+    </figure>
+    <p>In addition to the magnitude, direction, and point of application of the point force, another important term to understand is the <strong>line of action</strong> of the force. The line of action of a force is the line along which the force acts. Given the direction and point of application, one can find the line of action, but this term will be important in discussing concurrent forces and in the principle of transmissibility.</p>
+    <h2>Force Vector Representation:</h2>
+    <p>When vectors are drawn to form free body diagrams, the magnitude and direction are usually given in one of two formats:</p>
+    <ul>
+      <li>Overall magnitude and angle(s) to indicate direction (often called <strong>magnitude and direction form</strong>).</li>
+      <li>Magnitudes in each of the coordinate directions (often called <strong>component form</strong>).</li>
+    </ul>
+    <p>In either format we will need two values to fully define a force vector in a 2D system (either a magnitude and a single angle or a magnitude in each of the two coordinate axes), and three values to fully define a force vector in a 3D system (either a magnitude and two angles or a magnitude in each of the three coordinate axes). Below are some examples of force vectors in both representations.</p>
+    <figure class="center"> <img alt="2D Force Representations" height="201" src="images/2Dforces.png" width="500">
+      <figcaption>The same force can be represented with a magnitude and an angle as shown in the left or with magnitudes in each of the coordinate axes on the right.</figcaption>
+    </figure>
+    <figure class="center"> <img alt="3D Force Representations" height="209" src="images/3Dforces.png" width="500">
+      <figcaption>In three dimensions forces are represented with either a magnitude and two directions as shown on the left or with magnitudes in each of the three coordinate axes as shown on the right.</figcaption>
+    </figure>
+    <h2>Changing Force Vector Forms:</h2>
+    <p>Because the two different forms of the vector are equivalent, we can switch between representations without changing the problem. Often in engineering problems, it will initially be easier to write the force in magnitude and angle form but later, analysis will be easier if forces are written in component form. To switch from magnitude and direction form to component form you will use right triangles and trigonometry to determine the component of the overall magnitude in each direction. This is a simple vector decomposition, and more information on this process can be seen on the vector decomposition page. To switch back from component form into magnitude and direction form you simply use the reverse of this initial process.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/kq8vqOKhKeA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The tension force on the box below is given in magnitude and direction form. Redraw the diagram with the tension force given in component form.</p>
+        <img alt="Problem 1 Diagram" height="263" src="images/P1.png" width="500"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ZERURXWnlDg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/PointForces_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>The force acting on the cantilever beam shown below is given in component form. Redraw the diagram with the force given in magnitude and direction form.</p>
+        <img alt="Problem 2 Diagram" height="276" src="images/P2.png" width="500"></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/M3UjDfZzRHY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/PointForces_WorkedProblem2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>The force shown below is given in magnitude and direction form. Redraw the diagram with the force vector given in component form.</p>
+        <img alt="Problem 3 Diagram" height="302" src="images/P3.png" width="299"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/DroNv0TxnyA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/PointForces_WorkedProblem3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

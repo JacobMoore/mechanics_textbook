@@ -28,62 +28,29 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>The Method of Joints</h1>
-    <p>The <strong>method of joints</strong> is a process used to solve for 
-      the unknown forces acting on members of a <strong>truss</strong>. The 
-      method centers on the joints or connection points between the members, 
-      and it is usually the fastest and easiest way to solve for all the 
-      unknown forces in a truss structure.</p>
+    <p>The <strong>method of joints</strong> is a process used to solve for the unknown forces acting on members of a <strong>truss</strong>. The method centers on the joints or connection points between the members, and it is usually the fastest and easiest way to solve for all the unknown forces in a truss structure.</p>
     <h2>Using the Method of Joints:</h2>
     <p>The process used in the method of joints is outlined below:</p>
     <ol>
-      <li>In the  beginning it is usually useful to label the members and the 
-        joints in your truss. This will help you keep everything organized 
-        and consistent in later analysis. In this book, the members will be 
-        labeled with letters and the joints will be labeled with numbers.</li>
+      <li>In the  beginning it is usually useful to label the members and the joints in your truss. This will help you keep everything organized and consistent in later analysis. In this book, the members will be labeled with letters and the joints will be labeled with numbers.</li>
       <figure class="center"> <img alt="Method of Joints Labels" height="227" src="images/MOJlabels.png" width="400">
-        <figcaption>The first step in the method of joints is to label 
-          each joint and each member.</figcaption>
+        <figcaption>The first step in the method of joints is to label each joint and each member.</figcaption>
       </figure>
-      <li>Treating the entire truss structure as a rigid body, draw a free 
-        body diagram, write out the equilibrium equations, and solve for the 
-        external reacting forces acting on the truss structure. This analysis 
-        should not differ from the analysis of a single rigid body.</li>
+      <li>Treating the entire truss structure as a rigid body, draw a free body diagram, write out the equilibrium equations, and solve for the external reacting forces acting on the truss structure. This analysis should not differ from the analysis of a single rigid body.</li>
       <figure class="center"> <img alt="Method of Joints Reactions" height="193" src="images/MOJreactions.png" width="400">
-        <figcaption>Treat the entire truss as a rigid body and solve for 
-          the reaction forces supporting the truss structure.</figcaption>
+        <figcaption>Treat the entire truss as a rigid body and solve for the reaction forces supporting the truss structure.</figcaption>
       </figure>
-      <li>Assume there is a pin or some other small amount of material at 
-        each of the connection points between the members. Next you will 
-        draw a free body diagram for each connection point. Remember to 
-        include:
+      <li>Assume there is a pin or some other small amount of material at each of the connection points between the members. Next you will draw a free body diagram for each connection point. Remember to include:
         <ul>
-          <li>Any external reaction or load forces that may be acting 
-            at that joint.</li>
-          <li>A normal force for each two force member connected to 
-            that joint. Remember that for a two force member, the force 
-            will be acting along the line between the two connection 
-            points on the member. We will also need to guess if it will 
-            be a tensile or a compressive force. An incorrect guess now 
-            though will simply lead to a negative solution later on. A 
-            common strategy then is to assume all forces are tensile, 
-            then later in the solution any positive forces will be 
-            tensile forces and any negative forces will be compressive 
-            forces. </li>
-          <li>Label each force in the diagram. Include any known 
-            magnitudes and directions and provide variable names for 
-            each unknown.</li>
+          <li>Any external reaction or load forces that may be acting at that joint.</li>
+          <li>A normal force for each two force member connected to that joint. Remember that for a two force member, the force will be acting along the line between the two connection points on the member. We will also need to guess if it will be a tensile or a compressive force. An incorrect guess now though will simply lead to a negative solution later on. A common strategy then is to assume all forces are tensile, then later in the solution any positive forces will be tensile forces and any negative forces will be compressive forces. </li>
+          <li>Label each force in the diagram. Include any known magnitudes and directions and provide variable names for each unknown.</li>
         </ul>
       </li>
       <figure class="center"> <img alt="Method of Joints" height="215" src="images/MOJjoints.png" width="400">
-        <figcaption>Drawing a free body diagram of each joint, we draw 
-          in the known forces as well as tensile forces from each two 
-          force member.</figcaption>
+        <figcaption>Drawing a free body diagram of each joint, we draw in the known forces as well as tensile forces from each two force member.</figcaption>
       </figure>
-      <li>Write out the equilibrium equations for <strong>each of the joints</strong>. You 
-        should treat the joints as particles, so there will be force 
-        equations but no moment equations. With either two (for 2D problems) 
-        or three (for 3D problems) equations for each joint, this should 
-        give you a large number of equations.</li>
+      <li>Write out the equilibrium equations for <strong>each of the joints</strong>. You should treat the joints as particles, so there will be force equations but no moment equations. With either two (for 2D problems) or three (for 3D problems) equations for each joint, this should give you a large number of equations.</li>
       <ul>
         <li>In planar trusses, the sum of the forces in the x direction will be zero and the sum of the forces in the y direction will be zero for each of the joints.</li>
         <table class="equation">
@@ -111,11 +78,7 @@
           </tbody>
         </table>
       </ul>
-      <li>Finally, solve the equilibrium equations for the unknowns. You 
-        can do this algebraically, solving for one variable at a time, or 
-        you can use matrix equations to solve for everything at once. If you 
-        assumed that all forces were tensile earlier, remember that negative 
-        answers indicate compressive forces in the members.</li>
+      <li>Finally, solve the equilibrium equations for the unknowns. You can do this algebraically, solving for one variable at a time, or you can use matrix equations to solve for everything at once. If you assumed that all forces were tensile earlier, remember that negative answers indicate compressive forces in the members.</li>
     </ol>
   </div>
   <div id="sidebar"> <br/>
@@ -130,9 +93,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>Find the force acting in each of the members in the truss bridge 
-          shown below. Remember to specify 
-          if each member is in tension or compression.</p>
+        <p>Find the force acting in each of the members in the truss bridge shown below. Remember to specify if each member is in tension or compression.</p>
         <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -147,9 +108,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>Find the force acting in each of the members of the truss shown 
-          below. Remember to specify 
-          if each member is in tension or compression.</p>
+        <p>Find the force acting in each of the members of the truss shown below. Remember to specify if each member is in tension or compression.</p>
         <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -164,9 +123,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3</h3>
-        <p>Find the force acting in each of the members of the truss shown 
-          below. Remember to specify 
-          if each member is in tension or compression.</p>
+        <p>Find the force acting in each of the members of the truss shown below. Remember to specify if each member is in tension or compression.</p>
         <img alt="Problem 3Diagram" src="images/P3.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>

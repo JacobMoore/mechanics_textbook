@@ -28,60 +28,29 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Power Screws</h1>
-    <p>A power screw (also sometimes called a lead screw) is another simple 
-      machine that can be used to create very large forces. The screw can be 
-      thought of as a wedge or a ramp that has been wound around a shaft. By 
-      holding a nut stationary and rotating the shaft, we can have the nut 
-      sliding either up or down the wedge in the shaft. In this way a 
-      relatively small moment on the shaft can cause very large forces on the 
-      nut.</p>
+    <p>A power screw (also sometimes called a lead screw) is another simple machine that can be used to create very large forces. The screw can be thought of as a wedge or a ramp that has been wound around a shaft. By holding a nut stationary and rotating the shaft, we can have the nut sliding either up or down the wedge in the shaft. In this way a relatively small moment on the shaft can cause very large forces on the nut.</p>
     <table class="figtable">
       <tr>
-        <td><figure> <img alt="Treaded Rod" height="266" src="images/threadedrod.jpg" width="200">
-            <figcaption>The power screw can be thought of as a ramp wrapped 
-              around a shaft.</figcaption>
+        <td><figure> <img alt="Cider Press" height="305" src="images/ciderpress.jpg" width="200">
+            <figcaption>The screw in this cider press is rotated with the handle on the top. The stationary nut on the frame of the press forces the shaft downward as it is turned. Public Domain image by Daderot.</figcaption>
           </figure></td>
-        <td><figure> <img alt="Power Screw" height="217" src="images/leadscrew.jpg" width="300">
-            <figcaption>By rotating the shaft, a nut that is kept from rotating 
-              will slide up or down the ramp. This can turn a relatively small 
-              input moment into a huge force moving the nut up or down.</figcaption>
+        <td><figure> <img alt="Sissor Jack" height="206" src="images/scissorjack.jpg" width="300">
+            <figcaption>By rotating the screw in this scissor jack, the user can move the nut (on the left end) closer or further from the anchor on the right end, which will raise or lower the car. Public Domain image by nrjfalcon1.</figcaption>
           </figure></td>
       </tr>
     </table>
     <h2>Static Analysis of Power Screws:</h2>
-    <p>The easiest way to analyze a power screw system is to turn the 
-      problem into a 2D problem by "unwrapping" the ramp from around the 
-      shaft. To do this we will need two numbers. First we will need the <strong>diameter</strong> of the shaft, and second we will need either 
-      the <strong>threads-per-inch/centimeter</strong> or the <strong>pitch</strong> of the screw. The threads-per-inch tells you how many threads you have 
-      per inch/centimeter of screw. With a single thread design (most screws) 
-      this will also be the number of times the thread wraps around the screw 
-      in one inch/centimeter. The pitch on the other hand gives you the 
-      distance between two adjacent threads. Either of these numbers can be 
-      used to find the other.</p>
-    <p>Once we have these numbers, we can imagine unwrapping the ramp from 
-      around the screw and ending up with a ramp in one of the two situations 
-      below. In either case, we can use the inverse tangent function to find 
-      the <strong>lead angle</strong>, which can be thought of as the angle of 
-      the thread that the nut is climbing up. Finding the lead angle is the 
-      first step in analyzing a power screw system.</p>
-    <figure class="center"> <img alt="The lead angle of a screw" height="259" src="images/leadangle.png" width="500">
-      <figcaption>The lead angle of a screw is the angle of the thread 
-        that the nut will be climbing up as the shaft rotates.</figcaption>
+    <p>The easiest way to analyze a power screw system is to turn the problem into a 2D problem by "unwrapping" the ramp from around the 
+      shaft. To do this we will need two numbers. First we will need the <strong>diameter</strong> of the shaft, and second we will need either the <strong>threads-per-inch/centimeter</strong> or the <strong>pitch</strong> of the screw. The threads-per-inch tells you how many threads you have per inch/centimeter of screw. With a single thread design (most screws) this will also be the number of times the thread wraps around the screw in one inch/centimeter. The pitch on the other hand gives you the distance between two adjacent threads. Either of these numbers can be used to find the other.</p>
+    <p>Once we have these numbers, we can imagine unwrapping the ramp from around the screw and ending up with a ramp in one of the two situations below. In either case, we can use the inverse tangent function to find the <strong>lead angle</strong>, which can be thought of as the angle of the thread that the nut is climbing up. Finding the lead angle is the first step in analyzing a power screw system.</p>
+    <figure class="center"> <img alt="The lead angle of a screw" height="259" src="images/leadangle.png" width="419">
+      <figcaption>The lead angle of a screw is the angle of the thread that the nut will be climbing up as the shaft rotates.</figcaption>
     </figure>
-    <p>Once we find the lead angle, we can draw a free body diagram of the 
-      "nut" in our unwrapped system. Here we include the pushing force which 
-      is pushing our nut up the incline, the load force which is the force the 
-      nut exerts on some external body, the normal force between the nut and 
-      screw, and the friction force between the nut and the screw.</p>
+    <p>Once we find the lead angle, we can draw a free body diagram of the "nut" in our unwrapped system. Here we include the pushing force which is pushing our nut up the incline, the load force which is the force the nut exerts on some external body, the normal force between the nut and screw, and the friction force between the nut and the screw.</p>
     <figure class="center"> <img alt="Screw Free Body Diagram" height="280" src="images/screwfbd.png" width="500">
-      <figcaption>The free body diagram of the "nut" in our power screw 
-        system.</figcaption>
+      <figcaption>The free body diagram of the "nut" in our power screw system.</figcaption>
     </figure>
-    <p>If our screw is pushing a load at some constant rate, then we can 
-      assume two things: First the nut is in equilibrium, so we can write out 
-      the equilibrium equations for the nut. Second the nut is sliding, 
-      indicating that the friction force will be equal to the normal force 
-      times the kinetic coefficient of friction.</p>
+    <p>If our screw is pushing a load at some constant rate, then we can assume two things: First the nut is in equilibrium, so we can write out the equilibrium equations for the nut. Second the nut is sliding, indicating that the friction force will be equal to the normal force times the kinetic coefficient of friction.</p>
     <table class="equation">
       <tbody>
         <tr>

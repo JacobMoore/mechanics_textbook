@@ -29,72 +29,32 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Analysis of Frames and Machines</h1>
-    <p>The process used to analyze frames and machines, involves breaking 
-      the structure down into individual components in order to solve for the 
-      forces acting on each component. <strong>Sometimes</strong> the 
-      structure as a whole can be analyzed as a rigid body, and each component 
-      can <strong>always</strong> be analyzed as a rigid body.</p>
+    <p>The process used to analyze frames and machines, involves breaking the structure down into individual components in order to solve for the forces acting on each component. <strong>Sometimes</strong> the structure as a whole can be analyzed as a rigid body, and each component can <strong>always</strong> be analyzed as a rigid body.</p>
     <h2>The Process Used to Analyze Frames and Machines:</h2>
     <p>The process used to analyze frames and machines is outlined below:</p>
     <ol>
-      <li>In the beginning it is usually useful to label the members in 
-        your structure. This will help you keep everything organized 
-        and consistent in later analysis. In this book, we will label 
-        everything by assigning letters to each of the joints.</li>
+      <li>In the beginning it is usually useful to label the members in your structure. This will help you keep everything organized and consistent in later analysis. In this book, we will label everything by assigning letters to each of the joints.</li>
       <figure class="center"> <img alt="Analysis of Frames and Machines Labels" src="images/processlabels.png">
-        <figcaption>The first step in the analysis  of frames and 
-          machines is to label the members.</figcaption>
+        <figcaption>The first step in the analysis  of frames and machines is to label the members.</figcaption>
       </figure>
-      <li>Next you will need to determine if we can analyze the entire 
-        structure as a rigid body. In order to do this, the structure needs 
-        to be independently rigid. This means that it would be rigid even if 
-        we separated it from its supports. If the structure is independently 
-        rigid (no machines, and only some frames will be independently 
-        rigid), then analyze the structure as a single rigid body to 
-        determine the reaction forces acting on the structure. If the 
-        structure is not independently rigid then skip this step.</li>
+      <li>Next you will need to determine if we can analyze the entire structure as a rigid body. In order to do this, the structure needs to be independently rigid. This means that it would be rigid even if we separated it from its supports. If the structure is independently rigid (no machines, and only some frames will be independently rigid), then analyze the structure as a single rigid body to determine the reaction forces acting on the structure. If the structure is not independently rigid then skip this step.</li>
       <figure class="center"> <img alt="Analysis of Frames and Machines Free Body Diagram" height="231" src="images/processfbd.png" width="400">
-        <figcaption>If, and only if, the structure is independently 
-          rigid, you should analyze the whole structure as a single rigid 
-          body to solve for the reaction forces.</figcaption>
+        <figcaption>If, and only if, the structure is independently rigid, you should analyze the whole structure as a single rigid body to solve for the reaction forces.</figcaption>
       </figure>
-      <li>Next you will draw a free body diagram for each of the 
-        components in the structure. You will need to include all forces 
-        acting on each member, including...
+      <li>Next you will draw a free body diagram for each of the components in the structure. You will need to include all forces acting on each member, including...
         <ul>
-          <li>First add any external reaction or load forces that may 
-            be acting at the components.</li>
-          <li>Second identify any <strong>two force members</strong> in the structure. At their connection points they will cause 
-            a force with an unknown magnitude but a <strong>known 
-            direction</strong> (the forces will act along the line 
-            between the two connection points on the member).</li>
-          <li>Next add in the reaction forces (and possibly moments) 
-            at the connection points between non-two force members. For 
-            forces with an unknown magnitude and direction (such as in 
-            pin joints) the forces are often drawn in as having unknown 
-            x and y components (x, y and z for 3D truss problems).</li>
-          <li>Remember that the forces at each of the connection 
-            points will be a <strong>Newton's Third Law pair</strong>. 
-            This means that if one member exerts some force on some 
-            other member, then the second member will exert an equal and 
-            opposite force back on the first. When we draw out our 
-            unknown forces at the connection points, we must make sure 
-            that the forces acting on each member are <strong>opposite in 
-            direction</strong>.</li>
+          <li>First add any external reaction or load forces that may be acting at the components.</li>
+          <li>Second identify any <strong>two force members</strong> in the structure. At their connection points they will cause a force with an unknown magnitude but a <strong>known direction</strong> (the forces will act along the line between the two connection points on the member).</li>
+          <li>Next add in the reaction forces (and possibly moments) at the connection points between non-two force members. For forces with an unknown magnitude and direction (such as in pin joints) the forces are often drawn in as having unknown x and y components (x, y and z for 3D truss problems).</li>
+          <li>Remember that the forces at each of the connection points will be a <strong>Newton's Third Law pair</strong>. This means that if one member exerts some force on some other member, then the second member will exert an equal and opposite force back on the first. When we draw out our unknown forces at the connection points, we must make sure that the forces acting on each member are <strong>opposite in direction</strong>.</li>
         </ul>
       </li>
       <figure class="center"> <img alt="Analysis of Frames and Machines" height="250" src="images/processseperate.png" width="400">
-        <figcaption>Separate the structure into individual components 
-          and draw a free body diagram of each component. It is important 
-          to remember that the forces at each connection point are a 
-          Newton's Third Law pair.</figcaption>
+        <figcaption>Separate the structure into individual components and draw a free body diagram of each component. It is important to remember that the forces at each connection point are a Newton's Third Law pair.</figcaption>
       </figure>
-      <li>Write out the equilibrium equations for each component you drew a 
-        free body diagram of. These will be extended bodies, so you will 
-        need to write out the force and the moment equations. </li>
+      <li>Write out the equilibrium equations for each component you drew a free body diagram of. These will be extended bodies, so you will need to write out the force and the moment equations. </li>
       <ul>
-        <p>For 2D problems you will have three possible equations for each component, two force equations and one moment 
-          equation.</p>
+        <p>For 2D problems you will have three possible equations for each component, two force equations and one moment equation.</p>
         <table class="equation">
           <tbody>
             <tr>
@@ -108,8 +68,7 @@
             </tr>
           </tbody>
         </table>
-        <li>For 3D problems you will have six possible equations for each component, three force equations and three moment 
-          equations.</li>
+        <li>For 3D problems you will have six possible equations for each component, three force equations and three moment equations.</li>
         <table class="equation">
           <tbody>
             <tr>
@@ -135,12 +94,7 @@
           </tbody>
         </table>
       </ul>
-      <li>Finally, solve the equilibrium equations for the unknowns. You 
-        can do this algebraically, solving for one variable at a time, or 
-        you can use matrix equations to solve for everything at once. If any 
-        force turns out to be negative, that indicates that the force 
-        actually travels in the opposite direction from what is indicated in 
-        your initial free body diagram.</li>
+      <li>Finally, solve the equilibrium equations for the unknowns. You can do this algebraically, solving for one variable at a time, or you can use matrix equations to solve for everything at once. If any force turns out to be negative, that indicates that the force actually travels in the opposite direction from what is indicated in your initial free body diagram.</li>
     </ol>
   </div>
   <div id="sidebar"> <br/>
@@ -155,8 +109,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>Find all the forces acting on each of the members in the 
-          structure below.</p>
+        <p>Find all the forces acting on each of the members in the structure below.</p>
         <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -171,8 +124,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>Find all the forces acting on each of the members in the 
-          structure below.</p>
+        <p>Find all the forces acting on each of the members in the structure below.</p>
         <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -187,10 +139,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>If two 150 N forces are exerted on the handles of the bolt cutter 
-          shown below, determine the reaction forces (FR1 and FR2) exerted on 
-          the blades of the bolt cutter (this will be equal to the cutting 
-          forces exerted by the bolt cutters).</p>
+        <p>If two 150 N forces are exerted on the handles of the bolt cutter shown below, determine the reaction forces (FR1 and FR2) exerted on the blades of the bolt cutter (this will be equal to the cutting forces exerted by the bolt cutters).</p>
         <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -205,9 +154,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>A 100 lb force is exerted on one side of a TV tray as shown 
-          below. Assuming no friction forces at the base, determine all forces 
-          acting on each of the three parts of the TV tray.</p>
+        <p>A 100 lb force is exerted on one side of a TV tray as shown below. Assuming no friction forces at the base, determine all forces acting on each of the three parts of the TV tray.</p>
         <img alt="Problem 3 Diagram" src="images/P4.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>

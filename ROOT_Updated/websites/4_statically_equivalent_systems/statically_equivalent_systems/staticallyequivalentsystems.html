@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Statically Equivalent Systems</title>
+<title>Mechanics Map - Statically Equivalent Systems</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,104 +19,56 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Statically Equivalent Systems</h1>
-				
-		<p>Two sets of forces are considered <strong>statically equivalent</strong> 
-		if they <strong>cause the same set of reaction forces</strong> on a 
-		body. Because this is true, the two statically equivalent sets of forces 
-		are <strong>interchangeable</strong> in 
-		statics analysis.</p>
-		
-		<figure class="center">
-			<img alt="Statically Equivalent Systems" height="430" src="images/equivalentexample.png" width="600">
-			<figcaption>A single 200 lb man standing at the center of a beam 
-			causes the same reaction forces as two 100 lb children standing 
-			evenly along the beam as shown above. The weight force of the man is 
-			therefore statically equivalent to the weight forces of the two 
-			children.</figcaption>
-		</figure>		
-				
-		<h3>Determining if Forces are Statically Equivalent:</h3>
-		
-		<p>To determine if two sets of forces are statically equivalent, you 
-		must solve for the reaction forces in both cases. If the reaction forces 
-		are the same then the two sets of forces must be statically equivalent. 
-		For any one set of forces there are an infinite number of sets of forces 
-		that are statically equivalent to original set of forces. </p>
-		
-		<h3>Finding a Single Equivalent Point Force:</h3>
-		
-		<p>In statics analysis, we are usually looking to simplify a problem by 
-		turning multiple forces into a single, statically equivalent force. To 
-		find a single point force that is equivalent to multiple point forces 
-		you can use the following procedure.</p>
-		
-		<ol>
-		<li>Solve for the reaction forces in the original scenario.</li>
-			<li>Draw a new free body diagram with these reaction forces. You 
-			will also add one force with an unknown magnitude, direction, and 
-			point of application to your diagram. This is the single point load 
-			that will be equivalent to your original set of forces.</li>
-			<li>Write out the equations of equilibrium for this scenario, 
-			including the known values for the reaction forces.</li>
-			<li>First solve the force equations to find the x and y components 
-			of this unknown force (or x, y and z components for a 3D problem). 
-			This can be used to find the magnitude and direction of the 
-			statically equivalent point force.</li>
-			<li>Next use the moment equation (or equations for 3D problems) to 
-			determine the location of the statically equivalent point force.</li>
-		</ol>
-					
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/r0pwzQ_Ge00" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>Determine if the two sets of forces shown below are statically 
-			equivalent.</p>						
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-		</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/Xv5DyvQD29E" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/StaticallyEquivalent_WorkedProblem1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-		
-	</div>
-
-
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Statically Equivalent Systems</h1>
+    <p>Two sets of forces are considered <strong>statically equivalent</strong> if they <strong>cause the same set of reaction forces</strong> on a body. Because this is true, the two statically equivalent sets of forces are <strong>interchangeable</strong> in statics analysis.</p>
+    <figure class="center"> <img alt="Statically Equivalent Systems" height="430" src="images/equivalentexample.png" width="600">
+      <figcaption>A single 200 lb man standing at the center of a beam causes the same reaction forces as two 100 lb children standing evenly along the beam as shown above. The weight force of the man is therefore statically equivalent to the weight forces of the two children.</figcaption>
+    </figure>
+    <h2>Determining if Forces are Statically Equivalent:</h2>
+    <p>To determine if two sets of forces are statically equivalent, you must solve for the reaction forces in both cases. If the reaction forces are the same then the two sets of forces must be statically equivalent. For any one set of forces there are an infinite number of sets of forces that are statically equivalent to original set of forces. </p>
+    <h2>Finding a Single Equivalent Point Force:</h2>
+    <p>In statics analysis, we are usually looking to simplify a problem by turning multiple forces into a single, statically equivalent force. To find a single point force that is equivalent to multiple point forces you can use the following procedure.</p>
+    <ol>
+      <li>Solve for the reaction forces in the original scenario.</li>
+      <li>Draw a new free body diagram with these reaction forces. You will also add one force with an unknown magnitude, direction, and point of application to your diagram. This is the single point load that will be equivalent to your original set of forces.</li>
+      <li>Write out the equations of equilibrium for this scenario, including the known values for the reaction forces.</li>
+      <li>First solve the force equations to find the x and y components of this unknown force (or x, y and z components for a 3D problem). This can be used to find the magnitude and direction of the statically equivalent point force.</li>
+      <li>Next use the moment equation (or equations for 3D problems) to determine the location of the statically equivalent point force.</li>
+    </ol>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/r0pwzQ_Ge00" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Determine if the two sets of forces shown below are statically equivalent.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/Xv5DyvQD29E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/StaticallyEquivalent_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

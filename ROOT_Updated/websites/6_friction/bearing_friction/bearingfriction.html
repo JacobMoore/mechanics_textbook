@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Bearing Friction</title>
+<title>Mechanics Map - Bearing Friction</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-	<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
-    <script type="text/javascript">
+<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-34631101-1']);
@@ -21,53 +20,25 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Bearing Friction</h1>
-				
-		<p>A bearing is the machine element used to support a rotating shaft.
-		<strong>Bearing friction</strong> is the friction that exists between 
-		the rotating shaft and bearing that is supporting that shaft. Though 
-		many types of bearings exist (plain, ball, roller, hydrodynamic) in this 
-		course we will only be looking at plain bearings (also sometimes called 
-		journal bearings).</p>
-		
-		<figure class="right">
-			<img alt="A Plain Bearing" height="271" src="images/bearing.png" width="300">
-			<figcaption>In a plain bearing as the one shown here, a friction 
-			force will oppose the rotation of the spinning shaft in the 
-			stationary bearing. This force will cause a small moment opposing 
-			the rotation of the shaft.</figcaption>
-		</figure>
-		
-		<p>A plain bearing consists of a circular shaft fitted into a slightly 
-		larger circular hole as shown to the right. The shaft will usually be 
-		rotating and will be exerting some sort of load (F load) onto the 
-		bearing. The bearing will then be supporting the shaft with some normal 
-		force and a friction force will exist between the bearing surface and 
-		the surface of the shaft. Sometimes the rotation of the bearing will 
-		cause the shaft to climb up the side of the side of the bearing, causing 
-		the angle of the normal and friction forces to change, but this climbing 
-		is usually small enough that it is neglected.</p>
-		
-		<p>If we assume that the climbing in the bearing is negligible, 
-		the normal of the bearing on the shaft will be equal and opposite to 
-		loading force of the shaft on the bearing. Furthermore, if the shaft is 
-		rotating relative to the bearing, then the friction force will be equal 
-		to kinetic coefficient of friction times the normal force of the bearing 
-		on the shaft.</p>
-        
-         <p>If the climb angle is assumed to be small, then...</p>
-		
-	<table class="equation">
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Bearing Friction</h1>
+    <p>A bearing is the machine element used to support a rotating shaft <strong>Bearing friction</strong> is the friction that exists between the rotating shaft and bearing that is supporting that shaft. Though many types of bearings exist (plain, ball, roller, hydrodynamic) in this course we will only be looking at plain bearings (also sometimes called journal bearings).</p>
+    <figure class="center"> <img alt="A Plain Bearing" height="265" src="images/trainbearing.jpg" width="400">
+      <figcaption>Some friction will exist in the bearings on this train car. Public Domain image by ds_30.</figcaption>
+    </figure>
+    <figure class="right"> <img alt="A Plain Bearing" height="271" src="images/bearing.png" width="300">
+      <figcaption>In a plain bearing as the one shown here, a friction force will oppose the rotation of the spinning shaft in the stationary bearing. This force will cause a small moment opposing the rotation of the shaft.</figcaption>
+    </figure>
+    <p>A plain bearing consists of a circular shaft fitted into a slightly larger circular hole as shown to the right. The shaft will usually be rotating and will be exerting some sort of load (F load) onto the bearing. The bearing will then be supporting the shaft with some normal force and a friction force will exist between the bearing surface and the surface of the shaft. Sometimes the rotation of the bearing will cause the shaft to climb up the side of the side of the bearing, causing the angle of the normal and friction forces to change, but this climbing is usually small enough that it is neglected.</p>
+    <p>If we assume that the climbing in the bearing is negligible, the normal of the bearing on the shaft will be equal and opposite to loading force of the shaft on the bearing. Furthermore, if the shaft is rotating relative to the bearing, then the friction force will be equal to kinetic coefficient of friction times the normal force of the bearing on the shaft.</p>
+    <p>If the climb angle is assumed to be small, then...</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[F_{load}=F_{N}\]</td>
@@ -77,73 +48,42 @@
         </tr>
       </tbody>
     </table>
-		
-		<p>The friction force will then be exerting a moment about the center of 
-		the shaft opposing the rotation of the shaft. Unless some other moment 
-		is keeping the shaft spinning, this moment will eventually slow down and 
-		stop the rotation in the shaft. The magnitude of this moment will be 
-		equal to the magnitude of the friction force times the radius of the 
-		shaft.</p>
-		
-<table class="equation">
+    <p>The friction force will then be exerting a moment about the center of the shaft opposing the rotation of the shaft. Unless some other moment is keeping the shaft spinning, this moment will eventually slow down and stop the rotation in the shaft. The magnitude of this moment will be equal to the magnitude of the friction force times the radius of the shaft.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[M_{f}=r_{shaft}* \left( \mu _k* F_{N} \right)\]</td>
-		</tr>
+        </tr>
       </tbody>
     </table>
-		
-		<p>Another important factor to keep in mind is that most bearings are 
-		lubricated. This can significantly lower the coefficients of friction 
-		(this the the main reason for using lubrication actually). When 
-		performing calculations, it is import to know if the bearing is 
-		lubricated and if so using an appropriate friction coefficients.</p>
-				
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/v8q6xnJN9zE" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>
-	
-	<div id="workedproblems">
-		<h2>Worked Problems:</h2>
-		
-		<div class="problem">
-		<div class="question">
-			<h3>Question 1:</h3>
-			<p>A cart and its load weigh a total of 200 lbs. There are two 
-			wheels on the cart each with a diameter of 2 feet and each supporting 
-			half of the 200 pound load. The bearing attaching each wheel to the 
-			cart is a lubricated steel on steel (kinetic coefficient of 
-			friction = .05) journal bearing with a shaft one inch in diameter. 
-			What is the moment due to friction from each bearing? Assuming there 
-			are no other sources of friction, what magnitude must the pulling 
-			force have 
-			in order to keep the cart moving at a constant speed?</p>	
-			<img alt="Problem 1 Diagram" src="images/P1.png">
-			</div>
-		<div class="solution">
-			<h3>Solution:</h3>
-			<div class="video">
-				<iframe width="260" height="195" src="http://www.youtube.com/embed/1R3BZIBQsXE" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<br/>
-			<br/>
-			<div class="resource">
-				<a href="pdf/BearingFriction_WorkedExample1.pdf" target="_blank">PDF Solution</a>
-			</div>
-		</div>
-		</div>
-				
-	</div>
-	
-	<script language="javascript">displayFooter();</script>
+    <p>Another important factor to keep in mind is that most bearings are lubricated. This can significantly lower the coefficients of friction (this the the main reason for using lubrication actually). When performing calculations, it is import to know if the bearing is lubricated and if so using an appropriate friction coefficients.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/v8q6xnJN9zE" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A cart and its load weigh a total of 200 lbs. There are two wheels on the cart each with a diameter of 2 feet and each supporting half of the 200 pound load. The bearing attaching each wheel to the cart is a lubricated steel on steel (kinetic coefficient of friction = .05) journal bearing with a shaft one inch in diameter. What is the moment due to friction from each bearing? Assuming there are no other sources of friction, what magnitude must the pulling force have in order to keep the cart moving at a constant speed?</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/1R3BZIBQsXE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/BearingFriction_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>

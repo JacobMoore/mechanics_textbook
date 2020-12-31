@@ -28,28 +28,28 @@
   <div id="maincontent">
     <h1>Bodies in Engineering Mechanics</h1>
     <p>A <strong>body</strong>, for the purposes of engineering mechanics, is a collection of matter that is analyzed as a single object. This can be something simple like a rubber ball, or it can be something made of many parts such as a car. What can count as a body and what cannot count as a body is dependent on the circumstances of the analysis. In some circumstances in engineering mechanics, it is useful to make certain assumptions about the bodies being analyzed. We will usually need to assume the body is either rigid or deformable, and we will also need to assume that the body is either a particle or an extended body.</p>
-    <h3>Rigid versus Deformable Bodies</h3>
+    <h2>Rigid versus Deformable Bodies</h2>
     <p>Rigid bodies do not deform (stretch, compress, or bend) when subjected to loads, while deformable bodies do deform. In actuality, no physical body is completely rigid, but most bodies deform so little that this deformation has a minimal impact on the analysis. For this reason, we usually assume that bodies in the statics and dynamics courses are rigid. In the strength of materials course we specifically remove this assumption and examine how bodies deform and eventually fail under loading.</p>
     <p>There is no set boundary for determining if a body can be approximated as rigid, but there are two factors to look for that indicate that a rigid body assumption is not appropriate. First, if the body is being significantly stretched, compressed, or bent during the period of analysis, then the body should not be analyzed as a rigid body. Second, if the body has parts that are free to move relative to one another, then the body as a whole should not be analyzed as a rigid body (this is instead a machine, comprised of multiple connected bodies that will each need to be analyzed separately).</p>
 	<figure class="center"><img src="images/hammer.jpg" width="300" height="135" alt="A claw hammer"/>
-      <figcaption>This hammer is a good example of a rigid body for analysis. It deforms little under regular use and does not have any pieces that move relative to one another.</figcaption>
+      <figcaption>This hammer is a good example of a rigid body for analysis. It deforms little under regular use and does not have any pieces that move relative to one another. Public Domain image, no author listed.</figcaption>
     </figure>
-	<figure class="center"><img src="images/carcrash.jpg" width="300" height="225" alt="A car that crashed into a tree."/>
-      <figcaption>This car deformed significantly when it impacted the tree. When analyzing the impact, we should not treat the car as a rigid body.</figcaption>
+	<figure class="center"><img src="images/carcrash.jpg" width="300" height="195" alt="A car impacting a wall in a crash test."/>
+      <figcaption>This car deformed significantly during the crash test. When analyzing the impact, we should not treat the car as a rigid body. Image by Brady Holt CC-BY-3.0.</figcaption>
     </figure>
 	<figure class="center"><img src="images/scissors.jpg" width="300" height="225" alt="A pair of scissors"/>
-      <figcaption>This pair of scissors consists of two halves held together with a rivet. Because the two halves can move relative to one another, the pair of scissors as whole should not be treated as a rigid body. Image by ZooFari CC-BY-SA 3.0</figcaption>
+      <figcaption>This pair of scissors consists of two halves held together with a rivet. Because the two halves can move relative to one another, the pair of scissors as whole should not be treated as a rigid body. Image by ZooFari CC-BY-SA 3.0.</figcaption>
     </figure>
-    <h3>Particles versus Extended Bodies:</h3>
+    <h2>Particles versus Extended Bodies:</h2>
     <p><strong>Particles</strong> are bodies where all the mass is concentrated at a single point in space. Particle analysis will only have to take into account the forces acting on the body and translational motion because rotation is not considered for particles. Extended bodies on the other hand have mass that is distributed throughout a finite volume. Often in engineering statics, we will take a shortcut and say <strong>rigid bodies</strong> to describe extended bodies that also happen to be rigid. This is because particles, as a single point, cannot deform. Extended body analysis is more complex and also has to take into account moments and rotational motions. In actuality, no bodies are truly particles, but some bodies can be approximated as particles to simplify analysis. Bodies are often assumed to be particles if the rotational motions are negligible when compared to the translational motions, or in systems where there is no moment exerted on the body such as a concurrent force system.</p>
 	<figure class="center"><img src="images/comet.jpg" width="300" height="168" alt="A comet moving through space"/>
-      <figcaption>The rotation of this comet and the moments exerted on the comet are unimportant in modeling its trajectory through space, therefore we would treat it as a particle.</figcaption>
+      <figcaption>The rotation of this comet and the moments exerted on the comet are unimportant in modeling its trajectory through space, therefore we would treat it as a particle. Public Domain image by Buddy Nath.</figcaption>
     </figure>
 	<figure class="center"><img src="images/skycam.jpg" width="250" height="140" alt="A camera supported by several cables"/>
       <figcaption>The gravitational forces and the tension forces on the skycam all act through a single point, making this a concurrent force system that can be analyzed as a particle. Image by Despeaux CC-BY-SA 3.0.</figcaption>
     </figure>
 	<figure class="center"><img src="images/crowbar.jpg" width="150" height="228" alt="A man using a crowbar on a pallet"/>
-      <figcaption>Rotation and moments will be key to the analysis of the crowbar in this system, therefore the crowbar needs to be analyzed as an extended body. Public Domain image by Pearson Scott Foresman</figcaption>
+      <figcaption>Rotation and moments will be key to the analysis of the crowbar in this system, therefore the crowbar needs to be analyzed as an extended body. Public Domain image by Pearson Scott Foresman.</figcaption>
     </figure>
   </div>
   <div id="sidebar"> <br/>

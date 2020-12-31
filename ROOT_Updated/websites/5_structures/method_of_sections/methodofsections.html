@@ -28,68 +28,33 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>The Method of Sections</h1>
-    <p>The <strong>method of sections</strong> is a process used to solve for 
-      the unknown forces acting on members of a <strong>truss</strong>. The 
-      method involves breaking the truss down into individual sections and 
-      analyzing each section as a separate rigid body. The method of sections 
-      is usually the fastest and easiest way to determine the unknown forces 
-      acting in a specific member of the truss.</p>
+    <p>The <strong>method of sections</strong> is a process used to solve for the unknown forces acting on members of a <strong>truss</strong>. The method involves breaking the truss down into individual sections and analyzing each section as a separate rigid body. The method of sections is usually the fastest and easiest way to determine the unknown forces acting in a specific member of the truss.</p>
     <h2>Using the Method of Sections:</h2>
     <p>The process used in the method of sections is outlined below:</p>
     <ol>
-      <li>In the beginning it is usually useful to label the members in your truss. This will help you keep everything organized 
-        and consistent in later analysis. In this book, the members will be 
-        labeled with letters.</li>
+      <li>In the beginning it is usually useful to label the members in your truss. This will help you keep everything organized and consistent in later analysis. In this book, the members will be labeled with letters.</li>
       <figure class="center"> <img alt="Method of Sections Labels" height="203" src="images/MOSlabels.png" width="400">
         <figcaption>The first step in the method of sections is to label each member.</figcaption>
       </figure>
-      <li>Treating the entire truss structure as a rigid body, draw a free 
-        body diagram, write out the equilibrium equations, and solve for the 
-        external reacting forces acting on the truss structure. This analysis 
-        should not differ from the analysis of a single rigid body.</li>
+      <li>Treating the entire truss structure as a rigid body, draw a free body diagram, write out the equilibrium equations, and solve for the external reacting forces acting on the truss structure. This analysis should not differ from the analysis of a single rigid body.</li>
       <figure class="center"> <img alt="Method of Sections Reactions" height="211" src="images/MOSfbd.png" width="400">
-        <figcaption>Treat the entire truss as a rigid body and solve for 
-          the reaction forces supporting the truss structure.</figcaption>
+        <figcaption>Treat the entire truss as a rigid body and solve for the reaction forces supporting the truss structure.</figcaption>
       </figure>
-      <li>Next you will imagine cutting your truss into two separate 
-        sections. The cut should travel through the member that you are 
-        trying to solve for the forces in, and should cut through as few 
-        members as possible (The cut does not need to be a straight line).</li>
+      <li>Next you will imagine cutting your truss into two separate sections. The cut should travel through the member that you are trying to solve for the forces in, and should cut through as few members as possible (The cut does not need to be a straight line).</li>
       <figure class="center"> <img alt="Method of Sections Cutting the Truss" height="220" src="images/MOScut.png" width="400">
-        <figcaption>Next you will imagine cutting the truss into two 
-          parts. If you want to find the forces in a specific member be 
-          sure to cut through that member. It also makes things easier if 
-          you cut through as few members as possible.</figcaption>
+        <figcaption>Next you will imagine cutting the truss into two parts. If you want to find the forces in a specific member be sure to cut through that member. It also makes things easier if you cut through as few members as possible.</figcaption>
       </figure>
-      <li>Next you will draw a free body diagram for either one, or both 
-        sections that you created. Be sure to include all the forces acting 
-        on each section.
+      <li>Next you will draw a free body diagram for either one, or both sections that you created. Be sure to include all the forces acting on each section.
         <ul>
-          <li>Any external reaction or load forces that may be acting 
-            at the section.</li>
-          <li>An internal force in each member that was cut when 
-            splitting the truss into sections. Remember that for a two force member, the force 
-            will be acting along the line between the two connection 
-            points on the member. We will also need to guess if it will 
-            be a tensile or a compressive force. An incorrect guess now 
-            though will simply lead to a negative solution later on. A 
-            common strategy then is to assume all forces are tensile, 
-            then later in the solution any positive forces will be 
-            tensile forces and any negative forces will be compressive 
-            forces. </li>
-          <li>Label each force in the diagram. Include any known 
-            magnitudes and directions and provide variable names for 
-            each unknown.</li>
+          <li>Any external reaction or load forces that may be acting at the section.</li>
+          <li>An internal force in each member that was cut when splitting the truss into sections. Remember that for a two force member, the force will be acting along the line between the two connection points on the member. We will also need to guess if it will be a tensile or a compressive force. An incorrect guess now though will simply lead to a negative solution later on. A common strategy then is to assume all forces are tensile, then later in the solution any positive forces will be tensile forces and any negative forces will be compressive forces. </li>
+          <li>Label each force in the diagram. Include any known magnitudes and directions and provide variable names for each unknown.</li>
         </ul>
       </li>
       <figure class="center"> <img alt="Method of Sections" height="270" src="images/MOSsection.png" width="400">
-        <figcaption>Next draw a free body diagram of one or both halves 
-          of the truss. Add the known forces, as well as unknown tensile 
-          forces for each member that you cut.</figcaption>
+        <figcaption>Next draw a free body diagram of one or both halves of the truss. Add the known forces, as well as unknown tensile forces for each member that you cut.</figcaption>
       </figure>
-      <li>Write out the equilibrium equations for each section you drew a 
-        free body diagram of. These will be extended bodies, so you will 
-        need to write out the force and the moment equations. </li>
+      <li>Write out the equilibrium equations for each section you drew a free body diagram of. These will be extended bodies, so you will need to write out the force and the moment equations. </li>
       <ul>
         <li>For 2D problems you will have three possible equations for each section, two force equations and one moment equation.</li>
         <table class="equation">
@@ -131,11 +96,7 @@
           </tbody>
         </table>
       </ul>
-      <li>Finally, solve the equilibrium equations for the unknowns. You 
-        can do this algebraically, solving for one variable at a time, or 
-        you can use matrix equations to solve for everything at once. If you 
-        assumed that all forces were tensile earlier, remember that negative 
-        answers indicate compressive forces in the members.</li>
+      <li>Finally, solve the equilibrium equations for the unknowns. You can do this algebraically, solving for one variable at a time, or you can use matrix equations to solve for everything at once. If you assumed that all forces were tensile earlier, remember that negative answers indicate compressive forces in the members.</li>
     </ol>
   </div>
   <div id="sidebar"> <br/>
@@ -150,8 +111,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>Find the forces acting on members BD and CE. Be sure to 
-          indicate if the forces are tensile or compressive.</p>
+        <p>Find the forces acting on members BD and CE. Be sure to indicate if the forces are tensile or compressive.</p>
         <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -166,8 +126,7 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>Find the forces acting on members AC, BC, and BD of the truss. Be sure to 
-          indicate if the forces are tensile or compressive.</p>
+        <p>Find the forces acting on members AC, BC, and BD of the truss. Be sure to indicate if the forces are tensile or compressive.</p>
         <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
       <div class="solution">
         <h3>Solution:</h3>

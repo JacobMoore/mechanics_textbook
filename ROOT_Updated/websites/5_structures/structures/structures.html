@@ -1,12 +1,11 @@
 ﻿<!DOCTYPE HTML>
 <html>
-
 <head>
-	<title>Mechanics Map - Engineering Structures</title>
+<title>Mechanics Map - Engineering Structures</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 
-	<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"> <!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script>  <!--Common Element Includes File-->
-	
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -20,148 +19,53 @@
   })();
 
 </script>
-
 </head>
 
 <body>
-<div id="wrapper">
-	<script language="javascript">displayHeader();</script>
-	
-	<script language="javascript">displayMenuSub();</script>
-	
-	<div id="maincontent">
-		<h1>Engineering Structures</h1>
-				
-		<p>An <strong>engineering structure</strong> is term used to describe 
-		any <strong>set of 
-		interconnected bodies</strong>. The different bodies in the structure 
-		can move relative to one another (such as the blades in a pair of 
-		scissors) or they can be be fixed relative to one another (such as the 
-		different beams connected to form a bridge). </p>
-		
-		<figure class="center">
-			<img alt="A pair of scissors" height="339" src="images/scissors.png" width="500">
-			<figcaption>This pair of scissors is an example of an engineering 
-			structure. The structure consists of three different bodies that are 
-			interconnected.</figcaption>
-		</figure>
-		
-		<p>When analyzing engineering structures, we will sometimes analyze the 
-		structure as a whole, and we will sometimes break the structure down 
-		into individual bodies that are analyzed separately.&nbsp; The exact 
-		methods used depend upon what unknown forces we are looking for and what 
-		type of structure we are analyzing.</p>
-		
-		<h2>Internal and External Forces:</h2>
-		
-		<p>When examining a single body, we would find the forces that this body 
-		exerted on surrounding bodies, and the forces that these surrounding 
-		bodies would exert on the body we are analyzing. These forces are all 
-		considered <strong>external forces</strong> because they are forces between the body and 
-		the external environment.</p>
-		
-		<p>In an engineering structure, we still have external forces where the 
-		structure is interacting with bodies external to the structure, but we 
-		also can think about the forces that different parts of the structure 
-		exert on one another (the force between the pin and the blade in the 
-		diagram above for example). Since both of these bodies are part of the 
-		structure we are analyzing, this forces are considered <strong>internal 
-		forces</strong>.</p>
-		
-		<p>If we only wish to determine the external forces acting on a 
-		structure, then we can treat the whole structure as a single body 
-		(assuming the structure is rigid as a whole). If we wish to determine 
-		the internal forces acting between components in the structure, then we 
-		will need to disassemble the structure into separate bodies in our 
-		analysis.</p>
-		
-		<h2>Types of Structures:</h2>
-		
-		<p>Another important consideration when analyzing structures is the type 
-		of structure that is being analyzed. All structures fall into one of 
-		three categories: <strong>trusses</strong>, <strong>frames</strong>, or 
-		<strong>machines</strong>. Frames and machines are analyzed in the same 
-		way so distinction between them is less important, but the analysis 
-		methods used for trusses vary greatly from the analysis methods used for 
-		frames and machines, so determining if a structure is a truss or not is 
-		an important first step in structure analysis.</p>
-		
-		<h3>Trusses:</h3>
-		
-		<p>A <strong>truss</strong> is a structure that consists <strong>entirely</strong> of 
-		t<strong>wo force members</strong>. If any one body in the structure is 
-		not a two force member then the structure is either a frame or a 
-		machine. Also in order to be a <strong>statically determinate</strong> 
-		truss (a truss where we can actually solve for all the unknowns) the 
-		truss must be independently rigid as a whole. If different parts of the 
-		truss could 
-		move relative to one another then the truss separated is not independently rigid.</p>
-		
-		<figure class="center">
-			<img alt="Truss Bridge by Leonard G. (Own work) [Public domain], via Wikimedia Commons" height="200" src="images/bridge.jpg" width="400">
-			<figcaption>This bridge is an example of a truss. It consists of a 
-			number of members connected at only two points (the ends of the 
-			beams).</figcaption>
-		</figure>
-		
-		<p>A two force member is a body where forces are applied at only two 
-		locations. If forces are applied at more than two locations, or if any 
-		moments are applied then the body is not a two force member (see the two 
-		force member page for more details). Because of the unique assumptions 
-		we can make with two force members, we can apply two unique methods to 
-		the analysis of trusses (the method of joints and the method of 
-		sections) that we cannot apply to frames and machines (where we cannot 
-		assume we have two force members). </p>
-		
-		<h3>Frames and Machines:</h3>
-		
-		<p>A frame or a machine is structure where at least one component of the 
-		structure is not a two force member. This will be a body in the 
-		structure that has forces acting at three or more points on the body. 
-		The difference between a frame and a machine is that a frame is rigid as 
-		a whole while a machine is not rigid as a whole.</p>
-		
-		<table class="figtable">
-		<tr>
-		<td>	
-			<figure>
-				<img alt="Stool Licensed under Creative Commons Attribution-Share Alike 2.5 via Wikimedia Commons" height="266" src="images/stool.jpg" 				width="200">
-				<figcaption>The legs of this stool have forces applied to them 
-				in three locations (the top, the cross beams, and the floor). 
-				The stool is also independently rigid so this is a frame.</figcaption>
-			</figure>
-		</td>
-		<td>
-			<figure>
-				<img alt="Locking Pliers Licensed under Creative Commons Attribution-Share Alike 3.0 via Wikimedia Commons" height="220" 							src="images/lockingpliers.jpg" width="300">
-				<figcaption>Many pieces within this pair of locking pliers have 
-				forces applied to them at more than two locations. The pieces 
-				can also move relative to one another so this is an example of a 
-				machine.</figcaption>
-			</figure>
-		</td>
-		</tr>
-		</table>
-		
-		<p>Because frames and machines do not consist entirely of two force 
-		members, we cannot make the assumptions that allow us to use the method 
-		of joints and the method of sections. For this reason, we need to use a 
-		different analysis method (simply called the analysis of frames and 
-		machines here). </p>
-			
-	</div>
-	
-	<div id="sidebar"> <br/>
-		<h2>Video Lecture</h2>
-		<div class="video">
-			<iframe width="260" height="195" src="http://www.youtube.com/embed/5Hz8h7qEVEM" frameborder="0" allowfullscreen></iframe>
-		</div>
-		
-		<script language="javascript">displayResources();</script>
-	</div>	
-	
-	<script language="javascript">displayFooter();</script>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Engineering Structures</h1>
+    <p>An <strong>engineering structure</strong> is term used to describe any <strong>set of interconnected bodies</strong>. The different bodies in the structure can move relative to one another (such as the blades in a pair of scissors) or they can be be fixed relative to one another (such as the different beams connected to form a bridge). </p>
+    <figure class="center"> <img alt="A pair of scissors" height="339" src="images/scissors.png" width="500">
+      <figcaption>This pair of scissors is an example of an engineering structure. The structure consists of three different bodies that are interconnected. Adapted from Public Domain image by Comet27.</figcaption>
+    </figure>
+    <p>When analyzing engineering structures, we will sometimes analyze the structure as a whole, and we will sometimes break the structure down into individual bodies that are analyzed separately.&nbsp; The exact methods used depend upon what unknown forces we are looking for and what type of structure we are analyzing.</p>
+    <h2>Internal and External Forces:</h2>
+    <p>When examining a single body, we would find the forces that this body exerted on surrounding bodies, and the forces that these surrounding bodies would exert on the body we are analyzing. These forces are all considered <strong>external forces</strong> because they are forces between the body and the external environment.</p>
+    <p>In an engineering structure, we still have external forces where the structure is interacting with bodies external to the structure, but we also can think about the forces that different parts of the structure exert on one another (the force between the pin and the blade in the diagram above for example). Since both of these bodies are part of the structure we are analyzing, this forces are considered <strong>internal forces</strong>.</p>
+    <p>If we only wish to determine the external forces acting on a structure, then we can treat the whole structure as a single body (assuming the structure is rigid as a whole). If we wish to determine the internal forces acting between components in the structure, then we will need to disassemble the structure into separate bodies in our analysis.</p>
+    <h2>Types of Structures:</h2>
+    <p>Another important consideration when analyzing structures is the type of structure that is being analyzed. All structures fall into one of three categories: <strong>trusses</strong>, <strong>frames</strong>, or <strong>machines</strong>. Frames and machines are analyzed in the same way so distinction between them is less important, but the analysis methods used for trusses vary greatly from the analysis methods used for frames and machines, so determining if a structure is a truss or not is an important first step in structure analysis.</p>
+    <h3>Trusses:</h3>
+    <p>A <strong>truss</strong> is a structure that consists <strong>entirely</strong> of <strong>two force members</strong>. If any one body in the structure is not a two force member then the structure is either a frame or a machine. Also in order to be a <strong>statically determinate</strong> truss (a truss where we can actually solve for all the unknowns) the truss must be independently rigid as a whole. If different parts of the truss could move relative to one another then the truss separated is not independently rigid.</p>
+    <figure class="center"> <img alt="A truss bridge" height="200" src="images/bridge.jpg" width="400">
+      <figcaption>This bridge is an example of a truss. It consists of a number of members connected at only two points (the ends of the beams). Public domain image by Leonard G.</figcaption>
+    </figure>
+    <p>A two force member is a body where forces are applied at only two locations. If forces are applied at more than two locations, or if any moments are applied then the body is not a two force member (see the two force member page for more details). Because of the unique assumptions we can make with two force members, we can apply two unique methods to the analysis of trusses (the method of joints and the method of sections) that we cannot apply to frames and machines (where we cannot assume we have two force members). </p>
+    <h3>Frames and Machines:</h3>
+    <p>A frame or a machine is structure where at least one component of the structure is not a two force member. This will be a body in the structure that has forces acting at three or more points on the body. The difference between a frame and a machine is that a frame is rigid as a whole while a machine is not rigid as a whole.</p>
+    <table class="figtable">
+      <tr>
+        <td><figure> <img alt="A three legged stool" height="266" src="images/stool.jpg" width="200">
+            <figcaption>The legs of this stool have forces applied to them in three locations (the top, the cross beams, and the floor). The stool is also independently rigid so this is a frame. Image by Besceh31 CC-BY-SA 2.5</figcaption>
+          </figure></td>
+        <td><figure> <img alt="Locking Pliers" height="220" src="images/lockingpliers.jpg" width="300">
+            <figcaption>Many pieces within this pair of locking pliers have forces applied to them at more than two locations. The pieces can also move relative to one another so this is an example of a machine. Image by Duk CC-BY-SA 3.0</figcaption>
+          </figure></td>
+      </tr>
+    </table>
+    <p>Because frames and machines do not consist entirely of two force members, we cannot make the assumptions that allow us to use the method of joints and the method of sections. For this reason, we need to use a different analysis method (simply called the analysis of frames and machines here). </p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/5Hz8h7qEVEM" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
 </div>
 </body>
-
 </html>
