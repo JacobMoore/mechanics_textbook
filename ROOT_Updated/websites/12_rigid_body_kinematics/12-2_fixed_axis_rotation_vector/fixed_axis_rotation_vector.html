@@ -1,0 +1,177 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Fixed Axis Rotation</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Fixed Axis Rotation in Rigid Bodies</h1>
+    <p>When moving from particle kinematics to <strong>rigid body</strong> kinematics, we add the <strong>rotation</strong> of a body into the motion analysis process. Some bodies will translate and rotate at the same time, but many engineered systems have components that simply rotate about some fixed axis. We will start our examination of rigid body kinematics by examining these fixed axis rotation problems, where rotation is the only motion we need to worry about.</p>
+    <table class="figtable">
+      <tr>
+        <td><figure> <img src="images/antique_motor.jpg" width="225" height="225" alt="Antique motor with flywheel"/>
+            <figcaption>The flywheel on this antique motor is a good example of fixed axis rotation</figcaption>
+          </figure></td>
+        <td><figure> <img src="images/cat_scan.jpg" width="300" height="225" alt="A CT Scan Machine"/>
+            <figcaption>The rotating x ray tube within the gantry of this CT machine is another example of fixed axis rotation. Image by Thirteen of Clubs CC-BY-SA 2.0</figcaption>
+          </figure></td>
+      </tr>
+    </table>
+    <h2>Angular Position, Velocity, and Acceleration.</h2>
+    <p>Just as with translational motion, we will have angular positions, which we can take the derivative of to find angular velocities, which we can again take the derivative of to find angular accelerations. Since we can only have a single axis of rotation in two dimensional problems (rotating about the z axis, with counter-clockwise rotations being positive, and clockwise rotations being negative) the equations will mirror the one dimensional equations used in particle kinematics.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Angular Position:</th>
+          <td>\[\theta(t)\]</td>
+        </tr>
+        <tr>
+          <th>Angular Velocity:</th>
+          <td>\[\omega(t)=\frac{d\theta}{dt}=\dot{\theta}\]</td>
+        </tr>
+        <tr>
+          <th>Angular Acceleration:</th>
+          <td>\[\alpha(t)=\frac{d\omega}{dt}=\frac{d^2\theta}{dt^2}=\ddot{\theta}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Also as with one dimensional translational motion, we can use integration to move in the opposite direction (just remember your constants of integration).</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[\alpha(t)\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[\omega(t)=\int \alpha(t)\]</td>
+        </tr>
+        <tr>
+          <th>Position:</th>
+          <td>\[\theta(t)=\int \omega(t)=\iint \alpha(t)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If we have constant angular accelerations, we can also use the following formulas adapted from one dimensional motion.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[\alpha(t)=\alpha\]</td>
+        </tr>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[\omega(t)=\alpha t+\omega_{0}\]<br></td>
+        </tr>
+        <tr>
+          <th>Position:</th>
+          <td>\[\theta(t)=\frac{1}{2}\alpha t^{2}+\omega_{0}t+\theta_{0}\]</td>
+        </tr>
+        <tr>
+          <th>Without Time:</th>
+          <td>\[\omega^{2}-\omega{_{0}}^{2}=2\alpha(\theta-\theta_{0})\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Velocity and Acceleration of a Point on a Rotating Body:</h2>
+    <p>With fixed axis rotation, there is a single point on a body that does not move, however all other points on this body will have some velocity and some acceleration due to the rotation of the body itself. </p>
+    <figure class="center"><img src="images/FixedAxis.png" width="350" height="318" alt="A point on a rotating fixed axis"/>
+      <figcaption>The diagram above shows a point P on a body rotating about fixed axis O. Point P is a constant distance r away from the fixed point O. We will adapt the polar kinematics equations to find the velocity and acceleration of point P at any given instant.</figcaption>
+    </figure>
+    <p>To determine the velocities and accelerations of these points, we will adapt the equations we used for polar coordinates. As a reminder, these equations were as follows:</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v=\dot{r}\hat{u}_{r}+r\dot{\Theta}\hat{u}_{\Theta}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a=(\ddot{r}-r\dot{\Theta}^{2})\hat{u}_{r}+(2\dot{r}\dot{\Theta}+r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>To simplify the above equations, we can note that for a rigid body, the point P never gets any closer or further away from the fixed center point O. This means that the distance r never changes and the r dot and r double dot terms in the above equations are zero. Putting this to work, we can simplify the above equations into the equations below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity:</th>
+          <td>\[v=r\dot{\Theta}\hat{u}_{\Theta}\]</td>
+        </tr>
+        <tr>
+          <th>Acceleration:</th>
+          <td>\[a=(-r\dot{\Theta}^{2})\hat{u}_{r}+(r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These equations allow us to find the velocity and acceleration of any point on a body rotating about a fixed axis, given that we know the angular velocity of the body (Theta Dot), the angular acceleration of the body (Theta Double Dot), and the distance from the point to the axis of rotation (r).</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/X02-jN5cwF4" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A flywheel rotates on a fixed axle in a steam engine. The flywheel is rotating at a rate of 600 rpm before a brake begins decelerating the flywheel at a constant rate of 30 rad/s<sup>2</sup>. What is the time required to bring the flywheel to a complete stop? How many rotations does the flywheel go through while decelerating?</p>
+        <img src="images/P1.jpg" width="500" height="333" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/z1S9O0XFkDE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+		<div class="resource"> <a href="transcripts/P1_transcript.pdf" target="_blank">Problem Transcript</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>An 8 cm diameter hard drive platter is rotating at a constant rate of 3600 rpm. What is the velocity of a point on the outer edge of the platter? What is the acceleration experienced by a point on the edge of the platter?</p>
+        <img src="images/P2.jpg" width="400" height="348" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/n4OixdyqqoU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
