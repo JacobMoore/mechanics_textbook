@@ -1,0 +1,90 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Position Displacement Velocity Acceleration</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Position, Displacement, Velocity, and Acceleration</h1>
+    <p>After discussing <strong>bodies</strong>, the next important concepts in engineering mechanics are the concepts of <strong>position</strong>, <strong>displacement</strong>, <strong>velocity</strong>, and <strong>acceleration</strong>. Collectively these concepts will define the motion of the body over time. Though you may have heard of these concepts before, it is important to fully define them, as they have specific and precise meanings in engineering mechanics.</p>
+	<h2>Position</h2>
+	<p>The <strong>position</strong> of a body is simply the current location of that body. For particles, this will be easy to identify, but for extended bodies (which we often call rigid bodies) it is a little more complicated. This is because the position could refer to the location of any point on the body. In engineering mechanics though, unless otherwise specified, the position of a rigid body usually refers to the location of the <strong>center of mass</strong> of that body.</p>
+	<p>We have two options for quantifying the position of a body. We can either specify a distance and direction from some set origin point or we can give the location based on distances from the origin in the set coordinate directions. In either case it will first be important to identify an origin point where we will be measuring from and to identify the coordinate axes we will be using. Without this information we cannot fully define the position, and it is therefore essential that we clearly identify these in the problems we are working with.</p>
+	<figure class="center"><img src="images/position.png" width="500" height="164" alt="Position via angle and direction versus coordinates"/>
+      <figcaption>Position can be defined via a direction and distance as seen on the left or via two distances in the coordinate directions as seen on the right.</figcaption>
+    </figure>
+	<p> If we move to a three dimensional system, we will still have two options for defining position, but we will now need two angles and a distance or we will need distances in three coordinate positions.</p>
+	<figure class="center"><img src="images/position_3D.png" width="500" height="264" alt="Position via angle and direction versus coordinates in 3D"/>
+      <figcaption>In three dimensions, we will either need a distance and two angles to quantify the position or we will need distances in three coordinate directions.</figcaption>
+    </figure>
+	<h2>Displacement</h2>  
+	<p>The <strong>displacement</strong> of a body is simply the change in position between two points in time. Displacement is a vector quantity, where we will need to know not only how far the object has moved, but what direction it has moved in.</p>
+	<figure class="center"><img src="images/displacement.png" width="450" height="246" alt="The displacement vector between time one and time two"/>
+      <figcaption>The displacement is simply the change in position of a body between two points in time. It is represented by a vector, having both a magnitude and direction.</figcaption>
+    </figure>
+	<p>Another important aspect of displacement is that it is path independent. Regardless of the path taken between time one and time two, the displacement is the direct route between those positions.</p>
+	<figure class="center"><img src="images/displacement_path.png" width="500" height="171" alt="The path independence of the displacement vector."/>
+      <figcaption>Regardless of the path taken, the displacement vector is always the direct path from position one to position two.</figcaption>
+    </figure>
+	<h2>Velocity</h2>
+	<p>The <strong>velocity</strong> of a body is defined at the rate of change of the position of the body divided by the rate of chance of time at at any given instant.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{v}=\frac{d\vec{r}}{dt}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>Again this is a vector quantity, having both a magnitude and a direction. If we want to talk about just the magnitude of the velocity vector, that is the <strong>speed</strong>.</p>
+	<p>If we are interested in the average velocity over some set time period, we would take the change in position (which is the displacement) over the change in time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{v}_{ave}=\frac{\Delta \vec{r}}{\Delta t}=\frac{displacement}{time}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>Acceleration</h2>
+	<p>Finally, the <strong>acceleration</strong> is defined as the rate of change of velocity over the rate of change of time. Since velocity itself is the rate of change of position over time, the acceleration is then the double derivative of the position with respect to time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{a}=\frac{d\vec{v}}{dt}=\frac{d^2\vec{r}}{dt^2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>As with displacement and velocity, acceleration is a vector quantity with both a magnitude and direction. Acceleration will exist whenever there is a change in velocity, whether that is a change in speed or a change in direction.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="146" src="http://www.youtube.com/embed/DCln7qYMxa8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

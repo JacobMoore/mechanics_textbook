@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Orientation Angular Displacement Angular Velocity Angular Acceleration</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Orientation, Angular Displacement, Angular Velocity, and Angular Acceleration</h1>
+	<p>When discussing <strong>rigid bodies</strong> that can both translate and rotate, we will need to discuss the concepts of <strong>orientation</strong>, <strong>angular displacement</strong>, <strong>angular velocity</strong>, and <strong>angular acceleration</strong>, in addition to position, displacement, velocity, and acceleration in order to fully describe the motion.</p>
+	<figure class="center"><img src="images/rigid_body_motion.png" width="450" height="212" alt="A body rotating and translating"/>
+      <figcaption>Rigid bodies can both translate and rotate as they move, so rotational versions of position, displacement, velocity, and acceleration need to be taken into account to completely describe the motion of rigid bodies.</figcaption>
+    </figure>
+	<h2>Orientation</h2>
+	<p>The concept of <strong>orientation</strong> describes how a body is currently rotated relative to a set neutral orientation. Along with the position, it is necessary to fully define the location of a rigid body.</p>
+	<figure class="center"><img src="images/orientation.png" width="250" height="201" alt="A rigid body at an angle theta"/>
+      <figcaption>The angle theta is used to define the orientation of this rigid body. Along with the x and y coordinates for the center of mass, this fully describes the current location of the body.</figcaption>
+    </figure>
+	<p>In two dimensional systems, a single angle is enough to fully define the orientation. However, in three dimensional systems a set of three angles is necessary to fully define the orientation. These three angles are usually given as rotations about each of the three coordinate axes.</p>
+	<figure class="center"><img src="images/orientation_3D.png" width="300" height="235" alt="A rigid body at an angle theta"/>
+      <figcaption>In three dimensions, the angle of rotation about each axis is necessary to fully define the orientation of the body. Image by Jrvz CC-BY-SA 3.0</figcaption>
+    </figure>
+	<h2>Angular Displacement</h2>
+	<p>The <strong>angular displacement</strong> is simply the change in orientation between two points in time. In two dimensional systems we can treat this as more or less a scalar quantity (just the rotation clockwise or counterclockwise) but in three dimensional systems, we will need to treat the value as a vector quantity, describing the angle of rotation as well as the axis we are rotating the body about.</p>
+	<h2>Angular Velocity</h2>
+	<p>The <strong>angular velocity</strong> of a rigid body is defined as the rate of change of orientation over the rate of change of time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{\omega}=\frac{d\vec{\theta}}{dt}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>This is a vector quantity, indicating both a magnitude and a direction for the rotation. The angular velocity vector will line up with the axis of rotation, using the right hand rule to determine the direction of the vector along that axis.</p>
+	<figure class="center"><img src="images/angular_velocity.png" width="500" height="224" alt="The right hand rule and the angular velocity vector for a ceuling fan."/>
+      <figcaption>The right hand rule is used to determine the direction of the angular velocity vector. Take your right hand, curl your fingers in the direction of the rotation, and stick your thumb strait out as shown in the image. Your thumb will point in the direction of the angular velocity vector. Ceiling fan image by Piercetheorganist CC-BY-SA 3.0</figcaption>
+    </figure>
+	<p>If we are interested in the average angular velocity over some set time period, we would take the change in orientation (which is the angular displacement) over the change in time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{\omega}_{ave}=\frac{\Delta \vec{\theta}}{\Delta t}=\frac{angular\,displacement}{time}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<h2>Angular Acceleration</h2>
+	<p>Finally, the angular acceleration is defined as the rate of change of the angular velocity over time. Since the angular velocity itself is the rate of change of the orientation over time, the angular acceleration is the double derivative of the orientation with respect to time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{\alpha}=\frac{d\vec{\omega}}{dt}=\frac{d^2\vec{\theta}}{dt^2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>As with angular displacement and angular velocity, acceleration is a vector quantity with both a magnitude and direction. Just as with angular velocity, we can use the right hand rule to determine the direction of the angular acceleration vector.</p> 
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="146" src="http://www.youtube.com/embed/g5cBlsrvj7U" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
