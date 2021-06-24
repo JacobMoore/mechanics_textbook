@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Internal Forces</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Internal Forces</h1>
+    <p>So far in statics, we have focused on the external forces acting on on bodies. These external forces are the forces applied on one body by some other body. Whenever we have external forces acting on a body though, a set of <strong>internal forces</strong> will develop within the body to balance out the external forces. In order to understand how a body will deform and if it will break under loading, it's important to understand these internal forces.</p>
+	<p>The first step in determining the internal forces, is to define where we are looking within out body. Usually this location is defined by looking at a specific cross section within the body. It is important to clearly define this cross section early on, since the internal forces will vary from one cross section the next, even if all the external forces are the same.</p>
+	<p>No matter how complex the external loading conditions, we will only have two possible types of internal forces at any given cross section and two types of internal moments at any given cross section. These </p>
+    
+    <p>The most commonly used model for dry friction is <strong>coulomb friction</strong>. This type of friction can further be broken down into static friction and kinetic friction. These two types of friction are illustrated in the diagram below. First imagine a box sitting on a surface. A pushing force is applied parallel to the surface and is constantly being increased. A gravitational force, a normal force, and a frictional force are also acting on the box.</p>
+    <figure class="center"> <img alt="Coulomb Friction" height="375" src="images/coulombfriction.png" width="600">
+      <figcaption>As the pushing force increases, the static friction force will be equal in magnitude and opposite in directionuntil the point of impending motion. Beyond this point, the box will begin to slip as the pushing force is greater in magnitude than the kinetic friction force opposing it.</figcaption>
+    </figure>
+    <p><strong>Static friction</strong> occurs prior to the box slipping and moving. In this region the friction force will be equal in magnitude and opposite in direction to the pushing force itself. As the magnitude of the pushing force increases so does the magnitude of the friction force.</p>
+    <p>If the magnitude of the pushing force continues to rise, eventually the box will begin to slip. As the box begins to slip the type of friction opposing the motion of the box changes from static friction to what is called kinetic friction. The point just before the box slips is known as <strong>impending motion</strong>. This can also be thought of as the maximum static friction force before slipping. The magnitude of the maximum static friction force is equal to the static coefficient of friction times the normal force existing between the box and the surface. This coefficient of friction is a property that depends on both materials and can usually be looked up in tables.</p>
+    <p><strong>Kinetic friction</strong> occurs beyond the point of impending motion when the box is sliding. With kinetic friction, the magnitude of the friction force opposing motion will be equal to the kinetic coefficient of friction times the normal force between the box and the surface. The kinetic coefficient of friction also depends upon the two materials in contact, but will almost always be less than the static coefficient of friction.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/OPRc38nDpKo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A 500 lb box is sitting on concrete floor. If the static coefficient of friction is .7 and the kinetic coefficient of friction is .6:
+        <ul>
+          <li>What is the friction force if the pulling force is 150 lbs?</li>
+          <li>What pulling force would be required to get the box moving?</li>
+          <li>What is the minimum force required to keep the box moving once it has started moving?</li>
+        </ul>
+        </p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/7R7kvKBxUjw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/DryFriction_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A 30 lb sled is being pulled up an icy incline of 25 degrees. If the static coefficient of friction between the ice and the sled is .4 and the kinetic coefficient of friction is .3, what is the required pulling force needed to keep the sled moving at a constant rate?</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/oPMx-SZyiy4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/DryFriction_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A plastic box is sitting on a steel beam. One end of the steel beam is slowly raised, increasing the angle of the surface until the box begins to slip. If the box begins to slip when the beam is at an angle of 41 degrees, what is the static coefficient of friction between the steel beam and the plastic box?</p>
+        <img alt="Problem 3 Diagram" height="353" src="images/P3.png" width="450"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ShGP5rzIHN4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/DryFriction_WorkedExample3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
