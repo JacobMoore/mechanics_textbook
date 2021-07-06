@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Internal Forces via Equilibrium Analysis</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Finding Internal Forces via Equilibrium Analysis</h1>
+	<p>As a review, <strong>internal forces</strong> are the forces that exist within a body in order to balance out the external forces on that body. Understanding these internal forces will be essential step towards determining how bodies deform or even break under loading.</p>
+	<figure class="center"> <img alt="Internal Forces in a Beam" height="372" src="images/internalforces.png" width="500">
+      <figcaption>External forces, as shown in the top diagram are exerted on a body by other surrounding bodies. Internal forces and moments, as shown in the bottom diagram exist within a body to balance and counteract the external forces.</figcaption>
+    </figure>
+	<p>To determine the internal forces and moments within a body, we generally have two approaches. We can either split the body into sections and perform an <strong>equilibrium analysis</strong> to determine the forces and moments at one specific location, or we can use <strong>graphical approaches</strong> to determine the forces and moments along the length of a body, beam, or shaft. In this section we are going to focus on the first method, which will be the most straightforward method for determining the internal forces and moments at a single point.</p>
+	<h2>Determining Internal Forces and Moments via Equilibrium Analysis</h2>
+	<p>The procedure to determine the internal forces and moments via equilibrium analysis consists of four steps.</p>
+	<ol>
+		<li>Solve for all <strong>external forces</strong>.</li>
+		<li>Draw a <strong>free body diagram</strong> of one half of the body, cutting the original body in half at the point of interest.</li>
+		<li>Write out the <strong>equilibrium equations</strong> based on the free body diagram.</li>
+		<li><strong>Solve</strong> the equilibrium equations for the unknown internal forces and moments.</li>
+	</ol>
+	<p>The first step when determining the internal forces is to solve for any unknown external forces. This is just done using an equilibrium analysis for a rigid body as described in previous chapters, and is necessary because the equations we generate to solve for the internal forces will only just be sufficient to solve for the new unknowns. If we carry forward unknown external forces, we will wind up with more unknowns than equations and the equations will be unsolvable. One shortcut we can take however is that later we will only be analyzing one half of the body, and so we can skip solving for unknowns on the half of the body that we do not plan on using.</p>
+	<p>Next we will want to imagine cutting the body in half, and we will want to draw a free body diagram of just the one half of he body. Which half you choose is up to you, but the side with fewer external loads on it will make the analysis easier. Make sure you include any external forces that are acting on the chosen half of the body, and we will be adding an unknown normal force, and unknown shear force, and an unknown internal bending moment at the cross section surface.</p>
+	<figure class="center"> <img alt="Breaking a body into sections and the free body diagrams" height="497" src="images/freebodydiagram.png" width="600">
+      <figcaption>If we wish to determine the internal forces acting at cross section a-a, we can either draw a free body diagram of everything above the cross section or we can draw a free body diagram of everything below the cross section. In either case, make sure to draw in all external forces on that half of the body as well as the exposed internal forces and moments.</figcaption>
+    </figure>
+	<p>In 2D problems we will always has two unknown forces (normal force N and shearing force V) and one unknown bending moment (M<sub>r</sub>). If we are analyzing a 3D system, there will be three unknown forces (one normal and two shearing forces) as well as three unknown moments (one torsional moment and two bending moments) at the cut.</p>
+	<figure class="center"> <img alt="Internal forces in 3D" height="355" src="images/freebodydiagram3D.png" width="321">
+      <figcaption>In 3D problems, there will be three unknown internal forces at the cross section and three unknown internal moments.</figcaption>
+    </figure>
+	<p>After we get the free body diagram of one half of the body, the next step to write out the equilibrium equations for that one half of the body. Treat the section of the body just like any other rigid body and set the sum of the forces and the sum of the moments equal to zero.</p>
+	<p>Finally, once you have the equilibrium equations set up, you simply need to solve them for the unknown internal forces and moments. As long as you have solved for the external forces earlier, you should be able to solve for all the internal forces at this point.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/8njB4jnaGVU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
