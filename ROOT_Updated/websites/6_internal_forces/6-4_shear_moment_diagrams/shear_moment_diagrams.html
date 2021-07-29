@@ -33,53 +33,57 @@
       <figcaption>In complex loading situations, such as the loads on this horizontal ceiling beam, it may be difficult to know where the internal forces and internal moments will be greatest. By plotting out the internal forces and moments, we will be able to more easily identify these maximum internal loads and we can design the beam accordingly to withstand these loads.</figcaption>
     </figure>
 	<figure class="right"> <img alt="Internal forces in 3D" height="165" src="images/freebodydiagram3D.png" width="150">
-      <figcaption>The internal axial force (N) and the internal toque (T) act along the length of the beam or shaft.</figcaption>
+      <figcaption>The internal shearing forces (V) and the internal bending moments (M) act in the plane of the cross sections we are taking.</figcaption>
     </figure>
-	<p>In this section, we will be focusing on the methods used to generate the plots for the <strong>internal axial forces</strong>, and the <strong>internal torques</strong>. This will be the force and moment acting along the length of the beam or shaft. The axial force plot is used primarily for vertical columns or cables supporting multiple loads along its length. The torque diagram is used primarily for shafts supporting multiple inputs and outputs. Each of these plots will have a different practical application, but we have grouped them together here because the process used to generate each of the two plots is very similar.</p>
-	<h2>Creating the Axial Force Diagram</h2>
-	<p>The <strong>axial force diagram</strong> will plot out the internal axial (normal) forces within a beam, column, or cable that is supporting multiple forces along the length of the beam itself. This can be thought of as the internal <strong>tension</strong> or <strong>compression</strong> forces. The most relevant practical scenarios that match this description will be main support columns in a multi-story building, or hanging cables that are used to support multiple loads.</p>
-	<figure class="center"> <img alt="Main support collumns in a multi-story building" height="268" src="images/collumns.png" width="400">
-      <figcaption>The main vertical support columns in this building will support multiple load forces that act along the length of the column Image by Jun Seita CC-BY-NC 2.0.</figcaption>
+	<p>In this section, we will be focusing on the methods used to generate the plots for the <strong>internal shearing forces</strong>, and the <strong>internal bending moments</strong>. This will be the force and moment acting in the plane of the cross section. In cases where we have a horizontal beam and primarily vertical forces (such as in the diagram above), we will specifically be looking at vertical shearing forces (V1) and bending moments about a horizontal axis (M2), and the shear and moment diagrams will plot these elements respectively. We will group these plots together, because they will often be used together and because we will need to create the shear diagram in order to create the moment diagram.</p>
+	<h2>Creating the Shear Diagram</h2>
+	<p>The shear diagram will plot out the internal shearing forces within a beam, or other body that is supporting multiple forces perpendicular to the length of the beam or body itself. The shear and moment diagrams are both used primarily in the analysis of horizontal beams in structures, such as floor joists, ceiling joists, and other horizontal beams used in construction.</p>
+	<figure class="center"> <img alt="Horizontal beams in a bridge" height="375" src="images/beams.jpg" width="500">
+      <figcaption>The horizontal beams under this bridge surface will be supporting load forces perpendicular to the length of the beam. To analyze the internal shearing forces and moments in these beams we could use shear and moment diagrams. Image by Alethe CC-BY-SA 3.0</figcaption>
     </figure>
-	<p>To create the axial force plot for a body, we will use the following process.</p>  
+	<p>To create the shear force diagram, we will use the following process.</p>   
 	<ol>
 		<li>Solve for all <strong>external forces</strong> acting on the body.</li>
-		<li>Draw out a <strong>free body diagram</strong> of the body <strong>horizontally</strong>. In the case of vertical structures, rotate the body so that it sits horizontally and all the forces act horizontally</li>
-		<li>Lined up below the free body diagram, draw a set of axes. The x-axis will represent the location (lined up with the free body diagram above), and the y-axis will represent the internal axial forces, with positive numbers indicating tension and negative numbers indicating compression.</li>
+		<li>Draw out a <strong>free body diagram</strong> of the body <strong>horizontally</strong>. Leave all distributed forces as distributed forces and do not replace them with the equivalent point load.</li>
+		<li>Lined up below the free body diagram, draw a set of axes. The x-axis will represent the location (lined up with the free body diagram above), and the y-axis will represent the internal shear force.</li>
 		<li>Starting at zero at the right side of the plot, you will move to the right, pay attention to forces in the free body diagram above. As you move right in your plot, keep steady except...
 			<ul>
-			<li>Jump <strong>upwards</strong> by the magnitude of the force for any forces in our free body diagram to the <strong>left</strong>.</li>
-			<li>Jump <strong>downwards</strong> by the magnitude of the force for any forces to the <strong>right</strong>.</li>
-			<li>You can ignore any moments or vertical forces applied to the body.</li>
+			<li>Jump <strong>upwards</strong> by the magnitude of the force for any point forces going up.</li>
+			<li>Jump <strong>downwards</strong> by the magnitude of the force for any point forces going down.</li>
+			<li>For any <strong>uniform distributed forces</strong> you will have a <strong>linear slope</strong> where the magnitude of the distributed force is the slope of the line (positive slopes for upwards distributed forces, negative slopes for downwards distributed forces).</li>
+			<li>For <strong>non-uniform distributed forces</strong>, the shape of the shear diagram plot will be the <strong>integral of the force function</strong>.</li>
+			<li>You can ignore any moments or horizontal forces applied to the body.</li>
 			</ul>
 		By the time you get to the left end of the plot, you should always wind up coming <strong>back to zero</strong>. If you don't wind up back at zero, go back and check your previous work.</li>
 	</ol>
-	<figure class="center"> <img alt="A free body diagram with the axial force diagram." height="571" src="images/axialforcediagram.png" width="499">
-      <figcaption>The free body diagram of a support column (rotated to be horizontal). Is shown above the corresponding axial force diagram for that column</figcaption>
+	<figure class="center"> <img alt="A free body diagram with the cooresponding shear diagram." height="403" src="images/sheardiagram.png" width="600">
+      <figcaption>The free body diagram of a horizontal beam. Is shown above the corresponding shear force diagram for that beam.</figcaption>
     </figure>
-	<p>To read the plot, you simply need to find the location of interest from the free body diagram above, and read the corresponding value on the y-axis from your plot. Again, positive numbers represent an internal tension at that location and negative numbers represent an internal compression at that location.</p>
-	<h2>Creating the Torque Diagram</h2>
-	<p>The <strong>torque diagram</strong> will plot out the internal torsional moment within a shaft that is supporting multiple inputs and/or outputs along its length. The most relevant practical scenarios that match this description are shafts within complex gear or pulley driven systems.</p>
-	<figure class="center"> <img alt="A line shaft delivering power via multiple pulleys" height="220" src="images/shaft.png" width="400">
-      <figcaption>This line shaft has a single input delivering torques to multiple outputs via pulleys. Image by Wtshymanski CC-BY-SA 4.0</figcaption>
+	<figure class="right"> <img alt="Positive and negative shearing forces" height="210" src="images/shearforces.png" width="150">
+      <figcaption>Positive and negative internal shearing forces</figcaption>
     </figure>
-	<p>To create the torque diagram for a shaft, we will use the following process.</p>  
+	<p>To read the plot, you simply need to find the location of interest from the free body diagram above, and read the corresponding value on the y-axis from your plot. Positive numbers represent an upwards internal shearing force to the right of the cross section and a downwards force on the left, and negative numbers indicate a downwards internal shearing force to the right of the cross section and a upwards force on the left. A visual of these forces can be seen in the diagram to the right.</p>
+	<h2>Creating the Moment Diagram</h2>
+	<p>The moment diagram will plot out the internal bending moment within a horizontal beam that is subjected to multiple forces and moments perpendicular to the length of the beam. For practical purposes, this diagram is often used in the same circumstances as the shear diagram, and generally both diagrams will be created for analysis in these scenarios.</p>
+	<p>To create the moment diagram for a shaft, we will use the following process.</p>  
 	<ol>
-		<li>Solve for all <strong>external moments</strong> acting on the shaft.</li>
-		<li>Draw out a <strong>free body diagram</strong> of the shaft <strong>horizontally</strong>, rotating the shaft if necessary, so that all torques act around the horizontal axis.</li>
-		<li>Lined up below the free body diagram, draw a set of axes. The x-axis will represent the location (lined up with the free body diagram above), and the y-axis will represent the internal torsional moment, with positive numbers indicating an internal torsional moment vector to the right and negative numbers indicating an internal torsional moment to the left.</li>
-		<li>Starting at zero at the right side of the plot, you will move to the right, pay attention to moments in the free body diagram above. As you move right in your plot, keep steady except...
+		<li>Solve for all external forces and moments, create a free body diagram, and create the shear diagram. </li>
+		<li>Lined up below the shear diagram, draw a set of axes. The x-axis will represent the location (lined up with the shear diagram and free body diagram above), and the y-axis will represent the internal bending moment.</li>
+		<li>Starting at zero at the right side of the plot, you will move to the right, pay attention to shear diagram and the moments in the free body diagram above. As you move right in your plot, the moment diagram will primarily be the <strong>integral of the shear diagram</strong>, except...
 			<ul>
-			<li>Jump <strong>upwards</strong> by the magnitude of the moment for any torques in our free body diagram where the moment vector would point <strong>left</strong>.</li>
-			<li>Jump <strong>downwards</strong> by the magnitude of the moment for any torques in our free body diagram where the moment vector would point <strong>right</strong>.</li>
-			<li>You can ignore any forces in the free body diagram or moments not about the x axis.</li>
+			<li>Jump <strong>upwards</strong> by the magnitude of the moment for any negative <strong>(clockwise)</strong> moments.</li>
+			<li>Jump <strong>downwards</strong> by the magnitude of the moment for any positive <strong>(counter-clockwise)</strong> moments.</li>
+			<li>You can ignore any forces in the free body diagram.</li>
 			</ul>
 		By the time you get to the left end of the plot, you should always wind up coming <strong>back to zero</strong>. If you don't wind up back at zero, go back and check your previous work.</li>
 	 </ol>
-	 <figure class="center"> <img alt="A free body diagram of a shaft with the torque diagram." height="424" src="images/torquediagram.png" width="600">
-      <figcaption>A free body diagram of a shaft is shown above the corresponding toque diagram. Remember to use the right hand rule to determine if the moment vector is pointing to the right or left.</figcaption>
+	 <figure class="center"> <img alt="A free body diagram of a beam with the cooresponding shear and moment diagrams" height="528" src="images/momentdiagram.png" width="600">
+      <figcaption>A free body diagram of a beam is shown above the shear and moment diagrams for that beam.</figcaption>
     </figure>
-	<p>To read the plot, you simply need to take the find the location of interest from the free body diagram above, and read the corresponding value on the y-axis from your plot. </p>
+	<figure class="right"> <img alt="Positive and negative bending moments" height="218" src="images/bendingmoments.png" width="150">
+      <figcaption>Positive and negative internal bending moments</figcaption>
+    </figure>
+	<p>To read the plot, you simply need to take the find the location of interest from the free body diagram above, and read the corresponding value on the y-axis from your plot. Positive internal moments would cause the beam to bow downwards (think a smile shape) negative internal moments will cause the beam to bow upwards (think a frown shape). You can also see the positive and negative internal moments in the figure to the right.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
