@@ -131,7 +131,8 @@
 	  <table class="equation">
       <tbody>
         <tr>
-          <td>\[ \vec{v}_{B/O} = \vec{v}_{A/O} + \vec{\Omega} \times \vec{r}_{B/A} + (\vec{v}_{B/A})_{rel} \] </td>
+			<th> Rotating frames velocity:</th>
+          <td>\[ \mathbf{\vec{v}_{B/O} = \vec{v}_{A/O} + \vec{\Omega} \times \vec{r}_{B/A} + (\vec{v}_{B/A})_{rel}} \] </td>
         </tr>
 		  </tbody>
     </table>
@@ -143,10 +144,12 @@
 	  <table class="equation">
       <tbody>
         <tr>
-          <td>\[ \vec{a}_{B/O}  =  \vec{a}_{A/O} + \dot{\vec{\Omega}} \times \vec{r}_{B/A} + \vec{\Omega} \times (\vec{\Omega} \times \vec{r}_{B/A}) \, ... \]</td>
+	<th>Rotating frames acceleration:</th>
+          <td>\[ \mathbf{\vec{a}_{B/O}  =  \vec{a}_{A/O} + \dot{\vec{\Omega}} \times \vec{r}_{B/A} }\]</td>
         </tr>
 		  <tr>
-          <td>\[ ... + 2 \vec{\Omega} \times (\vec{v}_{B/A})_{rel} + (\vec{a}_{B/A})_{rel} \]</td>
+			  <th> </th>
+          <td>\[ \mathbf{+ \, \vec{\Omega} \times (\vec{\Omega} \times \vec{r}_{B/A}) + 2 \vec{\Omega} \times (\vec{v}_{B/A})_{rel} + (\vec{a}_{B/A})_{rel} }\]</td>
         </tr>
 		  </tbody>
     </table>
@@ -182,12 +185,28 @@
 	  <ol>
 	  <li>You need to pick the correct body to attach the rotating frame to. The correct body will have another body sliding against it.  If the object of interest is pinned to the body you chose, it might not be correct. </li>
 	  <li>It is often helpful to align your rotating frame such that you end up with a simplified "rel" term or terms.  For example, line up the x' axis with the direction of movement of the bug, so that <em>(v<sub>B/A</sub>)<sub>rel</sub></em> is only in the <em>x'</em>-direction.</li>
-	  <li>The components of all terms of any one equation must be computed along the same i and j directions.  If the frames are not aligned, you must pick ONE FRAME and express all terms along that the directions of the ONE FRAME. (You may be able to switch between frames in different equations, but make sure you are careful with notation!)</li>
+	  <li>The components of all terms of any one equation must be computed along the same <em>i</em> and <em>j</em> directions.  If the frames are not aligned, you must pick ONE FRAME and express all terms along that the directions of the ONE FRAME. (You may be able to switch between frames in different equations, but make sure you are careful with notation!)</li>
 	  <li>When you are given information in a problem, pay careful attention to what frame is being referred to. </li>
 	  <li>Make sure you include all the terms in the acceleration equation!  It's easy to miss one.  You should have five terms.</li>  
 	  </ol>
 	  <p>These are some of the most complex problems in planar kinematics, so take your time!</p>
-
+<h3>Planar rotating frames equations</h3>
+	  <table class="equation">
+      <tbody>
+		  <tr>
+			<th> Velocity:</th>
+          <td>\[ \mathbf{\vec{v}_{B/O} = \vec{v}_{A/O} + \vec{\Omega} \times \vec{r}_{B/A} + (\vec{v}_{B/A})_{rel}} \] </td>
+        </tr>
+        <tr>
+	<th>Acceleration:</th>
+          <td>\[ \mathbf{\vec{a}_{B/O}  =  \vec{a}_{A/O} + \dot{\vec{\Omega}} \times \vec{r}_{B/A}   }\]</td>
+        </tr>
+		  <tr>
+			  <th> </th>
+          <td>\[ \mathbf{  - \, \Omega^2 \vec{r}_{B/A} + 2 \vec{\Omega} \times (\vec{v}_{B/A})_{rel} + (\vec{a}_{B/A})_{rel} }\]</td>
+        </tr>
+		  </tbody>
+    </table>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -201,11 +220,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>You are designing an emergency brake for an amusement park ride that rotates riders about <em>B</em> at an angular velocity of 9 rad/s, while also rotating the rider compartment about <em>A</em>. Due to a mechanism (not shown), the rider completes three rotations about <em>B</em> for each rotation of the arm about <em>A</em>. You want to be able to stop the ride quickly, but very high accelerations can cause brain injuries. </p>
-
-        <p>Find the maximum braking angular acceleration, <em>α<sub>A</sub></em>, that you can apply about <em>A</em> such that the resultant head acceleration of a rider in the position shown does not exceed 363 m/s<sup>2</sup>. Let R = 4 m, r = 2 m.  ***MODIFY TO INCLUDE RELATIVE VEL OR REMOVE***
-        </p>
-        <img src="images/headaccl.png" width="500" height="290" alt="Problem 1 Diagram"/></div>
+        <p>A collar which is pinned to rod <em>CD</em> slides along rod <em>AB</em>. At the instant shown, when ϕ=60 deg, the angular velocity of rod <em>AB</em> is 2 rads/s in the direction shown. Find the rate at which <em>C</em> travels along rod <em>AB</em>, and the angular velocity of rod <em>CD</em>. Assume d<sub>1</sub> = 0.3 m and d<sub>2</sub> = 0.2 m. </p>
+        <img src="images/20-R-KM-DK-16-60dRH.png" width="450" height="290" alt="Problem 1 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -249,21 +265,7 @@
         <br/>
         <div class="resource"> <a href="pdf/Rotating Frames WP-003.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-    </div> <div class="problem">
-      <div class="question">
-        <h3>Question 4:</h3>
-        <p>TBA </p>
-        <img src="images/drone.png" width="400" height="500" alt="Problem 2 Diagram"/></div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/Rotating Frames WP-002.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
+    </div> 
 	  
 	  
 <div id="practiceproblems">
