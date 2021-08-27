@@ -1,0 +1,150 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Linear and Angular Momentum for a Rigid Body</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Linear and Angular Momentum for a Rigid Body</h1>
+    <p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. In a rigid body we will be concerned with not only linear impulse and momentum, but also <strong>angular</strong> impulse and momentum. The linear and angular impulse momentum equations are below, with the new term for angular impulse (K) starting out angular impulse momentum equation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
+        </tr>
+        <tr>
+          <td>\[\vec{K} = I_G \vec{\omega_{f}}-I_G \vec{\omega_{i}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For two dimensional problems, we can break the linear impulse equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components. Since all rotation will be about the z-axis for planar problems, the angular impulse momentum equation remains a single equation. Notice however that we will need to take the mass moment of inertia about the center of mass of the body in question, and similarly we will use the velocity of the center of mass when discussing the velocity in the linear impulse momentum equations.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[J_{x}=mv_{fx}-mv_{ix}\]</td>
+        </tr>
+        <tr>
+          <td>\[J_{y}=mv_{fy}-mv_{iy}\]</td>
+        </tr>
+        <tr>
+          <td>\[K_{z}=I_G\omega_f-I_G\omega_i\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Impulse:</h2>
+    <p>As discussed with particles, a linear impulse in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>Constant Magnitude Force:</td>
+          <td>\[\vec{J} = \vec{F}*t\]</td>
+        </tr>
+        <tr>
+          <td>Non-Constant Magnitude Force:</td>
+          <td>\[\vec{J} = \int \vec{F(t)} dt\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>An <strong>angular impulse</strong> is similar to a linear similar, except it is the <strong>moment exerted over time</strong> instead of a force exerted over time.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>Constant Magnitude Moment:</td>
+          <td>\[\vec{K} = \vec{M}*t\]</td>
+        </tr>
+        <tr>
+          <td>Non-Constant Magnitude Moment:</td>
+          <td>\[\vec{K} = \int \vec{M(t)} dt\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>This moment can come either in the form of a torque directly applied to a body, or as an off-center force causing a linear and angular impulse at the same time. All moments should be taken about the center of mass of the body.</p>
+    <figure class="center"><img src="images/angular_impulse.png" width="500" height="235" alt="A force causing a linear impluse and an off center force causing a linear and angular impulse"/>
+      <figcaption>If we have two identical spheres with forces as shown above, the force on the left would cause only a linear impulse over time, while the force on the right would cause a linear impulse and an angular impulse over time.</figcaption>
+    </figure>
+    <h2>Momentum:</h2>
+    <p>As discussed with particles, the linear momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for linear momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
+    <p>Angular momentum on the other had will be equal to the mass moment of inertia of that body (about it's center of mass) times it's current angular velocity. It's important to note that while the mass moment of inertia remains constant if the body does not change shape, a shape that does change shape will likely have changes in mass moments of inertia along with changes in angular velocity.</p>
+    <figure class="center"><img src="images/figure_skater.jpg" width="250" height="407" alt="A figure skater in a spin"/>
+      <figcaption>Figure skaters will often draw their arms an legs in during a spin to reduce their mass moment of inertia. With minimal impulses to change the angular momentum, the angular velocity will increase so that angular momentum is conserved. Public Domain image by deerstop.</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A miter saw has an operating speed of 1500 rpm. The blade and motor armature have a combined weight of 3 lbs and a radius of gyration of 1 inch.
+        <ul>
+          <li>What is the time required for the bearing friction alone (T=.015 in lbs) to stop the blade?</li>
+          <li>What is the torque a braking system would need to apply to stop the blade in just .25 seconds?</li>
+        </ul>
+        </p>
+        <img src="images/P1.jpg" width="400" height="285" alt="Problem 1 Diagram"/>
+        <p>Public domain image by John F. Looney</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A bowling ball is modeled as a 7 kg uniform sphere 300 mm in diameter. The ball is released with an initial velocity of 6m/s on a horizontal wooden floor (𝜇<sub>k</sub>=.1) with zero angular velocity.
+        <ul>
+          <li>How long does it take before the ball begins to roll without slipping?</li>
+          <li>What is linear velocity of the ball at this time?</li>
+        </ul>
+        </p>
+        <img src="images/P2.png" width="400" height="266" alt="Problem 2 Diagram"/>
+        <p>Public domain image by Jerry Saslav</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
