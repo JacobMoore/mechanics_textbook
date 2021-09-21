@@ -39,68 +39,37 @@
       <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
 	<p>The first step in relative motion analysis is to break the motion down into simple steps and assign a translating coordinate system (with x and y directions) attached to points of interest along the rigid bodies. Note that this coordinate system will translate with the point of interest, but will <strong>not</strong> rotate with the object. (We will use rotating coordinate systems later for more complex problems in the rotating frames method). We will typically start at a point with known motion (or a fixed point) and move step by step from there. In the case of our robotic arm, we know Joint A will not be moving so we start there. We will determine the velocity at point B (with respect to point A), and then point C (with respect to point B).</p>
-	<p>To since there are two steps to the motion there will be two coordinate systems. The first coordinate system will be attached to member AB, with the r direction going from point A to point B. The theta direction will then be ninety degrees counterclockwise from the r direction. The second coordinate system will be attached to member BC, with the r direction going from point B to point C. Again, the theta direction is ninety degrees counterclockwise from the r direction. At this point it is usually good to identify the angles of each of the r and theta directions with respect to ground. Below is a picture of the robotic arm with both coordinate systems drawn in.</p>
-	<figure class="center"><img src="images/coordinates.png" width="500" height="344" alt="A robotic arm with two sections"/>
-      <figcaption>Two coordinate systems are used in the relative motion analysis of this robotic arm. The first coordinate system is attached to member AB while the second is attached to member BC. The r direction will always line up with the two endpoints of the member while the theta direction will always be ninety degrees counterclockwise from the corresponding r direction.</figcaption>
+	<p>Below is a picture of the robotic arm with the coordinate systems drawn in.</p>
+	<figure class="center"><img src="images/coordinates_v.png" width="500" height="350" alt="A robotic arm with two sections"/>
+      <figcaption>Two coordinate systems are used in the relative motion analysis of this robotic arm. One coordinate system at A is the fixed system (from which absolute motion is viewed) and one translating coordinate system is attached at B (a point on both AB and BC). This translating coordinate system translates with the point on the rigid body they are attached to, but do not rotate with the rigid body.</figcaption>
     </figure>
-	<p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles.</p>
+	<p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles. Note that velocities that are relative to the fixed coordinate system are often designated with one subscript, and considered absolute velocities and accelerations. </p>
 	<table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
           <td>\[\vec{v}_{C/A}=\vec{v}_{B/A}+\vec{v}_{C/B}\]</td>
         </tr>
+		   <tr>
+          <th>or</th>
+          <td>\[\vec{v}_{C}=\vec{v}_{B}+\vec{v}_{C/B}\]</td>
+        </tr>
         <tr>
           <th>Acceleration:</th>
           <td>\[\vec{a}_{C/A}=\vec{a}_{B/A}+\vec{a}_{C/B}\]</td>
         </tr>
+		  <tr>
+          <th>or</th>
+          <td>\[\vec{a}_{C}=\vec{a}_{B}+\vec{a}_{C/B}\]</td>
+        </tr>
       </tbody>
     </table>
 	<p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
-	<p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B/A</sub> or v<sub>C/A</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C/A</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
-	<p>To take into account rotation or extension of any individual pieces, we will need to look back to our kinematics equations for polar coordinator systems. Below are the equations we had for velocity and acceleration.</p>
-	<table class="equation">
-      <tbody>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v=\dot{r}\hat{u}_{r}+r\dot{\Theta}\hat{u}_{\Theta}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a=(\ddot{r}-r\dot{\Theta}^{2})\hat{u}_{r}+(2\dot{r}\dot{\Theta}+r\ddot{\Theta})\hat{u}_{\Theta}\]</td>
-        </tr>
-      </tbody>
-    </table>
-	<p>In the above equations, r represents the length of the respective arm piece (the length of member AB or BC), r dot represents the rate at which that length is increasing, and r double dot represents the rate at which that rate is increasing. The theta term represents current angle of the arm piece, theta dot is the angular velocity of that arm piece, and theta double dot is the angular acceleration of that arm piece. The u<sub>r</sub> and u<sub>theta</sub> directions are the r and theta directions that are attached to that particular section of the arm (in our earlier drawing u<sub>r1</sub> and u<sub>theta1</sub> were attached to member AB and u<sub>r2</sub> and u<sub>theta2</sub> were attached to member BC).</p>
-	<p>Though it's certainly possible to have a mechanism that is rotating and extending at the same time, we will often have either just simple rotation, or just simple extension along a fixed direction. With <strong>simple rotation</strong>, the r dot and r double dot terms are zero, and our equations reduce down to the following.</p>
-	<table class="equation">
-      <tbody>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v=r\dot{\Theta}\hat{u}_{\Theta}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a=-r\dot{\Theta}^{2}\hat{u}_{r}+r\ddot{\Theta}\hat{u}_{\Theta}\]</td>
-        </tr>
-      </tbody>
-    </table>
-	<p>If we have <strong>simple extension</strong>, where the length of the piece is changing but there is no rotation, the theta dot and theta double dot terms would be zero and our original equations would reduce down to the following.</p>
-	<table class="equation">
-      <tbody>
-        <tr>
-          <th>Velocity:</th>
-          <td>\[v=\dot{r}\hat{u}_{r}\]</td>
-        </tr>
-        <tr>
-          <th>Acceleration:</th>
-          <td>\[a=\ddot{r}\hat{u}_{r}\]</td>
-        </tr>
-      </tbody>
-    </table>
-	<p>If we use the appropriate set of equations for the type of motion in each step and plug in known quantities for angular velocities, angular accelerations, and rates or extension for each piece, we can add these pieces to our relative motion analysis equation from earlier. Again these are vectors so be sure to indicate both the magnitudes and directions when we put them into the equation. </p>
-	<p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
-	<h2>Alternate Notation for Rigid Body Relative Motion</h2>
+	<p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B</sub> or v<sub>C</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
+	
+
+	
+	
 	<p>In some cases, we want to analyze multiple points on the same or several rigid bodies. Another notation used for this is:</p>
 	<table class="equation">
       <tbody>
@@ -132,50 +101,35 @@
 	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
       <figcaption>As previously, this robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	  <p>If we consider the same robotic arm, we can translate our previous notation to the new rigid body notation: </p>
-	  <table class="equation">
-      <tbody>
-		   <tr>
-          <td>\[\dot{\theta} \hat{k} = \vec{\omega_{AB}} \]</td>
-        </tr>
-		   <tr>
-          <td>\[\dot{\phi} \hat{k} = \vec{\omega_{BC}} \]</td>
-        </tr>
-		  		   <tr>
-          <td>\[\ddot{\theta} \hat{k} = \vec{\alpha_{AB}} \]</td>
-        </tr>
-		   <tr>
-          <td>\[\ddot{\phi} \hat{k} = \vec{\alpha_{BC}} \]</td>
-        </tr>
-      </tbody>
-    </table>
+	
 	<p>All vectors will be defined with respect to the <em>x</em> and <em>y</em> coordinates in the coordinate system shown, rather than the radial and theta directions as above.  </p>  
 	<p>If we want to find the velocity and acceleration of the end point, C, knowing the angular velocities and accelerations, we will find the following relationships: </p>  
 	<table class="equation">
       <tbody>
 		  <tr>
           <th>Velocity at point B:</th>
-          <td>\[\vec{v_B} = \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}}\]</td>
+          <td>\[\vec{v_B} = \vec{v_A} + \vec{\omega_{AB}} \times \vec{r_{B/A}}\]</td>
 			 </tr>
 		  <tr>
           <th>Velocity at point C:</th>
-		<td>\[\vec{v_C} = \vec{v_B} + \vec{\omega} \times \vec{r_{C/B}}\]  \[= \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}} + \vec{\omega} \times \vec{r_{C/B}}\]</td>
+		<td>\[\vec{v_C} = \vec{v_B} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]  \[= \vec{v_A} + \vec{\omega_{AB}} \times \vec{r_{B/A}} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]</td>
         </tr>
         <tr>
           <th>Acceleration at point B:</th>
-          <td>\[\vec{a_B} = \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} - \omega^2 \vec{r_{B/A}}  \]</td>
+          <td>\[\vec{a_B} = \vec{a_A} + \vec{\alpha_{AB}} \times \vec{r_{B/A}} - \omega_{AB}^2 \vec{r_{B/A}}  \]</td>
 		        </tr>
 		  <tr>
           <th>Acceleration at point C:</th>
-			<td>\[\vec{a_C} = \vec{a_B} + \vec{\alpha} \times \vec{r_{C/B}} - \omega^2 \vec{r_{C/B}} \]  \[ =  \vec{a_A} + \vec{\alpha} \times \vec{r_{B/A}} - \omega^2 \vec{r_{B/A}}  + \vec{\alpha} \times \vec{r_{C/B}} - \omega^2 \vec{r_{C/B}} \]</td>
+			<td>\[\vec{a_C} = \vec{a_B} + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]  \[ =  \vec{a_A} + \vec{\alpha_{AB}} \times \vec{r_{B/A}} - \omega_{AB}^2 \vec{r_{B/A}}  + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]</td>
         </tr>
       </tbody>
 	  </table>
+	  <p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
     <div class="video">
-      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/3JEhdfGzfq4" frameborder="0" allowfullscreen></iframe>
     </div>
     <script language="javascript">displayResources();</script> 
   </div>
