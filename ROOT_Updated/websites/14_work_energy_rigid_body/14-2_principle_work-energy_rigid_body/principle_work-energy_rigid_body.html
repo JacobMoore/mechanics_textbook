@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - Principle of Work-Energy for Rigid Bodies</title>
+<title>Mechanics Map - Principle of Work and Energy for Rigid Bodies</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
 <!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
@@ -30,19 +30,37 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Principle of Work-Energy for Rigid Bodies</h1>
-    <p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems. Generally, this method is called the <strong>Energy Method</strong> or the <strong>Conservation of Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the conservation of energy.</p>
+    <p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems. Generally, this method is called the <strong>Energy Method</strong> or the <strong>Principle of Work and Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. The Principle of Work and Energy examines the energy of a rigid body at two different states (positions), and the work done on the body to move between those two states.</p>
+	  <p>Typically, the work done by conservative forces (i.e. work we can reverse perfectly) is typically presented as potential energy instead.</p>
+	  <p> Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the principle of work and energy.</p>
     <table class="equation">
       <tbody>
         <tr>
           <td>\[W=\Delta KE + \Delta  PE\]</td>
         </tr>
+		  <tr>
+          <td>\[KE_1 + PE_1 +W=KE_2 + PE_2\]</td>
+        </tr>
       </tbody>
     </table>
     <p>It is important to notice that unlike Newton's Second Law, the above equation is <strong>not</strong> a vector equation. It does not need to be broken down into components which can simplify the process, however, we only have a single equation and therefore can only solve for a single unknown which can limit the method.</p>
     <h2>Work in Rigid Body Problems:</h2>
-    <p>For work done to a rigid body, we must consider any force applied over a distance as we did for particles, as well as any moment exerted over some angle of rotation. If these are <strong>constant</strong> forces and <strong>constant</strong> moments, we simply multiple the force times the distance and the moment times the angle of rotation to find the overall work done in the problem. As with particles, these are the components of forces in the direction of travel, with forces opposing the motion counting as negative work. Similarly these are moments in the direction of rotation with moments opposing the rotation counting as negative work. Both types of work are additive, with all work being lumped together for analysis.</p>
+    <p>For work done to a rigid body, we must consider any force applied over a distance as we did for particles, as well as any moment exerted over some angle of rotation. When we include potential energy in the work-energy equation, we will <strong>not</strong> calculate work done by gravity or by springs, as these values are already captured as PE. What we are left with are <strong>non-conservative forces</strong>, such as kinetic friction and external applied forces. Note that internal forces do not do work, nor do static friction, normal forces at ground or walls, or reaction forces at pins (no motion in the direction of the force).</p> 
+	  <p>If these non-conservative forces are <strong>constant</strong> forces and <strong>constant</strong> moments, we simply multiple the force times the distance and the moment times the angle of rotation to find the overall work done in the problem. As with particles, these are the components of forces in the <em>direction of travel</em>, with forces opposing the motion counting as negative work. Similarly these are moments in the direction of rotation with moments opposing the rotation counting as negative work. To obtain the correct distance (in the direction of the force or moment) and correct sign, we can use a vector dot product. Both types of work are additive, with all work being lumped together for analysis.</p>
     <table class="equation">
       <tbody>
+		  <tr>
+          <td>\[W=\vec{F} \cdot \vec{r}+\vec{M} \cdot \vec{\theta}\]</td>
+        </tr>
+		  <tr>
+          <td>\[W=F cos\phi *s+M (\theta_2 - \theta_1)\]</td>
+        </tr>
+		   </tr>
+		   <td>where phi is the angle between the force direction and the motion direction, and s is the distance travelled</td>
+		  <tr>
+			   </tr>
+		   <td align="center">or</td>
+		  <tr>
         <tr>
           <td>\[W=F*d+M*\Delta\theta\]</td>
         </tr>
@@ -52,43 +70,64 @@
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[W=\int_{x1}^{x2} F(d)+\int_{\theta1}^{\theta2} M(\theta)\]</td>
+          <td>\[W=\int_{s1}^{s2} Fcos\phi (ds)+\int_{\theta1}^{\theta2} M(d\theta)\]</td>
         </tr>
       </tbody>
     </table>
     <h2>Energy:</h2>
     <p>In rigid bodies, as with particles, we will break energy into <strong>kinetic energy</strong> and <strong>potential energy</strong>. Kinetic energy is the the energy mass in motion, while potential energy represents the energy that is stored up due to the position or stresses in a body.</p>
-    <p>In its equation form, the kinetic energy of a rigid body is represented by one half of the mass of the body times its velocity squared plus one half of the mass moment of inertia times the angular velocity squared. If we wish to determine the change in kinetic energy, we would simply take the final kinetic energy minus the initial kinetic energy.</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[KE=\frac{1}{2}mv^{2}+\frac{1}{2}I\omega^{2}\]</td>
-        </tr>
-        <tr>
-          <td>\[\Delta KE=\left (\frac{1}{2}mv_{f}^{2}-\frac{1}{2}mv_{i}^{2}\right )+\left (\frac{1}{2}I\omega_{f}^{2}-\frac{1}{2}I\omega_{i}^{2}\right )\]</td>
-        </tr>
-      </tbody>
-    </table>
+    
     <p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instants in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. These represent the work that the gravitational force and a spring force will do, respectively. We often use these potential energy terms in place of the work done by gravity or springs respectively. When including these potential energy terms, it's important to not also include the work done by gravity or spring forces as well.</p>
     <p>The change in gravitational potential energy for any system is represented by the mass of the body, times the value g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) times the vertical change in height between the start position and the end position. In equation form, this is as follows.</p>
-    <figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
-      <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
-    </figure>
-    <table class="equation">
+	  <table class="equation">
       <tbody>
         <tr>
           <td>\[\Delta PE_{gravity}=m*g*\Delta h\]</td>
         </tr>
       </tbody>
     </table>
+    <figure class="center"><img src="images/gravitational_potnetial_energy.png" width="400" height="390" alt="A box being raised up directly or along a curved path."/>
+      <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
+    </figure>
+    
     <p>Unlike work and kinetic energy, there is no rotational version of gravitational potential energy, so this is exactly the same as we had for particles.</p>
     <p>To determine the change in elastic potential energy, we will have to identify any linear springs (as we had for particles) as well as any torsional springs and the spring constants for each of these springs.</p>
     <figure class="center"><img src="images/mousetrap.jpg" width="500" height="315" alt="A mousetrap"/>
       <figcaption>The torsional spring in this mousetrap releases it's elastic potential energy to slam the trap shut. Public domain image by Evan-Amos.</figcaption>
     </figure>
-    <p>To find the change in elastic potential energy, we will need to know the stiffness of any spring in the problem (represented by k, in units of force per distance for linear springs or moment per angle of twist for torsional springs) as well as the distance or angle the spring has been stretched above or below it's natural resting position. This difference from resting position is represented by distance x for linear springs, or angle theta for torsional springs. Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared or the angle theta squared. To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
+    <p>To find the change in elastic potential energy, we will need to know the stiffness of any spring in the problem (represented by k, in units of force per distance for linear springs or moment per angle of twist for torsional springs) as well as the distance or angle the spring has been stretched above or below it's natural resting position, x<sub>0</sub> or theta<sub>0</sub>. This difference from resting position is represented by distance x for linear springs, or angle theta for torsional springs. Once we have those values, the elastic potential energy can be calculated by multiplying one half of the stiffness by the distance x squared or the angle theta squared.</p>
+	  <table class="equation">
+      <tbody>
+		  <tr>
+          <td>\[PE_{linear spring}=\frac{1}{2}k(x-x_0)^{2}\]</td>
+        </tr>
+        <tr>
+          <td>\[PE_{torsional spring}=\frac{1}{2}k(\theta-\theta_0)^{2}\]</td>
+        </tr> 
+		  </tr>
+		   <td align="center">or (if x and theta are measured from the unstretched length)</td>
+		  <tr>
+        <tr>
+          <td>\[PE_{linear spring}=\frac{1}{2}kx^{2}\]</td>
+        </tr>
+        <tr>
+          <td>\[PE_{torsional spring}=\frac{1}{2}k\theta^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  
+	  <p>To find the change in elastic potential energy, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
     <table class="equation">
       <tbody>
+		<tr>
+          <td>\[\Delta PE_{linear spring}=\frac{1}{2}k(x_{f}-x_0)^{2}-\frac{1}{2}k(x_{i}-x_0)^{2}\]</td>
+        </tr>
+        <tr>
+          <td>\[\Delta PE_{torsional spring}=\frac{1}{2}k(\theta_{f}-\theta_0)^{2}-\frac{1}{2}k(\theta_{i}-\theta_0)^{2}\]</td>
+        </tr> 
+		<tr>
+		   <td align="center">or (if x and theta are measured from the unstretched length)</td>
+		  </tr>
         <tr>
           <td>\[\Delta PE_{linear spring}=\frac{1}{2}kx_{f}^{2}-\frac{1}{2}kx_{i}^{2}\]</td>
         </tr>
@@ -98,6 +137,28 @@
       </tbody>
     </table>
     <p>Going back to our original conservation of energy equation, we simply plug the appropriate terms on each side (work on the left and energies on the right) and balance the two sides to solve for any unknowns. Terms that do not exist or do not change (such as elastic potential energy in a problem with no springs, or delta KE in a problem where there is no change in the speed of the body) can be set to zero. Again, there is only one equation, so we can only solve for a single unknown unless we supplement the conservation of energy equation with other relationship equations.</p>
+<h2>Systems of rigid bodies</h2>
+<p>One of the ways to simplify work-energy problems involving multiple connected rigid bodies is to consider all the rigid bodies as one system. Recall that internal forces do not do work. If we include multiple rigid bodies in our system, then the contact forces between the bodies become internal forces, and we do not need to calculate the work done by them. The work then reduces to any remaining external forces.</p>
+<p>The equation for this involves summing the KE and PE for all bodies in the system at each state, and then finding the work done by external, non-conservative forces on the system. </p>
+<table class="equation">
+      <tbody>
+		<tr>
+          <td>\[\Sigma_{sys} KE_{1,i} + \Sigma_{sys} PE_{1,i} +\Sigma_{sys} W =\Sigma_{sys} KE_{2,i} + \Sigma_{sys} PE_{2,i}\]</td>
+        </tr>
+      </tbody>
+    </table>
+<p>over all rigid bodies, i = 1, 2, ..., in the system.</p>
+<h2>Tips for solving work-energy problems</h2>
+<p>
+	<ol>
+<li>If the problem involves velocity and distance, then it's likely a work-energy problem.</li>
+<li>Start by sketching your states. (Suggest numbering states 1, 2, 3, etc., rather than initial (i) and final (f), since problems can have several states).</li>
+<li>Set your datum for gravitational potential energy (i.e. where you consider h = 0). Note that the datum for spring potential energy is always the unstretched position of the spring.</li>
+<li>Find the kE and PE for all bodies in both states. Don't forget to account for both linear and rotational KE for each body. (This may require using kinematic equations).</li>
+<li>Determine the work done by non-conservative forces (e.g. kinetic friction, applied forces, some contact forces). </li>
+<li>Put all values into the work-energy equation and solve for one unknown.</li>
+</ol>
+</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
