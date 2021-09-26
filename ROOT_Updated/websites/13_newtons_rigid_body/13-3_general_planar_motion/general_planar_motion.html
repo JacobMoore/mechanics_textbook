@@ -37,30 +37,50 @@
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[\sum \vec{F}=m*\vec{a}\]</td>
+          <td>\[\sum \vec{F}=m*\vec{a_G}\]</td>
         </tr>
         <tr>
-          <td>\[\sum \vec{M}=I*\vec{\alpha}\]</td>
+          <td>\[\sum \vec{M_G}=I_G*\vec{\alpha}\]</td>
         </tr>
       </tbody>
     </table>
-    <p>As we did with the previous translational systems, we will break the force equation into components, turning the one vector equation into two scalar equation. Additionally, it's important to
-      <stong>always use the center of mass</stong>
-      for the accelerations in our force equations and take the moments and moment of inertia about the center of mass for our moment equation.</p>
+    <p>As we did with the previous translational systems, we will break the force equation into components, turning the one vector equation into two scalar equation. Additionally, it's important to <strong>always use the center of mass (G)</strong> for the accelerations in our force equations and take the moments and moment of inertia about the center of mass for our moment equation.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[\sum F_{x}=m*a_{x}\]</td>
+          <td>\[\sum F_{x}=m*a_{Gx}\]</td>
         </tr>
         <tr>
-          <td>\[\sum F_{y}=m*a_{y}\]</td>
+          <td>\[\sum F_{y}=m*a_{Gy}\]</td>
         </tr>
         <tr>
-          <td>\[\sum M_{COM}=I*\alpha\]</td>
+          <td>\[\sum M_{G}=I_G*\alpha \]</td>
         </tr>
       </tbody>
     </table>
     <p>Plugging the known forces, moments, and accelerations into the above equations we can solve for up to three unknowns. If more than three unknowns exist in the equations, we will sometimes have to go back to kinematics to relate quantities such as acceleration and angular acceleration.</p>
+	  <p>Sometimes it's inconvenient to take moments about the centre of mass, G. We have two other options, if we'd like to take moments about another point. When choosing which moment equation version to use, consider what accelerations and mass moments of inertia you know, and what point will reduce the number of unknown forces captured in the moment equation. </p>
+	  
+	  <p> First, if we want to take moments about the instantaneous centre of zero velocity (ICZV) for a rigid body, we can use the fixed axis rotation version of the moment equation. Note that the subscripts always have to match - that is, if we take moments about the IC, we need to find the mass moment of inertia about the IC.</p>
+	   <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum \vec{M}_{IC}=I_{IC}\vec{\alpha}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>If we want to take moments about any point, P, on the rigid body, we will need to add an extra term to our equation, This extra term is related to the moment caused by the linear inertia (ma<sub>G</sub>). And there are two versions of this equation, using either G subscripts or P subscripts for I and a. </p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \sum \vec{M}_{P}=I_{G}\vec{\alpha}+ \vec{r}_{G/P} \times m \vec{a}_G \]</td>
+        </tr>
+		  <tr>
+          <td>\[ \sum \vec{M}_{P}=I_{P}\vec{\alpha}+ \vec{r}_{G/P} \times m \vec{a}_P \]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>Be sure the I and a subscripts (either G or P) match each other when you use these equations, and use the vector (both i and j components) for a<sub>G</sub> or a<sub>P</sub>.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
