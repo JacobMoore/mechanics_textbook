@@ -31,14 +31,14 @@
 	<figure class="center"><img src="images/pitching_machine.jpg" width="500" height="332" alt="A pitching machine"/>
       <figcaption>The wheel on this pitching machine is an example of fixed axis rotation with the axis of rotation at the center of mass. Image by Abigor under a CC-BY 2.0 license.</figcaption>
     </figure>
-	<p>We will again start with Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions.</p>
+	<p>We will again start with Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions. Note that now we have bodies with extent, the location of the acceleration and the axis about which we take moments or calculate mass moment of inertia are important. Linear accelerations are always measured at the centre of mass. We will develop several moment equations, depending on the point about which moments are taken.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[\sum \vec{F}=m*\vec{a}\]</td>
+          <td>\[\sum \vec{F}=m*\vec{a_G}\]</td>
         </tr>
 		<tr>
-          <td>\[\sum \vec{M}=I*\vec{\alpha}\]</td>
+          <td>\[\sum \vec{M_G}=I_G*\vec{\alpha}\]</td>
         </tr>
       </tbody>
     </table>
@@ -55,7 +55,7 @@
         </tr>
       </tbody>
     </table>
-	<p>In addition to the force equations, we will can also use the moment equations to solve for unknowns. In simple planar motion, this will be a single moment equation which we take about the axis of rotation / center of mass (remember they are the same point in balanced rotation</p>
+	<p>In addition to the force equations, we will can also use the moment equations to solve for unknowns. In simple planar motion, this will be a single moment equation which we take about the axis of rotation / center of mass (remember they are the same point in balanced rotation).</p>
 	<table class="equation">
       <tbody>
 		<tr>
@@ -67,14 +67,21 @@
 	<figure class="right"><img src="images/game_controller.png" width="300" height="266" alt="A video game controller"/>
       <figcaption>Many video game controllers use motors to rotate the small masses where the center of mass is not at the axis of rotation. This unbalanced rotation results in forces (felt as vibrations) needed to accelerate the center of mass of the spinning masses. Image (author unknown) under a CC0 license.</figcaption>
     </figure>
-	<p>When the center of mass is not located on the axis of rotation, the center of mass will be accelerating and therefore forces will be exerted to cause that acceleration. In perfectly anchored systems these will be forces exerted by the bearings, though these forces can often be felt as vibrations in real systems. Kinematics equations as discussed in the previous chapter can be used to determine the acceleration of a point on a rotating body, in this case that point being the center of mass. After determining those accelerations, they can be put into force equations, most likely using the r and theta directions.</p>
+	<p>When the center of mass is not located on the axis of rotation, the center of mass will be accelerating and therefore forces will be exerted to cause that acceleration. In perfectly anchored systems these will be forces exerted by the bearings, though these forces can often be felt as vibrations in real systems. Kinematics equations as discussed in the previous chapter can be used to determine the acceleration of a point on a rotating body, in this case that point being the center of mass. After determining those accelerations, they can be put into force equations, either using the r and theta directions, or x and y directions.</p>
 	<table class="equation">
       <tbody>
         <tr>
-          <td>\[\sum F_{r}=ma_{r}\]</td>
+          <td>\[\sum F_{r}=ma_{Gr}\]</td>
         </tr>
 		<tr>
-          <td>\[\sum F_{\theta }=ma_{\theta}\]</td>
+          <td>\[\sum F_{\theta }=ma_{G\theta}\]</td>
+        </tr>
+		   <td align="center">or</td>
+		  <tr>
+          <td>\[\sum F_{x}=ma_{Gx}\]</td>
+        </tr>
+		<tr>
+          <td>\[\sum F_{y}=ma_{Gy}\]</td>
         </tr>
       </tbody>
     </table>
@@ -133,8 +140,46 @@
         <br/>
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
+		<div>
+		<div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A hardworking engineer is developing a playground ride for her kid. If she determines that the maximum acceleration of an empty ride in the instant shown should not exceed 5 rad/s<sup>2</sup> due to safety reasons, what should be the length of the rod on which a 1kg seat is attached? The seat can be modelled as a thin disk with radius r=0.3m and the rod, no matter the length, has a mass of m=0.6kg.  
+The angle in the instant shown is θ=45 deg. 
+Choose the most realistic value for your final answer.
+</p>
+        <img src="images/P3.png" width="500" height="620" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/7c_43_UaqZQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+        <div class="resource"> <a href="pdf/P3Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
     </div>
+			
+			<div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Students are creating a miniature all-terrain vehicle for a competition. An idea was proposed for an additional wheel which could be lowered and raised to dislodge the vehicle if it ever got stuck on jagged rocks. They decide to apply minimum constraint design to their prototype, resulting in a singular linkage arm attached to a wheel with radius r=0.15m at an angle of θ=30 deg. The wheel has a mass of m=5kg and a radius of gyration k_B=0.2m. If the students rev the wheel such that it initially spins with ω=30 rad/s, determine the reaction force exerted on the linkage AB. What is the time required for the wheel to stop rotating? The coefficient of kinetic friction is given as μ_K=0.4. Assume the linkage arm is securely locked in once it is lowered and neglect the mass of the linkage arm.</p>
+        <img src="images/P4.png" width="500" height="620" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/5GFlAZQM89s" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+        <div class="resource"> <a href="pdf/P4Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
     </div>
+			
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>

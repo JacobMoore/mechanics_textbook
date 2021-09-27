@@ -35,18 +35,19 @@
     <figure class="center"> <img height="241" src="images/axisselection.png" width="500" alt="The average distances from a point go up as we go futher from the center">
       <figcaption>The distances used in our moment integrals depends on the point or axis chosen. These distances will be at a minimum at the centroid and will get larger as we start further from the centroid.</figcaption>
     </figure>
-    <p>Though this complicates our analysis, the nice thing is that the change in the moment of inertia is predicable. It will always be at a minimum when we take the moment of inertia about the centroid, or an axis going through the centroid. This minimum, which we will call I<sub>c</sub> is the value we will look up in our moment of inertia table. From this minimum, or unadjusted value, we can find the moment of inertia value about any point I<sub>p</sub> by adding an an adjustment factor equal to the area times distance squared for area moments of inertia, or mass times distance squared for mass moments of inertia.</p>
+    <p>Though this complicates our analysis, the nice thing is that the change in the moment of inertia is predicable. It will always be at a minimum when we take the moment of inertia about the centroid, or an axis going through the centroid (area moment of inertia), and minimum about an axis going through the centre of gravity (mass moment of inertia). This minimum, which we will call I<sub>c</sub> (area momen of inertia) or I<sub>G</sub> (mass moment of inertia), is the value we will look up in our moment of inertia table. From this minimum, or unadjusted value, we can find the moment of inertia value about any point I<sub>p</sub> by adding an an adjustment factor equal to the area times distance squared for area moments of inertia, or mass times distance squared for mass moments of inertia.</p>
 	<table class="equation">
       <tbody>
         <tr>
           <td>\[I_{xxP}=I_{xxC}+A*r^{2}\]</td>
         </tr>
 		<tr>
-          <td>\[I_{xxP}=I_{xxC}+m*r^{2}\]</td>
+          <td>\[I_{xxP}=I_{xxG}+m*r^{2}\]</td>
         </tr>
       </tbody>
     </table>
 	<p>This adjustment process with the equations above is the <strong>parallel axis theorem</strong>. The area or mass terms simply represent the area or mass of the part you are looking at, while the distance (r) represents the distance we are moving the axis we are taking the moment of inertia about. This may be a vertical distance, a horizontal distance, or a diagonal depending on the axis the moment or inertia is about.</p>
+	  <p>It is really important to note that the parallel axis theorem is only true for I<sub>c</sub> or I<sub>G</sub> - you cannot use the moment of inertia about another point in this formula. It's also clear that the added term will always be positive (area, mass, and the squared distance cannot be negative). This is a reminder that the moment of inertia about the centroid (area moment) or centre of gravity (mass moment) is the smallest moment of inertia for that object - about any other axis, the moment of inertia will be greater. </p>
     <figure class="center"> <img alt="Distances in the parallel axis theorem" height="500" src="images/adjustment_distance.png" width="500">
       <figcaption>The distance (r) in the Parallel Axis Theorem represents the distance we are moving the axis we are taking the moment or intent about.</figcaption>
     </figure>
@@ -133,6 +134,31 @@
         <div class="resource"> <a href="pdf/ParallelAxis_WorkedProblem3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
+	  
+	  <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>An engineer puts together a form study prototype of a robotic arm to show a group of stakeholders. Specifically they want to know ab
+out its radius of gyration. Unfortunately, he forgot what material he used. If the mass moment of inertia of the arm is I=15.2kgm<sup>2</sup> about point O, calculate the radius of gyration. Each component is a plate with thickness t=5 mm. Assume the plates are rigidly attached to one another.
+Plate A is identical to plate B, and has a radius r=2w. 
+Plates C, D and E have the same width w=15 cm.
+Plate C has a length l<sub>C</sub>=1.1 m, and is angled at ϕ=30 deg with the horizontal.
+Plate D is attached perpendicular to plate C at a distance r<sub>(D/A)</sub>=0.55 m from plate A, and has a length l<sub>D</sub>=0.3 m.
+Plate E has a length l<sub>E</sub>=0.21 m, and is angled θ=105 deg away from plate D.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png" width="400" height="350"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/mWKQuI2hzAY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+        <div class="resource"> <a href="pdf/P4Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
+    </div>
+	  
   </div>
   <div id="practiceproblems">
       <h2>Practice Problems:</h2>
