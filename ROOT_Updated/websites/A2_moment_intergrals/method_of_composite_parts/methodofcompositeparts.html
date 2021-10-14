@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - Centroids via the First Moment Integral</title>
+<title>Mechanics Map - Centroid, Centre of Mass, and Mass MOI in Composite Bodies</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
 <script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
@@ -26,7 +26,7 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Finding the Centroid and Center of Mass via the Method of Composite Parts</h1>
+    <h1>Finding the Centroid, Center of Mass and Mass Moment of Inertia via the Method of Composite Parts</h1>
     <p>As an alternative to the use of moment integrals, we can use the <strong>Method of Composite Parts</strong> to find the <strong>centroid</strong> of an area or volume or the <strong>center of mass</strong> of a body. This method is often easier and faster that the integration method; however, it will be limited by the table of centroids you have available. The method works by breaking the shape or volume down into a number of more basic shapes, identifying the centroids or centers of masses of each part via a table of values, and then combing the results to find the overall centroid or center of mass.</p>
     <p>A key aspect of the method is the use of these centroid tables. This is a set of tables that lists the centroids (and usually also moments of inertia) for a number of common areas and/or volumes. Links to some centroid tables can be found in the sidebar to the right. The method of composite parts is limited in that we will need to be able to break our complex shape down entirely into shapes found in the centroid table we have available or the method will not work without also doing some moment integrals.</p>
     <h2>Finding the Centroid via the Method of Composite Parts</h2>
@@ -70,6 +70,13 @@
       </tbody>
 	</table>
   <p>Similar to the centroid equations, the x equation is simply mass one times x&#772 one, plus mass two time x&#772 two, and so on for each part. After you have all the shapes on the top, just divide by the total mass.</p>
+	  <h2>Finding the Mass Moment of Inertia via the Method of Composite Parts</h2>
+	  <p>Similar to the above, you can add and subtract mass moments of inertia to find the mass moment of a inertia of a composite structure. </p>
+	  <figure class="center"> <img alt="Mass Moment of Inertia Composite Parts" height="293" src="images/centerofmassparts.png" width="500">
+      <figcaption>When finding the mass moment of inertia via composite parts, we will break the shape up into several simpler shapes. The figure on the left can be thought of as a semi-circular hemisphere (1) on top of a cylinder (2) with another smaller cylinder cut out of it (3). Each of these simple volumes are listed in our mass moment of inertia table.</figcaption>
+    </figure>
+	  <p>The one complication of the approach is that <strong>the mass moments of inertia must all be expressed about the same axis</strong> BEFORE they are added or subtracted. This can require using parallel axes when the shapes that make up the composite body do not have their axes aligned through their centres of gravity.</p>
+
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
