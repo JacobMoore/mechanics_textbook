@@ -29,7 +29,56 @@
     <h1>Linear and Angular Momentum for a Rigid Body</h1>
 	  <p><em>This section is not yet complete.</em></p>
     <p>As discussed with particles, the linear momentum of a body will be equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for linear momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
+	  <p>It is important to note that, since velocity is not necessarily the same at all points on a rigid body, linear momentum specifically includes the velocity at the centre of gravity only. There is no other version of linear momentum. </p>
+	  <p>Note that linear momentum, which we will denote as <em>J</em>, is sometimes represented by <em>L</em> or <em>G</em> symbolically. </p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{J} = m \vec{v}_G\]</td>
+        </tr>
+      </tbody>
+    </table>
     <p>Angular momentum on the other had will be equal to the mass moment of inertia of that body (about it's center of mass) times it's current angular velocity. It's important to note that while the mass moment of inertia remains constant if the body does not change shape, a shape that does change shape will likely have changes in mass moments of inertia along with changes in angular velocity.</p>
+	  <p>We will denote angular momentum as <em>K</em>, however many sources also use <em>H</em> to represent angular momentum. </p>
+	  <p>Just like there are several versions of the moment equation from Newton's Second Law, there are several versions of angular momentum for a rigid body, depending on the point about which you take your angular impulses. Since the angular velocity of a rigid body is the same at all locations, the difference in the angular momentum expression comes from differences in the mass moment of inertia.</p>
+	  <p>If we want to find the angular momentum about the centre of gravity of a body, the equation is:</p>
+	   <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_G = I_G \vec{\omega}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	 <p>If our object is pinned at a point <em>O</em>, the expression for angular momentum about <em>O</em> is:</p>
+	    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_O = I_O \vec{\omega}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>If our object has an ICZV, the expression for angular momentum about the IC is:</p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_{IC} = I_{IC} \vec{\omega}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>Finally, if we wish to find the angular momentum about any point <em>P</em>, there are two expressions. The subscripts for mass moment of inertia and linear velocity must match within the expression being used (i.e. both <em>G</em> or both <em>P</em>). Note that when we use linear momentum in the expression for angular momentum, the linear velocity is still always at the centre of gravity. Finally, if we wish to use the version with <em>P</em> subscripts, then <em>P</em> must be a point on the body (otherwise the linear velocity of <em>P</em> does not make sense). </p>
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_P = I_G \vec{\omega} + \vec{r}_{G/P} \times m \vec{v_G} = I_G \vec{\omega} + \vec{r}_{G/P} \times \vec{J}\]</td>
+        </tr>
+		  <tr>
+          <td>OR</td>
+        </tr>
+		  <tr>
+          <td>\[\vec{K}_P = I_P \vec{\omega} + \vec{r}_{G/P} \times m \vec{v_P} \]</td>
+        </tr>
+      </tbody>
+    </table>
     <figure class="center"><img src="images/figure_skater.jpg" width="250" height="407" alt="A figure skater in a spin"/>
       <figcaption>Figure skaters will often draw their arms an legs in during a spin to reduce their mass moment of inertia. With minimal impulses to change the angular momentum, the angular velocity will increase so that angular momentum is conserved. Public Domain image by deerstop.</figcaption>
     </figure>
@@ -46,10 +95,9 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>TBA
+        <p>Consider the bullet shown with mass m<sub>b</sub> = 0.025 kg and velocity just prior to impact with the rod of v<sub>1</sub> = 118 m/s. Find the linear momentum and angular momentum about O for the bullet. The distance h = 0.6 m and the total length of the rod is L = 0.8 m. 
         </p>
-        <img src="images/P1.jpg" width="400" height="285" alt="Problem 1 Diagram"/>
-        <p>Public domain image by John F. Looney</p>
+        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 1 Diagram"/>
       </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -64,10 +112,9 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>TBA
+        <p>Consider the rod shown with mass m<sub>r</sub> = 3.3 kg and angular velocity just after impact from the bullet of ω<sub>2</sub> = 12 rad/s. Find the linear momentum and angular momentum about O for the rod. The distance h = 0.6 m.
         </p>
-        <img src="images/P2.png" width="400" height="266" alt="Problem 2 Diagram"/>
-        <p>Public domain image by Jerry Saslav</p>
+        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 2 Diagram"/>
       </div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -83,8 +130,7 @@
 	<div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>You ask your little cousin to move a 1 kg box up a hill with a coefficient of kinetic friction μ_k=0.2. Rather than carrying the box, he overthinks things and drags the box up the hill with a rope. Determine the average power exerted by your little cousin if he applies a force F=10 N and he drags the box up the hill d=3 m with an incline of
-θ=30 degrees.</p>
+        <p>A city engineer is working on a cargo transport system utilizing gears and racks. She is considering a 30 kg gear with a radius of gyration of k<sub>G</sub> = 125 mm and a radius of r = 0.15 m. The gear is in contact with a 20 kg rack. If it takes the gear 0.6125 s to reach an angular velocity of &#969 = 20 rad/s, starting from rest, determine the moment that the gear is subjected to. Assume there is no frction between the rack and the ground. </p>
         <img src="images/P3.png" width="500" height="320" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
