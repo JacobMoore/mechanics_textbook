@@ -32,8 +32,23 @@
     <figure class="center"><img src="images/droppedwrench.png" width="390" height="293" alt="A wrench dropped on a rigid floor"/>
       <figcaption>Dropping a wrench on a concrete floor is a good example of rigid body impact with a solid surface. The first step in solving these problems is to identify the normal and tangential directions, which will be perpendicular and parallel to the surface respectively. Also important is identifying the center of mass (C) and point of impact (A).</figcaption>
     </figure>
-    <p>To predict the linear velocities after impact in the n and t directions, as well as the angular velocity after the impact (a total of three unknowns) we will need three equations. These equations will come in the form of the conservation of momentum in the t direction, as well as two equations based on the coefficient of restitution for the velocity in the n direction and the angular velocity after the impact.</p>
-    <p>For momentum, we will notice that the normal forces during impact will always be in the normal direction. Assuming negligible friction forces (which would be in the tangential direction) we will have no change in momentum in the tangential direction and therefore <strong>no change in velocity in the tangential direction for the center of mass of the body</strong>. This gives us the first equation we can use.</p>
+    <p>To predict the linear velocities after impact in the n and t directions, as well as the angular velocity after the impact (a total of three unknowns) we will need three equations. These equations will come in the form of the conservation of linear momentum in the t direction, as well as two equations based on the coefficient of restitution for the velocity in the n direction and the angular velocity after the impact.</p>
+    <p>For momentum, we will notice that the normal forces during impact will always be in the normal direction. Assuming negligible friction forces (which would be in the tangential direction) we will have no change in linear momentum in the tangential direction and therefore <strong>no change in velocity in the tangential direction for the center of mass of the body</strong>. </p> 
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[ \vec{J}_{1,x} = \vec{J}_{2,x}\]</td>
+        </tr>
+		  <tr>
+          <td>or</td>
+        </tr>
+		  <tr>
+          <td>\[ \vec{J}_{1,t} = \vec{J}_{2,t} \]</td>
+        </tr>
+      </tbody>
+    </table>
+	  
+	  <p>Recall that linear momentum involves the linear velocity at the centre of gravity only - we cannot chose to determine linear momentum at another point. This gives us the first equation we can use.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -41,7 +56,20 @@
         </tr>
       </tbody>
     </table>
-    <p>Next examining the coefficient of restitution will give us another equation. Specifically, the coefficient of restitution relates the <strong>velocities before and after the collision in the normal direction at the point of impact</strong>.</p>
+    <p>Next examining the coefficient of restitution will give us another equation. Specifically, the coefficient of restitution relates the <strong>velocities before and after the collision in the normal direction (along the line of impact) at the point of impact</strong>.</p>
+	  <p>The coefficient of restitution is a relationship between the closing velocity and the separation velocity. The closing velocity is how rapidly are the impact points approaching each other before the impact. The separation velocity is how rapidly are the impact points moving away from each other after the impact.</p>
+	  <table class="equation">
+      <tbody>
+		  <tr>
+          <td>\[e=\frac{\Delta v_{separation} }{\Delta v_{closing}}\]</td>
+        </tr>
+        <tr>
+          <td>\[e=\frac{v_{Anf} - v_{Fnf}}{v_{Fni} - v_{Ani}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  
+ <p>For impacts against an immovable surface, the velocities of the floor, v<sub>Fn</sub>, will be zero. The equation then simplifies to:</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -49,7 +77,33 @@
         </tr>
       </tbody>
     </table>
-    <p>If the collision is elastic we would also conserve the kinetic energy of the body, giving us our third equation. More generally however the coefficient of restitution can be used to quantify the amount of energy lost on the collision, with more elastic collisions conserving a higher percentage of energy and more inelastic equations conserving less kinetic energy. The equation below can be used for any elastic or semi elastic collision with a surface. Using the third equation below, we simply set e equal to one for elastic collisions or e equal to the coefficient of restitution for semi-elastic collisions.</p>
+    <p>If the collision is elastic we would also conserve the kinetic energy of the body, giving us our third equation. Generally, energy is <em>not</em> conserved across an impact. Our final relationship comes from <strong>angular momentum</strong>. </p>
+	  <p>Because the force of the impact (and therefore the impulse of the impact) is so large, most other impulses (except reaction forces generated by the impact force) will be negligible in comparison. The impact impulse will primarily detetrmine how the object moves after impact. Therefore <strong>about the location of impact, where the impact force has a zero moment arm, we can say that angular momentum is conserved</strong>. This is the only point about which angular momentum is conserved in an impact. (Note that, in problems where there is no impact, we can't generally say that impulses are negligible). </p> 
+	  
+	  <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_{A,1} = \vec{K}_{A,2} \]</td>
+        </tr>
+		   <tr>
+      </tbody>
+    </table>  
+	  <p>Since the point of impact is typically not the centre of gravity or a pin, we often need to use the general expression of angular momentum. </p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{K}_A = I_G \vec{\omega} + \vec{r}_{G/A} \times m \vec{v_G} \]</td>
+        </tr>
+		   <tr>
+          <td>OR</td>
+        </tr>
+		   <tr>
+          <td>\[\vec{K}_A = I_A \vec{\omega} + \vec{r}_{G/A} \times m \vec{v_A}  \]</td>
+        </tr>
+      </tbody>
+    </table>  
+	  
+	  <p><strong>(This needs to be checked - caution): </strong><em>In some cases, the coefficient of restitution can be used to quantify the amount of energy lost on the collision, with more elastic collisions conserving a higher percentage of energy and more inelastic equations conserving less kinetic energy. The equation below can be used for any elastic or semi elastic collision with a surface. Using the third equation below, we simply set e equal to one for elastic collisions or e equal to the coefficient of restitution for semi-elastic collisions.</p></em>
     <table class="equation">
       <tbody>
         <tr>
@@ -57,7 +111,7 @@
         </tr>
       </tbody>
     </table>
-    <p>Between the three equations above and whatever relevant kinematics relationships are necessary we should be able to solve for up to three unknowns, allowing us to completely predict the velocities after in impact assuming we know the pre-impact velocities and the coefficient of restitution for the impact itself.</p>
+    <p>Between the equations above and whatever relevant kinematics relationships are necessary we should be able to solve for up to three unknowns, allowing us to completely predict the velocities after impact, assuming we know the pre-impact velocities and the coefficient of restitution for the impact itself.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -81,6 +135,36 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	      <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>The square crate (dimensions a x a = 0.8 m x 0.8 m, mass m = 20 kg) has an initial angular velocity just before impact of ω<sub>1</sub> = 4 rad/s. It impacts the ground at corner B (perfectly plastic impact). Determine the angle, θ, through which the crate will rotate upwards and the percentage of energy lost in the impact. Assume friction prevents slipping throughout. </p>
+        <img src="images/21-AD-crate-rotate.png" width="500" height="205" alt="Problem 2 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/CJY4qW44cDI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/15-4_SurfImpact1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	      <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>The rod AB (length L = 2 m, mass 15 kg) falls from rest from an initial angle of θ = 30 degrees. It impacts the corner C (b = 1.3 m). Determine the angular velocity, ω, and the velocity of the rod’s centre of gravity, v<sub>G</sub>, just after impact.</p>
+        <img src="images/21-AD-falling-bar.png" width="450" height="385" alt="Problem 1 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/b6JVSmwnm3E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/15-4_SurfImpact2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
   </div>
