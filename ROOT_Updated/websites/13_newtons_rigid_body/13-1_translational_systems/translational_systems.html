@@ -3,11 +3,9 @@
 <head>
 <title>Mechanics Map - Translational Systems</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
 <script type="text/javascript">
 
@@ -30,31 +28,31 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Rigid Body Translation</h1>
-	  <p>With rigid bodies, we have to examine <strong>moments</strong> and at least the <strong>possibility of rotation</strong> along with the forces and accelerations we examined with particles. Some rigid bodies will translate but not rotate (translational systems), some will rotate but not translate (fixed axis rotation) and some will rotate and translate (general planar motion). Overall we will start with an examination of translational systems, then examine fixed axis rotation, then pull everything together for general planar motion.</p>
-	<figure class="center"><img src="images/braking_car.JPG" width="459" height="281" alt="A car braking."/>
+    <p>With rigid bodies, we have to examine <strong>moments</strong> and at least the <strong>possibility of rotation</strong> along with the forces and accelerations we examined with particles. Some rigid bodies will translate but not rotate (translational systems), some will rotate but not translate (fixed axis rotation) and some will rotate and translate (general planar motion). Overall we will start with an examination of translational systems, then examine fixed axis rotation, then pull everything together for general planar motion.</p>
+    <figure class="center"><img src="images/braking_car.JPG" width="459" height="281" alt="A car braking."/>
       <figcaption>The braking car in this picture is an example of a translational system. Though the car experiences a significant deceleration, it does not experience any significant rotation while it slows down. Public domain image by Sgt. Amber Blanchard.</figcaption>
     </figure>
-	<p>As the start of our analysis, we will go back to Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions.Note that now we have bodies with extent, the location of the acceleration and the axis about which we take moments or calculate mass moment of inertia are important. Linear accelerations are always measured at the centre of mass. We will develop several moment equations, depending on the point about which moments are taken.</p>
+    <p>As the start of our analysis, we will go back to Newton's Second Law. Since this is a rigid body system, we include both the translational and rotational versions. Note that now we have bodies with extent, the location of the acceleration and the axis about which we take moments or calculate mass moment of inertia are important. Linear accelerations are always measured at the center of mass. We will develop several moment equations, depending on the point about which moments are taken.</p>
     <table class="equation">
       <tbody>
         <tr>
           <td>\[\sum \vec{F}=m*\vec{a_G}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[\sum \vec{M_G}=I_G*\vec{\alpha}\]</td>
         </tr>
       </tbody>
     </table>
-	<p>As we did with particles, we can break the vector force equation into components, turning the one vector equation into two scalar equations (in the x and y directions respectively). As for the moment equation, a translational system by definition will have zero angular acceleration. With the angular acceleration being zero, the sum of the moments must all be equal to zero. This is similar to statics problems, however there is one big difference we must take into account. <strong>The moments must be taken about the center of mass of the body.</strong> Setting the moments to zero about other points will lead to invalid solutions for any body experiencing an acceleration. Putting these specifics into action, we wind up with the three base <strong>equations of motion</strong> below. To solve for unknown forces or accelerations, we simply draw a free body diagram, put the knowns and unknowns into these equations, and solve for the unknowns.</p>
-	<table class="equation">
+    <p>As we did with particles, we can break the vector force equation into components, turning the one vector equation into two scalar equations (in the x and y directions respectively). As for the moment equation, a translational system by definition will have zero angular acceleration. With the angular acceleration being zero, the sum of the moments must all be equal to zero. This is similar to statics problems, however there is one big difference we must take into account. <strong>The moments must be taken about the center of mass of the body.</strong> Setting the moments to zero about other points will lead to invalid solutions for any body experiencing an acceleration. Putting these specifics into action, we wind up with the three base <strong>equations of motion</strong> below. To solve for unknown forces or accelerations, we simply draw a free body diagram, put the knowns and unknowns into these equations, and solve for the unknowns.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[\sum F_{x}=m*a_{Gx}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[\sum F_{y}=m*a_{Gy}\]</td>
         </tr>
-		<tr>
+        <tr>
           <td>\[\sum M_{G}=0\]</td>
         </tr>
       </tbody>
@@ -83,8 +81,8 @@
         <br/>
         <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
       </div>
-		
-		<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
         <p>You are forced to pull a group of kindergarteners in a cart. If you apply a horizontal force of F=600 N, determine the normal force on its wheels. The cart has a total mass of m=160 kg and has a center of mass at G. Assume the wheels have negligible mass. Wheel A has a radius of 0.2 m and is a horizontal of d<sub>A</sub>=0.89 m from G. Wheel B has a radius of 0.2 m and is a horizontal distance of d<sub>B</sub>=0.39 m. You apply the horizontal force at a height y=0.5 m from the bottom of the cart. The center of gravity of G is located at a height h=1.1 m from the ground.</p>
@@ -97,14 +95,14 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P2Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
-			
-			<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>YYou are hauling a heavy cart up a θ=30 deg incline. Luckily, you have been working out so you can apply a force of F=500 N to the cart. If you apply this force at an angle ϕ=42 deg and the cart has a mass of m=30 kg, what is the acceleration of the cart and the normal force on each of the cart’s wheels? The cart has a center of gravity G. The force is applied at a height y=0.4 m from the ground and G is located at a height h=0.5 m. Wheel A is located x<sub>A</sub>=0.1 m from one side of the cart while wheel B is located x<sub>B</sub>=0.05 m from the other end. Wheel A is a distance d<sub>B</sub>=0.3 m from G while wheel B is a distance d<sub>B</sub>=0.25 m.</p>
+        <p>You are hauling a heavy cart up a θ=30 deg incline. Luckily, you have been working out so you can apply a force of F=500 N to the cart. If you apply this force at an angle ϕ=42 deg and the cart has a mass of m=30 kg, what is the acceleration of the cart and the normal force on each of the cart’s wheels? The cart has a center of gravity G. The force is applied at a height y=0.4 m from the ground and G is located at a height h=0.5 m. Wheel A is located x<sub>A</sub>=0.1 m from one side of the cart while wheel B is located x<sub>B</sub>=0.05 m from the other end. Wheel A is a distance d<sub>B</sub>=0.3 m from G while wheel B is a distance d<sub>B</sub>=0.25 m.</p>
         <img src="images/P3.png" width="500" height="380" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -114,14 +112,14 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P3Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
-				
-				<div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>Your very wonderful parents have returned from their vacation from Hawaii while you were studying for midterms. At the airport, you stack their luggage, which can be modelled as box A. Box A has a width w<sub>A</sub>=0.5m and height h<sub>A</sub>=0.8m. If box A has a mass m<sub>A</sub>=50kg, determine the maximum force F you can apply on the 12kg car before tipping their luggage over. Assume slipping does not occur and that box A has uniform density even though clothing is probably stuffed in all sorts of places to save space for souvenirs.</p>
+        <p>Your very wonderful parents have returned from their vacation from Hawaii while you were studying for midterms. At the airport, you stack their luggage, which can be modeled as box A. Box A has a width w<sub>A</sub>=0.5m and height h<sub>A</sub>=0.8m. If box A has a mass m<sub>A</sub>=50kg, determine the maximum force F you can apply on the 12kg car before tipping their luggage over. Assume slipping does not occur and that box A has uniform density even though clothing is probably stuffed in all sorts of places to save space for souvenirs.</p>
         <img src="images/P4.jpg" width="500" height="520" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -131,23 +129,21 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P4Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
-		
     </div>
-	  <div id="practiceproblems">
-	  <h2>Practice Problems:</h2>
-		<div class="problem">
-			<h3>Practice Problem 1:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="950"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-002.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>
-	  </div>	
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="950"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-002.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
     </div>
+  </div>
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>

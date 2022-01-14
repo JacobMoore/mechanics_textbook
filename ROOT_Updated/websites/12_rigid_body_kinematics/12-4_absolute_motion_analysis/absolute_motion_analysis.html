@@ -3,11 +3,9 @@
 <head>
 <title>Mechanics Map - Absolute Motion Analysis</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
 <script type="text/javascript">
 
@@ -31,13 +29,13 @@
   <div id="maincontent">
     <h1>Absolute Motion Analysis</h1>
     <p><strong>Absolute motion analysis</strong> is one method used to analyze bodies undergoing <strong>general planar motion</strong>. General planar motion is motion where bodies can both translate and rotate at the same time. Besides absolute motion analysis, the alternative is relative motion analysis. Either method can be used for any general planar motion problem, however one method may be significantly easier to apply in certain situations.</p>
-	<p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
+    <p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
     <h2>Utilizing Absolute Motion Analysis</h2>
     <p>To start our discussion on absolute motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two arm sections of fixed length with motors causing rotations at joint A and joint B.</p>
-	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+    <figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
       <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	<p>The first step in absolute motion analysis is come up with a set of equations describing the position of some point of interest. In this case we will be looking at the position of the end effector of the arm at point C, and we will write an equation for the x position and the y position of this point with respect to the fixed origin point at A. In these equations, anything that is a constant (such as the length of the arm pieces) can be put in as a number, but anything that will change (such as angles theta and phi) will need to remain as variables in these equations even if they are known at the moment. Using the values in the diagram we would wind up with the two following position equations.</p>
+    <p>The first step in absolute motion analysis is come up with a set of equations describing the position of some point of interest. In this case we will be looking at the position of the end effector of the arm at point C, and we will write an equation for the x position and the y position of this point with respect to the fixed origin point at A. In these equations, anything that is a constant (such as the length of the arm pieces) can be put in as a number, but anything that will change (such as angles theta and phi) will need to remain as variables in these equations even if they are known at the moment. Using the values in the diagram we would wind up with the two following position equations.</p>
     <table class="equation">
       <tbody>
         <tr>
@@ -47,7 +45,7 @@
         <tr>
           <th>Y Position:</th>
           <td>\[y_{c}=2sin(\theta)+1.5sin(\phi)\]</td>
-		  </tr>
+        </tr>
       </tbody>
     </table>
     <p>To find the velocity of point C in the x and y directions, we simply need to take the derivatives of the position equations. The velocity equations for our robotic arm are below.</p>
@@ -60,11 +58,11 @@
         <tr>
           <th>Y Velocity:</th>
           <td>\[v_{yc}=2cos(\theta)\dot{\theta}+1.5cos(\phi)\dot{\phi}\]</td>
-		  </tr>
+        </tr>
       </tbody>
-    </table>	  
-	  <p>To find the acceleration of point C in the x and y directions we simply need to take the derivatives of the velocity equations. The acceleration equations for our robotic arm in the x and y directions are shown below.</p>
-      <table class="equation">
+    </table>
+    <p>To find the acceleration of point C in the x and y directions we simply need to take the derivatives of the velocity equations. The acceleration equations for our robotic arm in the x and y directions are shown below.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>X Acc:</th>
@@ -73,10 +71,10 @@
         <tr>
           <th>Y Acc:</th>
           <td>\[a_{yc}=-2sin(\theta)\dot{\theta}^{2}+2cos(\theta)\ddot{\theta}-1.5sin(\phi)\dot{\phi}^{2}+1.5cos(\phi)\ddot{\phi}\]</td>
-		  </tr>
+        </tr>
       </tbody>
     </table>
-	<p>Once we have the velocity and acceleration equations, we can start solving for any unknowns. If we have known angular velocities and accelerations (theta dot, theta double dot, phi dot, and phi double dot) we can plug those in to find the velocity and acceleration vectors for the end effector. In other instances, we may known or desired motion of the end effector (v<sub>cx</sub>, v<sub>cy</sub>, a<sub>cx</sub>, and a<sub>cy</sub>) and will have to plug those in to the equations to solve for unknowns such as theta dot and so on.</p>
+    <p>Once we have the velocity and acceleration equations, we can start solving for any unknowns. If we have known angular velocities and accelerations (theta dot, theta double dot, phi dot, and phi double dot) we can plug those in to find the velocity and acceleration vectors for the end effector. In other instances, we may known or desired motion of the end effector (v<sub>cx</sub>, v<sub>cy</sub>, a<sub>cx</sub>, and a<sub>cy</sub>) and will have to plug those in to the equations to solve for unknowns such as theta dot and so on.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -117,7 +115,7 @@
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>A ladder is propped up against a wall as shown below. If the base of the ladder is sliding out at a speed of 2 m/s, what is the speed of the top of the ladder?</p>
@@ -132,7 +130,7 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
         <p>The crank-rocker mechanism as shown below consists of a crank with a  radius of .5 meters rotating about its fixed center at C at a constant rate of 2 rad/s clockwise. Rocker AB fixed at it's base at A and connects to point B along the edge of the crank. The pin at point B can slide along a frictionless slot in AB. In the current state, what is the angular velocity of rocker AB?</p>
@@ -147,7 +145,7 @@
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 5:</h3>
         <p>Determine the angular velocities and angular accelerations of links AB and BC if end D has a velocity of v=3m/s to the right and an acceleration of a=1m/s<sup>2</sup> to the left. Link AB and BC both have a length l=0.5m  and the angle is given as θ=60deg.</p>
@@ -160,12 +158,11 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P5Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
-		  
-		  </div>
-	  <div class="problem">
+    </div>
+    <div class="problem">
       <div class="question">
         <h3>Question 6:</h3>
         <p>Students are attempting to create a lift to raise their model car. The lift is assembled with two linkages, link AB and link BC, as seen in the picture shown. If the links have length l<sub>AB</sub>=0.2 m and l<sub>BC</sub>=0.4 m, determine the velocity and acceleration of the lift at the instant where the angular velocity of AB is ω<sub>AB</sub>=-5 rad/s and the angular acceleration of AB is α<sub>AB</sub>=-7 rad/s<sup>2</sup>. Take the angles to be θ=30 deg and ϕ=20 deg.</p>
@@ -178,30 +175,27 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P6.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P6Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
-		  
-    </div> 
-	  <div id="practiceproblems">
-	  <h2>Practice Problems:</h2>
-		<div class="problem">
-			<h3>Practice Problem 1:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="350"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-118.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>
-			  <div class="problem">
-			<h3>Practice Problem 2:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="350"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-117.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>
-	  </div>
+    </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="350"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-118.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 2:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="350"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-117.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
   </div>
   <script language="javascript">displayFooter();</script> 
 </div>

@@ -3,11 +3,9 @@
 <head>
 <title>Mechanics Map - Relative Motion Analysis (Vector)</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
 <script type="text/javascript">
 
@@ -30,27 +28,27 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
     <h1>Relative Motion Analysis Using Vectors</h1>
-	  <p><em>This section presents relative motion using vector notation.</em></p>
+    <p><em>This section presents relative motion using vector notation.</em></p>
     <p><strong>Relative motion analysis</strong> is one method used to analyze bodies undergoing <strong>general planar motion</strong>. General planar motion is motion where bodies can both translate and rotate at the same time. Besides relative motion analysis, the alternative is absolute motion analysis. Either method can be used for any general planar motion problem, however one method may be significantly easier to apply in certain situations.</p>
-	<p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
+    <p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
     <h2>Utilizing Relative Motion Analysis</h2>
     <p>To start our discussion on relative motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two arm sections of fixed length with motors causing rotations at joint A and joint B.</p>
-	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+    <figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
       <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	<p>The first step in relative motion analysis is to break the motion down into simple steps and assign a translating coordinate system (with x and y directions) attached to points of interest along the rigid bodies. Note that this coordinate system will translate with the point of interest, but will <strong>not</strong> rotate with the object. (We will use rotating coordinate systems later for more complex problems in the rotating frames method). We will typically start at a point with known motion (or a fixed point) and move step by step from there. In the case of our robotic arm, we know Joint A will not be moving so we start there. We will determine the velocity at point B (with respect to point A), and then point C (with respect to point B).</p>
-	<p>Below is a picture of the robotic arm with the coordinate systems drawn in.</p>
-	<figure class="center"><img src="images/coordinates_v.png" width="500" height="350" alt="A robotic arm with two sections"/>
+    <p>The first step in relative motion analysis is to break the motion down into simple steps and assign a translating coordinate system (with x and y directions) attached to points of interest along the rigid bodies. Note that this coordinate system will translate with the point of interest, but will <strong>not</strong> rotate with the object. (We will use rotating coordinate systems later for more complex problems in the rotating frames method). We will typically start at a point with known motion (or a fixed point) and move step by step from there. In the case of our robotic arm, we know Joint A will not be moving so we start there. We will determine the velocity at point B (with respect to point A), and then point C (with respect to point B).</p>
+    <p>Below is a picture of the robotic arm with the coordinate systems drawn in.</p>
+    <figure class="center"><img src="images/coordinates_v.png" width="500" height="350" alt="A robotic arm with two sections"/>
       <figcaption>Two coordinate systems are used in the relative motion analysis of this robotic arm. One coordinate system at A is the fixed system (from which absolute motion is viewed) and one translating coordinate system is attached at B (a point on both AB and BC). This translating coordinate system translates with the point on the rigid body they are attached to, but do not rotate with the rigid body.</figcaption>
     </figure>
-	<p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles. Note that velocities that are relative to the fixed coordinate system are often designated with one subscript, and considered absolute velocities and accelerations. </p>
-	<table class="equation">
+    <p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles. Note that velocities that are relative to the fixed coordinate system are often designated with one subscript, and considered absolute velocities and accelerations. </p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
           <td>\[\vec{v}_{C/A}=\vec{v}_{B/A}+\vec{v}_{C/B}\]</td>
         </tr>
-		   <tr>
+        <tr>
           <th>or</th>
           <td>\[\vec{v}_{C}=\vec{v}_{B}+\vec{v}_{C/B}\]</td>
         </tr>
@@ -58,26 +56,22 @@
           <th>Acceleration:</th>
           <td>\[\vec{a}_{C/A}=\vec{a}_{B/A}+\vec{a}_{C/B}\]</td>
         </tr>
-		  <tr>
+        <tr>
           <th>or</th>
           <td>\[\vec{a}_{C}=\vec{a}_{B}+\vec{a}_{C/B}\]</td>
         </tr>
       </tbody>
     </table>
-	<p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
-	<p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B</sub> or v<sub>C</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
-	
-
-	
-	
-	<p>In some cases, we want to analyze multiple points on the same or several rigid bodies. Another notation used for this is:</p>
-	<table class="equation">
+    <p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
+    <p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B</sub> or v<sub>C</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
+    <p>In some cases, we want to analyze multiple points on the same or several rigid bodies. Another notation used for this is:</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Position:</th>
           <td>\[\vec{r_B} = \vec{r_A} + \vec{r_{B/A}}\]</td>
         </tr>
-		  <tr>
+        <tr>
           <th>Velocity:</th>
           <td>\[\vec{v_B} = \vec{v_A} + \vec{v_{B/A}} = \vec{v_A} + \vec{\omega} \times \vec{r_{B/A}}\]</td>
         </tr>
@@ -87,9 +81,9 @@
         </tr>
       </tbody>
     </table>
-	  <p>In this notation, <em>A</em> and <em>B</em> are two points on the same rigid body. When we use only one subscript, that indicates the position/velocity/acceleration of that point with respect to the fixed coordinate system.  Because the body is rigid, the two points will not change the distance between them, but the position vector between them can change orientation (which is where the relative velocity between the two points comes from). Omega is the angular velocity of that rigid body (analogous to theta dot) and alpha is the angular acceleration of that rigid body (analogous to theta double dot). </p>
-	  <p>For planar motion, where the angular velocity vector (out of plane) is always perpendicular to the position vector (in the plane), the acceleration can be simplified to: </p>
-	  <table class="equation">
+    <p>In this notation, <em>A</em> and <em>B</em> are two points on the same rigid body. When we use only one subscript, that indicates the position/velocity/acceleration of that point with respect to the fixed coordinate system.  Because the body is rigid, the two points will not change the distance between them, but the position vector between them can change orientation (which is where the relative velocity between the two points comes from). Omega is the angular velocity of that rigid body (analogous to theta dot) and alpha is the angular acceleration of that rigid body (analogous to theta double dot). </p>
+    <p>For planar motion, where the angular velocity vector (out of plane) is always perpendicular to the position vector (in the plane), the acceleration can be simplified to: </p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Acceleration:</th>
@@ -97,34 +91,32 @@
         </tr>
       </tbody>
     </table>
-	  
-	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+    <figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
       <figcaption>As previously, this robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	
-	<p>All vectors will be defined with respect to the <em>x</em> and <em>y</em> coordinates in the coordinate system shown, rather than the radial and theta directions as above.  </p>  
-	<p>If we want to find the velocity and acceleration of the end point, C, knowing the angular velocities and accelerations, we will find the following relationships: </p>  
-	<table class="equation">
+    <p>All vectors will be defined with respect to the <em>x</em> and <em>y</em> coordinates in the coordinate system shown, rather than the radial and theta directions as above. </p>
+    <p>If we want to find the velocity and acceleration of the end point, C, knowing the angular velocities and accelerations, we will find the following relationships: </p>
+    <table class="equation">
       <tbody>
-		  <tr>
+        <tr>
           <th>Velocity at point B:</th>
           <td>\[\vec{v_B} = \vec{v_A} + \vec{\omega_{AB}} \times \vec{r_{B/A}}\]</td>
-			 </tr>
-		  <tr>
+        </tr>
+        <tr>
           <th>Velocity at point C:</th>
-		<td>\[\vec{v_C} = \vec{v_B} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]  \[= \vec{v_A} + \vec{\omega_{AB}} \times \vec{r_{B/A}} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]</td>
+          <td>\[\vec{v_C} = \vec{v_B} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]  \[= \vec{v_A} + \vec{\omega_{AB}} \times \vec{r_{B/A}} + \vec{\omega_{BC}} \times \vec{r_{C/B}}\]</td>
         </tr>
         <tr>
           <th>Acceleration at point B:</th>
           <td>\[\vec{a_B} = \vec{a_A} + \vec{\alpha_{AB}} \times \vec{r_{B/A}} - \omega_{AB}^2 \vec{r_{B/A}}  \]</td>
-		        </tr>
-		  <tr>
+        </tr>
+        <tr>
           <th>Acceleration at point C:</th>
-			<td>\[\vec{a_C} = \vec{a_B} + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]  \[ =  \vec{a_A} + \vec{\alpha_{AB}} \times \vec{r_{B/A}} - \omega_{AB}^2 \vec{r_{B/A}}  + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]</td>
+          <td>\[\vec{a_C} = \vec{a_B} + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]  \[ =  \vec{a_A} + \vec{\alpha_{AB}} \times \vec{r_{B/A}} - \omega_{AB}^2 \vec{r_{B/A}}  + \vec{\alpha_{BC}} \times \vec{r_{C/B}} - \omega_{BC}^2 \vec{r_{C/B}} \]</td>
         </tr>
       </tbody>
-	  </table>
-	  <p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
+    </table>
+    <p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -165,7 +157,7 @@
         <div class="resource"> <a href="pdf/12-6_RelMot2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>A ladder is propped up against a wall as shown below. If the base of the ladder is sliding out at a speed of 2 m/s, what is the velocity of the top of the ladder?</p>
@@ -180,12 +172,10 @@
         <div class="resource"> <a href="pdf/12-6_RelMot3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	
-	  <div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
-        <p>Several arms are linked to form the system shown. Link AB has a length of l<sub>AB</sub>=0.5m, link CD has a length of l<sub>CD</sub>=0.5m, and the distance from B to C is r<sub>CB</sub>=-1i ̂+1j ̂  m. If the angle between link AB is θ=45 deg, determine the angular velocity of link CD. Locate the ICZV. The angular velocities of the links are given as ω<sub>AB</sub>=-3 rad/s and ω<sub>BC</sub>=3/4√2  rad/s.
-</p>
+        <p>Several arms are linked to form the system shown. Link AB has a length of l<sub>AB</sub>=0.5m, link CD has a length of l<sub>CD</sub>=0.5m, and the distance from B to C is r<sub>CB</sub>=-1i ̂+1j ̂  m. If the angle between link AB is θ=45 deg, determine the angular velocity of link CD. Locate the ICZV. The angular velocities of the links are given as ω<sub>AB</sub>=-3 rad/s and ω<sub>BC</sub>=3/4√2  rad/s. </p>
         <img src="images/P5.png" width="400" height="342" alt="Problem 4 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -197,20 +187,16 @@
         <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	  
-
-	  
-	  <div id="practiceproblems">
-	  <h2>Practice Problems:</h2>
-		<div class="problem">
-			<h3>Practice Problem 1:</h3>
-			<div class="importbox">
-			<iframe  width="860" height="800"
-				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-107.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky">
-			</iframe>
-			</div>
-		</div>
-	  </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="800"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-107.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
   </div>
   <script language="javascript">displayFooter();</script> 
 </div>

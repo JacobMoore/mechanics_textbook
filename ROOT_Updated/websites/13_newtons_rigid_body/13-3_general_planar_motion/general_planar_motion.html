@@ -3,9 +3,9 @@
 <head>
 <title>Mechanics Map - General Planar Motion</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
 <script type="text/javascript">
 
@@ -59,28 +59,27 @@
       </tbody>
     </table>
     <p>Plugging the known forces, moments, and accelerations into the above equations we can solve for up to three unknowns. If more than three unknowns exist in the equations, we will sometimes have to go back to kinematics to relate quantities such as acceleration and angular acceleration.</p>
-	  <p>Sometimes it's inconvenient to take moments about the centre of mass, G. We have two other options, if we'd like to take moments about another point. When choosing which moment equation version to use, consider what accelerations and mass moments of inertia you know, and what point will reduce the number of unknown forces captured in the moment equation. </p>
-	  
-	  <p> First, if we want to take moments about the instantaneous centre of zero velocity (ICZV) for a rigid body, we can use the fixed axis rotation version of the moment equation. Note that the subscripts always have to match - that is, if we take moments about the IC, we need to find the mass moment of inertia about the IC.</p>
-	   <table class="equation">
+    <p>Sometimes it's inconvenient to take moments about the center of mass, G. We have two other options, if we'd like to take moments about another point. When choosing which moment equation version to use, consider what accelerations and mass moments of inertia you know, and what point will reduce the number of unknown forces captured in the moment equation. </p>
+    <p> First, if we want to take moments about the instantaneous centre of zero velocity (ICZV) for a rigid body, we can use the fixed axis rotation version of the moment equation. Note that the subscripts always have to match - that is, if we take moments about the IC, we need to find the mass moment of inertia about the IC.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[\sum \vec{M}_{IC}=I_{IC}\vec{\alpha}\]</td>
         </tr>
       </tbody>
     </table>
-	  <p>If we want to take moments about any point, P, on the rigid body, we will need to add an extra term to our equation, This extra term is related to the moment caused by the linear inertia (ma<sub>G</sub>). And there are two versions of this equation, using either G subscripts or P subscripts for I and a. </p>
-	  <table class="equation">
+    <p>If we want to take moments about any point, P, on the rigid body, we will need to add an extra term to our equation, This extra term is related to the moment caused by the linear inertia (ma<sub>G</sub>). And there are two versions of this equation, using either G subscripts or P subscripts for I and a. </p>
+    <table class="equation">
       <tbody>
         <tr>
           <td>\[ \sum \vec{M}_{P}=I_{G}\vec{\alpha}+ \vec{r}_{G/P} \times m \vec{a}_G \]</td>
         </tr>
-		  <tr>
+        <tr>
           <td>\[ \sum \vec{M}_{P}=I_{P}\vec{\alpha}+ \vec{r}_{G/P} \times m \vec{a}_P \]</td>
         </tr>
       </tbody>
     </table>
-	  <p>Be sure the I and a subscripts (either G or P) match each other when you use these equations, and use the vector (both i and j components) for a<sub>G</sub> or a<sub>P</sub>.</p>
+    <p>Be sure the I and a subscripts (either G or P) match each other when you use these equations, and use the vector (both i and j components) for a<sub>G</sub> or a<sub>P</sub>.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -158,12 +157,10 @@
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 5:</h3>
-        <p>Three slender rods with equal mas are welded together. If the assembly is released from rest, what is the angular acceleration of the rods? The rods have a mass of m=2kg each. Rod AB has a length l<sub>AB</sub>=1.5m, rod BC has length l<sub>BC</sub>=1m, and rod CD has length l<sub>CD</sub>=0.5m. Initially, rod AD and rod CD are perfectly horizontal. Rod BC forms an angle of θ=45deg with rod AB.
-</p>
+        <p>Three slender rods with equal mass are welded together. If the assembly is released from rest, what is the angular acceleration of the rods? The rods have a mass of m=2kg each. Rod AB has a length l<sub>AB</sub>=1.5m, rod BC has length l<sub>BC</sub>=1m, and rod CD has length l<sub>CD</sub>=0.5m. Initially, rod AD and rod CD are perfectly horizontal. Rod BC forms an angle of θ=45deg with rod AB. </p>
         <img src="images/P5.png" width="500" height="400" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -173,19 +170,17 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P5Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 6:</h3>
         <p>Your friend is once again trying to move their mom’s modern art sculpture by dragging a rug underneath it. Will the statue tip or slip first? Determine the magnitude of the acceleration needed for both tipping and slipping. The statue has a mass of m=80kg and has a radius of gyration k<sub>G</sub>=0.8m. The coefficient of static and kinetic friction are determined to be μ<sub>s</sub>=0.25 and μ<sub>K</sub>=0.2  respectively. 
-Assume there is no friction between the rug and the ground. 
-The center of gravity G is found a height h=1.5m and is a horizontal distance
-d<sub>A</sub>=0.1m from point A. Point B is a horizontal distance d<sub>B</sub>=0.35m away from the center of gravity.
-</p>
+          Assume there is no friction between the rug and the ground. 
+          The center of gravity G is found a height h=1.5m and is a horizontal distance
+          d<sub>A</sub>=0.1m from point A. Point B is a horizontal distance d<sub>B</sub>=0.35m away from the center of gravity. </p>
         <img src="images/P6.png" width="500" height="420" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -195,19 +190,18 @@ d<sub>A</sub>=0.1m from point A. Point B is a horizontal distance d<sub>B</sub>=
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P6.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P6Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 7:</h3>
-        <p>A mechanical engineering student has been practising his yoyo tricks because he has too much free time. For one trick, he spins the yoyo such that it contacts the ground and moves forward, emulating someone walking their dog. If the yoyo has a radius of gyration k<sub>G</sub>=0.02m and a mass of m=0.2kg, determine the acceleration and angular acceleration of the yoyo when the tension in the string is found to be T=0.4N. 
-Assume the string is at its full extent and does not roll up as the yoyo rolls. 
-Assume there is also no friction where the string slips around the yoyo’s inner axle.
-The coefficient of static and kinetic friction are found to be μ<sub>s</sub>=0.3 and μ<sub>K</sub>=0.2 respectively. The angle is θ=60 deg and the radius of the yoyo is r=0.03m. 
-Take the initial angular velocity of the yoyo to be ω=6 rad/sec.</p>
+        <p>A mechanical engineering student has been practicing his yo-yo tricks because he has too much free time. For one trick, he spins the yo-yo such that it contacts the ground and moves forward, emulating someone walking their dog. If the yo-yo has a radius of gyration k<sub>G</sub>=0.02m and a mass of m=0.2kg, determine the acceleration and angular acceleration of the yo-yo when the tension in the string is found to be T=0.4N. 
+          Assume the string is at its full extent and does not roll up as the yo-yo rolls. 
+          Assume there is also no friction where the string slips around the yo-yo’s inner axle.
+          The coefficient of static and kinetic friction are found to be μ<sub>s</sub>=0.3 and μ<sub>K</sub>=0.2 respectively. The angle is θ=60 deg and the radius of the yo-yo is r=0.03m. 
+          Take the initial angular velocity of the yo-yo to be ω=6 rad/sec.</p>
         <img src="images/P7.png" width="500" height="420" alt="Problem 3 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -217,11 +211,10 @@ Take the initial angular velocity of the yoyo to be ω=6 rad/sec.</p>
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P7.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P7Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	
   </div>
   <script language="javascript">displayFooter();</script> 
 </div>

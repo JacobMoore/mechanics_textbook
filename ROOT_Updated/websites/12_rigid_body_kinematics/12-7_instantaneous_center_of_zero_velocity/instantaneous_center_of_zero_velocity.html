@@ -1,0 +1,134 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Instantaneous Center of Zero Velocity</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Instantaneous Center of Zero Velocity (ICZV)</h1>
+    <p><em>This section presents relative motion using vector notation.</em></p>
+    <p><strong>Instantaneous Center of Zero Velocity</strong> is a graphical technique that can help simplify relative motion problems. At any instant in time, a rigid body undergoing <strong>general planar motion</strong> may appear to be rotating around a particular point. Finding this point allows you to use simpler equations for fixed rotation to analyze the motion of that body. In some cases, this simplifies the solution.</p>
+    <h2>Finding the Instantaneous Center of Zero Velocity (ICZV)</h2>
+    <p>To find the ICZV (also denoted "IC") for a rigid body, you need to know the direction (but not the magnitude or the sense) at two points on the same rigid body. If the velocities at the two points are parallel, then you need additional information. We will start with the simpler case of non-parallel velocities at two points.</p>
+    <figure class="center"><img src="images/IC1.png" width="400" height="400" alt="A rigid body with two point velocities"/>
+      <figcaption>This rigid body is undergoing general plane motion, and we can identify the direction of velocity at two points.</figcaption>
+    </figure>
+    <p>Once you have identified two non-parallel point velocities, draw lines perpendicular to those velocity directions. The point where the perpendiculars meet is the ICZV. At this point, the velocity of the body is zero. Note that the IC can be on or off the body. If the IC is off the body, you can imaging massless rods connecting the IC to the rigid body. </p>
+    <figure class="center"><img src="images/IC2.png" width="400" height="400" alt="A rigid body showing the intersection of perpendiculars to find the IC"/>
+      <figcaption>The intersection of two lines perpendicular to two point velocities defines the ICZV. </figcaption>
+    </figure>
+    <p>If this was actually pure rotation, with a physical pin at the location of the IC, we'd expect all points on the body would have velocities perpendicular to the position vector between the pin and the point of interest. The IC gives us the same effect. </p>
+    <figure class="center"><img src="images/IC3.png" width="600" height="350" alt="A rigid body showing how the IC is equivalent to a pin at this instant"/>
+      <figcaption>The ICZV can be treated as a pin for analysis at this instant only.</figcaption>
+    </figure>
+    <p>However, unlike a physical pin, in the next instant the ICZV location can change. The path of the ICZV is called a centrode. </p>
+    <figure class="center"><img src="images/IC4.png" width="400" height="440" alt="A rigid body showing the centrode"/>
+      <figcaption>The ICZV follows a path called a centrode over time.</figcaption>
+    </figure>
+    <p>Since many rigid body kinematics problems involve finding a velocity at a particular instant, the ICZV can be a useful tool. In many cases, it is used to quickly find the velocity at a third point on a body undergoing general plane motion. This can be done using the fixed axis rotation velocity equation:</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Velocity using ICZV:</th>
+          <td>\[\vec{v}_{C}=\vec{\omega} \times \vec{r}_{C/IC}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <figure class="center"><img src="images/IC5.png" width="400" height="450" alt="A rigid body showing three velocities with respect to the ICZV"/>
+      <figcaption>The velocity at each point on the rigid body can be defined using the fixed axis rotation equation and the position of the point with respect to the ICZV.</figcaption>
+    </figure>
+    <h2>Finding ICs when velocities are parallel</h2>
+    <p>When the two velocities are parallel, we need some additional information about sense and/or magnitude, and we find the IC in a slightly different way. </p>
+    <p>To find the IC when velocities are parallel, draw a line that connects the two vector heads, and another line that connects the two vector tails. </p>
+    <figure class="center"><img src="images/IC6.png" width="600" height="350" alt="Three rigid bodies showing cases for finding ICs when velocities are parallel"/>
+      <figcaption>Demonstrating the three cases possible when the two velocities you select are parallel. </figcaption>
+    </figure>
+    <h3>Case 1: Opposite senses</h3>
+    <p>When the two velocities are parallel but have opposite senses (e.g. one is directed toward positive <em>x</em> and the other toward negative <em>x</em>), the object is rotating and you will find an IC. The IC will be located on the line between the two points. The location of the IC will depend on the magnitudes of the vectors. </p>
+    <h3>Case 2: Same sense, different magnitude</h3>
+    <p>When the vectors have the same sense (e.g. both directed toward positive <em>x</em>), then you also need magnitude to know if an IC exists. If the magnitudes are different, the object is rotating. The IC will be located on the line passing through both points, past the point with lower velocity. </p>
+    <h3>Case 3: Same sense, same magnitude</h3>
+    <p>If two points on a rigid body have the same velocity vector, then the body is not rotating. If we draw the lines connecting the two heads and the two tails, we will get parallel lines. The intersection of parallel lines is at infinity. There is no useful IC in this case.</p>
+    <p>There are a few important things to remember when using the ICZV:</p>
+    <ol>
+      <li>The ICZV is only a model - there is no actual pin. </li>
+      <li>The ICZV typically changes location over time. An ICZV is only useful at this instant.</li>
+      <li>The ICZV is for velocity only. The ICZV will not necessarily have zero acceleration.</li>
+    </ol>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/64xLAMmp6Ec" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A ladder is propped up against a wall as shown below. If the base of the ladder is sliding out at a speed of 2 m/s, what is the velocity of the COG of the ladder (at the mid-point)?</p>
+        <img src="images/12-7_ICZV2.png" width="400" height="365" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/jSa1Cdb-QtI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/12-7_ICZV2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Two rods, <em>AB</em> and <em>BC</em>, are connected and moving. A pin at point <em>A</em> follows the vertical slot shown. Find the ICZV for each rod at the instant shown. If rod <em>BC</em> has an angular velocity of 3 rad/s, find the angular velocity of rod <em>AB</em>.</p>
+        <img src="images/P1.png" width="300" height="450" alt="Problem 2 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/fgTQXXU1QRc" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/12-7_ICZV1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="800"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/Dynamics/Mech2_2016-2017/UBC-DYN-17-107.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
