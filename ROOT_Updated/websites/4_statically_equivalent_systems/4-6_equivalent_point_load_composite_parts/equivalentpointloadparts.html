@@ -1,0 +1,116 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Equivalent Point Load via Composite Parts</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34631101-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="maincontent">
+    <h1>Equivalent Point Load (via Composite Parts)</h1>
+    <p>As stated previously, an equivalent point load is a <strong>single point force</strong> that will have the <strong>same effect</strong> on a body as the original loading condition, which is usually a distributed force.</p>
+    <figure class="center"> <img alt="The Equivalent Point Load" height="231" src="images/equivalentpointload.png" width="500">
+      <figcaption>If the body is unconstrained as shown on the left, the equivalent point load (shown as a solid vector) will cause the same linear and angular acceleration as the original distributed load (shown with dashed vectors). If the body is constrained as on shown on the right, the equivalent point load (shown as a solid vector) will cause the same reaction forces as the original distributed force (shown with dashed vectors).</figcaption>
+    </figure>
+    <h2>Finding the Equivalent Point Load</h2>
+    <p>When finding the equivalent point load we need to find the magnitude, direction, and point of application of a single force that is equivalent to the distributed force we are given. In this course we will only deal with distributed forces with a uniform direction, in which case the direction of the equivalent point load will match the uniform direction of the distributed force. This leaves the magnitude and the point of application to be found. There are two options available to find these values:</p>
+    <ol>
+      <li>We can find the magnitude and the point of application of the equivalent point load <strong>via integration</strong> of the force functions.</li>
+      <li>We can use the <strong>area/volume and the centroid</strong> of the area or volume under the force function.</li>
+    </ol>
+    <p>The first method is more flexible, allowing us to find the equivalent point load for any force function that we can make a mathematical formula for (assuming we have the skill in calculus to integrate that function). The second method is usually faster, assuming that we can look up the values for the area or volume under the force curve and the values for the centroid of the area or volume under the force function. On this page we will be focusing on the second method.</p>
+    <h3>Using the Area and Centroid for Distributed Forces in Beams:</h3>
+    <figure class="right"> <img alt="Equivalent Point Load via Composite Parts" height="352" src="images/2Dexamplearea.png" width="354">
+      <figcaption>The magnitude of the equivalent point load is equal to the area under the force function. Also the equivalent point load vector will always travel through the centroid of the area under the force function.</figcaption>
+    </figure>
+    <p>As an alternative to using integration, we can use the area under the force curve and the centroid of the area under the force curve to find the equivalent point load's magnitude and point of application respectively.</p>
+    <p>The <strong>magnitude</strong> (Feq) of the equivalent point load will be equal to the <strong>area under the force function</strong>. We can find this area using calculus, but there are often easier geometry based ways of finding the area under the force function. If that is an option, you can always use geometry to find the area under the force function curve which is equal to the magnitude of your equivalent point load. Note that the width of this area will be in units of distance, while the height of this area will be in units of force per unit of distance. This means that the resulting area will be in units of force.</p>
+    <p>The equivalent point load will also always <strong>travel through centroid of the area under the force function</strong>. On the previous page we used the moment integral to find this location, but we can alternatively use the method of composite parts to identify the centroid. For more information on using the method of composite parts to identify the centroid of an area, refer to Appendix 2.</p>
+    <h3>Using Volumes and Centroids in Surface Force Problems:</h3>
+    <figure class="right"> <img alt="Equivalent Point Load via Composite Parts for a Volume" height="400" src="images/3Dexamplevolume.png" width="300">
+      <figcaption>The magnitude of the equivalent point load is equal to the volume under the force function. Also the equivalent point load vector will always travel through the centroid of the volume under the force function.</figcaption>
+    </figure>
+    <p>Just as in the 2D problems, there are some available shortcuts to finding the equivalent point load in 3D surface force problems. For a force spread over an area, the <strong>magnitude</strong> (Feq) of the equivalent point load will be equal to the <strong>volume under the force function</strong>. Rather than integrating, if there is a geometry based way of finding the volume, you can use that instead of integration.</p>
+    <p>Additionally, the equivalent point load will also always <strong> travel through the centroid of the volume under the force function</strong>. For simple shapes you may be able to identify this centroid directly from the 3D Centroids table. For more complex setups, you may need to employ the method of composite parts to find the overall centroid. For more information on finding centroids via composite parts see Appendix 2.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/v01KgaqR58Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Determine the magnitude and location of the equivalent point load for the distributed force shown below using composite parts.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Use composite parts to identify the magnitude and location of the equivalent point load, then use that to identify the reaction forces at supports A and B, which are each 1 ft from the edge of the beam.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <div id="practiceproblems">
+    <h2>Practice Problems:</h2>
+    <div class="problem">
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="800"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Centers/load_lumping_H_R_T_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <h3>Practice Problem 2:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="740"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/set220PracticeReviewQuiz/PracticeReviewQuiz21.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

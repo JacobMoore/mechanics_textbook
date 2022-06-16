@@ -2,9 +2,10 @@
 <html>
 <head>
 <title>Mechanics Map - Centroid, Centre of Mass, and Mass MOI in Composite Bodies</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
 <script type="text/javascript">
 
@@ -26,7 +27,7 @@
   <script language="javascript">displayHeader();</script> 
   <script language="javascript">displayMenuSub();</script>
   <div id="maincontent">
-    <h1>Finding the Centroid, Center of Mass and Mass Moment of Inertia via the Method of Composite Parts</h1>
+    <h1>Finding the Centroid and Center of Mass via the Method of Composite Parts</h1>
     <p>As an alternative to the use of moment integrals, we can use the <strong>Method of Composite Parts</strong> to find the <strong>centroid</strong> of an area or volume or the <strong>center of mass</strong> of a body. This method is often easier and faster that the integration method; however, it will be limited by the table of centroids you have available. The method works by breaking the shape or volume down into a number of more basic shapes, identifying the centroids or centers of masses of each part via a table of values, and then combing the results to find the overall centroid or center of mass.</p>
     <p>A key aspect of the method is the use of these centroid tables. This is a set of tables that lists the centroids (and usually also moments of inertia) for a number of common areas and/or volumes. Links to some centroid tables can be found in the sidebar to the right. The method of composite parts is limited in that we will need to be able to break our complex shape down entirely into shapes found in the centroid table we have available or the method will not work without also doing some moment integrals.</p>
     <h2>Finding the Centroid via the Method of Composite Parts</h2>
@@ -39,44 +40,37 @@
       <figcaption>For each of the shapes, we need to find the area and the x and y coordinates of the centroid. Remember to find the centroid coordinates relative to a single set of axes that is the same for all shapes.</figcaption>
     </figure>
     <p>Once you have the areas and centroid coordinates for each shape relative to your origin point, you can find the x and y coordinate of the centroid for the overall shape with the following formulas. Remember that areas or volumes for any shape that is a hole or cutout in the design will be a negative area in your formula.</p>
-	<table class="equation">
+    <table class="equation">
       <tbody>
-		<tr>
+        <tr>
           <td>\[\bar{x}_{total}=\frac{\sum A_{i}\bar{x}_i}{A_{total}}\]</td>
-		  <td>\[\bar{y}_{total}=\frac{\sum A_{i}\bar{y}_i}{A_{total}}\]</td>
+          <td>\[\bar{y}_{total}=\frac{\sum A_{i}\bar{y}_i}{A_{total}}\]</td>
         </tr>
       </tbody>
-	</table>
-	<p>This generalized formula for the x direction above is simply area one times x&#772 one, plus area two times x&#772 two, plus area three times x&#772 three, adding up as many shapes as you have in this fashion and then dividing by the overall area of your combined shape. The equations are the same for the y location of the overall centroid, except you will instead be using y&#772 values in your equations.</p>
-	<p>For centroids in three dimensions we will simply use volumes in place of areas, and we will have a z coordinate for out centroid as well as the x and y coordinates.</p>
+    </table>
+    <p>This generalized formula for the x direction above is simply area one times x&#772 one, plus area two times x&#772 two, plus area three times x&#772 three, adding up as many shapes as you have in this fashion and then dividing by the overall area of your combined shape. The equations are the same for the y location of the overall centroid, except you will instead be using y&#772 values in your equations.</p>
+    <p>For centroids in three dimensions we will simply use volumes in place of areas, and we will have a z coordinate for our centroid as well as the x and y coordinates.</p>
     <h2>Finding the Center of Mass via the Method of Composite Parts</h2>
     <p>To use the method of composite parts to find the center of mass, we simply need to adjust the process slightly. First, center of mass calculations will always be in three dimensions. Draw an origin point and some axes on your diagram we did for the centroid. We will measure all locations relative to this origin point. We will then need to break the complex shape down into simple volumes, with each simple volume being something in the centroid table we have available. Remember that when we have a part with a uniform material, the centroid and center of mass are the same point, so we will often talk about these interchangeably.</p>
     <figure class="center"> <img alt="Center of Mass Composite Parts" height="293" src="images/centerofmassparts.png" width="500">
       <figcaption>When finding the center of mass via composite parts, we will break the shape up into several simpler shapes. The figure on the left can be thought of as a semi-circular hemisphere (1) on top of a cylinder (2) with another smaller cylinder cut out of it (3). Each of these simple volumes are listed in our centroid table.</figcaption>
     </figure>
-    <p>Once we have identified the different parts, we will create a table indicating the <strong>mass</strong> of each part, and the x, y, and z coordinate of the center of mass for each individual part. It is important to remember that each coordinate you list should be relative to the same base origin point, so you will need to mentally rotate and position the parts in the table on your axes.</p>
+    <p>Once we have identified the different parts, we will create a table indicating the <strong>mass</strong> of each part, and the x, y, and z coordinate of the center of mass for each individual part. It is important to remember that each coordinate you list should be relative to the same base origin point, so you will need to mentally rotate and position the parts in the table relative to your chosen axes.</p>
     <figure class="center"> <img alt="Center of Mass Table" height="511" src="images/centerofmasstable.png" width="500">
       <figcaption>Create a table with the mass of each piece as well as the center of mass location (x,y, and z locations) for each piece.</figcaption>
     </figure>
-	<p>One complicating factor with mass can be measuring the mass of the pieces separately. If we have a scale, we may simply know the overall mass without knowing the mass of the individual pieces. In these cases, you may need work backwards to calculate the density of the material (by dividing overall mass by overall volume) and then use density times piece volume to find the mass of each piece individually. When doing this remember count cutouts as negative mass in your calculations. For example, for the hollow cylinder in the shape above, you would find the mass of a solid cylinder for shape two, then you would have a negative mass for the cylindrical cutout for shape three.</p>
+    <p>One complicating factor with mass can be measuring the mass of the pieces separately. If we have a scale, we may simply know the overall mass without knowing the mass of the individual pieces. In these cases, you may need work backwards to calculate the density of the material (by dividing overall mass by overall volume) and then use density times piece volume to find the mass of each piece individually. When doing this remember count cutouts as negative mass in your calculations. For example, for the hollow cylinder in the shape above, the "mass" of shape two would be the mass of a solid cylinder (density times volume), and the "mass" of shape three would be the negative of the mass of the cutout cylinder (volume times density).</p>
     <p>Finally, once you have the mass the and center of mass coordinates for each shape, you can find the coordinates of the center of mass for the overall volume with the following formulas.</p>
-	<table class="equation">
+    <table class="equation">
       <tbody>
-		<tr>
+        <tr>
           <td>\[x_{G}=\frac{\sum m_{i}\bar{x}_i}{m_{total}}\]</td>
-		  <td>\[y_{G}=\frac{\sum m_{i}\bar{x}_i}{m_{total}}\]</td>
-		  <td>\[z_{G}=\frac{\sum m_{i}\bar{x}_i}{m_{total}}\]</td>
+          <td>\[y_{G}=\frac{\sum m_{i}\bar{y}_i}{m_{total}}\]</td>
+          <td>\[z_{G}=\frac{\sum m_{i}\bar{z}_i}{m_{total}}\]</td>
         </tr>
       </tbody>
-	</table>
-  <p>Similar to the centroid equations, the x equation is simply mass one times x&#772 one, plus mass two time x&#772 two, and so on for each part. After you have all the shapes on the top, just divide by the total mass.</p>
-	  <h2>Finding the Mass Moment of Inertia via the Method of Composite Parts</h2>
-	  <p>Similar to the above, you can add and subtract mass moments of inertia to find the mass moment of a inertia of a composite structure. </p>
-	  <figure class="center"> <img alt="Mass Moment of Inertia Composite Parts" height="293" src="images/centerofmassparts.png" width="500">
-      <figcaption>When finding the mass moment of inertia via composite parts, we will break the shape up into several simpler shapes. The figure on the left can be thought of as a semi-circular hemisphere (1) on top of a cylinder (2) with another smaller cylinder cut out of it (3). Each of these simple volumes are listed in our mass moment of inertia table.</figcaption>
-    </figure>
-	  <p>The one complication of the approach is that <strong>the mass moments of inertia must all be expressed about the same axis</strong> BEFORE they are added or subtracted. This can require using parallel axes when the shapes that make up the composite body do not have their axes aligned through their centres of gravity.</p>
-
+    </table>
+    <p>Similar to the centroid equations, the x equation is simply mass one times x&#772 one, plus mass two time x&#772 two, and so on for each part. After you have all the shapes on the top, just divide by the total mass.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -170,83 +164,23 @@
         <div class="resource"> <a href="pdf/CompositeParts_WorkedProblem5.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	      <div class="problem">
-      <div class="question">
-        <h3>Question 6:</h3>
-        <p>A semicircular thin plate has constant density, a radius of 10 cm, and a mass of 400 g. Find the mass moment of inertia of the plate around the axes (a) x and (b) z passing through the centre of mass.</p>
-        <img src="images/A2-7_Composite1.png" width="400" height="200" alt="Problem 6 Diagram"/> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="https://www.youtube.com/embed/CcClXi265ec" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/A2-7_Composite1.pdf" target="_blank">PDF Solution</a> </div>
+  </div>
+  <div id="practiceproblems">
+    <h2>Practice Problems:</h2>
+    <div class="problem">
+      <h3>Practice Problem 1:</h3>
+      <div class="importbox">
+        <iframe width="860" height="900" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Centers/composite_H_R_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
       </div>
     </div>
-	  <div class="problem">
-      <div class="question">
-        <h3>Question 7:</h3>
-        <p>A semicircular thin plate has constant density, a radius of 10 cm, and a mass of 400 g. Find the mass moment of inertia of the plate around the axes (a) x’ and (b) z’ passing through point A.</p>
-        <img src="images/A2-7_Composite2.png" width="400" height="200" alt="Problem 7 Diagram"/> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="https://www.youtube.com/embed/2aZFTRhnXwU" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/A2-7_Composite2.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	  <div class="problem">
-      <div class="question">
-        <h3>Question 8:</h3>
-        <p>The shape shown below consists of a solid semicircular hemisphere on top of a hollow cylinder. The object has a constant density, and a mass of 5 slugs. Based on the dimensions below, determine the mass moment of inertia about (a) the z-axis and (b) the y-axis. </p>
-        <img alt="Problem 8 Diagram" src="images/P4.png"> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="https://www.youtube.com/embed/5PkztVfnqX4" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/A2-7_Composite3.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-	  <div class="problem">
-      <div class="question">
-        <h3>Question 9:</h3>
-        <p>A sign is made from 3 circles of aluminum of thickness 1 cm and density 2.7 g/cm<sup>3</sup>. The smaller circles (radius 2 m) are joined to the larger circle (radius 3 m) where they overlap. Find the centre of mass of the sign with respect to the centre of the largest circle. Also find the moment of inertia of the sign about the axis passing through the centre of mass and perpendicular to the plane of the sign. </p>
-        <img alt="Problem 9 Diagram" src="images/P8.png"> </div>
-      <div class="solution">
-        <h3>Solution:</h3>
-        <div class="video">
-          <iframe width="260" height="195" src="https://www.youtube.com/embed/OEwMlTmQ_qU" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br/>
-        <br/>
-        <div class="resource"> <a href="pdf/A2-7_Sign.pdf" target="_blank">PDF Solution</a> </div>
-      </div>
-    </div>
-    <div id="practiceproblems">
-      <h2>Practice Problems:</h2>
-	  <div class="problem">
-        <h3>Practice Problem 1:</h3>
-        <div class="importbox">
-          <iframe width="860" height="900" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Centers/composite_H_R_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
-        </div>
-      </div>
-      <div class="problem">
-        <h3>Practice Problem 2:</h3>
-        <div class="importbox">
-          <iframe  width="860" height="860" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Centers/composite_T_R_T_H_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
-        </div>
+    <div class="problem">
+      <h3>Practice Problem 2:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="860" src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Centers/composite_T_R_T_H_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
       </div>
     </div>
   </div>
-  <script language="javascript">displayFooter();</script> 
+<script language="javascript">displayFooter();</script>
 </div>
 </body>
 </html>
