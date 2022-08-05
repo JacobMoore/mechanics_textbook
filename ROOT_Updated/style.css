@@ -88,7 +88,6 @@ sub {
 }
 
 #navmenu {
-	background-color:#666666;
 	clear: both;
     text-align:center;
 }
@@ -119,6 +118,35 @@ sub {
 #navmenu a:hover 		{ color:#FFFFFF; background-color: #AAAAAA}
 #navmenu a:focus		{ color:#FFFFFF; }
 
+#nextback {
+	clear: both;
+    text-align:center;
+}
+
+#nextback ul {
+	width: 100%;
+	float: left;
+	margin: 0px;
+	background-color: #999999;
+}
+
+#nextback li {
+	background-color: #999999;
+	display: inline;
+	margin: 0px;
+}
+
+#nextback ul li a {
+	float: left;
+	padding: 10px 20px;	
+	text-decoration: none;
+}
+
+#nextback a:link 		{ color:#FFFFFF; }
+#nextback a:visited 	{ color:#FFFFFF; }
+#nextback a:active		{ color:#FFFFFF; }
+#nextback a:hover 		{ color:#FFFFFF; background-color: #AAAAAA}
+#nextback a:focus		{ color:#FFFFFF; }
 
 #maincontent {
 	width: 700px;
