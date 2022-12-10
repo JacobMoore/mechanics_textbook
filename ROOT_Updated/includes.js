@@ -26,7 +26,7 @@ function displayMenuSub(){
     document.write('<li><a href="../../../index.html">Home</a></li>');
     document.write('<li><a href="../../../about.html">About</a></li>');
     document.write('<li><a href="../../../instructor.html">Instructor Resources</a></li>');
-    document.write('<li><a href="../../../contributing.html">Contributing</a></li>');
+    document.write('<li><a href="../../../involved.html">Get Involved</a></li>');
     document.write('</ul>');
 	document.write('</div>');
  }
