@@ -3,11 +3,11 @@
 <head>
 <title>Mechanics Map - Two Force Members</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,20 +23,21 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="nextback">
     <ul>
-		<li style="float:left"><a href="../5-1_structures/structures.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../5-3_trusses/trusses.html">Next Page &#8811;</a></li>
-	</ul>
+      <li style="float:left"><a href="../5-1_structures/structures.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../5-3_method_of_joints/methodofjoints.html">Next Page &#8811;</a></li>
+    </ul>
   </div>
   <div id="maincontent">
     <h1>Two Force Members</h1>
-    <p>A <strong>two force member</strong> is a body that has forces (and only forces, no moments) acting on it in only two locations. In order to have a two force member in static equilibrium, the net force at each location must be equal, opposite, and collinear. This will result in all two force members being in either tension or compression as shown in the diagram below.</p>
+    <p>A <strong>two force member</strong> is a body that has forces (and only forces, no moments) acting on it in only two locations. Two force members are an important aspect of the analysis of engineering structures in that there are the key element separating trusses (which consist entirely of two force members) from frames and machines (which have non-two force members). Even in the analysis of frames and machines, the identification of two force members will still be a necessary step in solving those problems.</p>
+    <p>In order to have a two force member in static equilibrium, the net force at each location must be equal, opposite, and collinear. This will result in all two force members being in either simple tension or simple compression as shown in the diagram below.</p>
     <figure class="center"> <img alt="Two Force Members" height="226" src="images/twoforcemembers.png" width="500">
       <figcaption>The forces acting on two force members need to be equal, opposite, and collinear for the body to be in equilibrium.</figcaption>
     </figure>
     <h2>Why the Forces Must Be Equal, Opposite, and Collinear:</h2>
     <p>Imagine a beam where forces are only exerted at each end of the beam (a two force member). The body has some non-zero force acting at one end of the beam, which we can draw as a force vector. If this body is in equilibrium, then we know two things: 1) the sum of the forces must be equal to zero, and 2) the sum of the moments must be equal to zero.</p>
     <p>In order to have the sum of the forces equal to zero, the force vector on the other side of the beam must be equal in magnitude and opposite in direction. This is the only way to ensure that the sum of the forces is equal to zero with only two forces.</p>
-    <p>In order to have the sum of the moments equal to zero, the forces must be collinear. If the forces were not collinear, then the two equal and opposite forces would form a couple. This couple would exert a moment on the beam when there are no other moments to counteract the couple. Because the moment exerted by the two forces must be equal to zero, the perpendicular distance between the forces (d) must be equal to zero. The only way to achieve this is to have the forces be collinear.</p>
+    <p>In order to have the sum of the moments equal to zero, the forces must be collinear. If the forces were not collinear, then the two equal and opposite forces would form a couple. This couple would exert a moment on the beam when there are no other moments to counteract the couple. Because the moment exerted by the two forces must be equal to zero, the perpendicular distance between the forces (d) must be equal to zero. The only way to achieve this is to have the forces be collinear, and for those forces to act along the line connecting to two points were the forces are applied.</p>
     <figure class="center"> <img alt="Forces in a Two Force Member must be collinear" height="325" src="images/couple.png" width="500">
       <figcaption>In order to have the sum of the moments be equal to zero, the forces acting on two force members must always be collinear, acting along the line connecting the two points where forces are applied</figcaption>
     </figure>

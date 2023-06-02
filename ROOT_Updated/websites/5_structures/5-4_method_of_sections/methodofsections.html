@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Method of Sections</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<style type="text/css"></style>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../5-3_method_of_joints/methodofjoints.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../5-5_analysis_of_frames_and_machines/analysisofframesandmachines.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>The Method of Sections</h1>
+    <p>The <strong>method of sections</strong> is a process used to solve for the unknown forces acting on members of a <strong>truss</strong>. The method involves cutting the truss into individual sections and analyzing each section as a separate rigid body. Where the method of joints is the fastest way to find the forces in all members, the method of sections is usually the fastest and easiest way to determine the unknown forces acting in a specific member of the truss.</p>
+    <h2>Using the Method of Sections:</h2>
+    <p>The method of sections and the method of joints both have the same initial steps, but will differ from one another once the external forces are found. The process used in the method of sections is outlined below.</p>
+    <p>To start, if the joints are not already labeled, we will begin by labeling all the joints with a letter. The exact order you label the joints in are not important, so long as you are consistent in your work. We will refer to joints by their letter (A, B, C...) and we will refer to the members by the two joints they connect (AB, AC, BC...). As a note, this text will always arrange the member names alphabetically, in order to avoid confusion (member AB, rather than member BA)</p>
+    <figure class="center"> <img alt="Method of Sections Labels" height="253" src="images/MOSlabels.png" width="500">
+      <figcaption>The first step in the method of sections is to label each joint with a letter. This may already be done in some problems, but it's important to have everything labeled before you proceed.</figcaption>
+    </figure>
+    <p>The second step is to solve for the external reaction forces supporting the truss. We can sometimes skip this step if the reaction forces are not necessary to solve for the internal forces, but when in doubt it is better to solve for the external reaction forces up front. To do this, treat the whole truss as a single rigid body. Draw a free body diagram of the truss, including the load forces and the external reaction forces supporting the truss, write out your equilibrium equations (sum of forces in the x, sum of forces in the y, and sum of moments), and finally solve the equilibrium equations for the unknown reaction forces.</p>
+    <figure class="center"> <img alt="Method of Sections Reactions" height="282" src="images/MOSfbd.png" width="500">
+      <figcaption>Treat the entire truss as a rigid body and solve for the reaction forces supporting the truss structure.</figcaption>
+    </figure>
+    <p>Next, to get to the heart of the method of sections, you will imagine cutting your truss into two separate sections. This cut should only travel through members (don't cut at a joint) and should cut through the member (or members) that you are trying to solve for. We should also try and minimize the number of members we cut though, limiting ourselves to a maximum of three members for a two dimensional problem.</p>
+    <figure class="center"> <img alt="Method of Sections Cutting the Truss" height="263" src="images/MOScut.png" width="500">
+      <figcaption>Next you will imagine cutting the truss into two parts. If you want to find the forces in a specific member be sure to cut through that member. It also makes things easier if you cut through as few members as possible.</figcaption>
+    </figure>
+    <p>After determining the cut you want to use, you will next draw a free body diagram of <strong>one half of the truss</strong>. This can be the half on either side of the cut you define, though choosing the side with fewer external reaction forces acting on it will generally make analysis easier. When drawing the free body diagram of this section be sure to include and label all known and unknown forces the forces acting on that section.</p>
+    <p>The known forces will be all load forces and external reaction forces acting on the half of the truss we are analyzing. Load or reaction forces acting on the other half of the truss should not be included on the free body diagram.</p>
+    <p>The unknown forces in the free body diagram should be the forces carried by the members that we cut through. As the members are all two force members, we will draw in  one single tensile force for each member we cut through. This force will act along the line of the member itself. Just as with the method of joints, we do not know if the members are in tension or compression. However, if we assume tension then positive answers indicate the member is actually in tension while negative numbers indicate the member is in compression.</p>
+    <p>In the free body diagram, make sure you label all forces, and indicate important angles and dimensions.</p>
+    <figure class="center"> <img alt="Method of Sections" height="280" src="images/MOSsection.png" width="400">
+      <figcaption>Next draw a free body diagram of one half of the truss. Add the known forces, as well as unknown tensile forces for each member that you cut.</figcaption>
+    </figure>
+    <p>Next you will want to write out the equilibrium equations for the section you just drew. These will be rigid bodies, so you will need to write out the force and the moment equations.</p>
+    <p>For 2D problems you will have three possible equations for each section, two force equations and one moment equation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum M_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For 3D problems you will have six possible equations for each section, three force equations and three moment equations.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum F_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum M_x=0\]</td>
+          <td>\[\sum M_y=0\]</td>
+          <td>\[\sum M_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Finally, solve the equilibrium equations for the unknowns. You can do this algebraically, solving for one variable at a time, or you can use and equation solver to solve for everything at once. If you assumed that all forces were tensile earlier, remember that negative answers indicate compressive forces in the members.</p>
+    <h2>Extending the Method of Sections:</h2>
+    <p>In some cases, you will need to determine the forces acting in a few members of a truss, but you will find that there is no one cut you can make with the method of sections that goes through all the members you need to solve for. In cases such as this, the method of sections may not be enough, but solving for everything with the method of joints may be overkill. In these cases, we may resort to one of the two following strategies to extend the method of sections beyond it's base process.</p>
+    <p>The first strategy we can use to extend the method of sections is to simply make a second cut and employ the method of sections again. In this strategy, start by using the method of sections normally to solve for some of the forces we are looking for. After making this first cut, we will repeat the process with a second cut, making sure to cut through the rest of the members that we wish to solve for in this second cut. Additionally, this second cut can travel through more than three members, so long as it does not travel through three unsolved members. Anything we solved for in the first round can be treated as a known value, and does not need to be solved for again.</p>
+    <figure class="center"> <img alt="Using the Method of Sections Twice" height="514" src="images/doubleMOS.png" width="500">
+      <figcaption>If we cannot solve for all the desired unknowns with a single cut, we can use multiple cuts to solve for additional unknowns with the method of sections.</figcaption>
+    </figure>
+    <p>The second strategy to extend the method of sections, is to start with the method of sections, then to use the method of joints to work out from the initial cut. In this strategy, start by using the method of sections normally to solve for some of the forces we are looking for. After making the initial cut, we will switch to the method of joints, by picking a joint near the cut for analysis. For each joint we choose, just make sure there are no more than two unknowns to solve for. Continue analyzing joints until you have all the unknown forces you are looking for.</p>
+    <figure class="center"> <img alt="Using the Method of Sections then Method of Joints" height="528" src="images/sectionjoint.png" width="450">
+      <figcaption>We can use the method of sections for an initial cut then work out from there with the method of joints.</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/XcRn776w22Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Use the method of sections to find the forces acting on members BD and CE. Be sure to indicate if the forces are tensile or compressive.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/9xxmHpLB1uU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MethodOfSections_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Use the method of sections to find the forces acting on members AC, BC, and BD of the truss. Be sure to indicate if the forces are tensile or compressive.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/Kp9U4d2qbvE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MethodOfSections_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>Use the method of sections to find the forces in members AB and DE. Be sure to indicate if the forces are tensile or compressive.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/DfgRWJwp2b0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Use the method of sections to find the forces in members AC, BC, CD, and CE. Be sure to indicate if the forces are tensile or compressive.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/V_f09EwBQ4g" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--
+	<div id="practiceproblems">
+    <h2>Practice Problems:</h2>
+    <div class="problem">
+      <h3>Practice Problem 1:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="870"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/set220SelfTest-Trusses/Trusses8.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 2:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1140"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/transmission_tower_02.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 3:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1350"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/entrance_sign_pratt_02.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+  </div>
+  --> 
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

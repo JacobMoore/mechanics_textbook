@@ -1,0 +1,206 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Analysis of Frames and Machines</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<style type="text/css"></style>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../5-4_method_of_sections/methodofsections.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../../6_internal_forces/6-0_intro/chap6_intro.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Analysis of Frames and Machines</h1>
+    <p>The process used to analyze frames and machines involves breaking the structure down into individual components in order to solve for the forces acting on each component. Unlike trusses, not all the members of in a frame or machine are <strong>two force members</strong>. When we have non-two force members, the forces acting on those individual members will be more complicated than just a simple tension or compression force.</p>
+    <h2>The Process Used to Analyze Frames and Machines:</h2>
+    <p>The process used to analyze frames and machines begins in much the same way as with trusses, but will differ after identifying the external forces.</p>
+    <p>To start, if the joints are not already labeled, we will begin by labeling all the joints with a letter. The exact order you label the joints in are not important, so long as you are consistent in your work. We will refer to joints by their letter (A, B, C...) and we will refer to the members by the joints they connect (ABC, BD, CDE...). It should be noted that unlike trusses, the members may now connect more than two joints.</p>
+    <figure class="center"> <img alt="Analysis of Frames and Machines Labels" src="images/processlabels.png">
+      <figcaption>The first step in the analysis  of frames and machines is to label the members.</figcaption>
+    </figure>
+    <p>Next you will need to determine if we can analyze the entire structure as a rigid body. In order to do this, the structure needs to be <strong>independently rigid</strong>. This means that it would be rigid even if we separated it from its supports. If the structure is independently rigid (no machines, and only some frames will be independently rigid), then we can analyze the structure as a single rigid body to determine the reaction forces acting on the structure. To do this, you would draw a free body diagram of the whole structure, write out the equilibrium equations, and solve for the unknown reaction forces. If the structure is not independently rigid than we cannot analyze the structure as a whole to determine external forces in this way.</p>
+    <figure class="center"> <img alt="Analysis of Frames and Machines Free Body Diagram" height="231" src="images/processfbd.png" width="400">
+      <figcaption>If, and only if, the structure is independently rigid, you should analyze the whole structure as a single rigid body to solve for the external reaction forces.</figcaption>
+    </figure>
+    <p>Next we will break the structure down into individual components and draw a free body diagram for each component. We can do the analysis one component at a time, or we can draw all the free body diagrams at once. The free body diagram should include all known and unknown forces acting on each of the components, as well as key angles and distances.</p>
+    <p>When drawing these free body diagrams, there are a few things to consider:</p>
+    <ul>
+      <li>First any external reaction or load forces should only show up on the component that they are directly acting on. Those load forces will act on other members only through the connections in the structure.</li>
+      <li>Second, when examining the forces that the members exert on one another, consider the types of connections and the forces they exert. Remember that (in 2D) fixed connections exert forces in the x and y direction as well as a moment, pin joints exert forces in the x and y direction (but no moment) and rollers or sliding joints only exert a force perpendicular to the surface/</li>
+      <li>Third identify any <strong>two force members</strong> in the structure and use that to simplify the analysis. At their connection points they will cause a force with an unknown magnitude but a <strong>known direction</strong> (the forces will act along the line between the two connection points on the member). This means that even at a pin joint, a two force member will result in a single unknown force rather than two unknown forces.</li>
+      <li>Finally, remember that the forces at each of the connection points will be a <strong>Newton's Third Law pair</strong>. This means that if one member exerts some force on some other member, then the second member will exert <strong>an equal and opposite force</strong> back on the first. When we draw out our unknown forces at the connection points, we must make sure that if we draw forces in a certain direction on one member, we draw them in the <strong>opposite direction</strong> on the connected other connected member.</li>
+    </ul>
+    <figure class="center"> <img alt="Analysis of Frames and Machines" height="250" src="images/processseperate.png" width="400">
+      <figcaption>Separate the structure into individual components and draw a free body diagram of each component. It is important to identify two force members and to remember that the forces at each connection point are a Newton's Third Law pair.</figcaption>
+    </figure>
+    <p>Next we will write out the equilibrium equations for each of the components. As each component is a rigid body, each component will have its own set of equilibrium equations. That being said, the unknown forces will likely show up in more than one set of these equations because of the third law pairs.</p>
+    <p>For 2D problems you will have three possible equations for each component, two force equations and one moment equation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum M_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For 3D problems you will have six possible equations for each component, three force equations and three moment equations.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum F_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sum M_x=0\]</td>
+          <td>\[\sum M_y=0\]</td>
+          <td>\[\sum M_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Finally, we can solve the equilibrium equations for the unknowns. If we are looking to do this by hand, we will look to start with a component with three or fewer unknowns, and solve for those unknowns before moving onto nearby components. With the third law pairs, we can move from one component to the next, solving for additional unknowns along the way, until we solve for all the desired unknowns. This strategy is similar to what we do with the method of joints.</p>
+    <p>Alternatively, we can plug all of our equations into an equation solver and solve for everything at once.</p>
+    <p>As a final note, unlike with trusses, the forces and moments acting on each component of the structure is more complex than a simple tension or compression force. For this reason, we will use diagrams to shown the magnitude, direction, and placement of all of the forces acting on each component for our solution. These will be similar to a free body diagram, except the magnitudes we solved for will be used in place of unknown forces.</p>
+    <figure class="center"> <img alt="Analysis of Frames and Machines Free Body Diagram" height="271" src="images/solution.png" width="450">
+      <figcaption>To describe all forces acting on the members of a structure, we will use a diagram to indicate the magnitude, direction, and placement of all the forces on acting on each component.</figcaption>
+    </figure>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/6DK6IOU_TmU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Find all the forces acting on each of the members in the structure below.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ix2BuRGMGBs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/AnalysisOfFramesAndMachines_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Find all the forces acting on each of the members in the structure below.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/TJjsz5Yt3Y0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/AnalysisOfFramesAndMachines_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>If two 150 N forces are exerted on the handles of the bolt cutter shown below, determine the reaction forces (FR1 and FR2) exerted on the blades of the bolt cutter (this will be equal to the cutting forces exerted by the bolt cutters).</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/uLsfSMzc5eQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/AnalysisOfFramesAndMachines_WorkedExample3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A 100 lb force is exerted on one side of a TV tray as shown below. Assuming no friction forces at the base, determine all forces acting on each of the three parts of the TV tray.</p>
+        <img alt="Problem 3 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/qi7WNDSb43k" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/AnalysisOfFramesAndMachines_WorkedExample4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div id="practiceproblems">
+    <h2>Practice Problems:</h2>
+    <div class="problem">
+      <h3>Practice Problem 1:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="900"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/2_screw_clamp_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 2:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1000"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/swing_up_tray_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 3:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="860"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/crimp_tool_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 4:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1300"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/4_bar_suspension_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 5:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1800"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/barge_crane_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+  </div>
+  --> 
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

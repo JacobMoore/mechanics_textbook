@@ -3,12 +3,12 @@
 <head>
 <title>Mechanics Map - Relative Motion Analysis (Scalar)</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -24,26 +24,26 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="nextback">
     <ul>
-		<li style="float:left"><a href="../12-4_absolute_motion_analysis/absolute_motion_analysis.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../12-6_relative_motion_analysis_vector/relative_motion_analysis_vector.html">Next Page &#8811;</a></li>
-	</ul>
+      <li style="float:left"><a href="../12-4_absolute_motion_analysis/absolute_motion_analysis.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../12-6_relative_motion_analysis_vector/relative_motion_analysis_vector.html">Next Page &#8811;</a></li>
+    </ul>
   </div>
   <div id="maincontent">
     <h1>Relative Motion Analysis (Scalar)</h1>
     <p><strong>Relative motion analysis</strong> is one method used to analyze bodies undergoing <strong>general planar motion</strong>. General planar motion is motion where bodies can both translate and rotate at the same time. Besides relative motion analysis, the alternative is absolute motion analysis. Either method can be used for any general planar motion problem, however one method may be significantly easier to apply in certain situations.</p>
-	<p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
+    <p>Absolute motion analysis will require calculus and is generally faster for simple problems and problems where only the velocities (and not accelerations) are required. Relative motion analysis will not require calculus, but does necessitate using multiple coordinate systems and is generally easier to use for more complex problems and problems where velocities and accelerations are being analyzed.</p>
     <h2>Utilizing Relative Motion Analysis</h2>
     <p>To start our discussion on relative motion analysis, we are going to imagine a simple robotic arm such as the one below. In this arm, we have a two arm sections of fixed length with motors causing rotations at joint A and joint B.</p>
-	<figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
+    <figure class="center"><img src="images/roboticarm.png" width="500" height="363" alt="A robotic arm with two sections"/>
       <figcaption>This robotic arm has a fixed base at A, and two fixed length arm sections (AB and BC) that are controlled via motors at joints A and B. The end effector of the robotic arm is at C.</figcaption>
     </figure>
-	<p>The first step in relative motion analysis is to break the motion down into simple steps and assign a coordinate system (with r and theta directions) to each step in the chain of motion. We will always start at a fixed point and move step by step from there. In the case of our robotic arm, Joint A is the only point that will not be moving so we start there and we have two cases of rotation without extension as we move from A to B then B to C.</p>
-	<p>To since there are two steps to the motion there will be two coordinate systems. The first coordinate system will be attached to member AB, with the r direction going from point A to point B. The theta direction will then be ninety degrees counterclockwise from the r direction. The second coordinate system will be attached to member BC, with the r direction going from point B to point C. Again, the theta direction is ninety degrees counterclockwise from the r direction. At this point it is usually good to identify the angles of each of the r and theta directions with respect to ground. Below is a picture of the robotic arm with both coordinate systems drawn in.</p>
-	<figure class="center"><img src="images/coordinates.png" width="500" height="344" alt="A robotic arm with two sections"/>
+    <p>The first step in relative motion analysis is to break the motion down into simple steps and assign a coordinate system (with r and theta directions) to each step in the chain of motion. We will always start at a fixed point and move step by step from there. In the case of our robotic arm, Joint A is the only point that will not be moving so we start there and we have two cases of rotation without extension as we move from A to B then B to C.</p>
+    <p>To since there are two steps to the motion there will be two coordinate systems. The first coordinate system will be attached to member AB, with the r direction going from point A to point B. The theta direction will then be ninety degrees counterclockwise from the r direction. The second coordinate system will be attached to member BC, with the r direction going from point B to point C. Again, the theta direction is ninety degrees counterclockwise from the r direction. At this point it is usually good to identify the angles of each of the r and theta directions with respect to ground. Below is a picture of the robotic arm with both coordinate systems drawn in.</p>
+    <figure class="center"><img src="images/coordinates.png" width="500" height="344" alt="A robotic arm with two sections"/>
       <figcaption>Two coordinate systems are used in the relative motion analysis of this robotic arm. The first coordinate system is attached to member AB while the second is attached to member BC. The r direction will always line up with the two endpoints of the member while the theta direction will always be ninety degrees counterclockwise from the corresponding r direction.</figcaption>
     </figure>
-	<p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles.</p>
-	<table class="equation">
+    <p>For relative motion analysis, we can identify the velocity or acceleration of the end point of the arm (C) with respect to the ground (A) by finding the velocity acceleration of B with respect to A and adding the velocity or acceleration of C with respect to B, just as we did with particles.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
@@ -55,10 +55,10 @@
         </tr>
       </tbody>
     </table>
-	<p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
-	<p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B/A</sub> or v<sub>C/A</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C/A</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
-	<p>To take into account rotation or extension of any individual pieces, we will need to look back to our kinematics equations for polar coordinator systems. Below are the equations we had for velocity and acceleration.</p>
-	<table class="equation">
+    <p>The relative motion analysis equations above are for a two-part motion (there are two sections to the arm in our example) but we can easily expand the above equation into three, four, or even more pieces for more complex mechanisms by adding more steps to the left side of our equation.</p>
+    <p>To use the above equations, we will need to plug in the information we know. Plugging in velocities or accelerations that are given as part of the problem for any particular points is a good place to start. If the velocity of points B or C were given for example, we would plug that in for v<sub>B/A</sub> or v<sub>C/A</sub> respectively. Do remember that point A is our fixed ground point so v<sub>C/A</sub> is the velocity of point C relative to the ground, while v<sub>C/B</sub> is the velocity of point C with respect to point B. If any point is fixed (other than our original ground point, which will always be fixed) we can also plug in zeros for both velocity and acceleration of that point. Do remember the above equation is a vector equation, so these velocities have both a magnitude and a direction. </p>
+    <p>To take into account rotation or extension of any individual pieces, we will need to look back to our kinematics equations for polar coordinator systems. Below are the equations we had for velocity and acceleration.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
@@ -70,9 +70,9 @@
         </tr>
       </tbody>
     </table>
-	<p>In the above equations, r represents the length of the respective arm piece (the length of member AB or BC), r dot represents the rate at which that length is increasing, and r double dot represents the rate at which that rate is increasing. The theta term represents current angle of the arm piece, theta dot is the angular velocity of that arm piece, and theta double dot is the angular acceleration of that arm piece. The u<sub>r</sub> and u<sub>theta</sub> directions are the r and theta directions that are attached to that particular section of the arm (in our earlier drawing u<sub>r1</sub> and u<sub>theta1</sub> were attached to member AB and u<sub>r2</sub> and u<sub>theta2</sub> were attached to member BC).</p>
-	<p>Though it's certainly possible to have a mechanism that is rotating and extending at the same time, we will often have either just simple rotation, or just simple extension along a fixed direction. With <strong>simple rotation</strong>, the r dot and r double dot terms are zero, and our equations reduce down to the following.</p>
-	<table class="equation">
+    <p>In the above equations, r represents the length of the respective arm piece (the length of member AB or BC), r dot represents the rate at which that length is increasing, and r double dot represents the rate at which that rate is increasing. The theta term represents current angle of the arm piece, theta dot is the angular velocity of that arm piece, and theta double dot is the angular acceleration of that arm piece. The u<sub>r</sub> and u<sub>theta</sub> directions are the r and theta directions that are attached to that particular section of the arm (in our earlier drawing u<sub>r1</sub> and u<sub>theta1</sub> were attached to member AB and u<sub>r2</sub> and u<sub>theta2</sub> were attached to member BC).</p>
+    <p>Though it's certainly possible to have a mechanism that is rotating and extending at the same time, we will often have either just simple rotation, or just simple extension along a fixed direction. With <strong>simple rotation</strong>, the r dot and r double dot terms are zero, and our equations reduce down to the following.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
@@ -84,8 +84,8 @@
         </tr>
       </tbody>
     </table>
-	<p>If we have <strong>simple extension</strong>, where the length of the piece is changing but there is no rotation, the theta dot and theta double dot terms would be zero and our original equations would reduce down to the following.</p>
-	<table class="equation">
+    <p>If we have <strong>simple extension</strong>, where the length of the piece is changing but there is no rotation, the theta dot and theta double dot terms would be zero and our original equations would reduce down to the following.</p>
+    <table class="equation">
       <tbody>
         <tr>
           <th>Velocity:</th>
@@ -97,8 +97,8 @@
         </tr>
       </tbody>
     </table>
-	<p>If we use the appropriate set of equations for the type of motion in each step and plug in known quantities for angular velocities, angular accelerations, and rates or extension for each piece, we can add these pieces to our relative motion analysis equation from earlier. Again these are vectors so be sure to indicate both the magnitudes and directions when we put them into the equation. </p>
-	<p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
+    <p>If we use the appropriate set of equations for the type of motion in each step and plug in known quantities for angular velocities, angular accelerations, and rates or extension for each piece, we can add these pieces to our relative motion analysis equation from earlier. Again these are vectors so be sure to indicate both the magnitudes and directions when we put them into the equation. </p>
+    <p>Once we have everything in our vector equation, we will break the vector equation into x and y components in order to solve for any unknowns. Simply find the angles or each of the r and theta directions using your diagram and use sines and cosines to break the individual vectors down into x and y components. Once you have everything in component form, you should be able to solve for any unknowns in your equations. As a note, it is often necessary to start with the velocity equations and solve for some unknowns there before moving on to the acceleration equations.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -139,7 +139,7 @@
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>A ladder is propped up against a wall as shown below. If the base of the ladder is sliding out at a speed of 2 m/s, what is the speed of the top of the ladder?</p>
@@ -154,7 +154,7 @@
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
         <p>The crank-rocker mechanism as shown below consists of a crank with a  radius of .5 meters rotating about its fixed center at C at a constant rate of 2 rad/s clockwise. Rocker AB fixed at it's base at A and connects to point B along the edge of the crank. The pin at point B can slide along a frictionless slot in AB. In the current state, what is the angular velocity of rocker AB?</p>
@@ -169,6 +169,8 @@
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
+  </div>
+  <!--
 	  <div id="practiceproblems">
 	  <h2>Practice Problems:</h2>
 		<div class="problem">
@@ -180,7 +182,7 @@
 			</div>
 		</div>
 	  </div>
-  </div>
+  --> 
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>

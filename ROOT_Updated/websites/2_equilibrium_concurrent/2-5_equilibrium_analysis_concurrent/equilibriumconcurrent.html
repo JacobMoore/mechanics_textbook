@@ -1,0 +1,254 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Equilibrium Analysis for Concurrent Force Systems</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../2-4_concurrent_forces/concurrentforces.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../../3_equilibrium_rigid_body/3-0_intro/chap3_intro.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Equilibrium Analysis for Concurrent Force Systems</h1>
+    <p>If a body is in static equilibrium, then by definition that body is not accelerating. If we know that the body is not accelerating then we know that <strong>the sum of the forces acting on that body must be equal to zero</strong>. This is the basis for equilibrium analysis for a particle.</p>
+    <p>In order to solve for any unknowns in our sum of forces equation, we actually need to turn the one vector equation into a set of scalar equations. For two dimensional problems, we will split our one vector equation down into two scalar equations. We do this by summing up all the x components of the force vectors and setting them equal to zero in our first equation, and summing up all the y components of the force vectors and setting them equal to zero in our second equation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td colspan="2">\[\sum \vec{F}=0\]</td>
+        </tr>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We do something similar in three dimensional problems except we will break all our force vectors down into x, y, and z components, setting the sum of x components equal to zero for our first equation, the sum of all the y components equal to zero for our second equation, and the sum of all our z components equal to zero for our third equation.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td colspan="3">\[\sum \vec{F}=0\]</td>
+        </tr>
+        <tr>
+          <td>\[\sum F_x=0\]</td>
+          <td>\[\sum F_y=0\]</td>
+          <td>\[\sum F_z=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Once we have written out the equilibrium equations, we can solve the 
+      equations for any unknown forces.</p>
+    <h2>Finding the Equilibrium Equations:</h2>
+    <p>The first step in finding the equilibrium equations is to <strong>draw a free body diagram</strong> of the body being analyzed. This diagram should show all the known and unknown force vectors acting on the body. In the free body diagram, provide values for any of the know magnitudes or directions for the force vectors and provide variable names for any unknowns (either magnitudes or directions).</p>
+    <figure class="center"> <img alt="A free body diagram" height="272" src="images/freebodydiagram.png" width="600">
+      <figcaption>The first step in equilibrium analysis is drawing a free body diagram. This is done by removing everything but the body and drawing in all forces acting on the body. It is also useful to label all forces, key dimensions, and angles.</figcaption>
+    </figure>
+    <p>Next you will need to choose the x, y, and z axes. These axes do need to be perpendicular to one another, but they do not necessarily have to be horizontal or vertical. If you choose coordinate axes that line up with some of your force vectors you will simplify later analysis.</p>
+    <p>Once you have chosen axes, you need to break down all of the force vectors into components along the x, y and z directions (see the vectors page in Appendix 1 if you need more guidance on this). Your first equation will be the sum of the magnitudes of the components in the x direction being equal to zero, the second equation will be the sum of the magnitudes of the components in the y direction being equal to zero, and the third (if you have a 3D problem) will be the sum of the magnitudes in the z direction being equal to zero. Collectively these are known as the <strong>equilibrium equations</strong>.</p>
+    <p>Once you have your equilibrium equations, you can solve them for unknowns using algebra. The number of unknowns that you will be able to solve for will be the number of equilibrium equations that you have. In instances where you have more unknowns than equations, the problem is known as a <strong>statically indeterminate problem</strong> and you will need additional information to solve for the given unknowns.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/Dbd9SvdfoN8" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A 6 kg traffic light is supported by two cables as shown below. Find the tension in each of the cables supporting the traffic light.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/Oi2yDg1SmrI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A 600 lb barrel is sitting in a groove as shown below. Determine normal forces acting on the barrel at points A and B.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/hQsjCcWRlNk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A cable supports a large mass resting along an angled surface. Determine the tension in the cable and the normal force acting on the mass.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/gETMTfy5Sew" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Three cables come together at the angles indicated. The tension in cable A is 50 lbs. Determine the tension in the other two cables.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/8DUmnsthZwM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>Two barrels are being carried on a handcart as shown below. Determine all forces acting on the bottom barrel.</p>
+        <img alt="Problem 5 Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/8DgrClhT4AM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 6:</h3>
+        <p>Three soda cans, each weighing 0.75 lbs and having a diameter of 4 inches, are stacked in a formation as shown below. Assuming no friction forces, determine the normal forces acting on can B. </p>
+        <img alt="Problem 6 Diagram" src="images/P6.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/lAUahV7Mml4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P6.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 7:</h3>
+        <p>The SkyCam shown below is supported by three cables. Assuming it has a mass of 20kg and that it is currently in equilibrium find the tension in each of the three cables supporting the SkyCam.</p>
+        <img alt="Problem 7 Diagram" src="images/P7.png">
+        <p> Image by Jrienstra CC-BY-SA 3.0.</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/4pc9aBcga9E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P7.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 8:</h3>
+        <p>A hot air balloon is tethered to the ground with three cables as shown below. If the balloon is pulling upwards with a net force of 900lbs, what is the tension in each of the three cables?</p>
+        <img alt="Problem 8 Diagram" height="554" src="images/P8.png" width="500">
+        <p>Adapted from image by L. Aragon CC-BY-SA 3.0.</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/HQqNGJR3ybQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P8.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    <div id="practiceproblems">
+      <h2>Practice Problems:</h2>
+      <div class="problem">
+        <h3>Practice Problem 1:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="740"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Moments_and_Rigid_Bodies/parallel_rope_hoist_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 2:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="810"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/pulling_net_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 3:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="710"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Moments_and_Rigid_Bodies/angled_rope_hoist_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 4:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="640"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/tractor_tree_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 5:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="640"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/two_squirrels_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+      <div class="problem">
+        <h3>Practice Problem 6:</h3>
+        <div class="importbox">
+          <iframe  width="860" height="1000"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/hanging_crate_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+        </div>
+      </div>
+    </div>
+    --> 
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

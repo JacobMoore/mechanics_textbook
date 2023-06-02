@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Method of Joints</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../5-2_two_force_members/twoforcemembers.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../5-4_method_of_sections/methodofsections.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>The Method of Joints</h1>
+    <p>The <strong>method of joints</strong> is a process used to solve for the unknown forces acting on members of a <strong>truss</strong>. As the name suggests, the method focuses on the joints or connection points between the members. While the method of sections discussed next is usually the fastest way to solve for the force in a specific member, the method of joints is usually the fastest way to solve for the unknown forces in all members of the truss.</p>
+    <h2>Using the Method of Joints:</h2>
+    <p>The method of joints and the method of sections both have the same initial steps, but will differ from one another once the external forces are found. The process used in the method of joints is outlined below:</p>
+    <p>To start, if the joints are not already labeled, we will begin by labeling all the joints with a letter. The exact order you label the joints in are not important, so long as you are consistent in your work. We will refer to joints by their letter (A, B, C...) and we will refer to the members by the two joints they connect (AB, AC, BC...). As a note, this text will always arrange the member names alphabetically, in order to avoid confusion (member AB, rather than member BA)</p>
+    <figure class="center"> <img alt="Method of Joints Labels" height="223" src="images/MOJlabels.png" width="500">
+      <figcaption>The first step in the method of joints is to label each joint with a letter. This may already be done in some problems, but it's important to have everything labeled before you proceed.</figcaption>
+    </figure>
+    <p>The second step is to solve for the external reaction forces supporting the truss. We can sometimes skip this step if the reaction forces are not necessary to solve for the internal forces, but when in doubt it is better to solve for the external reaction forces up front. To do this, treat the whole truss as a single rigid body. Draw a free body diagram of the truss, including the load forces and the external reaction forces supporting the truss, write out your equilibrium equations (sum of forces in the x, sum of forces in the y, and sum of moments), and finally solve the equilibrium equations for the unknown reaction forces.</p>
+    <figure class="center"> <img alt="Method of Joints Reactions" height="260" src="images/MOJreactions.png" width="500">
+      <figcaption>Treat the entire truss as a rigid body and solve for the reaction forces supporting the truss structure.</figcaption>
+    </figure>
+    <p>Next we get to the heart of the method of joints. We will assume there is a pin at each of the connection points between the members, and we will be drawing a free body diagram for each of those pins. We can do this one pin joint at a time, solving the equations as we go, or we can just draw all the free body diagrams at once and refer to those as we go. We will treat each of the pins as a particle for equilibrium analysis, and we will draw in the following forces.</p>
+    <ul>
+      <li>Any external reaction or load forces that may be acting at that joint. Add these as known values if you have already solved for them.</li>
+      <li>One force for each two force member connected to that joint. Remember that for a two force member, the force will be acting along the line between the two connection points on the member. We will also need to guess if it will be a tensile or a compressive force. An incorrect guess now though will simply lead to a negative solution later on. A common strategy is to <strong>assume all member forces are tensile</strong>, then later in the solution any positive forces will be tensile forces and any negative forces will be compressive forces.</li>
+    </ul>
+    <p>Be sure to label each force in your diagrams and include any known magnitudes and directions.</p>
+    <figure class="center"> <img alt="Method of Joints" height="268" src="images/MOJjoints.png" width="500">
+      <figcaption>Drawing a free body diagram of each joint, we draw in the known forces as well as tensile forces from each two force member.</figcaption>
+    </figure>
+    <li>Next we will write out the equilibrium equations for <strong>each of the joints</strong>. Since we treat the joints as particles, there will be force equations but no moment equations. We will have either two equations (for 2D problems) or three equations (for 3D problems) for each joint in the system. As the trusses get larger, so will the system of equations that we need to solve.</li>
+    <ul>
+      <li>In planar trusses, the sum of the forces in the x direction will be zero and the sum of the forces in the y direction will be zero for each of the joints.</li>
+      <table class="equation">
+        <tbody>
+          <tr>
+            <td>\[\sum F_x=0\]</td>
+            <td>\[\sum F_y=0\]</td>
+          </tr>
+        </tbody>
+      </table>
+      <li>In space trusses, the sum of the forces in the x direction will be zero, the sum of the forces in the y direction will be zero, and the sum of forces in the z direction will be zero for each of the joints.</li>
+      <table class="equation">
+        <tbody>
+          <tr>
+            <td>\[\sum F_x=0\]</td>
+            <td>\[\sum F_y=0\]</td>
+            <td>\[\sum F_z=0\]</td>
+          </tr>
+        </tbody>
+      </table>
+    </ul>
+    <p>Finally, we will solve the equilibrium equations for the unknowns. If we are doing this by hand, we will want to work one joint at a time. Start at a joint with only two members connected (or three for 3D problems), and start by solving for the unknowns there. Once we have solved for those unknowns, we should be able to move to other nearby joints. If forces we already have solved for show up in these equations, we can use those values to solve for other unknowns. Just make sure when you pick the next joint you don't have more unknowns than available equations. Using this strategy, you can usually find a starting joint on one end of a truss, and work your way to the other end of the truss, solving for unknowns along the way.</p>
+    <p>Alternatively, if you have access to a computer, you can plug the equations into an equation solver and solve for all the unknowns at once. Though plugging all the equations into a computer may take more time, it may also save your significant time in instances where you need to fix errors in your equations or in your math.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="http://www.youtube.com/embed/B8SEG7xPI-o" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Use the method of joints to find the forces in all members of the truss shown below. Remember to specify tension or compression.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/vowewkEdTzw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MethodOfJoints_WorkedExample1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Use the method of joints to find the forces in all members of the truss shown below. Remember to specify tension or compression.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/IxnClZ-ppjM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MethodOfJoints_WorkedExample2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>Use the method of joints to find the forces in all members of the truss shown below. Remember to specify tension or compression.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/yjdKrHeThfM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>Use the method of joints to find the forces in all members of the truss shown to the right. Remember to specify tension or compression.</p>
+        <img alt="Problem 3Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/sDKESSbufEk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/MethodOfJoints_WorkedExample4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>Use the method of joints to find the forces in all members of the truss shown to the right. Remember to specify tension or compression.</p>
+        <img alt="Problem 3Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/qsDjN6QDzCE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div id="practiceproblems">
+    <h2>Practice Problems:</h2>
+    <div class="problem">
+      <h3>Practice Problem 1:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="670"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/set220PracticeReviewQuiz/PracticeReviewQuiz29.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 2:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="870"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&
+   				 &sourceFilePath=Library/UBC/MECH/MECH2/set220SelfTest-Trusses/Trusses1.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 3:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="770"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/UBC/MECH/MECH2/set220SelfTest-Trusses/Trusses5.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 4:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1000"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/inverted_king_post_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 5:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1450"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/slanted_warren_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 6:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1300"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Structures/double_isosceles_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+    <div class="problem">
+      <h3>Practice Problem 7:</h3>
+      <div class="importbox">
+        <iframe  width="860" height="1100"
+				src="https://demo.webwork.rochester.edu/webwork2/html2xml?&answersSubmitted=0&&sourceFilePath=Library/OPES/opes_Statics/Concurrent_Forces/3D_struts_01.pg&&problemSeed=1&&courseID=daemon_course&&userID=daemon&&course_password=daemon&&showSummary=1&&displayMode=MathJax&&problemIdentifierPrefix=102&&language=en&&outputformat=sticky"> </iframe>
+      </div>
+    </div>
+  </div>
+  -->
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
