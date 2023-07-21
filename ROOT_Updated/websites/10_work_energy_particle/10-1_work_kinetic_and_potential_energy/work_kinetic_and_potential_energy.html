@@ -1,0 +1,195 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Work, Kinetic Energy, and Potential Energy</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../10-0_intro/chap10_intro.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../10-2_work_and_energy_principle/work_and_energy_principle.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Work, Kinetic Energy, and Potential Energy</h1>
+    <p>The concepts of <strong>Work</strong> and <strong>Energy</strong> provide the basis for solving a variety of kinetics problems, and an alternative to the force, mass, and acceleration method presented in the previous chapter. Generally, this method is called the <strong>Principle of Work and Energy</strong>, and it can be boiled down to the idea that the work done to a body will be equal to the change in energy of that body. Dividing energy into kinetic and potential energy pieces as we often do in dynamics problems, we arrive at the following base equation for the conservation of energy.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W=\Delta KE + \Delta  PE\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Before jumping into the application of this method though, it is important to first define the three terms used in the equation, the ideas of <strong>work</strong>, <strong>kinetic energy</strong>, and <strong>potential energy</strong>.</p>
+    <h2>Work:</h2>
+    <p><strong>Work</strong> in general is a force exerted over a distance. If we imagine a single, constant force pushing a body in a single direction over some distance, the work done by that force would be equal to the magnitude of that force times the distance the body traveled. If we have a force that is opposing the travel (such as friction) it would be negative work.</p>
+    <figure class="center"><img src="images/work_basic.png" width="600" height="263" alt="A box with a pushing force and a friction force acting on it being pushed over distance d"/>
+      <figcaption>In instances with a constant force and a constant direction, the work done to a body will be equal to the magnitude of the force times the distance the body travels. For forces opposing the motion, the work will be negative.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W_{push}=F_{push}*d\]</td>
+        </tr>
+        <tr>
+          <td>\[W_{friction}=-F_{friction}*d\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>For instances where forces and the direction of travel do not match, the component of the force in the direction of travel is the only piece of the force that will do work. Following through with this logic, forces that are perpendicular to the direction of travel for a body will exert no work on a body because there is no component of the force in the direction of travel.</p>
+    <figure class="center"><img src="images/work_angled.png" width="600" height="288" alt="A box with a pushing force and a force force acting on it being pushed over distance d"/>
+      <figcaption>Only the components of a force in the direction of travel exert work on a body. Forces perpendicular to the direction of travel will exert no work on the body.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W_{push}=F_{push}cos(\theta)*d\]</td>
+        </tr>
+        <tr>
+          <td>\[W_{normal}=0\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Finally, in the case of a force that does not have a constant magnitude, we will need to account for the changing magnitude of the force over the distance traveled. To do this we will simply integrate the force function over the distance traveled by the body. Just as before, only the component of the force in the direction of travel will count towards the work done and forces opposing travel will be negative work.</p>
+    <figure class="center"><img src="images/work_int.png" width="389" height="317" alt="A force function over a distance"/>
+      <figcaption>With a non-constant magnitude force, we need to integrate the force function over the distance traveled.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W=\int_{x1}^{x2} F(x) dx\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Kinetic Energy:</h2>
+    <p>Kinetic energy is the the energy of mass in motion, and for a particle or translational system (with no rotation) it will be equal to one half of the mass of the body times the velocity of the body squared.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[KE=\frac{1}{2}mv^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If we wish to determine the change in kinetic energy (as is used in the work and energy equation), we would simply take the final kinetic energy minus the initial kinetic energy.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta KE=\frac{1}{2}mv_{f}^{2}-\frac{1}{2}mv_{i}^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>As a note, even though the velocity of a body has a direction, <strong>kinetic energy does not have a direction.</strong></p>
+    <h2>Potential Energy</h2>
+    <p>Potential energy, unlike kinetic energy, is not really energy at all. Instead, it represents the work that a given force will potentially do between two instances in time. Potential energy can come in many forms, but the two we will discuss here are gravitational potential energy, and elastic potential energy. As the names imply, gravitational potential energy represents the potential work that the gravitational force will do, while elastic potential energy represents the potential work a spring force will do. We often use these potential energy terms in place of the work done by gravity or springs because it will simplify the math. It is important to note that when we include these potential energy terms, we should not also include the work done by gravity or spring forces as well, as this would double count those forces.</p>
+    <h3>Gravitational Potential Energy</h3>
+    <p>If we were to examine the work done by gravity as we lift the an object up by some change in height, we would see that it is equal to the negative of force times distance, because the gravity opposes the upwards displacement. In this case the magnitude of the force is equal to the mass times the acceleration due to gravity g (9.81 m/s<sup>2</sup> or 32.2 ft/s<sup>2</sup> on the earth's surface) while the distance is the change in height.</p>
+    <figure class="center"><img src="images/gravity_work.png" width="300" height="291" alt="The work dine by gravity on a box we lift up."/>
+      <figcaption>The work done by a gravity force as we lift up an object will be equal to negative mass times acceleration of gravity (g) times the change in height of the body.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W_{gravity}=-m*g*\Delta h\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>When changing this from a work term to an energy term, we will move the term from one side of the work and energy equation to the other. When we do this, we will wind up converting the negative work value into a positive energy value. Moving the body upwards represents a positive change in gravitational potential energy, while moving the body downwards represents a negative change in gravitational potential energy. In equation form, this is as follows.</p>
+    <figure class="center"><img src="images/gravitational_potnetial_energy.png" width="350" height="341" alt="A box being raised up directly or along a curved path."/>
+      <figcaption>When finding the change in gravitational potential energy, we multiply the mass times g (giving us the weight of the object) and then multiply that by the change in the height of the object, regardless of the path taken.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta PE_{gravity}=m*g*\Delta h\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>It is important to note that the change in height here is the not the total distance traveled, but only the <strong>vertical displacement</strong> between the starting and ending states. When working with US customary systems, it is also important to remember that the <strong>weight</strong> of an object is not equal to the mass. Instead the weight (in pounds) is the mass times g already. This means that the change in gravitational energy is equal to the weight time the change in height.</p>
+    <h3>Elastic Potential Energy</h3>
+    <p>Elastic potential energy represents the potential work done by a spring that is stretched or compressed as it returns to its natural, unstretched length. The force a spring exerts is linearly related to the amount of stretch itself by the spring constant k, where the spring force is equal to the spring constant (k) times the distance the spring is stretched or compressed (x) beyond its natural, unstretched length. The spring force will always push or pull the object back towards the unstretched length of the spring.</p>
+    <figure class="center"><img src="images/spring_work.png" width="500" height="203" alt="A spring being compressed."/>
+      <figcaption>The force exerted by a spring will be equal to the stiffness of the spring (k) times the distance the spring is stretched or compressed beyond its natural resting length (x).</figcaption>
+    </figure>
+    <p>To find the work done by a spring as we compress it from it's unstretched length (point A) to some other point (Point B), we simply need to integrate the spring force over this distance. As this is the integral of a simple linear relationship that opposes the displacement we wind up finding that the work done by the spring is equal to negative one half times the spring constant (k) times the amount of stretch (x) squared.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[W_{spring}= \int_{0}^{x}(kx)dx=-\frac{1}{2}kx^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Rather than leaving this as work, we will instead move it to the energy side of the work and energy equation. In doing so, we will drop the negative sign from our value.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[PE_{spring}=\frac{1}{2}kx^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In the equation above, the stiffness of the spring (k) represented the amount of force the spring exerts per unit distance it is compressed. A stiffer spring, with a higher value of k, will be harder to stretch or compress, while a less stiff spring, with a lower value of k, will be easier to stretch or compress. Spring manufactures may specify the k value, though this can also be determined experimentally by stretching or compressing a spring a set amount and measuring the force exerted by the spring at that set displacement.</p>
+    <p>It's also important to remember that in the equation above, x is not the length of the spring but instead the distance the spring has been stretched or compressed beyond its unstretched length. For example, a spring that is naturally 10 cm long has no elastic potential energy when it is just sitting there unstretched at 10 cm long.</p>
+    <p>To find the change in elastic potential energy (Delta PE), as is used in the work and energy equation, we simply take the final elastic potential energy minus the initial elastic potential energy.</p>
+    <figure class="center"><img src="images/delta_elastic_potential_energy.png" width="500" height="262" alt="A spring being compressed in initial and final states"/>
+      <figcaption>The change elastic potential energy will be equal to one half times the stiffness of the spring (k) times the distance the spring is stretched or compressed in it's final state minus the same equation in it's initial state.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta PE_{spring}=\frac{1}{2}kx_{f}^{2}-\frac{1}{2}kx_{i}^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In this case, it is important to remember that the amount of stretch (x final or x initial) is always measured relative to the unstretched length of the spring. We cannot simply use a change in length of the spring, as this will give you invalid results.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/neQDS7nyd4k" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A 16 pound crate slides down a ramp as shown to the below. The crate is released from a height of 10 feet.
+        <ul>
+          <li>What is the work done by gravity?</li>
+          <li>What is the change in gravitational potential energy?</li>
+        </ul>
+        </p>
+        <img src="images/P1.png" width="369" height="461" alt="Problem 1 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="http://www.youtube.com/embed/ZkopO1aTj54" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
