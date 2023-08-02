@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Impulse and Momentum in Particle Systems</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../11-0_intro/chap11_intro.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../11-2_impulse_momentum_principle/impulse_momentum_particle.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Impulse and Momentum in Particle Systems</h1>
+    <p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. The impulse is usually denoted by the variable J (not to be confused with the polar area moment of inertia, which is also J) and the momentum is a body's mass times it's velocity. Impulses and velocities are both vector quantities, giving us the basic equation below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Before we go into depth on using the method, it will first be important to define the key concepts of impulse and momentum.</p>
+    <h2>Impulse:</h2>
+    <p>The concept of an <strong>impulse</strong> in it's most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>Constant Magnitude Force:</td>
+          <td>\[\vec{J} = \vec{F}*t\]</td>
+        </tr>
+        <tr>
+          <td>Non-Constant Magnitude Force:</td>
+          <td>\[\vec{J} = \int \vec{F(t)} dt\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>In many cases, we will discuss <strong>impulsive forces</strong>. This is an instance where we have very large forces acting over a very short time frame. In instances of impulsive forces, it is often difficult to measure the exact magnitude of the force or the time. In these cases we may only be able to deduce the magnitude of the impulse as a whole via the observed change in momentum of the body.</p>
+    <figure class="center"><img src="images/tennis.jpg" width="400" height="600" alt="A tennis player hitting a ball"/>
+      <figcaption>The force the tennis racket exerts on the ball will be very large, but it will be exerted over a very short period of time. Because of this, the force is considered an "impulsive" force. It would be difficult to determine the exact magnitude of the force or time frame of the impact, but by examining the velocity of the ball before and after the impact we could deduce the overall magnitude of the impulse as a whole. Photo by DAVID ILIFF. License: CC BY-SA 3.0</figcaption>
+    </figure>
+    <h2>Momentum:</h2>
+    <p>The <strong>momentum</strong> of a body is equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set period of time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in US Customary units.</p>
+    <h2>Impulse and Momentum a Vector Quantities</h2>
+    <p>When working with both the impulse and momentum values, it is important to remember that they are vector quantities. Just as we have done with forces and accelerations in previous sections, the first step in many impulse momentum problems in two or three dimensions is to break the quantities into components. Only once we have the scalar impulse and momentum components in our equations can we solve for unknowns.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/0fk-NRNOMyU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
