@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Rigid Body Surface Collisions</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../15-2_impulse_momentum_theorem_rigid_body/impulse_momentum_theorem_rigid_body.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../15-4_rigid_body_free_collisions/free_rigid_body_collisions.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Rigid Body Surface Collisions</h1>
+    <p>In instances where a moving rigid body impacts a solid and immovable surface, the resulting impact can seem chaotic. However, we can still use the ideas of impulse and momentum to predict this impact behavior.</p>
+    <p>Just as it was with particles, an important first step in solving rigid body impact with a surface problems is to identify the normal and tangential directions. The normal direction will be perpendicular to the surface being impacted while the tangential direction will be parallel to the surface being impacted. Also important for rigid body impact is to identify both the center of mass for the body (G) and the point of impact between the body and the surface (P).</p>
+    <figure class="center"><img src="images/droppedwrench.png" width="412" height="382" alt="A wrench dropped on a rigid floor"/>
+      <figcaption>Dropping a wrench on a concrete floor is a good example of rigid body impact with a solid surface. The first step in solving these problems is to identify the normal and tangential directions, which will be perpendicular and parallel to the surface respectively. Also important is identifying the center of mass (G) and point of impact (P).</figcaption>
+    </figure>
+    <p>Given we know everything about the motion of a body before the impact, to predict the linear velocity in two dimensions well as the angular velocity after the impact (a total of three unknowns) we will need three equations. These equations will be derived from from the conservation of momentum as well as the application of the coefficient of restitution.</p>
+    <p>For momentum, we will first notice that the forces during impact will always be in the normal direction. Assuming negligible friction forces (which would be in the tangential direction) we will have no change in linear momentum in the tangential direction and assuming the mass stays constant <strong>no change in velocity in the tangential direction at the center of mass of the body</strong>.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[v_{tGi}= v_{tGf}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Next, examining the coefficient of restitution will give us another equation. Specifically, the coefficient of restitution relates the <strong>velocities before and after the collision in the normal direction at the point of impact</strong>.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[e=-\frac{v_{Pnf}}{v_{Pni}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Finally, because the force of the impact (and therefore the impulse of the impact) is so large, the forces at any other point will generate negligible impulses in comparison. The impact impulse will primarily determine how the object moves after impact. Therefore <strong>about the location of impact, where the impact force does not exert a moment, we can say that angular momentum is conserved</strong>. This is the only point about which angular momentum is conserved in an impact. </p>
+    <p>Since the point of impact is typically not the center of gravity or a pin, we often need to use the general expression of angular momentum. </p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I_G * \vec{\omega_i}+\left( \vec{r}_{G/P}\times m * \vec{v_Gi} \right) = I_G * \vec{\omega_f}+\left( \vec{r}_{G/P}\times m * \vec{v_Gf} \right)\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Between the equations above and whatever relevant kinematics relationships are necessary to relate velocities at the center of mass and the point of impact we should be able to solve for up to three unknowns, allowing us to completely predict the velocities after impact, assuming we know the pre-impact velocities and the coefficient of restitution for the impact itself.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/-RZYyXRTqs0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>An 80 centimeter long 1 kilogram metal bar falling at 2 meters per second strikes the edge of a table as shown below. Assuming a coefficient of restitution of .9, what is the expected velocity and angular velocity of the bar after impact?</p>
+        <img src="images/P1.png" width="500" height="385" alt="Problem 1 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>The square crate (dimensions a x a = 0.8 m x 0.8 m, mass m = 20 kg) has an initial angular velocity just before impact of ω<sub>1</sub> = 4 rad/s. It impacts the ground at corner B (perfectly plastic impact). Determine the angle, θ, through which the crate will rotate upwards and the percentage of energy lost in the impact. Assume friction prevents slipping throughout. </p>
+        <img src="images/21-AD-crate-rotate.png" width="500" height="205" alt="Problem 2 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/CJY4qW44cDI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/15-4_SurfImpact1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>The rod AB (length L = 2 m, mass 15 kg) falls from rest from an initial angle of θ = 30 degrees. It impacts the corner C (b = 1.3 m). Determine the angular velocity, ω, and the velocity of the rod’s center of gravity, v<sub>G</sub>, just after impact.</p>
+        <img src="images/21-AD-falling-bar.png" width="450" height="385" alt="Problem 1 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/b6JVSmwnm3E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/15-4_SurfImpact2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A block of mass m<sub>B</sub> = 6 kg is sliding along a slippery, icy surface with no friction. It hits a slender bar of mass m<sub>A</sub> = 4kg and length L = 5m at a speed of v =14 m/s at point C. If the angular velocity or the bar just after the impact is 2.85 rad/s, find the coefficient of restitution between the slender bar and the block. </p>
+        <img src="images/P3.png" width="450" height="450" alt="Problem 4 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/OyNO_Io9xsI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3 Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

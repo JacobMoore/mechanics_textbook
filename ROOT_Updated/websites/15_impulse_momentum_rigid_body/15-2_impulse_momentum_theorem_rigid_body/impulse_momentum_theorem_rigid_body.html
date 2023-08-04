@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - The Impulse and Momentum Equations for a Rigid Body</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<title>Mechanics Map - The Impulse Momentum Theorem for a Rigid Body</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,106 +24,52 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="nextback">
     <ul>
-		<li style="float:left"><a href="../15-1_linear_and_angular_momentum/linear_and_angular_momentum.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../15-3_conservation_systems_of_rigid_bodies/conservation_systems_of_rigid_bodies.html">Next Page &#8811;</a></li>
-	</ul>
+      <li style="float:left"><a href="../15-1_impulse_and_momentum_rigid_body/impulse_and_momentum_rigid_body.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../15-3_rigid_body_surface_collisions/rigid_body_surface_collisions.html">Next Page &#8811;</a></li>
+    </ul>
   </div>
   <div id="maincontent">
-    <h1>Impulse and Momentum in a Rigid Body</h1>
-    <p>The concepts of <strong>Impulse</strong> and <strong>Momentum</strong> provide a third method of solving kinetics problems in dynamics. Generally this method is called the <strong>Impulse-Momentum Method</strong>, and it can be boiled down to the idea that the impulse exerted on a body over a given time will be equal to the change in that body's momentum. </p>
-	  <p>The impulse-momentum equation is simply Newton's Second Law integrated with respect to time. </p>
-	  <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[ \int_{t_1}^{t_2} \vec{F} \,dt =  \int_{t_1}^{t_2} m\vec{a}_G \,dt = m\vec{v}_G(t_2) - m\vec{v}_G(t_1) \]</td>
-        </tr>
-        <tr>
-          <td>\[ \int_{t_1}^{t_2} \vec{M}_G \,dt =  \int_{t_1}^{t_2} I_G \vec{\alpha} \,dt  = I_G \vec{\omega}(t_2) - I_G \vec{\omega}(t_1) \]</td>
-        </tr>
-      </tbody>
-    </table>
-	  <p>The expressions on the left above will become linear or angular impulse, and the expressions on the right above will become the difference in linear or angular momentum between two points in time, or states. These equations assume that mass and mass moment of inertia stay the same over time. Recall that there are several expressions we can use for our moment equation, depending on the point about which we take the moments. There are equivalent impulse-momentum equations for each of those cases. </p>
-	  <p>In a rigid body we will be concerned with not only linear impulse and momentum, but also <strong>angular</strong> impulse and momentum. The expressions describing a <strong>change</strong> in linear and angular impulse momentum are below. Recall that there are several versions of angular momentum expressions, including about points that are not the center of gravity. For linear momentum, only linear velocity at the center of gravity can be used. </p>    
-	  <table class="equation">
-      <tbody>
-        <tr>
-          <td>\[\Delta \vec{J} = m \vec{v_{G,f}}-m \vec{v_{G,i}}\]</td>
-        </tr>
-        <tr>
-          <td>\[\Delta \vec{K_G} = I_G \vec{\omega_{f}}-I_G \vec{\omega_{i}}\]</td>
-        </tr>
-	   <tr>
-          <td style="text-align:center">OR, for a pinned point, O:</td>
-        </tr>
-		 <tr>
-          <td>\[ \Delta \vec{K_O} = I_O \vec{\omega_{f}}-I_O \vec{\omega_{i}} \]</td>
-        </tr>
-	   <tr>
-          <td style="text-align:center">OR, for an ICZV:</td>
-        </tr>
-	    <tr>
-          <td>\[\Delta \vec{K_{IC}} = I_{IC} \vec{\omega_{f}}-I_{IC} \vec{\omega_{i}}\]</td>
-        </tr>
-	    <tr>
-          <td style="text-align:center">OR, for any point, P:</td>
-        </tr>
-		 <tr>
-          <td>\[\Delta \vec{K_P} = [I_G \vec{\omega_{f}} + \vec{r}_{G/P} \times m\vec{a}_{G,f}]-[I_G \vec{\omega_{i}} + \vec{r}_{G/P} \times m\vec{a}_{G,i}]\]</td>
-        </tr>
-		   <tr>
-          <td style="text-align:center">or</td>
-        </tr>
-		 <tr>
-          <td>\[\Delta \vec{K_P} = \left( I_P \vec{\omega_{f}} + \vec{r}_{G/P} \times m\vec{a}_{P,f} \right)- \left( I_P \vec{\omega_{i}} + \vec{r}_{G/P} \times m\vec{a}_{P,i} \right)\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>For two dimensional problems, we can break the linear impulse equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components. Since all rotation will be about the z-axis for planar problems, the angular impulse momentum equation remains a single equation.</p>
+    <h1>The Impulse Momentum Theorem for a Rigid Body</h1>
+    <p>The <strong>Impulse-Momentum Theorem</strong> states that the impulse exerted on a body will be equal to the change in momentum of that body. In rigid body systems, this refers to both the linear impulse and momentum as well as the angular impulse and momentum. In equation form, this leads us to out two base equations.</p>
     <table class="equation">
       <tbody>
         <tr>
-          <td>\[\Delta J_{x}=mv_{G,fx}-mv_{G,ix}\]</td>
+          <td>\[\Delta \vec{J} = m \vec{v_{f}}-m \vec{v_{i}}\]</td>
         </tr>
         <tr>
-          <td>\[\Delta J_{y}=mv_{G,fy}-mv_{G,iy}\]</td>
-        </tr>
-        <tr>
-          <td>\[\Delta K_{G,z}=I_G\omega_f-I_G\omega_i\]</td>
+          <td>\[\Delta \vec{K} = I \vec{\omega_{f}}-I \vec{\omega_{i}}\]</td>
         </tr>
       </tbody>
     </table>
-    <h2>Impulse:</h2>
-    <p>As discussed with particles, a linear impulse in its most basic form is a force integrated over a time. For a force with a constant magnitude, we can find the magnitude of the impulse by multiplying the magnitude of the force by the time that force is exerted. If the force is not constant, we simply integrate the force function over the set time period. The direction of the impulse vector will be the direction of the force vector and the units will be a force times a time (Newton Seconds or Pound Seconds for example).</p>
-    <table class="equation">
-      <tbody>
-        <tr>
-          <td>Constant Magnitude Force:</td>
-          <td>\[\Delta \vec{J} = \vec{F}*t\]</td>
-        </tr>
-        <tr>
-          <td>Non-Constant Magnitude Force:</td>
-          <td>\[\Delta \vec{J} = \int_{t_1}^{t_2} \vec{F(t)} dt\]</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>An <strong>angular impulse</strong> is similar to a linear impulse, except it is the <strong>moment exerted over time</strong> instead of a force exerted over time.</p>
-	<table class="equation">
-      <tbody>
-        <tr>
-          <td>Constant Magnitude Moment:</td>
-          <td>\[\Delta \vec{K_G} = \vec{M_G}*t\]</td>
-        </tr>
-        <tr>
-          <td>Non-Constant Magnitude Moment:</td>
-          <td>\[\Delta \vec{K}_G = \int_{t_1}^{t_2} \vec{M_G(t)} dt\]</td>
-        </tr>
-      </tbody>
-    </table>
-	  <p>Again, there are versions of these equations that use resultant moments about a point other than the center of gravity. These will include angular momentum about a point other than the center of gravity. When choosing which angular impulse-momentum equation to use, consider what values in the problem that you know or don't know. For example, if you don't know several reaction forces at a particular point, taking moments about that point (where those reaction forces have zero moment arm, and will not be included in the sum of moments) may simplify your equations. </p>
-	<p>This moment can come either in the form of a torque directly applied to a body, or as an off-center force causing a linear and angular impulse at the same time. All moments should be taken about the center of mass of the body.</p>
-    <figure class="center"><img src="images/angular_impulse.png" width="500" height="235" alt="A force causing a linear impluse and an off center force causing a linear and angular impulse"/>
-      <figcaption>If we have two identical spheres with forces as shown above, the force on the left would cause only a linear impulse over time, while the force on the right would cause a linear impulse and an angular impulse over time.</figcaption>
+    <p>A few things to note about the equations above when dealing with impulse momentum problems. First is that the above equations are vector equations, and can be split apart into components. For two dimensional problems, we will commonly break the linear impulse momentum equation into x and y component equations, while the angular impulse momentum equation will be about the z direction. Second, the velocities in the linear impulse momentum equation should always refer to the velocity of the center of mass of the body. And finally, for the angular impulse momentum equation, we can take the impulse and momentum about any point we choose so long as we are consistent within the equation. If the impulse is taken about a certain point then the momentum terms must also be taken about that same point. You can see the previous section for more information on angular momentum about various points.</p>
+    <h2>Solving Impulse Momentum Problems:</h2>
+    <p>With impulse momentum problems, the best place to start is with a diagram. The point of the diagram is to show the initial state, the final state, and the forces and moments in between causing the change. In your diagram you should show any known masses, mass moments of inertia, any known velocities (magnitude and direction), angular velocities, any forces or moments causing an impulse, and the time these forces or moments are exerted for.</p>
+    <figure class="center"><img src="images/problem_diagram.png" width="500" height="224" alt="An impulse momentum diagram"/>
+      <figcaption>An impulse momentum diagram should show the initial and final states, along with any known information about the body in each of the two states. Also shown any forces or moments exerting an impulse between the two states.</figcaption>
     </figure>
+    <p>After creating a diagram, the next step is to set up your impulse momentum equations. Determine how many equations you are going to use. In 2D problems you have up to three scalar equations, but you may not always need all three equations. You will also need to determine other key factors such as what point you are taking the angular impulse and momentum about. Whatever point you choose, make sure to identify that in your work.</p>
+    <p>After choosing your equations, plug in any known values for the initial or final states, as well as the impulses acting on the body between these points. At this stage, it is important to remember that moments can come either in the form of a torque directly applied to a body, or as an off-center force causing a linear and angular impulse at the same time.</p>
+    <figure class="center"><img src="images/angular_impulse.png" width="500" height="235" alt="A force causing a linear impluse and an off center force causing a linear and angular impulse"/>
+      <figcaption>If we have two identical spheres with forces as shown above, the force on the left would cause only a linear impulse about the center of mass, while the force on the right would cause a linear impulse and an angular impulse.</figcaption>
+    </figure>
+    <p>Finally, the last step is to solve the equations for the unknowns. Make sure you have at least as many equations as unknowns. If you have more unknowns than you can solve for, you may need to use kinematics to relate values such as linear and angular velocity.</p>
+    <h2>Conservation of Angular Momentum:</h2>
+    <p>In instances where there is no external angular impulse on an object, we can see that the angular momentum of the object will remain unchanged. This is known as the conservation of angular momentum, which is simply an extension of the Impulse Momentum Theorem.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\Delta \vec{K} = 0 = I \vec{\omega_{f}}-I \vec{\omega_{i}}\]</td>
+        </tr>
+        <tr>
+          <td>\[I \vec{\omega_{f}} = I \vec{\omega_{i}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The conservation of momentum is used primarily in two instances. The first is when spinning bodies change shape. In this case the change in shape of the body will usually increase or decrease the mass moment of inertia of the body about the axis it is spinning about. In order for angular momentum to be conserved, the angular velocity of the body must change such that the angular momentum as a whole remains the same.</p>
+    <figure class="center"><img src="images/figure_skater.jpg" width="250" height="407" alt="A figure skater in a spin"/>
+      <figcaption>Figure skaters will often draw their arms an legs in during a spin to reduce their mass moment of inertia. With minimal impulses to change the angular momentum, the angular velocity will increase so that angular momentum is conserved. Public Domain image by deerstop.</figcaption>
+    </figure>
+    <p>The second instance in which the conservation of momentum is applied is in rigid body collisions. In these cases, forces but no moments will be exerted at the point of impact in the collision. This means that a linear impulse is exerted, but no angular impulse is exerted. With no angular impulse about the point of impact, the angular momentum of the bodies must be conserved about that specific point, and this conservation of angular momentum equation will be an important tool in solving rigid body collision problems as discussed in the next few sections.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -177,8 +124,7 @@
         <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
         <p>A wind-chime consists of several slender rods, each suspended on one end by a rope and each with mass m. Consider a singular rod for this problem. As the wind blows, the rod is subjected to an impulse I at its bottom. Determine the vertical location of point O in which the rod appears to rotate. </p>
@@ -191,12 +137,11 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P3Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
         <p>A salmon hatchery has a gate to release water whenever water levels get too high. The gate is normally locked into place, but when the water reaches. The top of the gate, the lock is instantly removed. While the water would flow out of the gate by itself, there is a pump located upstream from the gate to push water forward. The pump is old, so its power slowly ramps up with time. The gate consists of a slender rod in which a 20 kg thin plate is attached. The plate has dimensions a=1.5 m,b=2 m and rotates about the slender rod as if it were a pin. Although there is a seal such that water may not get out, assume the contact between the plate and other surfaces is frictionless. If the gate is subject to water from the pump that applies a force distribution with a magnitude that is related to both the y-coordinate and time dF=(-t(y-2)^2+8t)  dy N, determine the angular velocity of the gate after t=2 seconds if the gate initially starts at rest. </p>
@@ -209,11 +154,11 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P4Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 5:</h3>
         <p>A city engineer is working on a cargo transport system utilizing gears and racks. She is considering a 30 kg gear with a radius of gyration of k<sub>G</sub> = 125 mm and a radius of r = 0.15 m. The gear is in contact with a 20 kg rack. If it takes the gear 0.6125 s to reach an angular velocity of &#969 = 20 rad/s, starting from rest, determine the moment that the gear is subjected to. Assume there is no friction between the rack and the ground. </p>
@@ -226,20 +171,18 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <div class="resource"> <a href="pdf/P5Transcript.pdf" target="_blank">Transcript</a> </div>
       </div>
     </div>
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 6:</h3>
-        <p>A helicopter tail rotor is used to prevent unwanted rotation of the body of the helicopter when the main rotor changes speed. Assume that the four main rotor blades are each long thin rods with length of 5 m and mass of 30 kg. Assume that the helicopter body has a mass of 750 kg and a mass moment of inertia of 1300 kg-m<sup>2</sup> at its center of gravity, located vertically in line with the main rotor. The distance between the main and tail rotors is 6 m. 
-		  </p>
-	<ol type="a">
-	<li>If the tail rotor is functioning, and the angular velocity of the helicopter body remains at zero before and after the main rotor changes speed from 200 rpm to 300 rpm, find the final horizontal velocity of the helicopter body (starts from rest).</li>
-	<li>Assuming the main rotor change in speed from 200 rpm to 300 rpm occurs in uniformly over 8 s, find the force exerted by the tail rotor to keep the helicopter body from turning. </li>
-	</ol>
-
+        <p>A helicopter tail rotor is used to prevent unwanted rotation of the body of the helicopter when the main rotor changes speed. Assume that the four main rotor blades are each long thin rods with length of 5 m and mass of 30 kg. Assume that the helicopter body has a mass of 750 kg and a mass moment of inertia of 1300 kg-m<sup>2</sup> at its center of gravity, located vertically in line with the main rotor. The distance between the main and tail rotors is 6 m. </p>
+        <ol type="a">
+          <li>If the tail rotor is functioning, and the angular velocity of the helicopter body remains at zero before and after the main rotor changes speed from 200 rpm to 300 rpm, find the final horizontal velocity of the helicopter body (starts from rest).</li>
+          <li>Assuming the main rotor change in speed from 200 rpm to 300 rpm occurs in uniformly over 8 s, find the force exerted by the tail rotor to keep the helicopter body from turning. </li>
+        </ol>
         <img src="images/helicopter.png" width="500" height="320" alt="Problem 5 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -249,16 +192,14 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/15-2_ImpMom1.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 7:</h3>
         <p>A circular industrial disc sander of radius r = 1m, with a moment of inertia of 0.5 kgm<sup>2</sup> is rotating at a speed of 1100 rpm just after being disconnected from power. A block of wood is pushed against the sander with a constant force at a distance of 5 cm from the center of the sander in order to slow it down. If it takes 20 seconds for the disk to come to a complete stop, what is the required force F applied to the wooden block? 
-There are no other losses or frictions in the system and take the coefficient of kinetic friction between the wood and sanding disc to be μ<sub>k</sub> = 0.8.
-		  </p>
+          There are no other losses or frictions in the system and take the coefficient of kinetic friction between the wood and sanding disc to be μ<sub>k</sub> = 0.8. </p>
         <img src="images/P6.png" width="500" height="500" alt="Problem 5 Diagram"/></div>
       <div class="solution">
         <h3>Solution:</h3>
@@ -268,10 +209,10 @@ There are no other losses or frictions in the system and take the coefficient of
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P6.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <br/>
         <div class="resource"> <a href="pdf/Transcript P6.pdf" target="_blank">Transcript</a> </div>
-		  <br/>
+        <br/>
       </div>
     </div>
   </div>

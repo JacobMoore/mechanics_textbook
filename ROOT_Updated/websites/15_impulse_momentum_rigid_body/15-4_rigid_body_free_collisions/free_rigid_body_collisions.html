@@ -1,0 +1,193 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Free Rigid Body Collisions</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+		<li style="float:left"><a href="../15-3_rigid_body_surface_collisions/rigid_body_surface_collisions.html">&#8810; Previous Page</a></li>
+		<li style="float:right"><a href="../../16_one_dof_vibrations/16-1_undamped_free/16-1_undamped_free.html">Next Page &#8811;</a></li>
+	</ul>
+  </div>
+  <div id="maincontent">
+    <h1>Free Rigid Body Collisions</h1>
+	<p>A free rigid body collision is an instance where two non-anchored or moveable bodies impact one another, and we are treating at least one of those bodies as a rigid body where rotation can occur. In these instances, the <strong>large internal impulsive forces</strong> between the bodies colliding dwarf any external forces in the moment. The result is that though each body individually will have large changes in linear momentum in the instant of the collision, the linear momentum of both bodies as a whole is maintained.</p>
+	<table class="equation">
+      <tbody>
+		  <tr>
+          <td>\[ \sum\limits_{system} \vec{J}_f= \sum\limits_{system} \vec{J}_i \]</td>
+        </tr>
+		   <tr>
+          <td>\[ \vec{J}_{Af} + \vec{J}_{Bf} = \vec{J}_{Ai} + \vec{J}_{Bi} \]</td>
+        </tr>
+		<tr>
+          <td>\[ m_{A} \vec{v_{GAf}}+m_{B} \vec{v_{GBf}}= m_{A} \vec{v_{GAi}}+m_{B} \vec{v_{GBi}}\]</td>
+        </tr>
+      </tbody>
+	</table>
+	  <p>Where A and B are two objects colliding. Recall that linear momentum uses the velocity of the center of gravity of an object, and we cannot use any other velocity. </p>
+	  <p>Angular momentum is typically also conserved for the system, as the large impact impulse is internal. </p>
+	  <table class="equation">
+      <tbody>
+		  <tr>
+          <td>\[ \sum\limits_{system} \vec{K_P}_f= \sum\limits_{system} \vec{K_P}_i \]</td>
+        </tr>
+		   <tr>
+          <td>\[ \vec{K}_{P,Af} + \vec{K}_{P,Bf} = \vec{K}_{P,Ai} + \vec{K}_{P,Bi} \]</td>
+        </tr>
+      </tbody>
+	</table>
+	  <table class="equation">
+      <tbody>
+		<tr>
+          <td>\[ I_{P,A} \vec{\omega_{Af}} + \vec{r}_{G_A/P} \times m_A \vec{v_{P,Af}} + I_{P,B} \vec{\omega_{Bf}} + \vec{r}_{G_B/P} \times m_B \vec{v_{P,Bf}} \cdots \]</td>
+        </tr>
+		  <tr>
+          <td>\[ \,\,\, = I_{P,A} \vec{\omega_{Ai}} + \vec{r}_{G_A/P} \times m_A \vec{v_{P,Ai}} + I_{P,B} \vec{\omega_{Bi}} + \vec{r}_{G_B/P} \times m_B \vec{v_{P,Bi}} \]</td>
+        </tr>
+		  <tr>
+          <td>OR</td>
+        </tr>
+		  <tr>
+          <td>\[ I_{G,A} \vec{\omega_{Af}} + \vec{r}_{G_A/P} \times m_A \vec{v_{G,Af}} + I_{G,B} \vec{\omega_{Bf}} + \vec{r}_{G_B/P} \times m_B \vec{v_{G,Bf}} \cdots  \]</td>
+        </tr>
+		  <tr>
+          <td>\[ \,\,\, = I_{G,A} \vec{\omega_{Ai}} + \vec{r}_{G_A/P} \times m_A \vec{v_{G,Ai}} + I_{G,B} \vec{\omega_{Bi}} + \vec{r}_{G_B/P} \times m_B \vec{v_{G,Bi}} \]</td>
+        </tr>
+      </tbody>
+	</table>
+	  <p>Note that the angular momenta need to be taken <strong>about the same point for both bodies</strong> in order to be able to add them together. </p>
+	<p>In addition, angular momentum will also be conserved for each body individually <strong>about the point of impact</strong>. This is because the impact forces by definition cannot exert a moment about this point (and typically other impulse moments will be so much smaller they can be considered negligible). With no moment, there can be no change in angular momentum. Moments are force times distance and we are ensuring the distance is zero by choosing the impact point where the forces are exerted.</p>
+	<p>The angular momentum of one of the bodies (similar for the other), where Q is the impact point, will be: </p>
+	<table class="equation">
+      <tbody>
+		<tr>
+          <td>\[  I_{G,A} \vec{\omega_{Af}} + \vec{r}_{G_A/Q} \times m_A \vec{v_{G,Af}} = I_{G,A} \vec{\omega_{Ai}} + \vec{r}_{G_A/Q} \times m_A \vec{v_{G,Ai}}\]</td>
+        </tr>
+		  <tr>
+          <td>OR</td>
+        </tr>
+		<tr>
+          <td>\[  I_{Q,A} \vec{\omega_{Af}} + \vec{r}_{G_A/Q} \times m_A \vec{v_{Q,Af}} =  I_{Q,A} \vec{\omega_{Ai}} + \vec{r}_{G_A/Q} \times m_A \vec{v_{Q,Ai}}\]</td>
+        </tr>
+      </tbody>
+	</table>	
+	  <p>You can sometimes find conservation of linear momentum in the transverse direction, or perpendicular to the line of impact. This may not be true when there is friction at the impact point, because the friction force will be proportional to the impact (normal) force. </p>
+	  <p>Finally, we can also use the coefficient of restitution equation, if we know something about the elastic/plastic characteristics of the collision. </p>
+	  <table class="equation">
+      <tbody>
+		  <tr>
+          <td>\[e=\frac{\Delta v_{separation} }{\Delta v_{closing}}\]</td>
+        </tr>
+        <tr>
+          <td>\[e=\frac{v_{A,Qnf} - v_{B,Qnf}}{v_{B,Qni} - v_{A,Qni}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	  <p>Where Q is the point of impact, n is the direction of the line of impact (LOI), and A and B are the two bodies impacting. </p>
+	<p>For two dimensional problems, we can break the linear impulse equation down into two scalar components to solve. In this case, we simply need to break all forces and velocities into x and y components, taking these velocities at the center of mass of each body. Since all rotation will be about the z-axis for planar problems, the angular impulse momentum equation remains a single equation. </p>
+	
+	 <p>Along with kinematic relationships, combinations of the above equations and strategies can allow us to analyze post-impact motion of the objects. This is useful in areas such as accident reconstruction, where engineers determine what happened in a vehicular crash.</p>
+	<figure class="center"><img src="images/50de68b4351de40a7cd5e6532bece703502e9e76.png" width="500" height="700" alt="A vehicle crash diagram showing two vehicles impacting in an intersection"/>
+      <figcaption>The diagram shows the result of a vehicle crash investigation where engineers used techniques from free rigid body collisions to determine the incoming vehicle velocities based on information from the scene, including the final positions of the vehicles. (<a href="https://crashviewer.nhtsa.dot.gov/CIREN/Details?Study=CIREN&CaseId=21#">NHTSA CIREN case 21</a>). </figcaption>
+    </figure>
+	</div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/Rnq4Uhx6wCU" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A space telescope with a mass of 20,000 kg (approximate as a cylinder with a length of 10 m and a diameter of 2 m) is struck on one end with a micrometeorite with a mass .003 kg and a velocity of 10,000 m/s (model as a point mass). Assuming the micrometeorite becomes lodged in to space telescope, What is the expected velocity and angular velocity for the space telescope after impact?</p>
+        <img src="images/P1.png" width="400" height="400" alt="Problem 1 Diagram"/>
+		</div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A Rube Goldberg machine utilizes a pool ball and a slender 2 m long rod. If the pool ball has a mass m_ball=0.16 kg while the rod has mass m_rod=1 kg, determine the angular velocity of the rod when the pool ball strikes it at v=3 m/s. The pool ball has radius r=0.025 m and the coefficient of restitution is e=0.8. The rod hits the pool ball at the same height as the ball’s center of gravity. </p>
+        <img src="images/P3.png" width="480" height="600" alt="Problem 3 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/6eTNsC5pHg0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="images/P3.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+        <div class="resource"> <a href="images/P3Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
+    </div>
+	  <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A rod (m<sub>R</sub> = 5 kg, L = 3 m) rests on a frictionless surface. A ball (m<sub>B</sub> = 1 kg) with an initial velocity v<sub>B1</sub> = 12 m/s in the direction shown impacts the rod at P. Find the rod’s angular velocity, ω<sub>R2</sub>, and linear velocity of the center of gravity, v<sub>G2</sub>, immediately after impact if b = 1 m. Assume e = 0.6.  </p>
+        <img src="images/15-5_Free1.png" width="480" height="265" alt="Problem 4 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/n4Sow1Yt-Ug" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+      </div>
+    </div>
+	  <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A car (m<sub>C</sub> = 2000 kg, d<sub>3</sub> = 3 m, d<sub>4</sub> = 1.5 m) is driving on an icy road (assume frictionless road surface). It is unable to stop at an intersection and impacts a bus (m<sub>B</sub> = 8000 kg, d<sub>1</sub> = 9 m, d<sub>2</sub> = 2.5 m). The initial vehicle velocities are v<sub>C1</sub> = 5 m/s and v<sub>B1</sub> = 10 m/s. Assume the impact is such that the vehicles corners contact at A, and the plane of contact is θ = 0<sup>o</sup>. Find the angular velocity of each vehicle just after impact, ω<sub>C2</sub> and ω<sub>B2</sub>, if the impact is completely plastic at A. Assume the car and the bus can be treated as constant density objects.  </p>
+        <img src="images/15-5_Free3.png" width="480" height="350" alt="Problem 5 Diagram"/></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/PhBYV3CS3Hwhttps://www.youtube.com/embed/PhBYV3CS3Hw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+		  <br/>
+      </div>
+    </div>
+	  
+	</div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

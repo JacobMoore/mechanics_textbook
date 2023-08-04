@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Mechanics Map - Linear and Angular Momentum for a Rigid Body</title>
-<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<title>Mechanics Map - Impulse and Momentum for a Rigid Body System</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,66 +24,103 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="nextback">
     <ul>
-		<li style="float:left"><a href="../../14_work_energy_rigid_body/14-4_efficiency_rigid_body/efficiency_rigid_body.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../15-2_impulse_momentum_rigid_body/impulse_momentum_rigid_body.html">Next Page &#8811;</a></li>
-	</ul>
+      <li style="float:left"><a href="../../14_work_energy_rigid_body/14-4_efficiency_rigid_body/efficiency_rigid_body.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../15-2_impulse_momentum_theorem_rigid_body/impulse_momentum_theorem_rigid_body.html">Next Page &#8811;</a></li>
+    </ul>
   </div>
   <div id="maincontent">
-    <h1>Linear and Angular Momentum for a Rigid Body</h1>
-    <p>As discussed with particles, the linear momentum of a body will be equal to the mass of the body times its current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for linear momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in English units.</p>
-	  <p>It is important to note that, since velocity is not necessarily the same at all points on a rigid body, linear momentum specifically includes the velocity at the centre of gravity only. There is no other version of linear momentum. </p>
-	  <p>Note that linear momentum, which we will denote as <em>J</em>, is sometimes represented by <em>L</em> or <em>G</em> symbolically. </p>
-	  <table class="equation">
+    <h1>Impulse and Momentum for a Rigid Body System</h1>
+    <p>As discussed in previous sections, as we move from a particle system to a rigid body system, we need to not only worry about forces and translational motion, but we will also need to include moments and the angular motion. Impulse and momentum methods are no different, and we will begin this chapter by defining linear impulse, angular impulse, linear momentum, and angular momentum.</p>
+    <h2>Linear and Angular Impulse:</h2>
+    <p>As discussed in the impulse-momentum chapter for particles, the <strong>linear impulse</strong> from a <strong>constant magnitude force</strong> will simply be equal to the magnitude of the force times the time that that force is exerted for. Because the force is a vector quantity, the impulse is also a vector quantity, where the direction of the force is simply equal to the direction of the impulse. In previous sections we simply called this the "impulse", but in this section we will call it the linear impulse in order to differentiate it from the angular impulse.</p>
+    <table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{J} = m \vec{v}_G\]</td>
+          <td>\[\vec{J} = \vec{F}*t\]</td>
         </tr>
       </tbody>
     </table>
-    <p>Angular momentum on the other hand will be equal to the mass moment of inertia of that body (about it's center of mass) times it's current angular velocity. It's important to note that while the mass moment of inertia remains constant if the body does not change shape, a shape that does change shape will likely have changes in mass moments of inertia along with changes in angular velocity.</p>
-	  <p>We will denote angular momentum as <em>K</em>, however many sources also use <em>H</em> to represent angular momentum. </p>
-	  <p>Just like there are several versions of the moment equation from Newton's Second Law, there are several versions of angular momentum for a rigid body, depending on the point about which you take your angular impulses. Since the angular velocity of a rigid body is the same at all locations, the difference in the angular momentum expression comes from differences in the mass moment of inertia.</p>
-	  <p>If we want to find the angular momentum about the centre of gravity of a body, the equation is:</p>
-	   <table class="equation">
+    <p>Adapting the idea of impulse into a rotational system simply involves replacing the force in the equation above with a moment. In this case, the magnitude of the <strong>angular impulse</strong> for a <strong>constant magnitude moment</strong> will be equal to the magnitude of the moment times the time this moment is exerted for. The direction of the angular impulse vector will simply be equal to the direction of the moment vector. In this resource, we will use a capitol letter K to symbolize the angular impulse.</p>
+    <table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{K}_G = I_G \vec{\omega}\]</td>
+          <td>\[\vec{K} = \vec{M}*t\]</td>
         </tr>
       </tbody>
     </table>
-	 <p>If our object is pinned at a point <em>O</em>, the expression for angular momentum about <em>O</em> is:</p>
-	    <table class="equation">
+    <p>In instances where we have non-constant force functions or non-constant magnitude functions, we will simply need to integrate these functions over time to determine the total linear or angular impulse of the force or moment</p>
+    <table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{K}_O = I_O \vec{\omega}\]</td>
+          <th>Linear Impulse:</th>
+          <td>\[\vec{J} = \int F(t)dt\]</td>
+        </tr>
+        <tr>
+          <th>Angular Impulse:</th>
+          <td>\[\vec{K}=\int M(t)dt\]</td>
         </tr>
       </tbody>
     </table>
-	  <p>If our object has an ICZV, the expression for angular momentum about the IC is:</p>
-	  <table class="equation">
+    <p>One last important factor to remember when dealing with angular impulse, is that the magnitude of the moment will depend upon the point you are taking the moment about. As such the magnitude of the angular impulse will also depend upon the point you are taking it about. This is important to remember for later, as the impulse and the angular momentum will need to be taken about the same point in order for the angular impulse and momentum equation to work.</p>
+    <h2>Linear Momentum:</h2>
+    <p>As discussed with particles, the <strong>linear momentum</strong> of a body is equal to the mass of the body times it's current velocity. Since velocity is a vector, the momentum will also be a vector, having both magnitude and a direction. Unlike the impulse, which happens over some set period of time, the momentum is captured as a snapshot of a specific instant in time (usually right before and after some impulse is exerted). The units for momentum will be mass times unit distance per unit time. This is usually kilogram meters per second in metric, or slug feet per second in US Customary units.</p>
+    <p>It is important to note that, since velocity is not necessarily the same at all points on a rigid body, linear momentum specifically references the velocity at the <strong>center of mass</strong>.</p>
+    <table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{K}_{IC} = I_{IC} \vec{\omega}\]</td>
+          <th>Linear Momentum:</th>
+          <td>\[m*\vec{v_G}\]</td>
         </tr>
       </tbody>
     </table>
-	  <p>Finally, if we wish to find the angular momentum about any point <em>P</em>, there are two expressions. The subscripts for mass moment of inertia and linear velocity must match within the expression being used (i.e. both <em>G</em> or both <em>P</em>). Note that when we use linear momentum in the expression for angular momentum, the linear velocity is still always at the centre of gravity. Finally, if we wish to use the version with <em>P</em> subscripts, then <em>P</em> must be a point on the body (otherwise the linear velocity of <em>P</em> does not make sense). </p>
-	  <table class="equation">
+    <h2>Angular Momentum:</h2>
+    <p>In order to adapt the concept of linear momentum into the concept of angular momentum, we will need to make two adjustments. First we will need to replace the mass of the body with the mass moment of inertia. Second we will replace the velocity of the body with the angular velocity. This leads to the basic formula for the angular momentum of body, which is equal to the mass moment of inertia times the angular velocity of the body.</p>
+    <p>Because the mass moment of inertia will vary with the point that we take it about the angular momentum will also vary with the point we take it about. Depending on the situation, there may be valid reasons to determine the angular momentum about various points, so keeping that in mind is important.</p>
+    <p>Some points we may want to find the angular momentum about include the center of mass, some fixed axis of rotation, or an instant center. In all of these cases, we simply need to find the mass moment of inertia about that point, and multiply it by the angular velocity.</p>
+    <table class="equation">
       <tbody>
         <tr>
-          <td>\[\vec{K}_P = I_G \vec{\omega} + \vec{r}_{G/P} \times m \vec{v_G} = I_G \vec{\omega} + \vec{r}_{G/P} \times \vec{J}\]</td>
+          <th>Angular Momentum about the <br>
+            Center of Mass:</th>
+          <td>\[I_G*\omega\]</td>
         </tr>
-		  <tr>
-          <td>OR</td>
+        <tr>
+          <th>Angular Momentum about a <br>
+            Fixed Axis:</th>
+          <td>\[I_O*\omega\]</td>
         </tr>
-		  <tr>
-          <td>\[\vec{K}_P = I_P \vec{\omega} + \vec{r}_{G/P} \times m \vec{v_P} \]</td>
+        <tr>
+          <th>Angular Momentum about an <br>
+            Instant Center:</th>
+          <td>\[I_IC*\omega\]</td>
         </tr>
       </tbody>
     </table>
-    <figure class="center"><img src="images/figure_skater.jpg" width="250" height="407" alt="A figure skater in a spin"/>
-      <figcaption>Figure skaters will often draw their arms an legs in during a spin to reduce their mass moment of inertia. With minimal impulses to change the angular momentum, the angular velocity will increase so that angular momentum is conserved. Public Domain image by deerstop.</figcaption>
+    <p>If we wish to find the angular momentum about some other point, such as the point of impact in a rigid body collision, then finding the angular momentum will be slightly more complicated. In this case we will have to take into account the angular momentum due to the rotation of the object, as well as the impact that translation has on angular momentum.</p>
+    <p>Specifically, the angular momentum will be equal to the mass moment of inertia about the center of mass times the angular velocity of the body, plus the cross product of a displacement vector going from the point of interest to the center of mass with the linear momentum vector of the body. The equation for this is shown below.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <th>Angular Momentum about <br>
+            Any Point:</th>
+          <td>\[I_G * \vec{\omega}+\left( \vec{r}_{G/P}\times m * \vec{v_G} \right) \]</td>
+        </tr>
+      </tbody>
+    </table>
+    <figure class="center"><img src="images/angular_momentum_any_point.png" width="400" height="328" alt="The angular momentum about any point"/>
+      <figcaption>When finding the angular momentum about any point P, we will use a number of values. The most confusing is often the r vector, which specifically refers to a vector going from our point of interest (P) to the center of mass of the body (G).</figcaption>
     </figure>
+	<p>As an alternate to the equation above, we can also use an equation that references the mass moment of inertia about our point of interest P, as well as referencing the velocity of point P. This alternate equation is as shown below.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <th>Angular Momentum about <br>
+            Any Point (alternate):</th>
+          <td>\[I_P * \vec{\omega}+\left( \vec{r}_{G/P}\times m * \vec{v_P} \right) \]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>In the general equations above, we can see how these reduce to a simpler form if there for the center of mass, a fixed axis, or an instant center. First, if the point of interest P is the center of mass (G) then the r vector will be equal to zero and that second term will be zero. Additionally, we can see in the second version of the equation that if the velocity of the point of interest (P) is zero, as it would be for both a fixed axis and an instant center, then the velocity vector would be zero and the second term as a whole would also be zero.</p>
   </div>
   <div id="sidebar"> <br/>
     <h2>Video Lecture</h2>
@@ -96,10 +134,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 1:</h3>
-        <p>Consider the bullet shown with mass m<sub>b</sub> = 0.025 kg and velocity just prior to impact with the rod of v<sub>1</sub> = 400 m/s. Find the linear momentum and angular momentum about O for the bullet. The distance h = 0.6 m and the total length of the rod is L = 0.8 m. 
-        </p>
-        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 1 Diagram"/>
-      </div>
+        <p>Consider the bullet shown with mass m<sub>b</sub> = 0.025 kg and velocity just prior to impact with the rod of v<sub>1</sub> = 400 m/s. Find the linear momentum and angular momentum about O for the bullet. The distance h = 0.6 m and the total length of the rod is L = 0.8 m. </p>
+        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 1 Diagram"/> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -113,10 +149,8 @@
     <div class="problem">
       <div class="question">
         <h3>Question 2:</h3>
-        <p>Consider the uniform thin rod shown with mass m<sub>r</sub> = 3.3 kg and angular velocity just after impact from the bullet of ω<sub>2</sub> = 12 rad/s. Find the linear momentum and angular momentum about O for the rod. The distance h = 0.6 m.
-        </p>
-        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 2 Diagram"/>
-      </div>
+        <p>Consider the uniform thin rod shown with mass m<sub>r</sub> = 3.3 kg and angular velocity just after impact from the bullet of ω<sub>2</sub> = 12 rad/s. Find the linear momentum and angular momentum about O for the rod. The distance h = 0.6 m. </p>
+        <img src="images/20-R-IM-DK-12.png" width="400" height="400" alt="Problem 2 Diagram"/> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -127,14 +161,11 @@
         <div class="resource"> <a href="pdf/15-1_LinAngMom2.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 3:</h3>
-        <p>A toy is made of a square with 4 semi-circles of radius 14 cm attached.  It has a mass of m = 400 g and a radius of gyration k = 20 cm about its center of mass G. If it rolls to the left without slipping and has 3 J of kinetic energy at this moment, find the linear momentum of the toy, the angular momentum about its center of mass G and its angular momentum about the point of contact with the ground O. At this instant, the center of mass is directly above the point of contact with the ground. 
-        </p>
-        <img src="images/P4.png" width="480" height="400" alt="Problem 3 Diagram"/>
-      </div>
+        <p>A toy is made of a square with 4 semi-circles of radius 14 cm attached.  It has a mass of m = 400 g and a radius of gyration k = 20 cm about its center of mass G. If it rolls to the left without slipping and has 3 J of kinetic energy at this moment, find the linear momentum of the toy, the angular momentum about its center of mass G and its angular momentum about the point of contact with the ground O. At this instant, the center of mass is directly above the point of contact with the ground. </p>
+        <img src="images/P4.png" width="480" height="400" alt="Problem 3 Diagram"/> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -143,24 +174,19 @@
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <br/>
         <div class="resource"> <a href="pdf/Transcript P4.pdf" target="_blank">Transcript</a> </div>
-		  
       </div>
     </div>
-	
-	<div class="problem">
+    <div class="problem">
       <div class="question">
         <h3>Question 4:</h3>
         <p>In each of the following scenarios find the angular velocity of the rod or disc given they have the same angular momentum about point O of 0.1 kg m2/s. 
-Scenario 1: The disc has radius r = 45 cm, mass m = 600 g 
-Scenario 2: Rod has length L = 90 cm, mass m = 350 g 
-Scenario 3: Rod has length d = 67 cm, mass m = 630 g 
-
-        </p>
-        <img src="images/P5.png" width="550" height="200" alt="Problem 3 Diagram"/>
-      </div>
+          Scenario 1: The disc has radius r = 45 cm, mass m = 600 g 
+          Scenario 2: Rod has length L = 90 cm, mass m = 350 g 
+          Scenario 3: Rod has length d = 67 cm, mass m = 630 g </p>
+        <img src="images/P5.png" width="550" height="200" alt="Problem 3 Diagram"/> </div>
       <div class="solution">
         <h3>Solution:</h3>
         <div class="video">
@@ -169,13 +195,11 @@ Scenario 3: Rod has length d = 67 cm, mass m = 630 g
         <br/>
         <br/>
         <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
-		  <br/>
+        <br/>
         <br/>
         <div class="resource"> <a href="pdf/Transcript P5.pdf" target="_blank">Transcript</a> </div>
-		  
       </div>
     </div>
-	  
   </div>
   <script language="javascript">displayFooter();</script> 
 </div>
