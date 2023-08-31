@@ -3,12 +3,12 @@
 <head>
 <title>Mechanics Map - Centroid of an Area</title>
 <link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
-<!--CSS Stylesheet-->
-<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -24,18 +24,18 @@
   <script language="javascript">displayMenuSub();</script>
   <div id="nextback">
     <ul>
-		<li style="float:left"><a href="../A2-1_moment_integrals/momentintegrals.html">&#8810; Previous Page</a></li>
-		<li style="float:right"><a href="../A2-3_centroids_3D/centroids3D.html">Next Page &#8811;</a></li>
-	</ul>
+      <li style="float:left"><a href="../A2-1_moment_integrals/momentintegrals.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../A2-3_centroids_3D/centroids3D.html">Next Page &#8811;</a></li>
+    </ul>
   </div>
   <div id="maincontent">
     <h1>Centroid of an Area via Moment Integrals</h1>
     <p>The <strong>centroid</strong> of an area can be thought of as the geometric center of that area. The location of the centroid is often denoted with a 'C' with the coordinates being x&#772 and y&#772, denoting that they are the average x and y coordinate for the area. If an area was represented as a thin, uniform plate, then the centroid would be the same as the center of mass for this thin plate.</p>
-	<figure class="center"> <img alt="The x coordinate of the centroid" height="345" src="images/centroids_common_shapes.png" width="500">
+    <figure class="center"> <img alt="The x coordinate of the centroid" height="345" src="images/centroids_common_shapes.png" width="500">
       <figcaption>The centroid (marked C) for a few common shapes.</figcaption>
     </figure>
     <p>Centroids of areas are useful for a number of situations in the mechanics course sequence, including the analysis of distributed forces, the analysis of bending in beams, the analysis of torsion in shafts, and as an intermediate step in determining moments of inertia.</p>
-	<p>The location of centroids for a variety of common shapes can simply be looked up in tables, such as the table provided in the right column of this website. However, we will often need to determine the centroid of other shapes and to do this we will generally use one of two methods.</p>
+    <p>The location of centroids for a variety of common shapes can simply be looked up in tables, such as the table provided in the right column of this website. However, we will often need to determine the centroid of other shapes and to do this we will generally use one of two methods.</p>
     <ol>
       <li>We can use the <strong>first moment integral</strong> to determine the centroid location.</li>
       <li>We can use the <strong>method of composite parts</strong> along with centroid tables to determine the centroid location.</li>
@@ -44,17 +44,17 @@
     <h2>Finding the Centroid via the First Moment Integral</h2>
     <p>When we find the centroid of a two dimensional shape, we will be looking for both an x and a y coordinate, represented as x&#772 and y&#772 respectively. Collectively, this x and y coordinate is the centroid of the shape.</p>
     <p>To find the average x coordinate of a shape (x&#772) we will essentially break the shape into a large number of very small and equally sized areas, and find the average x coordinate of these areas. To do this sum of an infinite number of very small things we will use integration. Specifically, we will take the <strong>first, rectangular, area moment integral</strong> along the x axis, and then divide that integral by the total area to find the average coordinate. We can do something similar along the y axis to find our y&#772 value. Writing all of this out, we have the equations below.</p>
-	<table class="equation">
+    <table class="equation">
       <tbody>
         <tr>
           <td colspan="2">\[C=(\bar{x},\bar{y})\]</td>
         </tr>
-		<tr>
-			<td>\[\bar{x}=\frac{\int_{A}(dA*x)}{A}\]</td>
-		  	<td>\[\bar{y}=\frac{\int_{A}(dA*y)}{A}\]</td>
-		</tr>
+        <tr>
+          <td>\[\bar{x}=\frac{\int_{A}(dA*x)}{A}\]</td>
+          <td>\[\bar{y}=\frac{\int_{A}(dA*y)}{A}\]</td>
+        </tr>
       </tbody>
-	</table>
+    </table>
     <p>Next let's discuss what the variable dA represents and how we integrate it over the area. The variable dA is the rate of change in area as we move in a particular direction. For x&#772 we will be moving along the x axis, and for y&#772 we will be moving along the y axis in these integrals.</p>
     <p>As we move along the x axis of a shape from its left most point to its right most point, the rate of change of the area at any instant in time will be equal to the height of the shape that point times the rate at which we are moving along the axis (dx). Because the height of the shape will change with position, we do not use any one value, but instead must come up with an equation that describes the height at any given value of x. We will then multiply this dA equation by the variable x (to make it a moment integral), and integrate that equation from the leftmost x position of the shape (x min) to the right most x position of the shape (x max).</p>
     <figure class="center"> <img alt="The x coordinate of the centroid" height="423" src="images/dAx.png" width="600">
@@ -128,6 +128,8 @@
         <div class="resource"> <a href="pdf/Centroids_WorkedProblem3.pdf" target="_blank">PDF Solution</a> </div>
       </div>
     </div>
+  </div>
+  <!--
     <div id="practiceproblems">
       <h2>Practice Problems:</h2>
       <div class="problem">
@@ -137,7 +139,7 @@
         </div>
       </div>
     </div>
-  </div>
+    --> 
   <script language="javascript">displayFooter();</script> 
 </div>
 </body>
