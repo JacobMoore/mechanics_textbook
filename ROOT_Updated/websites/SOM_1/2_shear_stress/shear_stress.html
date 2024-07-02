@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Shear Stress</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../2-4_concurrent_forces/concurrentforces.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../../3_equilibrium_rigid_body/3-0_intro/chap3_intro.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Shear Stress</h1>
+    <p>Shear stress is the counterpart to normal stress. Rather than being stresses in a plane perpendicular to the load forces. Shear stress exists between a set of non-collinear forces in a cross section that is parallel to the forces themselves. Using a pair of scissors to cut paper is a classic example of shear stress in action.</p>
+    <p>Similar to the definition of normal stress, the magnitude of shear stress is simply defined as the magnitude of the force divided by the cross-sectional area we are examining. The important thing to remember here is that the area will be parallel with the forces, rather than perpendicular to the surfaces. A lower case tau is traditionally used to denote shear stress.</p>
+    <figure class="center"> <img alt="A beam subjected to shear stress" height="172" src="images/shearstress.png" width="400">
+      <figcaption></figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\tau=V/A\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Just like normal stress, the metric unit for shear stress is a Pascal (Pa), Kilopascal (kPa), or Megapascal (MPa). Similarly, units of pound per square inch (psi), or kilo-pounds per square inch (ksi) are the standard in the US system.</p>
+    <h2>Non-Planar Shear</h2>
+    <p>Although the cross sectional area in our shear stress calculations is typically in a single plane it is not always in a single plane. An example of non-planar shear stress is a paper hole punch. Similar to the pair of scissors discussed above, it is using shear stress to cut the paper. Unlike the scissors, the resulting cut surface is not a single geometric plane.</p>
+    <figure class="center"> <img alt="A hole punch" height="231" src="images/holepunch.jpg" width="300">
+      <figcaption>A paper hole punch in action is an example of non-planar shear stress. Image by Enoch Lau CC-BY-SA 3.0</figcaption>
+    </figure>
+    <p>When determining the shear stress present in these cases, we will still use the same force divided by area formula. The only difference is that the area is not a single plane, it is the area along which the cut or fracture would occur. In our hole punch example, we would use the circumference times the height of the hole we punched (the area of the sides of our new cylindrical hole). Whatever area would be newly exposed by the punch or other tool, that is the area the stress is acting in and the area we use in our formulas.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A single steel nail holds two wooden boards together as shown below. Assume the nail has a circular cross section with an eighth inch diameter. A 40 lb tensile force is then applied to the boards. What is the shear stress in the nail?</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>You are using a sheet metal shear to cut a 30cm long strip of 1mm thick aluminum. Assuming a shear strength of 207 MPa, what is the required force of the blade on the metal?</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png">
+        <p>Public Domain Image by PH2 D. Vukovich</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>You are using a hole punch to create a hole in multiple sheets of paper at once. It will be a circular hole, 2mm in diameter. Each sheet of paper is .1mm thick, and the paper has a shear strength of 1.5 MPa. If the die can exert a force of 20N on the paper, how many sheets of paper would you expect to be able to punch through at once?</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png">
+        <p>Public Domain Image, no author listed</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

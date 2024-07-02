@@ -1,0 +1,26 @@
+body {body background-color:#FFFFAD; font-family: sans-serif}
+
+h1 {color: #00003B; font-size: 28px; text-align: center; font-variant: small-caps}
+h3 {color: #00003B; font size: 18px}
+h4 {color: #00003B; font-size: 14px; text-align: center}
+h5 {color: #00003B; font-size: 14px; text-decoration:underline; font-style:italic; font-weight:normal; line-height: 0%;}
+p {color: #00003B; font-size: 14px}
+hr {color: #00003B}
+li {color: #00003B; font-size: 14px}
+
+sup, sub {height: 0; line-height: 1; vertical-align: baseline; _vertical-align: bottom; position: relative}
+
+sup {bottom: 1ex}
+sub {top: .5ex}
+
+
+#maincontent{margin-left: 15%; margin-right: 15%}
+#menu{text-align: center}
+#title{text-align: center}
+#portrait{float: right; padding: 10px 10px 10px 10px}
+
+a:link {color: #00003B}
+a:visited {color: #00003B}
+a:focus {color: #00003B}
+a:hover {color: #19194F}
+a:focus {color: #00003B}

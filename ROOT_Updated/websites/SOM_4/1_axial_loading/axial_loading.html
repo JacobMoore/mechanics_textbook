@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Normal Stress</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../2-4_concurrent_forces/concurrentforces.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../../3_equilibrium_rigid_body/3-0_intro/chap3_intro.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Axial Loading</h1>
+    <p>A body that is subjected to a combination of forces, or loading, will experience <strong>stress</strong>. Stress can be thought of as a force distributed internally in a body. Stress describes the intensity of force at a given cross sectional area. Different types of loading can also give rise to different types of stress, which will be discussed in the following sections.</p>
+    <p>Stress is a useful concept. It extends what we learned in statics to explain if a body will break or how it will deform under loading.  Intuitively, larger beams can support larger loads. To determine if a beam will break, the stress from an applied load is compared to the known strength for the material that the beam is made of. Strength values for a given material are a fundamental property and are well established and can be looked up in reference tables.  Materials will have different strengths for different modes of loading.  For example, a given material will have different strengths for tension and compression.</p>
+    <h2>Normal Stress</h2>
+    <p>To begin, we will examine <strong>normal stresses</strong>. Normal stress, also sometimes called axial stress, is stress resulting from tensile or compressive forces in a plane perpendicular (or normal) to those external forces. The magnitude of the normal stress is calculated by taking the magnitude of the force in the normal direction and dividing it by the cross-sectional area at the point we are examining. The conventional symbol for normal stress is a lowercase sigma.</p>
+    <figure class="center"> <img alt="normal stress under tensile loading" height="114" src="images/normalstress.png" width="600">
+      <figcaption>Basic normal stresses are stresses that result from tensile or compressive loading in a plane perpendicular to the loading forces.</figcaption>
+    </figure>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\sigma = N/A\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The metric units for stress is a Pascal, which is defined as 1 Newton per square meter. Because a Pascal is a very small stress, units of kPA (kilopascals – 1000 pascals), and MPa (Megapascals – 1,000,000 pascals) will more commonly be used.  Similarly, units of pound per square inch (psi), or kilo-pounds per square inch (ksi) are the standard in the US system. You'll notice that these are the same units we use for pressure, and conceptually stress and pressure are similar, except stress is always used with solids, while pressure is usually used with fluids.</p>
+    <p>Normal stress will follow similar conventions to those used in statics. Normal stresses can be either tensile (pulling) or compressive (pushing) in nature, depending on the direction of the force. The sign convention for stress is that tensile stresses are considered positive while compressive stresses are negative.</p>
+    <p>As discussed earlier, we will generally design components such that the expected stress does not exceed the <strong>strength</strong> of the material we are using. We will generally look up the strength of the material, while we will need to calculate the stress given the loading forces and part geometry. When examining material strength, it is also important to match the type of stress to the appropriate strength. Some materials will have different tensile and compressive strengths. For example, concrete is much stronger in compression than it is in tension.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>A cylindrical brass rod has a length of 2 meters and a diameter of 150 mm. It’s subjected to an 850 kN compressive load. Assume brass has a Young’s Modulus of 100 GPa.
+		  <ul>
+			  <li>What is the expected stress?</li>
+			  <li>What is the expected change in length under loading?</li>
+		  </ul></p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A 1-inch diameter steel cable (E=29,000 ksi) is supporting a multi-tier walkway as shown to the right.
+		  <ul>
+		  <li>What is the maximum axial stress in the cable?</li>
+			  <li>What is the change in length of each segment of the cable?</li>
+			  <li>What is the overall change in length of the cable?</li>
+		  </ul></p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

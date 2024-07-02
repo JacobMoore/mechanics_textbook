@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Safety Factor</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../2-4_concurrent_forces/concurrentforces.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../../3_equilibrium_rigid_body/3-0_intro/chap3_intro.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Safety Factor</h1>
+    <p>The <strong>safety factor</strong> (also called the factor of saftey) is an important engineering concept that will recur throughout this course as well as throughout industry. All materials have a quantifiable strength as mentioned earlier, but this actually represents more of an average strength for the given material. Small variations in the material composition, part geometry, and factors such as corrosion will slightly change the strength for that particular part. Rather than eliminating all uncertainty, we use safety factors and over-design parts to accommodate for the uncertainty.</p>
+    <p>The safety factor represents a ratio of the failure load (the load we would expect the design to fail at given the specified strength) to the maximum allowed load (the maximum load we expect for our design). This ratio can can be adjusted based on how much confidence we have in the given materials and the given design. In particular, the safety factor is defined as the failure load divided by the allowed load.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[SF=\frac{F_{failure}}{F_{{allowed}}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Because the magnitude of the force is usually linearly related to the magnitude of the stress, we will sometimes also write the safety as the ratio of stresses.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[SF=\frac{\sigma_{failure}}{\sigma_{allowed}}\]</td>
+          <td><p>or</p></td>
+          <td>\[SF=\frac{\tau_{failure}}{\tau_{allowed}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Choosing a Safety Factor:</h2>
+    <p>The safety factor for any design should always be greater than one, and is typically in the range of 1.2 - 4. A larger safety factor is better able to accommodate uncertainly and unexpectedly high loads, but this usually comes with an increased cost and weight for the component.</p>
+    <p>Some reasons we may want to <strong>raise</strong> the safety factor include...
+    <ul>
+      <li>A high cost of failure (particularly if failure could result serious injury or even a loss of life).</li>
+      <li>High variability or high uncertainty in the material properties.</li>
+      <li>Higher variability in part geometry due to lower tolerance manufacturing to likely part defects.</li>
+      <li>High likelihood of impact loads.</li>
+      <li>Likely part corrosion of high part wear over time.</li>
+      <li>Component inspection will be difficult or infrequent.</li>
+    </ul>
+    </p>
+    <p>Some reasons we may want to <strong>lower</strong> the safety factor include...
+    <ul>
+      <li>A low cost of failure, where the component is not critical to the safety of the users or public.</li>
+      <li>Material properties consistent and well understood.</li>
+      <li>High quality manufacturing results in consistent and defect free parts.</li>
+      <li>Component corrosion and component wear will be minimal</li>
+      <li>Component will be regularly inspected for corrosion or wear.</li>
+      <li>We wish to keep costs down.</li>
+      <li>We wish to keep weight down.</li>
+    </ul>
+    </p>
+    <p>Often times, choosing a safety factor will involve balancing the factors above, and this tension can help guide the design and manufacturing process. For example, many aircraft parts are critical to the safety of the airplane, but at the same time keeping weight down is critical. These parts often have fairly low safety factors, but to keep the safety factor low, engineers will use very well studied materials, precision manufacturing, and regular component inspections to help minimize the uncertainty, even in the face of the high cost of failure.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>You are designing an elevator that will be transporting passengers via a single cable. The cable has a tensile strength of 300 MPA. The empty car weighs 800 kg, and you want a maximum capacity of 1000kg. If we wish to have a safety factor of 3, what should the diameter of the cable be?</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png">
+        <p>Image by Jacob Moore CC-BY-SA 4.0</p>
+      </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Two quarter inch diameter steel bolts with a shearing strength of 50 ksi are used to support a bracket as shown to the right. Assuming a safety factor of 2, what is the maximum load that should be allowed for the bracket as designed?</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"></div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/RYpqVdjWrKs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
