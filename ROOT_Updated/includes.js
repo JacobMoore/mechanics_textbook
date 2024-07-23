@@ -75,12 +75,12 @@ function displayFooter(){
 	document.write('<table style="border:0px">');
 	document.write('<tr>');
 	document.write('<td style="width:200px"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></td>');
-	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="http://adaptivemap.ma.psu.edu/icons/NSF_Logo.jpg" width="100"></td>');
-	document.write('<td style="width:200px"><img alt="Open_PSU" height="45" src="http://adaptivemap.ma.psu.edu/icons/PSU_OER.png" width="100"></td>');
+	document.write('<td style="width:200px"><img alt="NSF Icon" height="100" src="http://mechanicsmap.psu.edu/icons/NSF_Logo.jpg" width="100"></td>');
+	document.write('<td style="width:200px"><img alt="Open_PSU" height="45" src="http://mechanicsmap.psu.edu/icons/PSU_OER.png" width="100"></td>');
 	document.write('</tr>');
 	document.write('<tr>');
 	document.write('<td style="width:200px">');
-	document.write('Authors: <a href="http://www.personal.psu.edu/jpm46/">Jacob Moore</a>, Majid Chatsaz, <a href="http://mech.ubc.ca/agnes-dentremont/">Agnes d&#39;Entremont</a>, Joan Kowalski, and Douglas Miller have licensed all content under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.');
+	document.write('Authors: <a href="https://mechanicsmap.psu.edu/bio/index.html">Jacob Moore</a>, Majid Chatsaz, <a href="http://mech.ubc.ca/agnes-dentremont/">Agnes d&#39;Entremont</a>, Joan Kowalski, and Douglas Miller have licensed all content under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.');
 	document.write('</td>');
 	document.write('<td colspan="2" style="width:400px">');
 	document.write('This work was partially supported by the U.S. National Science Foundation Award # TUES-1044790 as well as the Affordable Course Transformation Program at PSU. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the sponsoring organizations');
