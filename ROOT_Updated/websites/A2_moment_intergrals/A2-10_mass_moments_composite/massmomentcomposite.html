@@ -1,0 +1,220 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Parallel Axis Theorem</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../A2-9_area_moments_composite/areamomentcomposite.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../A2-10_mass_moments_composite/massmomentcomposite.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Method of Composite Parts for Moments of Inertia and the Parallel Axis Theorem</h1>
+    <p>As an alternative to integration, both area and mass moments of inertia can be calculated via the method of composite parts, similar to what we did with centroids. In this method we will break down a complex shape into simple parts, look up the moments of inertia for these parts in a table, adjust the moments of inertia for position, and finally add the adjusted values together to find the overall moment of inertia. This method is known as the <strong>method of composite parts</strong>.</p>
+    <p>A key part to this process that was not present in centroid calculations is the adjustment for position. As discussed on the previous pages, the area and mass moments of inertia are dependent upon the chosen axis of rotation. Moments of inertia for the parts of the body can only be added when they are <strong>taken about the same axis</strong>. The moments of inertia in the table are generally listed relative to that shape's centroid though. Because each part has its own individual centroid coordinate, we cannot simply add these numbers. We will use something called the <strong>Parallel Axis Theorem</strong> to adjust the moments of inertia so that they are all taken about some standard axis or point. Once the moments of inertia are adjusted with the Parallel Axis Theorem, then we can add them together using the method of composite parts.</p>
+    <h2>The Parallel Axis Theorem</h2>
+    <p>When we calculated the area and mass moments of inertia via integration, one of the first things we had to do was to select a point or axis we were going to take the moment of inertia about. We then measured all distances from that point or axis, where the distances were the moment arms in our moment integrals. Because the centroid of a shape is the geometric center of an area or volume, the average distance to any one point in a body is at a minimum. If we pick a different point or axis to take the moment of inertia about, then on average all the distances in our moment integral will be a little bit bigger. Specifically, the further we move from the centroid, the larger the average distances become.</p>
+    <figure class="center"> <img height="241" src="images/axisselection.png" width="500" alt="The average distances from a point go up as we go futher from the center">
+      <figcaption>The distances used in our moment integrals depends on the point or axis chosen. These distances will be at a minimum at the centroid and will get larger as we start further from the centroid.</figcaption>
+    </figure>
+    <p>Though this complicates our analysis, the nice thing is that the change in the moment of inertia is predictable. It will always be at a minimum when we take the moment of inertia about the centroid, or an axis going through the centroid (area moment of inertia), and minimum about an axis going through the center of gravity (mass moment of inertia). This minimum, which we will call I<sub>c</sub> (area moment of inertia) or I<sub>G</sub> (mass moment of inertia), is the value we will look up in our moment of inertia table. From this minimum, or unadjusted value, we can find the moment of inertia value about any point I<sub>p</sub> by adding an adjustment factor equal to the area times distance squared for area moments of inertia, or mass times distance squared for mass moments of inertia.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[I_{xxP}=I_{xxC}+A*r^{2}\]</td>
+        </tr>
+        <tr>
+          <td>\[I_{xxP}=I_{xxG}+m*r^{2}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This adjustment process with the equations above is the <strong>parallel axis theorem</strong>. The area or mass terms simply represent the area or mass of the part you are looking at, while the distance (r) represents the distance we are moving the axis we are taking the moment of inertia about. This may be a vertical distance, a horizontal distance, or a diagonal depending on the axis the moment of inertia is about.</p>
+    <p>It is really important to note that the parallel axis theorem is only true for I<sub>c</sub> or I<sub>G</sub> - you cannot use the moment of inertia about another point in this formula. It's also clear that the added term will always be positive (area, mass, and the squared distance cannot be negative). This is a reminder that the moment of inertia about the centroid (area moment) or center of gravity (mass moment) is the smallest moment of inertia for that object - about any other axis, the moment of inertia will be greater. </p>
+    <figure class="center"> <img alt="Distances in the parallel axis theorem" height="500" src="images/adjustment_distance.png" width="500">
+      <figcaption>The distance (r) in the Parallel Axis Theorem represents the distance we are moving the axis we are taking the moment of intent about.</figcaption>
+    </figure>
+    <p>Say we are trying to find the moments of inertia of the rectangle above about point P. We would start by looking up I<sub>xx</sub>, I<sub>yy</sub>, and J<sub>zz</sub> about the centroid of the rectangle (C) in the moment of inertia table. Then we would add on an area times distance squared term to each to find the adjusted moments of inertia about P. The distance we are moving the x axis for I<sub>xx</sub> is the vertical distance r<sub>x</sub>, the distance we are moving the y axis for I<sub>yy</sub> is the horizontal distance r<sub>y</sub>, and the distance we would move the z axis (which is pointing out of the page) for J<sub>zz</sub> is the diagonal r<sub>z</sub>.</p>
+    <p>Center of mass adjustments follow a similar logic, using mass times distance squared, where the distance represents how far you are moving the axis of rotation in three dimensional space.</p>
+    <h2>Using the Method of Composite Parts to Find the Moment of Inertia</h2>
+    <p>To find the moment of inertia of a body using the method of composite parts, you need to start by breaking your area or volume down into simple shapes. Make sure each individual shape is available in the moment of inertia table, and you can treat holes or cutouts as negative area or mass.</p>
+    <figure class="center"> <img alt="Breaking down an area and volume into simple parts" height="246" src="images/part_breakdown.png" width="500">
+      <figcaption>Start by breaking down your area or volume into simple parts and number those shapes. Holes or cutouts will count as negative areas or masses.</figcaption>
+    </figure>
+    <p>Next you are going to create a table to keep track of values. Devote a row to each part that your numbered earlier, and include a final "total" row that will be used for some values. Most of the work of the method of composite parts is filling in this table The columns will vary slightly with what you are looking for, but you will generally need the following.</p>
+    <figure class="center"> <img alt="A moment of interia table" height="295" src="images/momentofinertiatable.png" width="600">
+      <figcaption>Most work in the method of composite parts will revolve around filling out a table such as this one. This table contains the rows and columns necessary to find the rectangular area moments of inertia (I<sub>xx</sub> and I<sub>yy</sub>) for this composite body.</figcaption>
+    </figure>
+    <ul>
+      <li>The area or mass for each piece (area for area moments of inertia or mass for mass moments of inertia). Remember cutouts should be listed as negative areas or masses.</li>
+      <li>The centroid or center of mass locations (X, Y and possibly Z coordinates). Most of the time, we will be finding the moment of inertia about centroid of the composite shape, and if that is not explicitly given to you, you will need to find that before going further. For more details on this, see the page "Centroids and Center of Mass via Method of Composite Parts".</li>
+      <li>The moment of inertia values about each shape's centroid. To find these values you will plug numbers for height, radius, mass, etc. into formulas on the moment of inertia table. Do not use these formulas blindly though as you may need to mentally rotate the body, and thus switch equations, if the orientation of the shape in the table does not match the orientation of the shape in your diagram.</li>
+      <li>The adjustment distances (r) for each shape. For this value you will want to determine how far the x-axis, y-axis, or z-axis moves to go from the centroid of the piece to the overall centroid, or point you are taking the moment of inertia about. To calculate these values generally, you will be finding the horizontal, vertical, or diagonal distances between piece centroids and the overall centroids that you have listed earlier in the table. See the parallel axis theorem section of this page earlier for more details.</li>
+      <li>Finally, you will have a column of the adjusted moments of inertia. Take the original moment of inertia about the centroid, then simply add your area times r squared term or mass times r squared term for this adjusted value.</li>
+    </ul>
+    <p>The overall moment of inertia of your composite body is simply the sum of all of the adjusted moments of inertia for the pieces, which will be the sum of the values in the last column (or columns if you are finding the moments of inertia about more than one axis).</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/zulGTSWF6xs" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Use the parallel axis theorem to find the mass moment of inertia 
+          of this slender rod with mass m and length L about the z axis at 
+          its end point.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/4oN0kgDO3Yw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>A semicircular thin plate has constant density, a radius of 10 cm, and a mass of 400 g. Find the mass moment of inertia of the plate around the axes (a) x and (b) z passing through the center of mass.</p>
+        <img src="images/P2.png" width="400" height="200" alt="Problem 2 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/CcClXi265ec" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A semicircular thin plate has constant density, a radius of 10 cm, and a mass of 400 g. Find the mass moment of inertia of the plate around the axes (a) x’ and (b) z’ passing through point A.</p>
+        <img src="images/P3.png" width="400" height="200" alt="Problem 3 Diagram"/> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/2aZFTRhnXwU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 4:</h3>
+        <p>A beam is made by connecting two 2" x 4" beams in a T pattern 
+          with the cross section as shown below. Determine the location of the 
+          centroid of this combined cross section and then find the 
+          rectangular area moment of inertia about the x axis through the 
+          centroid point.</p>
+        <img alt="Problem 4 Diagram" src="images/P4.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/lgXlp2lRaiA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 5:</h3>
+        <p>A dumbbell consists of two .2 meter diameter spheres, each with a 
+          mass of 40 kg, attached to the ends of a .6 meter long, 20 kg 
+          slender rod. Determine the mass moment of inertia of the dumbbell 
+          about the y axis shown in the diagram.</p>
+        <img alt="Problem 5 Diagram" src="images/P5.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/ufewJ7CmvIs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 6:</h3>
+        <p>The shape shown below consists of a solid semicircular hemisphere on top of a hollow cylinder. The object has a constant density, and a mass of 5 slugs. Based on the dimensions below, determine the mass moment of inertia about (a) the z-axis and (b) the y-axis. </p>
+        <img alt="Problem 6 Diagram" src="images/P6.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/5PkztVfnqX4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P6.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 7:</h3>
+        <p>A sign is made from 3 circles of aluminum of thickness 1 cm and density 2.7 g/cm<sup>3</sup>. The smaller circles (radius 2 m) are joined to the larger circle (radius 3 m) where they overlap. Find the center of mass of the sign with respect to the center of the largest circle. Also find the moment of inertia of the sign about the axis passing through the center of mass and perpendicular to the plane of the sign. </p>
+        <img alt="Problem 7 Diagram" src="images/P7.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/OEwMlTmQ_qU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P7.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 8:</h3>
+        <p>An engineer puts together a form study prototype of a robotic arm to show a group of stakeholders. Specifically they want to know about its radius of gyration. Unfortunately, he forgot what material he used. If the mass moment of inertia of the arm is I=15.2kgm<sup>2</sup> about point O, calculate the radius of gyration. Each component is a plate with thickness t=5 mm. Assume the plates are rigidly attached to one another. Plate A is identical to plate B, and has a radius r=2w. Plates C, D and E have the same width w=15 cm. Plate C has a length l<sub>C</sub>=1.1 m, and is angled at ϕ=30 deg with the horizontal. Plate D is attached perpendicular to plate C at a distance r<sub>(D/A)</sub>=0.55 m from plate A, and has a length l<sub>D</sub>=0.3 m. Plate E has a length l<sub>E</sub>=0.21 m, and is angled θ=105 deg away from plate D.</p>
+        <img alt="Problem 8 Diagram" src="images/P8.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/mWKQuI2hzAY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P8.pdf" target="_blank">PDF Solution</a> </div>
+        <br/>
+        <div class="resource"> <a href="pdf/P8Transcript.pdf" target="_blank">Transcript</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

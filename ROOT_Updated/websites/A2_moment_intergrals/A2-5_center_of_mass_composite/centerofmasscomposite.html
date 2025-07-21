@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Centroid, Centre of Mass, and Mass MOI in Composite Bodies</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../A2-4_centroid_composite/centroidcomposite.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../A2-6_area_moment_intergral/areamomentintegral.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Centroid of a Volume and Center of Mass via the Method of Composite Parts</h1>
+	<p>In addition to finding the centroid of an area, we can also use the method of composite parts to find the centroid of a volume, and the more commonly used center of mass. The centroid of a volume can be useful in examining bouyancy forces, while the center of mass is useful for any system where weight forces are important. In both cases we will use the same tables, the 3D centroid tables available on the right side of the page.</p>
+	<h2>Finding the Centroid of a Volume via the Method of Composite Parts</h2>
+    <p>To find the centroid of a volume we will use mostly the same process that we did with areas, except with a few modifications. First we will use volumes in place of areas, and second we will be working in three dimensions, so we will have one more dimension to worry about.</p>
+    <figure class="center"> <img alt="centroid of volume table" src="images/centroidofvolume.png">
+      <figcaption>For each of the parts, we need to find the volume and the x, y, and z coordinates of the centroid. Remember to find the centroid coordinates relative to the origin point you established earlier.</figcaption>
+    </figure>
+	<p>Just as before, you will want to identify an origin point and set up your axes on the diagram. Then you will want to break the volume down into parts that are in the 3D centroid table. Put the volumes, as well as x, y and z coordinates for the centroids of each part into your table of values. Finally, use the equations below to identify the x, y, and z coordinates for the centroid of the composite body.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\bar{x}_{total}=\frac{\sum V_{i}\bar{x}_i}{V_{total}}\]</td>
+          <td>\[\bar{y}_{total}=\frac{\sum V_{i}\bar{y}_i}{V_{total}}\]</td>
+          <td>\[\bar{z}_{total}=\frac{\sum V_{i}\bar{z}_i}{V_{total}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>In some cases you may not need to know all three coordinates, and in these cases you can simply leave those columns out of your table and leave out that part of the final calculations. Also, as we discussed with the integration method, symetry can be a powerful shortcut. If the whole composite shape is symetric about any given plane, then we know that the centroid cooridnate must lie in that plane.</p>
+	<h2>Finding the Center of Mass via the Method of Composite Parts</h2>
+	<p>Finding the center of mass via the method of composite parts is similar to the process for finding the centroid of a volume. Center of mass calculations will always be in three dimensions, because a body must have a volume in order to have a mass. First, draw an origin point and some axes on your diagram we did for the centroid. We will measure all locations relative to this origin point. We will then need to break the complex shape down into simple volumes, with each simple volume being something in the centroid table we have available.</p>
+    <figure class="center"> <img alt="Center of Mass Composite Parts" height="293" src="images/centerofmassparts.png" width="500">
+      <figcaption>When finding the center of mass via composite parts, we will break the shape up into several simpler shapes. The figure on the left can be thought of as a semi-circular hemisphere (1) on top of a cylinder (2) with another smaller cylinder cut out of it (3). Each of these simple volumes are listed in our centroid table.</figcaption>
+    </figure>
+    <p>Once we have identified the different parts, we will create a table indicating the <strong>mass of each part</strong>, and the x, y, and z coordinate of the centroid for each individual part. It is important to remember that each coordinate you list should be relative to the same base origin point, so you will need to mentally rotate and position the parts in the table relative to your chosen axes.</p>
+    <figure class="center"> <img alt="Center of Mass Table" height="511" src="images/centerofmasstable.png" width="500">
+      <figcaption>Create a table with the mass of each piece as well as the center of mass location (x,y, and z locations) for each piece.</figcaption>
+    </figure>
+    <p>One complicating factor with mass can be measuring the mass of the pieces separately. If we are given the mass of each piece or can measure the mass of each piece separately we simply need to put those values into the table. If we don't have the mass of each piece separately, we will need to multiply the volume by the density to find the mass. In cases such as this, we do need to account the original mass then the mass removed for cutouts. For example, in the diagram above the mass for shape 2 would be the mass of the cylinder before we drill the hole out, and the mass for shape 3 would be a negative number showing the mass removed by drilling out the hole in the cylinder.</p>
+    <p>Finally, once you have the mass the and center of mass coordinates for each shape, you can find the coordinates of the center of mass for the composite body with the following formulas.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[x_{G}=\frac{\sum m_{i}\bar{x}_i}{m_{total}}\]</td>
+          <td>\[y_{G}=\frac{\sum m_{i}\bar{y}_i}{m_{total}}\]</td>
+          <td>\[z_{G}=\frac{\sum m_{i}\bar{z}_i}{m_{total}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Similar to the centroid equations, the center of mass equations are simply a weighted average, except now they are weighted by mass rather than area or volume.</p>
+	<h2>Centroids Vs Center of Mass</h2>
+	<p>We will sometimes talk about the centroid of a 3D body and center of mass interchangeably. Though the equations we use are similar, they differ in that one uses volume and the other uses mass. If we have an object with a uniform density however, we can cancel out the density terms and transform the center of mass equation into the centroid of a 3D shape equation as shown below.</p>
+	<table class="equation">
+      <tbody>
+        <tr>
+          <td>\[x_{G}=\frac{\sum m_{i}\bar{x}_i}{m_{total}}=\frac{\sum \rho_{i}V_{i}\bar{x}_i}{\rho*V_{total}}=\]</td>
+        </tr>
+		<tr>
+          <td>\[\frac{\rho \sum V_{i}\bar{x}_i}{\rho*V_{total}}=\frac{\sum V_{i}\bar{x}_i}{V_{total}}=\bar{x}_{total}\]</td>
+        </tr>
+      </tbody>
+    </table>
+	<p>This means that for any body with a uniform density (anything made of a single material) the centroid of the shape and the center of mass of the shape will be the same point. Meanwhile, for any composite body made of with different parts made of different materials, the centroid and the center of mass will be different points.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/wfjLNSfPXAI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+	<div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The shape shown below consists of a solid semicircular hemisphere 
+          on top of a hollow cylinder. Based on the dimensions below, 
+          determine the location of the centroid.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/vQk4OqTcDpQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/CompositeParts_WorkedProblem4.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>A spherical steel tank (density = 8050 kg/m<sup>3</sup>) is half filled 
+          with water (density = 1000 kg/m<sup>3</sup>) as shown below. Find 
+          the overall mass of the tank and the current location of the center 
+          of mass of the tank (measured from the base of the tank).</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/5zbYD4Wogck" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/CompositeParts_WorkedProblem5.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

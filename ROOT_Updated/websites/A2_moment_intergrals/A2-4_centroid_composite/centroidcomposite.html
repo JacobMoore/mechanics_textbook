@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - Centroid, Centre of Mass, and Mass MOI in Composite Bodies</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen">
+<!--CSS Stylesheet--> 
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File--> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax--> 
+
+<!-- Global site tag (gtag.js) - Google Analytics --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+      <li style="float:left"><a href="../A2-3_centroids_3D_intergral/centroids3Dintegral.html">&#8810; Previous Page</a></li>
+      <li style="float:right"><a href="../A2-5_center_of_mass_composite/centerofmasscomposite.html">Next Page &#8811;</a></li>
+    </ul>
+  </div>
+  <div id="maincontent">
+    <h1>Centroid of and Area via the Method of Composite Parts</h1>
+    <p>As an alternative to using calculus to find the centroid, we can use the <strong>Method of Composite Parts</strong> to find the centroid of an area, centroid of a volume, or the center of mass of a body. This page we will focus on the process of finding the centroid of an area, while the following page will discuss the process used for the centroid of a volume as well as the center of mass.</p>
+	<p>The method of composite Parts is often easier and faster than the integration method; however, it will be limited by the tables you have available. The method works by breaking the shape down into a number of more basic shapes, identifying the centroid of each part via a table of values, and then combing the results to find the overall centroid.</p>
+    <p>A key aspect of the method is the use of these centroid tables. This is a set of tables that lists the centroids (and also moments of inertia which we will discuss later) for a number of common areas and/or volumes. Links to the centroid tables used for these examples can be found in the sidebar to the right. The method of composite parts is limited in that we will need to be able to break our complex shape down entirely into shapes found in the centroid table we have available or the method will not work without also doing some moment integrals. These centroid tables were generated via the calculus based methods discussed earlier, so it is not an entirely new method, we are just using other people's work as a shortcut.</p>
+    <h2>Finding the Centroid of an Area via the Method of Composite Parts</h2>
+    <p>You can start the process of finding the centroid by drawing out the shape and identifying a origin point and axes. We will will need to measure all locations relative to this origin point, so it is important to clearly identify this point in your work. Next, we must break our complex shape down into several simpler shapes, and number these separate pieces. This may include added areas (which we will count as positive areas in our calculations) or cutouts/holes (which we will count as negative areas in our calculations). Each of these individual shapes must have a centroid that we can look up in our table.</p>
+    <figure class="center"> <img alt="Break Down the Part into Simple Shapes" height="214" src="images/breakdown.png" width="600">
+      <figcaption>To find the centroid via composite parts, we first need to identify an origin point and axes, and then break down and shape into parts that are in our centroid tables. For this shape we have a semicircle (1), a rectangle (2), and a triangular cutout (3). Remember we can count cutouts or holes as negative areas.</figcaption>
+    </figure>
+    <p>Once we have identified the different parts, we will create a table listing the area of each piece, and the x and y centroid coordinates for that piece. It is important to remember that each coordinate you list should be <strong>relative to the same base origin point</strong> that you drew in earlier. You may need to mentally rotate diagrams in the centroid tables to match the shape you have, and account for the placement of the shape relative to the axes in your diagram.</p>
+    <figure class="center"> <img alt="centroid table" src="images/table.png">
+      <figcaption>For each of the parts, we need to find the area and the x and y coordinates of the centroid. Remember to find the centroid coordinates relative to the origin point you established earlier.</figcaption>
+    </figure>
+    <p>Once you have the areas and centroid coordinates for each part in your table, you can find the x and y coordinate of the centroid for the overall shape with the following formulas. Remember to use negative numbers in your equations for any areas that represent a hole or cutout.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td>\[\bar{x}_{total}=\frac{\sum A_{i}\bar{x}_i}{A_{total}}\]</td>
+          <td>\[\bar{y}_{total}=\frac{\sum A_{i}\bar{y}_i}{A_{total}}\]</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This generalized formula for x&#772 total above is simply area one times x&#772 one, plus area two times x&#772 two, plus area three times x&#772 three, adding up as many shapes as you have in this fashion and then dividing by the overall area of your composite shape. You may recognize this as a weighted average formula, as that is exactly what it is. We are taking the average centroid coordinate when weighted by shape area. The equations are the same for the y location of the overall centroid, except you will instead be using y&#772 values in your equations.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/wfjLNSfPXAI" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>Find the x and y coordinates of the centroid of the shape shown 
+          below.</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/QIe6Hk4Bofs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/CompositeParts_WorkedProblem1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Find the x and y coordinates of the centroid of the shape shown 
+          below.</p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/F1rlzboPlZM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/CompositeParts_WorkedProblem2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 3:</h3>
+        <p>Find the x and y coordinates of the centroid of the shape shown 
+          below.</p>
+        <img alt="Problem 3 Diagram" src="images/P3.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/LyGqaZHZW-E" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P3.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>

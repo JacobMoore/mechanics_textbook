@@ -1,0 +1,158 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Mechanics Map - The Centroid and Center of Mass in 3D via the First Moment Integral</title>
+<link href="../../../style.css" rel="stylesheet" type="text/css" media="screen"><!--CSS Stylesheet-->
+<script type="text/javascript" src="../../../includes.js"></script><!--Common Element Includes File-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async></script><!--MathJax-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TB7SH89Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TB7SH89Q');
+</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <script language="javascript">displayHeader();</script> 
+  <script language="javascript">displayMenuSub();</script>
+  <div id="nextback">
+    <ul>
+		<li style="float:left"><a href="../A2-2_centroids_2D_intergral/centroids2Dintegral.html">&#8810; Previous Page</a></li>
+		<li style="float:right"><a href="../A2-4_centroid_composite/centroidcomposite.html">Next Page &#8811;</a></li>
+	</ul>
+  </div>
+  <div id="maincontent">
+    <h1>Centroids of Volumes and the Center of Mass via Moment Integrals</h1>
+    <p>The <strong>centroid</strong> of a volume can be thought of as the geometric center of that shape. It is often denoted as 'C', being being located at the coordinates (x&#772, y&#772, z&#772). If this volume represents a part with a uniform density (like most single material parts) then the centroid will also be the center of mass, a point usually labeled as 'G'.</p>
+	<figure class="center"> <img alt="The center of mass of common shapes" height="257" src="images/center_of_mass_common.png" width="500">
+      <figcaption>The centroid point (C) or the center of mass (G) for some common shapes. (Centroid and Center of Mass are the same point for bodies with a uniform density)</figcaption>
+	</figure>
+    <p>Just as with the centroids of an area, centroids of volumes and the center of mass are useful for a number of situations in the mechanics course sequence, including the analysis of distributed forces, simplifying the analysis of gravity (which is itself a distributed force), and as an intermediate step in determining mass moments of inertia.</p>
+   	<p>Just as with areas, the location of the centroid (or center of mass) for a variety of common shapes can simply be looked up in tables, such as the table provided in the right column of this website. However, we will often need to determine the centroid or center mass for other shapes and to do this we will generally use one of two methods.</p>
+    <ol>
+      <li>We can use the <strong>first moment integral</strong> to determine the centroid or center of mass location.</li>
+      <li>We can use the <strong>method of composite parts</strong> along with centroid tables to determine the centroid or center of mass location.</li>
+    </ol>
+ 	<p>On this page we will only discuss the first method, as the method of composite parts is discussed in a later section. The tables used in the method of composite parts however are derived via the first moment integral, so both methods ultimately rely on first moment integrals.</p>
+    <h2>Finding the Centroid of a Volume via the First Moment Integral</h2>
+    <p>When we find the centroid of a three dimensional shape, we will be looking for x, y, and z coordinates (x&#772, y&#772, and z&#772). This will be the x, y, and z coordinates of the point that is the centroid of the shape.</p>
+    <p>Much like the centroid calculations we did with 2D shapes, we are looking to find the shape's average coordinate in each dimension. We do  this by summing up all the little bits of volume times the x, y, or z coordinate of that bit of volume and then dividing that sum by the total volume of the shape. Again we will use calculus to sum up an infinite  number of infinitely small volumes. Specifically this sum will be the <strong>first, rectangular, volume moment integral</strong> for the shape. Working in each of the three coordinate directions we wind up with the following three equations.</p>
+    <table class="equation">
+      <tbody>
+        <tr>
+          <td colspan="3">\[C=G=(\bar{x},\bar{y},\bar{z})\]</td>
+        </tr>
+		<tr>
+			<td>\[\bar{x}=\frac{\int_{V}(dV*x)}{V}\]</td>
+		  	<td>\[\bar{y}=\frac{\int_{V}(dV*y)}{V}\]</td>
+			<td>\[\bar{z}=\frac{\int_{V}(dV*z)}{V}\]</td>
+		</tr>
+      </tbody>
+	</table>
+    <p>With these new equations we have the variable dV rather than dA, because we are integrating over a volume rather than an area. This represents the rate of change of the volume as we move along an axis from one end to another. The rate of change of the volume at any point on the shape will be the <strong>cross sectional area</strong> that is perpendicular to that axis times the rate at which we are moving along that axis. Since cross sectional area may vary as we move along the axis, we will need to determine a formula for the cross sectional area at any point along that axis.</p>
+    <figure class="center"> <img alt="The center of mass" height="428" src="images/centerofmass.png" width="600">
+      <figcaption>The z coordinate of the center of mass.</figcaption>
+    </figure>
+    <p>Using the first moment integral and the equations shown above we can theoretically find the centroid of any volume as long as we can write an equation to describe the cross section area for each direction. For more complex shapes, however, determining these equations and then integrating these equations may become very time consuming. For these complex shapes, the method of composite parts or computer tools will most likely be much faster.</p>
+    <h2>Using Symmetry as a Shortcut</h2>
+    <p>Just as with 2D areas, shape symmetry can provide a shortcut in many centroid calculations. Remember that the centroid coordinate is the average x, y, and z coordinate for all the points in the shape. If the volume has a plane of symmetry, that means each point on one side of the line must have an equivalent point on the other side of the line. This means that the average value (aka. the centroid) must lie within that plane. If the volume has more than one plane of symmetry, then the centroid must exist at the intersection of those planes.</p>
+    <figure class="center"> <img alt="Centroids and Symmetry" src="images/symmetry.png" width="250" height="292">
+      <figcaption>If a volume has a plane of symmetry, then the centroid must lie somewhere in that plane. If the volume has more than one plane of symmetry, the centroid must exist at the intersection of those planes.</figcaption>
+    </figure>
+	<h2>Finding the Center of Mass for Non-Uniform Density Parts</h2>
+	<p>If a body has a non-uniform density, then the centroid of the volume and the center of mass will no longer be the same point. In these cases, we will be integrating with respect to mass, rather than integrating the volume. To do this, we will use something called a density function, which will provide the density (the mass per unit volume) in terms of x,y, and/or z location. In the end, we will also be dividing by total mass, rather than dividing by total volume. The generalized equations for the center of mass are shown in the equations below.</p>
+    <table class="equation">
+      <tbody>
+		<tr>
+          <td>\[C \neq G\]</td>
+        </tr>
+        <tr>
+          <td>\[G=(x_{G},y_{G},z_{G})\]</td>
+        </tr>
+		<tr>
+			<td>\[x_{G}=\frac{\int_{m}(dm*x)}{m}=\frac{\int_{V}(\rho(x,y,z)*dV*x)}{m}\]</td>
+		</tr>
+		<tr>
+			<td>\[y_{G}=\frac{\int_{m}(dm*y)}{m}=\frac{\int_{V}(\rho(x,y,z)*dV*y)}{m}\]</td>
+		</tr>
+		<tr>
+			<td>\[z_{G}=\frac{\int_{m}(dm*z)}{m}=\frac{\int_{V}(\rho(x,y,z)*dV*z)}{m}\]</td>
+		</tr>
+      </tbody>
+	</table>
+	<p>In instances of uniform density (where the density function did not vary with location and was therefore just a constant), the density constant could be moved outside of the integral. On the bottom, we could also write mass as density times volume, and the density terms on the top and bottom of the fraction would cancel out. That is why for uniform density parts, the centroid and center of mass will be the same point.</p>
+	<p>When we have a density function that is not a constant, we will have to come up with a mathematical function for the density in terms of x and/or y and/or z locations. If density varies along more than one axis, determining the function and then integrating it may become quite difficult, and computer modeling may be advisable in these situations.</p>
+	<figure class="center">
+	<img alt="Center of Mass for Continously Changing Density" height="400" src="images/centerofmass_nonuniform.png" width="600">
+	<figcaption>To find the center of mass of a body with a continuously varying density, we must have an equation to describe the density based on position.</figcaption>
+	</figure>
+	<p>Once you have the density function, you will multiply that by the relevant dV function as discussed earlier on the page and multiply it by the variable for the relevant axis. This entire function is integrated from left to right, bottom to top, or back to front, and then that quantity is divided by mass to find the location of the center of mass.</p>
+  </div>
+  <div id="sidebar"> <br/>
+    <h2>Video Lecture</h2>
+    <div class="video">
+      <iframe width="260" height="195" src="https://www.youtube.com/embed/cBiWKfBLEhk" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script language="javascript">displayResources();</script> 
+  </div>
+  <div id="workedproblems">
+    <h2>Worked Problems:</h2>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 1:</h3>
+        <p>The cone shown below is four inches tall and has a four inch diameter base. Find the x, y, and z coordinates of the centroid</p>
+        <img alt="Problem 1 Diagram" src="images/P1.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/IJHwNaOG4-s" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P1.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+    <div class="problem">
+      <div class="question">
+        <h3>Question 2:</h3>
+        <p>Find the y coordinate of the centroid for the tetrahedron shown in the image below. (The fourth vertex is at the origin) </p>
+        <img alt="Problem 2 Diagram" src="images/P2.png"> </div>
+      <div class="solution">
+        <h3>Solution:</h3>
+        <div class="video">
+          <iframe width="260" height="195" src="https://www.youtube.com/embed/itu_P4ysw9g" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br/>
+        <br/>
+        <div class="resource"> <a href="pdf/P2.pdf" target="_blank">PDF Solution</a> </div>
+      </div>
+    </div>
+	<div class="problem">
+		<div class="question">
+			<h3>Question 3:</h3>
+			<p>A water and ceramic slurry with a uniform density of 1100 kilograms per meter cubed enters a settling tank with a height of one meter and a diameter of one meter. After one hour in the tank, the density of the slurry at the top of the tank is measured to be 1000 kilograms per meter cubed and the density at the bottom of the tank is measured to be 1200 kilograms per meter cubed. Assume the density of the slurry varies linearly between the top and the bottom. How far has the center of mass of the slurry dropped between the initial conditions and the current state?</p>	
+			<img alt="Problem 3 Diagram" src="images/P3.png">
+			</div>
+		<div class="solution">
+			<h3>Solution:</h3>
+			<div class="video">
+				<iframe width="260" height="195" src="https://www.youtube.com/embed/BTyO2HolIHY" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<br/>
+			<br/>
+			<div class="resource">
+				<a href="pdf/P3.pdf" target="_blank">PDF Solution</a>
+			</div>
+		</div>
+		</div>
+  </div>
+  <script language="javascript">displayFooter();</script> 
+</div>
+</body>
+</html>
