@@ -1,0 +1,857 @@
+Mechanics Map
+Chapter 1 Newtonian Mechanics Basics
+1.1 Bodies
+- What is another name for an object or a collection of connected objects that we want to analyze as a whole in engineering mechanics?
+	- body *
+	- group
+	- hive
+	- herd
+- In engineering mechanics, a body that does not bend, stretch, twist, or otherwise deform in any way under loading is considered ____________.
+	- hard
+	- stiff
+	- rigid *
+	- integrated
+- In engineering mechanics, a body that will bend, stretch, twist, or otherwise deform under loading is considered _______________.
+	- loose
+	- deformable *
+	- simple
+	- integrated
+- In engineering mechanics, ______________ is a body where we assume all the mass is concentrated at a single point.
+	- particle *
+	- pin
+	- neuron
+	- note
+- A body is assumed to be a particle if the rotational motions are considered negligible relative to the ________________ motions.
+	- static
+	- dynamic
+	- kinematic
+	- translational *
+- In engineering mechanics, a body is said to be _______________ where the mass is spread out over an area or volume.
+	- thin
+	- extended *
+	- amorphous
+	- unattached
+- Which type of body will we not focus on in engineering mechanics?
+	- rigid
+	- extended
+	- deformable *
+	- particle
+- On which type of body will will strength of materials focus?
+	- rigid
+	- extended
+	- deformable *
+	- particle
+
+1.2 Position, Displacement, Velocity, Acceleration
+- Which of the following describes the location of the body in engineering mechanics?
+	- position *
+	- displacement
+	- velocity
+	- acceleration
+- What is considered the location of a rigid extended body?
+	- center of gravity
+	- average distance from the origin
+	- center of mass *
+	- top center of the body
+- Which of the following are necessary to describe the position of a body?
+	- distance and time
+	- origin and axes *
+	- direction and origin
+	- origin and time
+- Path ______________ means that the displacement is always the direct route from location one to location two.
+	- irrelevance
+	- ignorance
+	- anonimity
+	- independence *
+- Which of the following describes the change of position of a body between two points in time in engineering mechanics?
+	- new position
+	- displacement *
+	- velocity
+	- acceleration
+- Which of the following describes the change in position of the body divided by the change in time?
+	- position
+	- displacement
+	- velocity *
+	- acceleration
+- What is the average velocity of a displacement of 20 meters over the course of 10 seconds?
+	- 2 m/s
+	- 2 m
+	- 200 m
+	- 200 m/s
+- Which of the following describes the rate of change of velocity divided by the rate of change of time?
+	- position
+	- displacement
+	- velocity
+	- acceleration *
+- The magnitude of the velocity is also know as the ____________.
+	- speed *
+	- rate
+	- direction
+	- limit
+- Which of the following is the double derivative of the change of position over the change in time?
+	- position
+	- displacement
+	- velocity
+	- acceleration *
+- Displacement, velocity, and acceleration all have magnitude and direction, which make them ___________ quantities.
+	- scalar
+	- vector *
+	- double
+	- twin
+- Does acceleration occus when the direction of the velocity changes but the speed does not?
+	- yes *
+	- no
+
+1.3 Forces 
+- In which units is magnitude (strength) of force measured?
+	- kg * m / s
+	- kg * m^2 / s
+	- kg^2 * m / s
+	- kg * m / s^2 *
+- In equations, vectors are represented by a variable with an arrow ____________ .
+	- underneath
+	- to the left
+	- to the right
+	- over top *
+- Point forces have a single point of application and are modeled as a _______________.
+	- field of vectors
+	- field of magnitudes
+	- single vector *
+	- single magnitude
+- Distributed forces have a point of application that is distributed over a line, surface, or volume and are modeled as a _________________.
+	- field of vectors *
+	- field of magnitudes
+	- single vector 
+	- single magnitude
+
+1.4 Orientation, Angular Displacement, Angular Velocity, Angular Acceleration
+- In two-dimensional motion, how many angles are required to define orientation?
+	- one *
+	- two
+	- three
+	- four
+- In three-dimensional motion, how many angles are required to define orientation?
+	- one
+	- two
+	- three *
+	- four
+- Change in angular displacement divided by the change in time is known as ______________.
+	- average angular velocity *
+	- angular velocity at an instant
+	- average angular acceleration
+	- angular acceleration at an instant
+- What rule can be used to determine the direction of the angular velocity (or acceleration) vector along the axis of rotation?
+	- left hand
+	- right hand *
+	- two hands
+	- vector
+- Angular acceleration is the rate of change of angular velocity over time as well as _______________.
+	- the double derivative of position with respect to time
+	- the double derivative of velocity with respect to time
+	- the double derivative of orientation with respect to time *
+	- the double derivative of angular velocity with respect to time
+	
+1.5 Moments
+- A moment of a force is the tendancy of that force to cause a rotation of a body in the form of an _________________.
+	- angular velocity 
+	- opposing velocity
+	- angular acceleration *
+	- opposing velocity
+- What is a set of forces that will exert a moment without exerting a net force?
+	- a pair
+	- a couple *
+	- a net zero
+	- a pure force
+- The magnitude of the moment is measured as _______________.
+	- force * time
+	- force / time
+	- force / distance
+	- force * distance *
+- What is the magnitude of the moment produced by a force of 5N at a distance of 10m?
+	- 0.5 N/m
+	- 500 Nm^2
+	- 50 Nm
+	- 2 m/N
+- Which of the following are units of moment?
+	- N * m *
+	- N * m^2
+	- N * s
+	- N / s
+- Which of the following represents a positive moment?
+	- counter-clockwise *
+	- clockwise
+	- up
+	- down
+- Does the point of application affect the magnitude and direction of a moment?
+	- yes * 
+	- no
+
+1.6 Free Body Diagrams
+- What is a free body diagram?
+	- a simplified diagrammed version of the equations of equilibrium and motion
+	- a simplified version of a physcial system that engineers use as a starting point for analysis *
+	- a detailed prototype of a physical system
+	- a free version of an expensive diagram of a body
+- Where and in which direction are gravitational forces typically modeled on a free body diagram?
+	- down at the center of mass of the body *
+	- up at the center of mass of the body
+	- down at the starting point of the body
+	- up at the starting point of the body
+- What is the name of the force that prevents two bodies from occupying the same place at the same time? 
+On a free body diagram, this force is shown perpendicular to the surfaces in contact at the point of contact.
+	- prevention force 
+	- common force
+	- perpendicular force
+	- normal force *
+- Which of the following types of connection allows for rotation and movement along the surface but prevents motion vertically?
+	- roller *
+	- pin 
+	- fixed
+- Which of the following types of connection allows for rotation but prevents motion vertically and horizontally?
+	- roller 
+	- pin *
+	- fixed
+- Which of the following types of connection prevents rotation and motion vertically and horizontally?
+	- roller 
+	- pin 
+	- fixed *
+- How is a friction force Ff represented on a free body diagram for a smooth surface?
+	- perpendicular to the surface
+	- parallel to the surface
+	- at a specified angle to the surface
+	- none *
+- How is a friction force Ff represented on a free body diagram for a rough surface?
+	- perpendicular to the surface
+	- parallel to the surface *
+	- at a specified angle to the surface
+	- none 
+- What is the typical designation for the force and in which direction will cables, ropes, or wires exert on a body?
+	- tension T and in the direction of the cable away from the body *
+	- tension T and in the direction of the cable toward the body
+	- force Ft and in the direction of the cable away from the body
+	- force Ft and in the direction of the cable toward the body
+
+1.7 Newton's First Law
+- Newton's First Law is also know as the _____________.
+	- law of intertia *
+	- law of motion
+	- law of a body
+	- law of forces 
+
+1.8 Newton's Second Law
+- Which equation exemplifies Newton's Second Law?
+	- F = m * d
+	- F = m^2 * d
+	- F = m * a *
+	- F = m^2 * d
+- In Newton's Second Law, which of the following are vector quantities?
+	- force and acceleration *
+	- force and mass
+	- mass and acceleration
+	- force, mass, and acceleration
+- In the rotational version of Newton's Second Law, net moment exerted on a body is equal to ______________.
+	- the sum of the mass moment of inertia and the angular acceleration
+	- the product of the mass moment of inertia and the angular acceleration *
+	- the sum of the mass moment of inertia and the angular velocity
+	- the product of the mass moment of inertia and the angular velocity
+
+1.9 Newton's Third Law
+- When Newton said "For every action there is an equal and opposite reaction," he meant ____________ when he said "action."
+	- mass
+	- velocity
+	- acceleration
+	- force *
+
+Chapter 2 Static Equilibrium in Concurrent Force Systems
+2.1 Static Equilibrium
+- An object in equilibrium is not ______________. 
+	- accelerating *
+	- moving
+	- maintaining direction
+	- maintaining speed
+
+2.3 Principle of Transmissibility
+- The Principle of Transmissibility states that the point of application of a force can be moved _______________.
+	- perpendicular to its line of action
+	- anywhere along its line of action *
+	- parallel to its line of action
+	- rotated along its line of action
+- If two external forces have the same magnitude and direction but different lines of action, will they produce the same result?
+	- yes
+	- no *
+- Can the Principle of Transmissibility be applied to internal forces (stresses)?
+	- yes
+	- no *
+
+2.4 Concurrent Forces
+- A set of forces are concurrent if and only if the lines of action of ________________.
+	- more than one of the forces come together at one point
+	- more than one of the forces diverge
+	- all the forces all come together at one point *
+	- all the forces diverge
+- If a set of forces is concurrent about a point, will the forces cause a moment about that point?
+	- yes
+	- no *
+- If there are no moments exerted on a body, we can treat the body as ___________ at that point in the system analysis.
+	- a particle *
+	- an extended body
+	- a concurrent force
+	- a divergent force
+- In particle analysis, we must balance _____________.
+	- the forces and the moments
+	- the moments only (don't need to consider forces)
+	- the forces only (don't need to consider moments) *
+
+2.5 Equilibrium Analysis for Concurrent Force Systems
+- If a body is in static equilibrium, the sum of the forces acting on that body must be equal to _____________ .
+	- the sum of the moments
+	- the product of the accelerations
+	- the sum of the accelerations
+	- zero 
+- Equations summing the forces in the x, y, and z directions, each equaling zero are know as the _____________ equations.
+	- equilibrium *
+	- static
+	- acceleration
+	- concurrent
+- When there are more unknowns than equations, the problem is ______________.
+	- statically determinate
+	- statically indeterminate *
+	- dynamically determinate
+	- dynamically indeterminate
+
+Chapter 3 Static Equilibrium in Rigid Body Systems
+3.1 Moment of a Force about a Point (Scalar Calculation)
+- The moment of a force is the force's tendency to cause what?
+	- sliding
+	- friction
+	- rotation *
+	- constant velocity
+- Which of the following represents a positive moment?
+	- counter-clockwise *
+	- clockwise
+	- up
+	- down
+- To calculate moment in two dimensions, which distance is multiplied by the applied force?
+	- perpendicular distance from the beginning to the end of the force
+	- perpendicular distance from the force to the point about which we are taking the moment *
+	- parallel distance between the beginning and the end of the force
+	- parallel distance between the force and the surface of application 
+- The perpendicular displacement vector in the moment equation goes ___________. ****** too early for this?
+	- from the point about which we are taking to the moment to the point of application of the force ***** (confirm positive direction)
+	- from the point of application of the force to the point about which we are taking the moment
+	- along the length of the force
+	- along the length of the moment
+- In three dimensions, the axis of rotation of a moment will be a line traveling through the point about which we are taking the moment that is _________.
+	- parallel to the force vector and perpendicular to the displacement vector
+	- perpendicular to the force vector and parallel to the displacement vector
+	- parallel to both the force vector and the displacement vector
+	- perpendicular to both the force vector and the displacement vector *
+- Can we use the right-hand rule to find the direction of the moment vector?
+	- yes *
+	- no
+- What is the magnitude of the moment created by a 14N force about a point with a perpendicular distance of 7m between the point and the force?  
+Assume a positive moment is created.
+	- 2 N/m
+	- 98 Nm *
+	- 686 Nm^2
+	- 1372 N^2 m
+	
+3.2 Varignon's Theorem
+- Varignon's Theorem states "with two or more concurrent forces, the sum of the moments that each force creates around a point will be _____________."
+	- equal to the moment created by the difference between those forces about the same point 
+	- equal to the moment created by the sum of those forces about the same point *
+	- a fixed percentage of the moment created by the difference between those forces about the same point 
+	- a fixed percentage of the moment created by the sum of those forces about the same point 
+
+3.3 Couples
+- What is a couple?
+	- a set of equal and opposite moments that exerts a net force on an object but no net moment
+	- a set of equal and opposite moments that exerts a net force on an object and an equal moment
+	- a set of equal and opposite forces that exerts a net moment on an object but no net force *
+	- a set of equal and opposite forces that exerts a net moment on an object and an equal force
+- Is the moment exerted by a couple indpendent of the location about which you're taking moment?
+	- yes *
+	- no
+
+3.4 Moment about a Point (Vector Calculations)
+- In the cross product method for calculating moment, which of the following are vectors?
+	- M, r, and F *
+	- r and F
+	- M and F
+	- no vectors
+- Is the cross product of the moment communicative (order does not matter)?
+	- yes
+	- no *
+
+3.5 Moment of a Force about an Axis
+- Does the dot product result in a singular scalar value?
+	- yes *
+	- no
+- To find the moment about an axis, we use the cross product to calculate the moment then we take the dot product of the ____________ along the axis and 
+the moment vector just calculated.
+	- unit magnitude
+	- unit distance
+	- unit vector *
+	- unit moment
+
+3.6 Rigid Body Equilibrium
+- Which might a rigid body have?
+	- linear acceleration
+	- angular acceleration
+	- both linear and angular acceleration *
+	- neither linear nor angular acceleration
+- Which does a rigid body in static equilibrium have?
+	- sum of the forces on the body must equal zero
+	- sum of the moments on the body must equal zero
+	- sum of the moments on the body must equal the sum of the forces on the body
+	- both the sum of the forces and the sum of the moments on the body must equal zero *
+- In 2D, how many force and moment equations do we have for a rigid body in static equilibrium?
+	- 3 *
+	- 4
+	- 5
+	- 6
+- In 3D, how many force and moment equations do we have for a rigid body in static equilibrium?
+	- 3 
+	- 4
+	- 5
+	- 6 *
+
+Chapter 4 Statically Equivalent Systems
+4.1 Statically Equivalent Systems
+- Which of the following is true if two sets of forces are considered statically equivalent?
+	- the sets of forces cause the same set of reaction forces and moments on a body *
+	- the sets of forces cause only the same set of moments on a body
+	- the sets of forces are equal 
+	- the sets of forces equal the reaction moments
+
+4.2 Resolution of a Force into a Force and a Couple
+- Of what does an equivalent force couple system consist?
+	- multiple forces and a single pure moment (couple)
+	- a single force and a single pure moment (couple) *
+	- a single force and multiple pure moments (couples)
+	- multiple forces and multiple pure moments (couples)
+
+4.3 Equivalent Force Couple System
+- The force in the equivalent couple system will always be _________________.
+	- the sum of all original force vectors' magnitude and direction *
+	- equal magnitude and opposite direction of the largest original force
+	- equal magnitude and opposite direction of the smallest original force
+	- equal magnitude and same direction of the largest original force
+- The moment in the equivalent couple system will include __________________.
+	- the sum of the moments exerted by each original force
+	- the pure moments exerted directly on the body
+	- both the sum of the moments exerted by each each original force and the pure moments exerted directly on the body *
+	- the difference between the moments exerted by each original force and the pure moments exerted directly on the body
+
+4.4 Distributed Forces
+- In what units are a surface force measured?
+	- Nm
+	- Nm^2
+	- N/m^2 *
+	- N/m^3
+- In what units are a body force measured?	
+	- Nm
+	- Nm^2
+	- N/m^2 
+	- N/m^3 *
+
+4.5 Equivalent Point Load (via Integration)
+- When using integration for distributed forces in beams, what is the mathematical formula needed that relates the magnitude of force to the position?
+	- distance function
+	- position function
+	- force function * 
+	- beam function
+- What can be used to find the magnitude of the equivalent point load as the total area under the force function?
+	- summation
+	- division
+	- derivation
+	- integration *
+- The position of the equivalent point load using integration is equal to _______________.
+	- the integral of the product of the force function and the moment arm distance divided by the equivalent point load *
+	- the integral of the force function divided by the equivalent point load
+	- the equivalent point load divided by the integral of the product of the force function and the moment arm distance
+	- the equivalent point load divided by the integral of the force function 
+- For a surface force problem, the magnitude of the equivalent point load is equal to the ______________ under the force function.
+	- area
+	- volume *
+	- weight
+	- pressure
+
+4.6 Equivalent Point Load (via Composite Parts)
+- Where does the equivalent load act when analyzing a force function using composite parts?
+	- center
+	- centroid *
+	- maximum distance from the origin
+	- perpendicular distance from the the origin
+
+Chapter 5 Engineering Structures
+5.1 Structures
+- What are the forces called that different parts of a structure exert on each other?
+	- external forces
+	- inherent forces
+	- internal forces *
+	- initial forces
+- What is a truss?
+	- rigid assembly made of single-force members
+	- rigid assembly made of two-force members *
+	- deformable assembly made of single-force members
+	- deformable assembly made of two-force members
+- If a structure includes one or more bodies that are not two-force members, what kind of structure is it?
+	- truss
+	- support structure
+	- hanger
+	- frame or machine *
+- What does it mean that a truss is independently rigid?
+	- all of the parts of the truss cannot move relative to one another *
+	- all of the parts of the truss can move relative to one another
+	- some parts of the truss cannot move relative to one another
+	- some parts of the truss can move relative to one another
+
+5.2 Two-force Members
+- A two-force member is a body that has ________________.
+	- forces exerted at only two points and more than two moments exerted on it
+	- forces exerted at only two points and two moments exerted on it
+	- forces exerted at only two points and only one moment exerted on it
+	- forces exerted at only two points and no moments exerted on it *
+- If a structure is in equilibrium, are all members in equilibrium?
+	- yes *
+	- no
+- A two-force member cannot be in which of the following: 
+	- tension
+	- compression
+	- torsion *
+- A two-force member will have _______________ forces acting on it.
+	- equal, opposite, and perpendicular
+	- equal, opposite, and colinear * 
+	- unequal, opposite, and perpendicular
+	- unequal, opposite, and colinear
+- The line of action of the two forces in a two-force member will always be ________________.
+	- a line perpendicular to the two connection points
+	- a line parallel to the two connection points
+	- a line directly between the two connection points *
+	- a line circumventing the two connection points
+
+5.3 Trusses
+- A plane truss wil be analyzed in _______________ dimensions.
+	- one
+	- two *
+	- three
+- A space truss will be analyzed in __________________ dimensions.
+	- one
+	- two
+	- three *
+- In the method of joints for analyzing a truss, what type of connection is modeled at each connection points between members?
+	- roller
+	- pin *
+	- fixed
+	- none
+- Which method is faster and easier for solving for all the unknown forces in a truss?
+	- joints *
+	- sections
+	- triangles
+	- linear
+- Which method is better suited to solving for forces in specific members without solving for all the unknown forces in a truss?
+	- joints 
+	- sections *
+	- triangles
+	- linear
+
+5.4 Method of Joints
+- What is the first step in the method of joints for solving a truss?
+	- draw a free body diagram
+	- identify the members in the truss in tension or compression
+	- label the members and joints in the truss *
+	- write out the equilibrium equations for each joint
+- Which of the following is NOT an assumption of the method of joints for solving a truss?
+	- the structure is in dynamic equilibrium *
+	- the members in the truss are connected to one another with pin joints
+	- the pin in each pin joint is in static equilibrium
+	- each member connected to a pin will push or pull along the line of action
+
+5.5 Method of Sections
+- What is the first step in the method of sections for solving a truss?
+	- draw a free body diagram
+	- identify the members in the truss in tension or compression
+	- label the members and joints in the truss *
+	- write out the equilibrium equations for each section
+- Which of the following is NOT an assumption of the method of sections for solving a truss?
+	- the structure is in static equilibrium
+	- when the structure is cut into sections, each section is in dynamic equilibrium *
+	- when the structure is cut into sections, the internal forces of the members can be analyzed
+- In the method of sections for solving a truss, which should be solved first?
+	- external reacting forces *
+	- internal forces in each member
+- In the method of sections for solving a truss, must the line cut through the truss to create two sections be straight?
+	- yes
+	- no *
+- Is it possible to use the method of sections for solving a truss, more than once in a single truss?
+	- yes *
+	- no
+
+5.6 Frames and Machines
+- What is the difference between a frame and a machine?
+	- a frame is a rigid structure; a machine has parts that can move relative to one another *
+	- a machine is a rigid structure; a frame has parts that can move relative to one another
+	- a frame has all two force members; a machine does not
+	- a machine has all two force members; a frame does not
+
+5.7 Analysis of Frames and Machines
+- When analyzing frames and machines, which of the following states that when one member exerts a force on another member, the second member will exert 
+an equal and opposite force back on the first?
+	- Newton's First Law
+	- Newton's Second Law
+	- Newton's Third Law *
+
+Chapter 6 Internal Forces
+6.1 Internal Forces
+- Which type of internal forces act parallel to the cross section and will tend to deform the body along the cross section in the direction of the force?
+	- normal
+	- shear * 
+	- torsional
+	- bending
+- Which type of internal moment is parallel to the cross section and will tend to bend the body?
+	- normal
+	- shear 
+	- torsional
+	- bending *
+- Which type of internal forces act perpendicular to the cross section and will tend to stretch or compress the body?
+	- normal *
+	- shear  
+	- torsional
+	- bending
+- Which type of internal moment is perpendicular to the cross section and will tend to twist the body?
+	- normal
+	- shear  
+	- torsional *
+	- bending
+
+6.2 Finding Internal Forces via Equilibrium Analysis
+- In two dimensional problems, how many internal unknowns will there be in equilibrium analysis?
+	- one unknown force and one unknown moment 
+	- two unknown forces and one unknown moment *
+	- one unknown force and two unknown moments 
+	- two unknown forces and two unknown moments 
+- In three dimensional problems, how many internal unknowns will there be in equilibrium analysis?
+	- two unknown forces and two unknown moments 
+	- three unknown forces and two unknown moments 
+	- two unknown forces and three unknown moments 
+	- three unknown forces and three unknown moments *
+
+6.3 Axial Force Diagrams and Torque Diagrams
+
+
+Chapter 7 Friction
+7.1 Dry Friction
+- Which type of friction will be equal in magnitude and opposite in direction of a pushing force on an object that is not moving?
+	- static *
+	- kinetic 
+	- normal
+	- gravitational
+- What is the name of the point just before the type of friction on an object switches from static to kinetic?
+	- upending motion
+	- upending station
+	- impending motion *
+	- impending station
+- Which type of friction occurs beyond the point of impending motion of an object?
+	- static
+	- kinetic *
+	- normal
+	- gravitational
+- Will the kinetic coefficient of friction almost always be less than the static coefficient of friction?
+	- yes *
+	- no
+- The force of friction is equal to the product of a coefficient of friction and the _______________.
+	- gravitational force 
+	- normal force *
+	- applied force
+	- parallel force
+
+7.2 Slipping vs. Tipping
+- What usually occurs when the pushing force on an object exceeds the maximum static friction force?
+	- slipping *
+	- tipping
+	- both slipping and tipping
+	- neither slipping nor tipping
+- What usually occurs when the pushing force on an object creates an exceedingly strong couple with the friction force?
+	- slipping 
+	- tipping *
+	- both slipping and tipping
+	- neither slipping nor tipping
+- When will an object slide across a surface?
+	- when the pushing force exceeds the maximum kinetic friction force
+	- when the maximum kinetic friction force exceeds the pushing force
+	- when the pushing force exceeds the maximum static friction force *
+	- when the maximum static friction force exceeds the pushing force
+- Which of the following is equal to the maximum static friction force?
+	- the product of the static coefficient of friction and the gravitational force on the object 
+	- the product of the static coefficient of friction and the normal force on the object *
+	- the product of the kinetic coefficient of friction and the normal force on the object 
+	- the product of the kinetic coefficient of friction and the gravitational force on the object 
+- When will tipping (rotating) of an object occur?
+	- when the moment due to the gravity and friction forces exceeds the moment due to the pushing and normal forces 
+	- when the moment due to the pushing and normal forces exceeds the moment due to the gravity and friction forces 
+	- when the moment due to the gravity and normal forces exceeds the moment due to the pushing and friction forces 
+	- when the moment due to the pushing and friction forces exceeds the moment due to the gravity and normal forces *
+
+7.3 Wedges
+- What is the positive and intended effect of a wedge?
+	- a small pushing force will create very large normal forces *
+	- a small gravitational force will create very large normal forces 
+	- a small normal force will create a very large gravitational force 
+	- a small normal force will create a very large pushing force
+- What type of forces are created by a wedge that will reduce the effectiveness of the wedge?
+	- pushing
+	- friction *
+	- gravitational
+	- normal
+- What is the first step in analyzing a wedge system?
+	- set up the equilibrium equations
+	- assume zero kinetic friction
+	- assume all bodies are not in equilibrium
+	- draw a free body diagram *
+
+7.4 Power Screws
+- How can we analyze a power screw system by looking at it in two dimensions?
+	- "unwrapping" the ramp from the shaft *
+	- "unwrapping" the shaft from the ramp 
+	- "wrapping" the ramp around the shaft
+	- "wrapping" the shaft around the ramp
+- What is the pitch of the power screw?
+	- the distance between the intersection of two threads 
+	- the distance between the intersection of two shafts
+	- the distance between two adjacent threads *
+	- the distance between two adjacent shafts
+- An inverse trigonometric function can be used to find the power screw lead angle given which of the following? 
+	- the thread diameter and the pitch
+	- the shaft diameter and the pitch or threads per inch *
+	- the thread length and the pitch
+	- the shaft length and the pitch or threads per inch 
+- When the screw is pushing a load at a constant rate, what can be assumed?
+	- the nut is not in equilibrium and the nut is stationary
+	- the nut is not in equilibrium and the nut is sliding
+	- the nut is in equilibrium and the nut is stationary
+	- the nut is in equilibrium and the nut is sliding *
+- Which type of friction is assumed when analyzing a power screw system?
+	- static
+	- kinetic * 
+	- normal
+	- gravitational
+- In the case of a self locking screw, what is gone from the free body diagram (relative to the free body diagram of a power screw)?
+	- the pushing force *
+	- the normal force
+	- the loading force
+	- the gravitational force
+- What changes about the force of friction in a self locking screw relative to the force of friction for a power screw?
+	- the force of friction is gone
+	- the force of friction doubles
+	- the force of friction reverses direction *
+	- the force of friction becomes perpendicular to the surface
+- What is the self locking angle?
+	- the angle at which the nut would begin to stop slipping
+	- the angle at which the nut would begin to slip *
+	- the angle at which the nut would continuously slip
+	- the angle at which the normal force equals the loading force
+- Which type of friction is assumed when finding the self locking angle?
+	- static *
+	- kinetic 
+	- normal
+	- gravitational
+- What is the equation for the self locking angle?
+	- tangent of the coefficient of static friction
+	- inverse tangent of the coefficient of static friction *
+	- tangent of the coefficient of kinetic friction
+	- inverse tangent of the coefficient of kinetic friction 
+- Will a screw system with a lead angle larger than the self locking angle be self locking?
+	- yes
+	- no *
+
+7.5 Bearing Friction
+- If climbing of the shaft up the side of the bearing is negligible, which of the following is true?
+	- the normal force of the bearing on the shaft will be equal and opposite to the loading force of the shaft on the bearing *
+	- the normal force of the bearing on the shaft will be greater than the loading force of the shaft on the bearing
+	- the normal force of the bearing on the shaft will be less than the loading force of the shaft on the bearing
+	- the normal force of the bearing on the shaft will be removed by the loading force of the shaft on the bearing
+- If the shaft is rotating relative to the bearing and climbing in the bearing is negligible, which of the following is true?
+	- the force of friction is equal to the product of the coefficient of kinetic friction and the normal force of the bearing on the shaft *
+	- the force of friction is equal to the product of the coefficient of static friction and the normal force of the bearing on the shaft	
+	- the force of friction is equal to the ratio of the coefficient of kinetic friction and the normal force of the bearing on the shaft
+	- the force of friction is equal to the ratio of the coefficient of static friction and the normal force of the bearing on the shaft
+- Lubricating a bearing will ___________________.
+	- increase the coefficients of friction
+	- decrease the coefficients of friction *
+	- not impact the coefficients of friction
+
+7.6 Disc Friction
+- In the analysis of disc friction with a hollow circular contact area, which of the following are true?
+	- the same friction force and the same moment due to the friction force are exerted at all points 
+	- the moment due to the friction force is the same at all points but the friction force is not the same at all points
+	- the same friction force is exerted at all points but the moment exerted by the friction force is not the same at all points *
+	- neither the friction force nor the moment exerted by the friction force are the same at all points
+- In the analysis of disc friction with a solid circular contact area, which of the following simplifies the formula for the moment exerted by the friction
+forces from the formula for a hollow circular contact area moment?
+	- set the inner radius to zero *
+	- set the outer radius to zero
+	- set the coefficient of friction to one
+	- set the coefficient of friction to zero
+- In the analysis of disc friction with a circular arc, which of the following is true?
+	- the moment formula is that same as that for the solid circular contact area
+	- the moment formula is the same as that for the hollow circular contact area *
+	- the moment formula is a simplified version of the moment formula for the solid circular contact area
+	- the moment forumal is a simplified version of the moment formula for the hollow circular contact area
+
+7.7 Belt Friction
+- With equal tensions on both sides of a belt, which type of normal force exists between the belt and the surface?
+	- uniform 
+	- non-uniform *
+- What type of force appears as a result of unequal tensions on the sides of a belt?
+	- gravitational
+	- normal
+	- friction *
+	- pushing
+- In which type of belt does the belt or cable fit into a groove?
+	- Y belt
+	- V belt *
+	- grooved belt
+	- divot belt
+- For a flat belt, on which of the following does the maximum tension force NOT depend?
+	- the smaller tension force
+	- coefficient of friction between the surface and the belt
+	- angle of contact in radians
+	- the constant pi *
+- When will a flat belt start to slip?
+	- when T1 equals T2
+	- when T2 is less than the product of T1 and Euler's constant raised to the product of the coefficient of friction and the angle of contact 
+	- when T2 is equalt to the product of T1 and Euler's constant raised to the product of the coefficient of friction and the angle of contact
+	- when T2 is greater than the product of T1 and Euler's constant raised to the product of the coefficient of friction and the angle of contact *
+- Which of the following is true of an effective V belt?	
+	- the belt must be in contact with the sides of the groove but not the base of the groove *
+	- the belt must be in contact with the base of the groove but not the side of the groove
+	- the belt must be in contact with both the sides of the groove and the base of the groove
+	- the belt must be in contact with neither the sides of the groove nor the base of the groove
+- Which part of the equation to calculate the maximum tension force of a V belt must be enhanced to account for the groove?
+	- the smaller tension force
+	- the coefficient of friction *
+	- Euler's constant
+	- the angle of contact
+- How is the maximum tension force for a V belt affected by steeper sides of the groove?
+	- decrease
+	- increase *
+	- no change
+- In a belt driven system, what is the tension in the belt when both pulleys are stationary?
+	- resting tension *
+	- stationary tension
+	- starting tension
+	- zero tension
+- Which tension value is used to calculated the maximum input or output torque of a belt driven system?
+	- the maximum tension
+	- the resting testing
+	- the sum of the maximum and resting tensions
+	- the difference between the maximum and resting tensions *
+- What is the difference in the equations for maximum input torque and maximum output torque before slipping in a belt driven system?
+	- the radius *
+	- the maximum tension 
+	- the resting tension
+	- the groove angle
+- Will the maximum power of a drive belt system be the same at the input and the output?
+	- yes *
+	- no

@@ -1,0 +1,348 @@
+emch 212 Particle Dynamics
+Chapter 8 Particle Kinematics
+8.1 One Dimensional Continuous Motion
+- Which of the following is the rate of change of position over time?
+	- origin
+	- displacement
+	- velocity *
+	- acceleration
+- Which of the following can be used to find the velocity equation v(t)?
+	- derivative of the position equation x(t) *
+	- integral of the position equation x(t)
+	- second derivative of the position equation x(t)
+	- double integral of the position equation x(t)
+- Can speed be negative?
+	- yes
+	- no *
+- Which of the following is the rate of change of velocity over time?
+	- origin
+	- displacement
+	- velocity 
+	- acceleration *
+- Which of the following can be used to find the acceleration equation a(t)?
+	- derivative of the position equation x(t)
+	- integral of the position equation x(t)
+	- derivative of the velocity equation v(t) *
+	- integral of the velocity equation v(t)
+- Which of the following are vectors (have both magnitude and direction)?
+	- velocity is a vector but acceleration is not
+	- acceleration is a vector but velocity is not
+	- both velocity and acceleration are vectors
+	- neither velocity nor acceleration are vectors
+- Which of the following can be used to find the velocity equation v(t)?
+	- integral of the position equation x(t) 
+	- double integral of the position equation x(t)
+	- integral of the acceleration equation a(t) *
+	- double integral of the acceleration equation a(t)
+- Which of the following can be used to find the position equation x(t)?
+	- derivative of the velocity equation v(t) 
+	- double integral of the velocity equation v(t)
+	- integral of the acceleration equation a(t) 
+	- double integral of the acceleration equation a(t) *
+- When taking the integral of the acceleration function to get the velocity equation, what does the constant of integration represent?
+	- initial position
+	- initial velocity *
+	- final position
+	- final velocity
+- When taking the integral of the velocity function to get the position equation, what does the constant of integration represent?
+	- initial position *
+	- initial velocity 
+	- final position
+	- final velocity
+
+8.2 One Dimensional Non-Continuous Motion
+- When taking the integral of the acceleration function to get the velocity equation in some time frame after the first frame of non-continuous motion, 
+what can be used to find the constant of integration?
+	- the calculated position at the time at the end of the previous frame 
+	- the calculated velocity at the time at the end of the previous frame *
+	- the calculated position at the time at the end of the next frame
+	- the calculated velocity at the time at the end of the next frame
+- When taking the integral of the velocity function to get the position equation in some time frame after the first frame of non-continuous motion, what 
+can be used to find the constant of integration?
+	- the calculated position at the time at the end of the previous frame *
+	- the calculated velocity at the time at the end of the previous frame 
+	- the calculated position at the time at the end of the next frame
+	- the calculated velocity at the time at the end of the next frame
+
+8.3 Two Dimensional Kinematics in Rectangular Coordinate Systems
+- The rectangular coordinate system is most useful when _________________.
+	- the axes remain fixed to an origin and the body being analyzed moves relative to the fixed axes *
+	- the body being analyzed remains fixed relative to an origin and the axes move relative to the origin
+	- both the axes and the body being analyzed change direction over time
+- The rectangular coordinate system is most useful when _________________. 
+	- all forces maintain a constant direction *
+	- some forces maintain a constant direction and some forces change direction over time
+	- all forces change direction over time
+- Derivatives and integrals can be used to move between position, velocity, and acceleration equations in 2D as in 1D.
+	- yes *
+	- no
+
+8.4 Two Dimensional Kinematics in Normal-Tangential Coordinate Systems
+- Where is the origin in the normal-tangential coordinate system?
+	- at the intersection of the x and y axes
+	- at the body in motion *
+	- there is no origin
+	- the origin is everything everywhere all at once
+- What is the tangential direction in the normal-tangential coordinate system?
+	- direction of the current velocity vector of the body at a moment in time *
+	- direction of the current acceleration vector of the body at a moment in time
+	- direction of the current velocity vector of the body averaged over a period of time 
+	- direction of the current acceleration vector of the body averaged over a period of time 
+- How is the normal direction related to the tangential direction in the normal-tangential coordinate system?
+	- 90 degrees clockwise from the tangential direction
+	- 90 degrees counter clockwise from the tangential direction *
+	- 180 degrees clockwise from the tangential direction
+	- 180 degrees counter clockwise from the tangential direction
+- Which of the following is an important distinction between the rectangular and normal-tangential coordinate systems?
+	- the rectangular system has an origin and the normal-tangential does not
+	- the rectangular system has two axes and the normal-tangential does not
+	- the rectangular system has fixed axes and the normal-tangential does not *
+	- the rectangular system has the origin at the body in motion and the normal-tangential does not
+- Which of the following is true of the position equation in the normal-tangential coordinate system?
+	- the coefficient of the tangential unit vector is zero
+	- the coefficient of the normal unit vector is zero
+	- the coefficients of both the tangential and normal unit vectors are zero *
+	- the coefficients of neither the tangential nor normal unit vectors are zero
+- Which of the following is true of the velocity in the normal-tangential coordinate system?
+	- there is velocity in both the normal and the tangential direction
+	- there is no velocity in the tangential direction
+	- there is no velocity in the normal direction *
+	- there is no velocity in either the normal or tangential directions
+- Can acceleration in the normal-tangential coordinate system be transformed to the rectangular coordinate system?
+	- yes *
+	- no
+- If a particle is moving along a curved path, the rate at which it is turning is equal to which of the following?
+	- velocity of the particle divided by the radius of the path at that point *
+	- velocity of the particle divided by the square of the radius of the path at that point
+	- the radius of the path at that point divided by the velocity of the particle 
+	- the square of the radius of the path at that point divided by the velocity of the particle 
+
+8.5 Two Dimensional Kinematics in Polar Coordinate Systems
+- Where is the origin in the polar coordinate system?
+	- at the intersection of the distance and angle axes *
+	- at the body in motion 
+	- there is no origin
+	- the origin is everything everywhere all at once
+- Is the origin fixed in the polar coordinate system?	
+	- yes *
+	- no
+- Which of the following is true of the r-axis in the polar coordinate system?
+	- it is always parallel to the x-axis
+	- it is always parallel to the y-axis
+	- it is always parallel to the theta axis
+	- it is always pointed toward the body in the system *
+- Which of the following is true of the theta axis in the polar coordinate system?
+	- it is 90 degrees clockwise from the r-axis
+	- it is 90 degrees counter clockwise from the r-axis *
+	- it is 180 degrees clockwise from the r-axis
+	- it is 180 degrees counter clockwise from the r-axis
+- Which of the following is true of the position equation in the polar coordinate system?
+	- the coefficient of the u-r unit vector is zero
+	- the coefficient of the u-theta unit vector is zero *
+	- the coefficients of both the u-r and u-theta unit vectors are zero 
+	- the coefficients of neither the u-r nor u-theta unit vectors are zero
+
+8.6 Dependent Motion in Particles
+- Which of the following describes a constraint equation of the position as needed for analyzing dependent motion of two bodies?
+	- it is a geometric relationship that will only be true at the start of the motion
+	- it is a geometric relationship that will remain true over the course of the motion *
+	- it is a geometric relationship that will only be true at the completion of the motion
+	- it is a geometric relationship that will double by the completion of the motion
+- When analyzing dependent motion of two bodies, what can be done to the constraint equation for position to find the constraint equation for velocity?
+	- take the derivative of the position constraint equation *
+	- take the second derivative of the position constraint equation
+	- take the integral of the position constraint equation
+	- take the double integral of the position constraint equation
+- When analyzing dependent motion of two bodies, what can be done to the constraint equation for velocity to find the constraint equation for acceleration?
+	- take the derivative of the velocity constraint equation *
+	- take the second derivative of the velocity constraint equation
+	- take the integral of the velocity constraint equation
+	- take the double integral of the velocity constraint equation
+
+8.7 Relative Motion in Particles
+- How are subscripts formatted to describe the r vector in relative motion equations?
+	- r (B/A) is the distance from A to B, point B is being observed from point A *
+	- r (B/A) is the distance from A to B, point A is being observed from point B
+	- r (B/A) is the distance from B to A, point B is being observed from point A
+	- r (B/A) is the distance from B to A, point A is being observed from point B
+- When analyzing relative motion of two bodies, what can be done to the position equation to find the velocity equation?
+	- take the derivative of the position equation *
+	- take the second derivative of the position equation
+	- take the integral of the position equation
+	- take the double integral of the position equation
+- When analyzing relative motion of two bodies, what can be done to the position equation to find the acceleration equation?
+	- take the derivative of the position equation 
+	- take the second derivative of the position equation *
+	- take the integral of the position equation
+	- take the double integral of the position equation
+- When analyzing relative motion of two bodies in two dimensions, which of the following desribes the values needed for the position equation?
+	- scalar
+	- vector *
+	- absolute
+	- double
+
+Chapter 9 Newton's Second Law for Particles 
+9.1 The Equation of Motion in One Dimension
+- Which of the following is the basis for kinetics, the branch of dynamics that deals with the relationship between motion and the forces that cause 
+the motion?
+	- Newton's First Law
+	- Newton's Second Law *
+	- Newton's Third Law
+- Which of the following are the kinematics equations?
+	- products of mass and acceleration relating to forces
+	- positions, velocities, and accelerations *
+	- products of pressure and volume relating to temperature
+	- exponential growth and decay
+
+9.2 The Equations of Motion with Rectangular Coordinates
+- For rectangular coordinates in two dimensions, the vector equation of Newton's Second Law can be broken into how many scalar equations?
+	- zero
+	- one
+	- two *
+	- three
+- In which type of kinetics problem do rectangular coordinates work best?
+	- the force maintains a constant direction relative to a fixed origin over time *
+	- the force maintains a constant direction relative to a body in motion over time
+	- the force changes direction over time
+	- the particle is rotating around a fixed point
+
+9.3 The Equations of Motion with Normal-Tangential Coordinates
+- In the normal-tangential coordinate system, which trigonometric function can be used to find the normal component of a force given the angle of the force?
+	- sine *
+	- cosine
+	- tangent
+	- cotangent
+- In the normal-tangential coordinate system, which trigonometric function can be used to find the tangential component of a force given the angle of the 
+force?
+	- sine 
+	- cosine *
+	- tangent
+	- cotangent
+- In which type of kinetics problem do normal-tangential coordinates work best?
+	- the force maintains a constant direction relative to a fixed origin over time 
+	- the force maintains a constant direction relative to a body in motion over time *
+	- the force changes direction over time
+	- the particle is rotating around a fixed point
+
+9.4 The Equations of Motion with Polar Coordinates
+- In the polar coordinate system, which trigonometric function can be used to find the theta direction component of a force given the angle of the force?
+	- sine *
+	- cosine 
+	- tangent
+	- cotangent
+- In the polar coordinate system, which trigonometric function can be used to find the r direction component of a force given the angle of the force?
+	- sine 
+	- cosine *
+	- tangent
+	- cotangent
+- In which type of kinetics problem do polar coordinates work best?
+	- the force maintains a constant direction relative to a fixed origin over time 
+	- the force maintains a constant direction relative to a body in motion over time 
+	- the force changes direction over time
+	- the particle is rotating around a fixed point *
+
+Chapter 10 Work and Energy in Particles
+10.1 The Convervation of Energy for a Particle
+- Which of the following is the force exerted over a distance?
+	- work *
+	- total energy
+	- kinetic energy 
+	- potential energy
+- Will forces in the direction of travel exert work on the body?
+	- yes *
+	- no
+- Will forces perpendicular to the direction of travel exert work on the body?
+	- yes
+	- no *
+- Which of the following is necessary to calculate the work caused by a force that is not constant?
+	- derivation
+	- integration *
+- Which of the following is the energy of a mass in motion?
+	- work
+	- total energy
+	- kinetic energy *
+	- potential energy
+- Which of the following is the energy stored due to position or stresses?
+	- work
+	- total energy
+	- kinetic energy 
+	- potential energy *
+- Kinetic energy is dependent on which of the following?
+	- height of the object dependent on path
+	- height of the object independent of path 
+	- velocity of the object *
+	- force of friction
+- Gravitational potential energy is dependent on which of the following?
+	- height of the object dependent on path
+	- height of the object independent of path *
+	- velocity of the object
+	- force of friction
+- Calculation of elastic potential energy is dependent on which of the following?
+	- the distance the spring has been stretched or compressed relative to its natural resting length *
+	- the natural resting length relative to the maximum stretch distance
+	- the natural resting length relative to the maximum compression distance
+	- the maximum stretch distance relative to the maximum compression distance
+- Which of the following is equal to the change in elastic potential energy of a spring?
+	- the sum of final elastic potential energy and initial elastic potential energy
+	- the difference between final elastic potential energy and intial elastic potential energy *
+	- the product of final elastic potential energy and intial elastic potential energy
+	- the ratio of final elastic potential energy and intial elastic potential energy
+
+10.2 Power in Particle Systems
+- Which of the following is NOT a definition of power?
+	- the rate at which work is being done
+	- the rate at which energy is changing 
+	- the derivative of work with respect to energy *
+	- the derivative of work with respect to time
+- Which of the following is NOT equivalent to the average power?
+	- the product of work and time *
+	- the product of force and distance divided by time
+	- the product of force and velocity
+	- the work divided by time
+- Which of the following are NOT units of power?
+	- watts
+	- joule per second
+	- newton meter per second
+	- newton meter per second squared *
+- Which of the following is the definition of horsepower?
+	- 550 foot pounds per second *
+	- 550 foot pounds per second squared
+	- 5500 foot pounds per second
+	- 5500 foot pounds per second squared
+
+10.3 Efficiency in Particle Systems
+- Which of the following is the definition of efficiency with respect to particle systems?
+	- product of useful work and power at input and output of a system
+	- product of useful energy and power at input and output of a system
+	- percentage of useful work or power transfered from input to output of a system *
+	- percentage of useful work or power transfered from output to input of a system
+- Which of the following is an equation for efficiency?
+	- the ratio of work in divided by work out
+	- the ratio of work out divided by work in *
+	- the product of work in and work out
+	- the product of power out and power in
+- What is the goal for efficiency?
+	- 0%
+	- 1%
+	- 100% *
+	- 1000%
+
+10.4 The Conservation of Energy for Systems of Particles
+- Which of the following is equal to the sum of work to all particles in a system period of time?
+	- the sum of the sum of the change in kinetic energy and the sum of the the change in potential energy *
+	- the difference of the sum of the change in kinetic energy and the sum of the the change in potential energy
+	- the product of the sum of the change in kinetic energy and the sum of the the change in potential energy
+	- the ratio of the sum of the change in kinetic energy and the sum of the the change in potential energy
+- Which forces will cancel out in the conservation of energy equations for a system of particles?
+	- gravitational
+	- internal *
+	- external
+	- friction
+- Which of the following describes the conservation of energy for a system of particles
+	- the sum of work by internal forces is equal to the change in total energy
+	- the sum of work by external forces is equal to the change in total energy *
+	- the sum of work by internal and external forces is equal to the change in total energy
+	- the sum of work by internal, external, and compounded forces is equal to the change in total energy
+
+Chapter 11 Impulse and Momentum in Particles
+11.1 Impulse and Momentum in a Particle
